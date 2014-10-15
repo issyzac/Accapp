@@ -126,18 +126,87 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/tabs_wrapper"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/layout2"
             android:layout_below="@id/summary">
 
-            <TabWidget
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fake_tabs"
+                android:padding="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/layout2">
+
+                <TextView
+                    android:background="@color/light_blue_a700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VEHICLE ONE"
+                    android:id="@+id/vehicle_one_tab"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="VEHICLE TWO"
+                    android:textSize="18sp"
+                    android:background="@color/light_blue_a700"
+                    android:id="@+id/vehicle_two_tab"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:padding="8dp"/>
+
+
+                </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/vehicle_tab"
-                />
+                android:id="@+id/driver_details"
+                android:layout_below="@id/fake_tabs"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/tabcontent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="DRIVER ONE DETAILS"
+                    android:textStyle="bold"
+                    android:id="@+id/driver_details_title"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/driver_name"
+                    android:text="Name :"
+                    android:layout_below="@id/driver_details_title"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:hint="driver one's name"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:layout_marginLeft="16dp"
+                    android:layout_below="@id/driver_details_title"
+                    android:layout_toRightOf="@id/driver_name"/>
+
+                </RelativeLayout>
 
 
             </RelativeLayout>

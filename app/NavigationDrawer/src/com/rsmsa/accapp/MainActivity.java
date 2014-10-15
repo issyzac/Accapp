@@ -16,6 +16,7 @@
 package com.rsmsa.accapp;
 
 import android.app.Activity;
+import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TabHost;
 import android.widget.Toast;
 
 import adapters.gridViewAdapter;
@@ -65,8 +67,6 @@ public class MainActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 
 
-
-
 		mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         /**
@@ -80,7 +80,6 @@ public class MainActivity extends Activity {
 		mDrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
 		_initMenu();
-
 
         mDrawerToggle = new CustomActionBarDrawerToggle(this, mDrawer);
 
