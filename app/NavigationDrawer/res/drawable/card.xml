@@ -11,12 +11,12 @@
         <shape
             android:dither="true"
             android:shape="rectangle" >
-            <corners android:radius="0dp" />
+            <corners android:radius="2dp" />
 
             <solid android:color="@android:color/white" />
 
             <stroke
-                android:width="3px"
+                android:width="2px"
                 android:color="@color/stroke" />
 
             <padding
