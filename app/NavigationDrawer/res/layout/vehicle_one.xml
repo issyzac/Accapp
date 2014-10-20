@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:scrollbars="none"
     android:layout_height="wrap_content">
 
 <RelativeLayout
@@ -825,6 +826,127 @@
             android:layout_toRightOf="@id/repair_amount"
             android:layout_below="@id/policy_period_one"
             android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/card"
+        android:layout_below="@id/insurance_details">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/damage_title"
+            android:text="Damage"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/light_blue_a400"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/damage_strip"
+            android:layout_below="@id/damage_title"
+            android:background="@color/card_separator"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/car"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/damage_strip"
+            android:id="@+id/car_image"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:layout_marginTop="16sp"
+            android:layout_below="@id/car_image"
+            android:id="@+id/vehicle_title"
+            android:layout_marginLeft="8dp"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/vehicle_title_edit"
+            android:layout_below="@id/car_image"
+            android:layout_toRightOf="@id/vehicle_title"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_total_edit"
+            android:layout_below="@id/car_image"
+            android:layout_marginTop="4dp"
+            android:minWidth="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_total"
+            android:layout_below="@id/car_image"
+            android:layout_toLeftOf="@id/vehicle_total_edit"
+            android:text="Vehicle Total"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Infastructure : "
+            android:id="@+id/infastructure"
+            android:layout_below="@id/vehicle_title_edit"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/infastructure_edit"
+            android:layout_below="@id/vehicle_title_edit"
+            android:layout_toRightOf="@id/infastructure"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:minWidth="80dp"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rescure_cost_edit"
+            android:textSize="12sp"
+            android:minWidth="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/vehicle_total_edit"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rescue_cost"
+            android:layout_below="@id/vehicle_total_edit"
+            android:layout_toLeftOf="@id/rescure_cost_edit"
+            android:text="Cost"
+            android:layout_marginTop="16dp"/>
+
 
     </RelativeLayout>
 

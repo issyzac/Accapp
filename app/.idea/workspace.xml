@@ -95,55 +95,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_accident.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_accident.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39556378" vertical-offset="7453" max-vertical-offset="8160">
-              <caret line="451" column="41" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
+            <state vertical-scroll-proportion="-7.9259257" vertical-offset="7453" max-vertical-offset="8160">
+              <caret line="451" column="30" selection-start-line="451" selection-start-column="30" selection-end-line="451" selection-end-column="30" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepthPageTransformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/transformers/DepthPageTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="833">
-              <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZoomOutPageTransformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/transformers/ZoomOutPageTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="867">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScreenSlidePageFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="612">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="vehicle_one.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.814815" vertical-offset="11747" max-vertical-offset="14246">
-              <caret line="705" column="47" selection-start-line="704" selection-start-column="0" selection-end-line="826" selection-end-column="37" />
-              <folding />
+            <state vertical-scroll-proportion="-13.740741" vertical-offset="13756" max-vertical-offset="14297">
+              <caret line="831" column="3" selection-start-line="831" selection-start-column="3" selection-end-line="950" selection-end-column="21" />
+              <folding>
+                <element signature="tag#RelativeLayout#6;tag#RelativeLayout#0;tag#ScrollView#0" expanded="false" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer">
@@ -151,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vehicle_two.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="vehicle_two.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.777779" vertical-offset="13569" max-vertical-offset="14280">
-              <caret line="828" column="41" selection-start-line="828" selection-start-column="41" selection-end-line="828" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.7171904" vertical-offset="15660" max-vertical-offset="16337">
+              <caret line="944" column="45" selection-start-line="944" selection-start-column="45" selection-end-line="944" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -199,8 +171,8 @@
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragmentTwo.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml" />
       </list>
     </option>
   </component>
@@ -356,7 +328,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="JZKR7LAA6SW8ONQK" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="accapp" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/gogo/Documents/android/Accapp/app/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/gogo/Documents/android/Accapp/app/NavigationDrawer/res/layout/vehicle_one.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -548,7 +520,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="916" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="916" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -564,7 +536,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21578947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21578947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -635,8 +607,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="595">
           <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
           <folding>
-            <element signature="e#411#429#0" expanded="true" />
-            <element signature="e#573#591#0" expanded="true" />
+            <element signature="e#411#429#0" expanded="false" />
+            <element signature="e#573#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,8 +698,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="595">
           <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
           <folding>
-            <element signature="e#411#429#0" expanded="true" />
-            <element signature="e#573#591#0" expanded="true" />
+            <element signature="e#411#429#0" expanded="false" />
+            <element signature="e#573#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -943,8 +915,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="e#411#429#0" expanded="true" />
-            <element signature="e#573#591#0" expanded="true" />
+            <element signature="e#411#429#0" expanded="false" />
+            <element signature="e#573#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1024,11 +996,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.9259257" vertical-offset="7453" max-vertical-offset="8160">
+          <caret line="451" column="30" selection-start-line="451" selection-start-column="30" selection-end-line="451" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.814815" vertical-offset="11747" max-vertical-offset="14246">
-          <caret line="705" column="47" selection-start-line="704" selection-start-column="0" selection-end-line="826" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="-13.740741" vertical-offset="13756" max-vertical-offset="14297">
+          <caret line="831" column="3" selection-start-line="831" selection-start-column="3" selection-end-line="950" selection-end-column="21" />
+          <folding>
+            <element signature="tag#RelativeLayout#6;tag#RelativeLayout#0;tag#ScrollView#0" expanded="false" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1037,19 +1022,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.777779" vertical-offset="13569" max-vertical-offset="14280">
-          <caret line="828" column="41" selection-start-line="828" selection-start-column="41" selection-end-line="828" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39556378" vertical-offset="7453" max-vertical-offset="8160">
-          <caret line="451" column="41" selection-start-line="451" selection-start-column="41" selection-end-line="451" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7171904" vertical-offset="15660" max-vertical-offset="16337">
+          <caret line="944" column="45" selection-start-line="944" selection-start-column="45" selection-end-line="944" selection-end-column="45" />
           <folding />
         </state>
       </provider>
