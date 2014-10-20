@@ -19,121 +19,442 @@
             android:background="#ffefefef"
             android:layout_height="wrap_content">
 
-     <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="48dp"
-         android:id="@+id/top_header"
-         android:background="@color/light_blue_a400">
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_centerInParent="true"
-             android:text="Vehicle and Driver"
-             android:textSize="30sp"
-             android:textStyle="bold"
-             android:textColor="@android:color/white"/>
-
-         </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_below="@id/top_header"
-            android:layout_margin="8dp"
-            android:id="@+id/summary"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:background="@drawable/card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fatal"
-                android:textSize="16sp"
-                android:id="@+id/fatal_text"
-                android:layout_marginLeft="8dp"/>
+                android:id="@+id/scene_of_accident"
+                android:background="#ffdadada"
+                android:paddingBottom="8dp"
+                android:paddingTop="16dp">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/fatal_edit"
-                android:hint="........."
-                android:layout_toRightOf="@id/fatal_text"
-                android:textSize="16sp"
-                android:background="@null"
-                android:layout_marginLeft="8dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_marginLeft="8dp"
+                    android:paddingBottom="16dp"
+                    android:layout_marginRight="8dp">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/injury_edit"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="8dp"
-                android:hint="................"
-                android:textSize="16sp"
-                android:background="@null"
-                android:layout_marginLeft="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/accident_severity_title"
+                        android:text="Accident Severity (Number)"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light_blue_a400"
+                        android:layout_marginLeft="8dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/injury_text"
-                android:layout_toLeftOf="@id/injury_edit"
-                android:text="severe injuries"
-                android:textSize="16sp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:id="@+id/accident_severity_strip"
+                        android:background="@color/card_separator"
+                        android:layout_below="@id/accident_severity_title"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_below="@id/accident_severity_strip"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fatal"
+                        android:id="@+id/fatal_text"
+                        android:layout_marginLeft="8dp"/>
+
+                    <EditText
+                        android:layout_below="@id/accident_severity_strip"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fatal_edit"
+                        android:layout_toRightOf="@id/fatal_text"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <EditText
+                        android:layout_below="@id/accident_severity_strip"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/injury_edit"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <TextView
+                        android:layout_below="@id/accident_severity_strip"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/injury_text"
+                        android:layout_toLeftOf="@id/injury_edit"
+                        android:text="Severe injuries"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Simple"
+                        android:id="@+id/simple_text"
+                        android:layout_below="@id/fatal_edit"
+                        android:layout_marginTop="16dp"/>
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/simple_edit"
+                        android:layout_below="@id/fatal_edit"
+                        android:layout_toRightOf="@id/simple_text"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/injury_edit"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/not_injured_edit"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/not_injured_text"
+                        android:layout_below="@id/injury_edit"
+                        android:layout_toLeftOf="@id/not_injured_edit"
+                        android:text="Only Damage"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="8dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/scene_of_accident"
+                android:layout_width="match_parent"
+                android:id="@+id/t_and_l"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Simple"
-                android:id="@+id/simple_text"
-                android:layout_below="@id/fatal_edit"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/simple_edit"
-                android:hint="..........."
-                android:layout_below="@id/fatal_edit"
-                android:layout_toRightOf="@id/simple_text"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="8dp"
-                android:background="@null"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/injury_edit"
-                android:layout_marginTop="4dp"
-                android:textSize="16sp"
                 android:layout_marginRight="8dp"
-                android:background="@null"
-                android:hint="................"
-                android:id="@+id/not_injured_edit"/>
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card"
+                android:paddingBottom="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/not_injured_text"
-                android:layout_below="@id/injury_edit"
-                android:layout_toLeftOf="@id/not_injured_edit"
-                android:text="Not injured"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_and_location"
+                    android:text="Time And Location"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_a400"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/time_and_location_strip"
+                    android:background="@color/card_separator"
+                    android:layout_below="@id/time_and_location"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date_title"
+                    android:text="Date"
+                    android:layout_below="@id/time_and_location_strip"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/time_and_location_strip"
+                    android:layout_toRightOf="@id/date_title"
+                    android:layout_marginLeft="16dp"/>
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/date_picker"
+                    android:layout_below="@id/time_and_location_strip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:text="Pick"
+                    android:textSize="14sp"
+                    android:background="@drawable/button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_title"
+                    android:layout_below="@id/date_title"
+                    android:layout_marginLeft="8dp"
+                    android:text="Time"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@id/date"
+                    android:layout_toRightOf="@id/date_title"
+                    android:layout_marginLeft="16dp"/>
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/time_picker"
+                    android:layout_below="@id/date_picker"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:text="Pick"
+                    android:textSize="14sp"
+                    android:background="@drawable/button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/area_title"
+                    android:layout_below="@id/time"
+                    android:textColor="@color/light_blue_a400"
+                    android:layout_marginLeft="8dp"
+                    android:text="Area"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/area_strip"
+                    android:background="@color/card_separator"
+                    android:layout_below="@id/area_title"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_title"
+                    android:text="Area Name "
+                    android:layout_below="@id/area_strip"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:layout_below="@id/area_strip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:hint=".............."
+                    android:layout_toRightOf="@id/name_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/district_title"
+                    android:layout_below="@id/name"
+                    android:layout_marginLeft="8dp"
+                    android:text="District"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/district"
+                    android:layout_below="@id/name"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@id/district_title"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="................"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city_or_region"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/district"
+                    android:text="city/Region"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city"
+                    android:layout_below="@id/district"
+                    android:background="@null"
+                    android:layout_toRightOf="@id/city_or_region"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:hint="......................."/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_header"
+                    android:layout_below="@id/city"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Road"
+                    android:textColor="@color/light_blue_a400"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/road_strip"
+                    android:background="@color/card_separator"
+                    android:layout_below="@id/road_header"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_title"
+                    android:layout_toRightOf="@id/road_header"
+                    android:layout_below="@id/road_strip"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Road"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/intersection_title"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/road_strip"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Intersection"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_name_title"
+                    android:layout_below="@id/road_title"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Name"/>
+
+                
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_name"
+                    android:layout_below="@id/road_title"
+                    android:layout_toRightOf="@id/road_name_title"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="8dp"/>
+
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/intersection_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/road_title"
+                    android:textSize="12sp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_number_title"
+                    android:layout_below="@id/road_name"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Number"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_number"
+                    android:layout_below="@id/road_name"
+                    android:layout_toRightOf="@id/road_number_title"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/intersection_number"
+                    android:layout_below="@id/road_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/km_title"
+                    android:layout_below="@id/road_number"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Km Mark"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/road_mark"
+                    android:layout_below="@id/road_number"
+                    android:layout_toRightOf="@id/km_title"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/intersection_mark"
+                    android:layout_below="@id/road_number"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+
 
             </RelativeLayout>
 
             <customviews.AutoScrollViewPager
                 android:layout_width="match_parent"
-                android:layout_height="1100dp"
-                android:layout_below="@id/summary"
+                android:layout_height="1400dp"
+                android:background="#ffdadada"
+                android:layout_marginTop="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_below="@id/t_and_l"
                 android:id="@+id/pager">
             </customviews.AutoScrollViewPager>
 

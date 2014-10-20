@@ -1,14 +1,835 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vehicle two"
-        android:layout_centerInParent="true"/>
+        android:id="@+id/tabs_wrapper"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@id/summary">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fake_tabs"
+            android:background="@drawable/button4"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VEHICLE TWO"
+                android:id="@+id/vehicle_one_tab"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/fake_tabs"
+            android:id="@+id/summary"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fatal"
+                android:textSize="16sp"
+                android:id="@+id/fatal_text"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fatal_edit"
+                android:hint="........."
+                android:layout_toRightOf="@id/fatal_text"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/injury_edit"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:hint="................"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/injury_text"
+                android:layout_toLeftOf="@id/injury_edit"
+                android:text="severe injuries"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Simple"
+                android:id="@+id/simple_text"
+                android:layout_below="@id/fatal_edit"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/simple_edit"
+                android:hint="..........."
+                android:layout_below="@id/fatal_edit"
+                android:layout_toRightOf="@id/simple_text"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/injury_edit"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:hint="................"
+                android:id="@+id/not_injured_edit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/not_injured_text"
+                android:layout_below="@id/injury_edit"
+                android:layout_toLeftOf="@id/not_injured_edit"
+                android:text="Not injured"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_details"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:layout_below="@id/summary"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Driver Two Details"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:id="@+id/driver_details_title"
+                android:textColor="@color/light_blue_a400"
+                android:layout_marginTop="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/strip_one"
+                android:layout_below="@id/driver_details_title"
+                android:background="@color/card_separator"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driver_one_surname"
+                android:text="Surname :"
+                android:layout_below="@id/strip_one"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/surname_one"
+                android:textSize="12sp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/strip_one"
+                android:layout_toRightOf="@id/driver_one_surname"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driver_one_othernames"
+                android:layout_below="@id/surname_one"
+                android:text="Other Names : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/surname_one"
+                android:id="@+id/othernames_one"
+                android:textSize="12sp"
+                android:layout_toRightOf="@id/driver_one_othernames"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/physical_address"
+                android:text="Physical Address : "
+                android:layout_below="@id/othernames_one"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/physical_address_one"
+                android:layout_below="@id/othernames_one"
+                android:layout_toRightOf="@id/physical_address"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adress PO Box : "
+                android:id="@+id/address_box"
+                android:layout_below="@id/physical_address_one"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/address_box_one"
+                android:layout_below="@id/physical_address_one"
+                android:layout_toRightOf="@id/address_box"
+                android:textSize="12sp"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/national_id"
+                android:text="National Id : "
+                android:layout_below="@id/address_box_one"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_below="@id/address_box_one"
+                android:layout_toRightOf="@id/national_id"
+                android:id="@+id/national_id_one"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_no"
+                android:text="Phone No : "
+                android:layout_below="@id/national_id_one"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_no_one"
+                android:layout_below="@id/national_id_one"
+                android:layout_toRightOf="@id/phone_no"
+                android:textSize="12sp"
+                android:layout_marginLeft="16dp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender"
+                android:layout_toRightOf="@id/phone_no"
+                android:layout_below="@id/phone_no_one"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="8dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    android:id="@+id/male"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="16sp"
+                    android:id="@+id/female"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dob"
+                android:text="Date Of Birth : "
+                android:layout_below="@id/gender"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dob_one"
+                android:layout_below="@id/gender"
+                android:layout_toRightOf="@id/dob"
+                android:hint="Pick Date"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nationality"
+                android:text="Nationality : "
+                android:layout_below="@id/dob_one"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nationality_one"
+                android:textSize="12sp"
+                android:minWidth="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/nationality"
+                android:layout_below="@id/dob_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/license"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Driver License ID : "
+                android:layout_below="@id/nationality_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/license_one"
+                android:layout_marginLeft="16dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/license"
+                android:layout_below="@id/nationality_one"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/occupation"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Occupation : "
+                android:layout_below="@id/license_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/occupation_one"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/occupation"
+                android:layout_marginLeft="16dp"
+                android:minWidth="100dp"
+                android:layout_below="@id/license_one"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/driver_details"
+            android:layout_marginTop="8dp"
+            android:id="@+id/test"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drug"
+                android:textSize="16sp"
+                android:id="@+id/drug_title"
+                android:layout_marginLeft="8dp"/>
+
+
+            <CheckBox
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:id="@+id/drug_edit"
+                android:layout_below="@id/drug_edit"
+                android:layout_toRightOf="@id/drug_title"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alcohol_edit"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:hint="................"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alcohol_text"
+                android:layout_toLeftOf="@id/alcohol_edit"
+                android:text="Alcohol %"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Phone Use : "
+                android:id="@+id/phone_text"
+                android:layout_below="@id/drug_edit"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <CheckBox
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:id="@+id/phone_edit"
+                android:layout_below="@id/drug_edit"
+                android:layout_toRightOf="@id/phone_text"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                />
+
+
+            <CheckBox
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:id="@+id/seat_belt_edit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/alcohol_edit"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seat_belt_text"
+                android:layout_below="@id/alcohol_edit"
+                android:layout_toLeftOf="@id/seat_belt_edit"
+                android:text="Seat Belt/Helmet"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_details"
+            android:layout_below="@id/test"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vehicle_one_details_title"
+                android:text="Vehicle Two Details"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/light_blue_a400"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/strip_two"
+                android:layout_below="@id/vehicle_one_details_title"
+                android:background="@color/card_separator"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/type"
+                android:text="Vehicle Type : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/strip_two"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/type_one"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/type"
+                android:layout_below="@id/strip_two"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/registration_number"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Registration Number : "
+                android:layout_below="@id/type_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/registration_number_one"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:minWidth="100dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/registration_number"
+                android:layout_below="@id/type_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owners_names"
+                android:text="Owner's Full Name : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/registration_number_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner"
+                android:minWidth="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/owners_names"
+                android:textSize="12sp"
+                android:layout_below="@id/registration_number_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_nationality"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Nationality : "
+                android:layout_below="@id/owner"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_nationality_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/owner_nationality"
+                android:layout_below="@id/owner"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_physical_address"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Physical Address : "
+                android:layout_below="@id/owner_nationality_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_physical_address_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/owner_physical_address"
+                android:textSize="12sp"
+                android:layout_below="@id/owner_nationality_one"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_address"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Address : "
+                android:layout_below="@id/owner_physical_address_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/owner_address_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/owner_address"
+                android:layout_below="@id/owner_physical_address_one"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/model"
+                android:text="Vehicle Brand/Model : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/owner_address_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:minWidth="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/model"
+                android:id="@+id/model_one"
+                android:layout_below="@id/owner_address_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/manufacturing_year"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/model_one"
+                android:text="Year of Manufacturing : "/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/year_one"
+                android:minWidth="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/manufacturing_year"
+                android:layout_below="@id/model_one"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chassis_number"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Chassis Number : "
+                android:layout_below="@id/year_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chassis_number_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/chassis_number"
+                android:layout_below="@id/year_one"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/insurance_details"
+            android:layout_below="@id/vehicle_details"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vehicle_one_insurance_details_title"
+                android:text="Vehicle Two Insurance Details"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/light_blue_a400"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/strip_three"
+                android:layout_below="@id/vehicle_one_insurance_details_title"
+                android:background="@color/card_separator"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/company"
+                android:text="Insurance Company : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/strip_three"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/company_one"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/company"
+                android:layout_below="@id/strip_three"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/insurance_type"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Insurance Type : "
+                android:layout_below="@id/company_one"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/insurance_type_one"
+                android:layout_marginLeft="16dp"
+                android:textSize="12sp"
+                android:minWidth="100dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/insurance_type"
+                android:layout_below="@id/company_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/insurance_phone_no"
+                android:text="Phone Number : "
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/insurance_type_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/insurance_phone"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/insurance_phone_no"
+                android:textSize="16sp"
+                android:layout_below="@id/insurance_type_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/policy_number"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Policy Number : "
+                android:layout_below="@id/insurance_phone"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/policy_number_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/policy_number"
+                android:layout_below="@id/insurance_phone"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/policy_period"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Policy Period : "
+                android:layout_below="@id/policy_number_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/policy_period_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/policy_period"
+                android:textSize="12sp"
+                android:layout_below="@id/policy_number_one"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repair_amount"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Estimated Repair TSH : "
+                android:layout_below="@id/policy_period_one"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repair_amount_one"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/repair_amount"
+                android:layout_below="@id/policy_period_one"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

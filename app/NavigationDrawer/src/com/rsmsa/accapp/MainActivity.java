@@ -325,7 +325,13 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new ScreenSlidePageFragment();
+            if(position == 0){
+                return new ScreenSlidePageFragment();
+            }
+            else{
+                return new ScreenSlidePageFragmentTwo();
+            }
+
         }
 
         @Override
