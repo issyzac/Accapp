@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    android:layout_height="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/passenger_wrapper"
+        android:paddingBottom="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Passenger Activity"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/passenger_layout"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/passanger_title"
+                android:text="Passengers Information"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/light_blue_a400"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/passenger_strip"
+                android:layout_below="@id/passanger_title"
+                android:background="@color/card_separator"
+                android:layout_marginTop="16dp"/>
+
+            <customviews.AutoScrollViewPager
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_below="@id/passenger_strip"
+                android:id="@+id/passenger_pager">
+            </customviews.AutoScrollViewPager>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pedestrian_wraper"
+            android:layout_below="@id/passenger_layout"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp"
+            android:background="@drawable/card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pedestrian_title"
+                android:text="Pedestrian and Witness"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/light_blue_a400"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/pedestrian_strip"
+                android:layout_below="@id/pedestrian_title"
+                android:background="@color/card_separator"
+                android:layout_marginTop="16dp"/>
+
+            <customviews.AutoScrollViewPager
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:background="#ffdadada"
+                android:layout_marginTop="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_below="@id/pedestrian_strip"
+                android:id="@+id/pedestrian_pager">
+            </customviews.AutoScrollViewPager>
+
+            </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:layout_below="@id/pedestrian_wraper"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button"
+            android:layout_marginTop="8dp"/>
+
+        </RelativeLayout>
+
+</ScrollView>
