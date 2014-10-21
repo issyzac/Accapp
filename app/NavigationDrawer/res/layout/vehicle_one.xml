@@ -776,7 +776,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/infastructure_edit"
+            android:id="@+id/infrastructure_edit"
             android:layout_below="@id/vehicle_title_edit"
             android:layout_toRightOf="@id/infastructure"
             android:layout_marginTop="4dp"
@@ -787,7 +787,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/rescure_cost_edit"
+            android:id="@+id/rescue_cost_edit"
             android:textSize="12sp"
             android:minWidth="80dp"
             android:layout_alignParentRight="true"
