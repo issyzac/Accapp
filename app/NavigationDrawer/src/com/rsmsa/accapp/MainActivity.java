@@ -16,7 +16,9 @@
 package com.rsmsa.accapp;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.app.TabActivity;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -34,11 +36,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TabHost;
+import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import adapters.gridViewAdapter;
 import customviews.AutoScrollViewPager;
@@ -87,6 +95,32 @@ public class MainActivity extends FragmentActivity {
      */
     public static int currentPage;
 
+    /**
+     *
+     * date and time pickers
+     *
+     */
+    public Button datePicker;
+
+    public Button timePicker;
+
+    private Calendar cal;
+
+    private int min;
+
+    private int hour;
+
+    private int day;
+
+    private int month;
+
+    private int year;
+
+    public EditText mDate;
+
+    public EditText mTime;
+
+
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +139,42 @@ public class MainActivity extends FragmentActivity {
          */
         header = (View)getLayoutInflater().inflate(R.layout.activity_accident,null);
 
+        mDate = (EditText)header.findViewById(R.id.date);
+
+        mTime = (EditText)header.findViewById(R.id.time);
+
+        cal = Calendar.getInstance();
+
+        day = cal.get(Calendar.DAY_OF_MONTH);
+
+        month = cal.get(Calendar.MONTH);
+
+        year = cal.get(Calendar.YEAR);
+
+        hour = cal.get(Calendar.HOUR_OF_DAY);
+
+        min = cal.get(Calendar.MINUTE);
+
+        datePicker = (Button)header.findViewById(R.id.date_picker);
+        datePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this ,datePickerListener,year, month, day);
+                datePickerDialog.show();
+
+            }
+        });
+
+
+
+        timePicker= (Button)header.findViewById(R.id.time_picker);
+        timePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this, timePickerListener, hour, min, true);
+                timePickerDialog.show();
+            }
+        });
 
         // set a custom shadow that overlays the main content when the drawer
 		// opens
@@ -137,6 +207,36 @@ public class MainActivity extends FragmentActivity {
 
 
     }
+
+    /**
+     * Date change listender
+     */
+    private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int selectedYear,
+                              int selectedMonth, int selectedDay) {
+            mDate.setText(selectedDay + " / " + (selectedMonth + 1) + " / "
+                    + selectedYear);
+        }
+    };
+
+    /**
+     * Time Change Listener
+     */
+    private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            int hour;
+            String am_pm;
+            if (hourOfDay > 12) {
+                hour = hourOfDay - 12;
+                am_pm = "PM";
+            } else {
+                hour = hourOfDay;
+                am_pm = "AM";
+            }
+            mTime.setText(hour + " : " + minute + " " + am_pm);
+        }
+    };
 
 	private void _initMenu() {
 

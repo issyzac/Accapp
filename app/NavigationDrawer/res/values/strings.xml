@@ -4,6 +4,7 @@
     <string name="app_name">Accapp</string>
     <string name="action_settings">Settings</string>
     <string name="action_save">Save</string>
+    <string name="spinner_prompt">Select</string>
     <string name="hello_world">Hello world!</string>
     <string name="drawer_text">Accapp</string>
     

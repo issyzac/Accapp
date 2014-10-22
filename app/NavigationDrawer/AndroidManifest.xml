@@ -28,6 +28,8 @@
             android:windowSoftInputMode="stateHidden"
             />
 
+        <activity android:name=".AccidentTypeclassification"/>
+
     </application>
 
 </manifest>

@@ -96,7 +96,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Finish"
+            android:text="Next"
             android:layout_below="@id/pedestrian_wraper"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
