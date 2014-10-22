@@ -8,12 +8,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 
+import Fragments.OtherOne;
+import Fragments.OtherTwo;
+import Fragments.PedestrianA;
+import Fragments.PedestrianB;
+import Fragments.PedestrianC;
 import Fragments.VehicleOnePassengerOneScreenSlide;
 import Fragments.VehicleOnePassengerThree;
 import Fragments.VehicleOnePassengerTwo;
 import Fragments.VehicleTwoPassengerOne;
 import Fragments.VehicleTwoPassengerThree;
 import Fragments.VehicleTwoPassengerTwo;
+import Fragments.Witness;
 import customviews.AutoScrollViewPager;
 import transformers.DepthPageTransformer;
 
@@ -33,11 +39,14 @@ public class Passenger extends FragmentActivity{
      */
     public static AutoScrollViewPager mPager;
 
+    public static AutoScrollViewPager pPager;
+
     /**
      * The pager adapter, which provides the pages to the view pager widget.
      */
     private PagerAdapter mPagerAdapter;
 
+    private PagerAdapter pPagerAdapter;
     /**
      * Value holding the current page
      */
@@ -51,14 +60,20 @@ public class Passenger extends FragmentActivity{
         setContentView(R.layout.passenger);
 
         /**
-         * instantiate ViewPaget
+         * instantiate Passenger ViewPager
          */
         mPager = (AutoScrollViewPager) findViewById(R.id.passenger_pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setPageTransformer(true, new DepthPageTransformer());
         mPager.setAdapter(mPagerAdapter);
 
-
+        /**
+         * instantiate Pedestrian ViewPager
+         */
+        pPager = (AutoScrollViewPager) findViewById(R.id.pedestrian_pager);
+        pPagerAdapter = new PedestrianScreenSlidePagerAdapter(getSupportFragmentManager());
+        pPager.setPageTransformer(true, new DepthPageTransformer());
+        pPager.setAdapter(pPagerAdapter);
 
     }
 
@@ -92,6 +107,50 @@ public class Passenger extends FragmentActivity{
             }
             else{
                 return new VehicleTwoPassengerThree();
+            }
+
+        }
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            return POSITION_NONE;
+        }
+    }
+
+    /**
+     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
+     * sequence.
+     */
+    private class PedestrianScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+        public PedestrianScreenSlidePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+
+            if(position == 0){
+                return new PedestrianA();
+            }
+            else if(position == 1){
+                return new PedestrianB();
+            }
+            else if(position == 2){
+                return new PedestrianC();
+            }
+            else if(position == 3){
+                return new Witness();
+            }
+            else if(position == 4){
+                return new OtherOne();
+            }
+            else{
+                return new OtherTwo();
             }
 
         }

@@ -15,6 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.rsmsa.accapp.MainActivity"
+            android:windowSoftInputMode="stateHidden"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Passenger"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden"
             />
 
     </application>
