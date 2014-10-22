@@ -28,17 +28,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/NavigationDrawer.iml" afterPath="$PROJECT_DIR$/NavigationDrawer/NavigationDrawer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/passenger.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/passenger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -62,23 +59,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OtherOne.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherOne.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3098" max-vertical-offset="5389">
+              <caret line="250" column="14" selection-start-line="250" selection-start-column="14" selection-end-line="250" selection-end-column="14" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#7751#7773#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="two_pass_two.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml">
+      <file leaf-file-name="witness.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.185185" vertical-offset="0" max-vertical-offset="4284">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.33271718" vertical-offset="2217" max-vertical-offset="2907">
+              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,29 +84,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Passenger.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java">
+      <file leaf-file-name="pedestrian_a.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="2873">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3876#3877#0" expanded="true" />
-                <element signature="e#3909#3910#0" expanded="true" />
-                <element signature="e#4558#4559#0" expanded="true" />
-                <element signature="e#4598#4599#0" expanded="true" />
-                <element signature="e#4669#4670#0" expanded="true" />
-                <element signature="e#4713#4714#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-14.222222" vertical-offset="3424" max-vertical-offset="3995">
+              <caret line="224" column="17" selection-start-line="181" selection-start-column="3" selection-end-line="224" selection-end-column="17" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_accident.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
+      <file leaf-file-name="pedestrian_b.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.814815" vertical-offset="7568" max-vertical-offset="8160">
-              <caret line="456" column="24" selection-start-line="456" selection-start-column="24" selection-end-line="456" selection-end-column="24" />
+            <state vertical-scroll-proportion="-13.111111" vertical-offset="3420" max-vertical-offset="3961">
+              <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -131,8 +123,8 @@
       <file leaf-file-name="vehicle_one.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.333333" vertical-offset="7844" max-vertical-offset="13906">
-              <caret line="481" column="45" selection-start-line="481" selection-start-column="45" selection-end-line="481" selection-end-column="45" />
+            <state vertical-scroll-proportion="-6.6666665" vertical-offset="11142" max-vertical-offset="13906">
+              <caret line="666" column="8" selection-start-line="666" selection-start-column="8" selection-end-line="666" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -151,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pedestrian_c.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pedestrian_c.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36956522" vertical-offset="187" max-vertical-offset="4267">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state vertical-scroll-proportion="-12.481482" vertical-offset="3369" max-vertical-offset="3961">
+              <caret line="218" column="30" selection-start-line="218" selection-start-column="30" selection-end-line="218" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -164,27 +156,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PedestrianB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianB.java">
+      <file leaf-file-name="other_one.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-18.777779" vertical-offset="3250" max-vertical-offset="3944">
+              <caret line="221" column="17" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PedestrianC.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianC.java">
+      <file leaf-file-name="other_two.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-10.592592" vertical-offset="3420" max-vertical-offset="3961">
+              <caret line="218" column="32" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="32" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -221,10 +215,8 @@
         <option value="$PROJECT_DIR$/NavigationDrawer/src/transformers/DepthPageTransformer.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/transformers/ZoomOutPageTransformer.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragmentTwo.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_three.xml" />
@@ -233,12 +225,6 @@
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_three.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_two.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/passenger.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianOne.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
@@ -254,6 +240,14 @@
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" />
       </list>
     </option>
   </component>
@@ -321,24 +315,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NavigationDrawer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,7 +401,7 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4d0053aa60ff9027" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="JZKR7LAA6SW8ONQK" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="accapp" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/gogo/Documents/android/Accapp/app/NavigationDrawer/res/layout/passenger.xml" />
     <property name="options.lastSelected" value="vcs.Git" />
@@ -753,15 +729,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="916" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="916" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3223684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3223684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -769,7 +745,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21578947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21578947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -996,18 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="5797">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#9816#9817#0" expanded="false" />
-            <element signature="e#9849#9850#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -1071,65 +1035,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8888888" vertical-offset="0" max-vertical-offset="4267">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.185185" vertical-offset="0" max-vertical-offset="4301">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553" vertical-offset="0" max-vertical-offset="4301">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_three.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="4301">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-153.0" vertical-offset="0" max-vertical-offset="4267">
-          <caret line="243" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.4074073" vertical-offset="255" max-vertical-offset="4267">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1190,7 +1099,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1200,7 +1109,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1262,17 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.333333" vertical-offset="7844" max-vertical-offset="13906">
-          <caret line="481" column="45" selection-start-line="481" selection-start-column="45" selection-end-line="481" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.814815" vertical-offset="7568" max-vertical-offset="8160">
@@ -1300,10 +1198,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665" vertical-offset="11142" max-vertical-offset="13906">
+          <caret line="666" column="8" selection-start-line="666" selection-start-column="8" selection-end-line="666" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3098" max-vertical-offset="5389">
+          <caret line="250" column="14" selection-start-line="250" selection-start-column="14" selection-end-line="250" selection-end-column="14" />
+          <folding>
+            <element signature="e#7751#7773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.222222" vertical-offset="3424" max-vertical-offset="3995">
+          <caret line="224" column="17" selection-start-line="181" selection-start-column="3" selection-end-line="224" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.111111" vertical-offset="3420" max-vertical-offset="3961">
+          <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36956522" vertical-offset="187" max-vertical-offset="4267">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="-12.481482" vertical-offset="3369" max-vertical-offset="3961">
+          <caret line="218" column="30" selection-start-line="218" selection-start-column="30" selection-end-line="218" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.777779" vertical-offset="3250" max-vertical-offset="3944">
+          <caret line="221" column="17" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.592592" vertical-offset="3420" max-vertical-offset="3961">
+          <caret line="218" column="32" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33271718" vertical-offset="2217" max-vertical-offset="2907">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding />
         </state>
       </provider>

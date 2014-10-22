@@ -176,25 +176,6 @@
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/nationality"
         android:layout_below="@id/phone_no_one"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/license"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Seatbelt/Helmet : "
-        android:layout_below="@id/nationality_one"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/seat_belt_check"
-        android:layout_toRightOf="@id/license"
-        android:layout_below="@id/nationality_one"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -202,14 +183,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:text="Casualty : "
-        android:layout_below="@id/seat_belt_check"/>
+        android:layout_below="@id/nationality_one"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/casualty"
         android:layout_toRightOf="@id/occupation"
-        android:layout_below="@id/seat_belt_check"
+        android:layout_below="@id/nationality_one"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"

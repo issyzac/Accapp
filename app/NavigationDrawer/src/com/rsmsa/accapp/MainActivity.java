@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * next button instance
      */
-    Button nextButton;
+    public static Button nextButton;
 
     /**
      *
@@ -144,6 +144,7 @@ public class MainActivity extends FragmentActivity {
          * instantiate next button
          */
         nextButton = (Button) header.findViewById(R.id.next_button);
+        nextButton.setVisibility(View.GONE);
 
 
         hasheader = false;
@@ -348,6 +349,12 @@ public class MainActivity extends FragmentActivity {
     private static class PageListener extends ViewPager.SimpleOnPageChangeListener {
         public void onPageSelected(int position) {
             Log.i("vp", "page selected " + position);
+            if(position == 0){
+                nextButton.setVisibility(View.GONE);
+            }
+            else{
+                nextButton.setVisibility(View.VISIBLE);
+            }
             currentPage = position;
         }
     }
