@@ -31,7 +31,7 @@ import java.net.URL;
 /**
  * Created by PETER on 10/21/2014.
  */
-public class Vehicle1 extends Activity {
+public class Vehicle2 extends Activity {
 
     /**
      * JSON Response node names.
@@ -60,7 +60,7 @@ public class Vehicle1 extends Activity {
     private static String KEY_PHONE_USE = "phone_use";
     private static String KEY_SEAT_BELT = "seat_belt";
 
-  //VEHICLE ONE KEYS
+    //VEHICLE ONE KEYS
     private static String KEY_VEHICLE_TYPE= "vehicle_type";
     private static String KEY_REG_NUMBER = "reg_number";
 
@@ -186,7 +186,7 @@ public class Vehicle1 extends Activity {
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
-            nDialog = new ProgressDialog(Vehicle1.this);
+            nDialog = new ProgressDialog(Vehicle2.this);
             nDialog.setMessage("Loading..");
             nDialog.setTitle("Checking Network");
             nDialog.setIndeterminate(false);
@@ -300,7 +300,7 @@ public class Vehicle1 extends Activity {
             seatbelt_helmet = seat_belt_edit.getText().toString();
 
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -375,7 +375,7 @@ public class Vehicle1 extends Activity {
             vehicle_type = type_one.getText().toString();
             registration_number = othernames_one.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -448,7 +448,7 @@ public class Vehicle1 extends Activity {
             policy_period = policy_period_one.getText().toString();
             cost = repair_amount_one.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -520,7 +520,7 @@ public class Vehicle1 extends Activity {
             inf = infrastructure.getText().toString();
             estimated_cost = cost.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -575,4 +575,4 @@ public class Vehicle1 extends Activity {
 
     public void NetAsync(View view){
         new NetCheck().execute();
-}}
+    }}
