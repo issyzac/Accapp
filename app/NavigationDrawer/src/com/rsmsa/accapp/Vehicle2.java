@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -15,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.rsmsa.accapp.library.DatabaseHandler;
@@ -31,7 +33,7 @@ import java.net.URL;
 /**
  * Created by PETER on 10/21/2014.
  */
-public class Vehicle1 extends Activity {
+public class Vehicle2 extends Activity {
 
     /**
      * JSON Response node names.
@@ -116,7 +118,6 @@ public class Vehicle1 extends Activity {
     EditText vehicle_total;
     EditText infrastructure;
     EditText cost;
-    Button btn;
 
 
     /**
@@ -125,7 +126,7 @@ public class Vehicle1 extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vehicle_one);
+        setContentView(R.layout.vehicle_two);
         /**
          * Defining all layout items
          **/
@@ -175,10 +176,8 @@ public class Vehicle1 extends Activity {
         cost = (EditText) findViewById(R.id.rescue_cost_edit);
 
         new NetCheck().execute();
-    }
-     
 
-    
+    }
 
     /**
      * Async Task to check whether internet connection is working
@@ -195,7 +194,7 @@ public class Vehicle1 extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            nDialog = new ProgressDialog(Vehicle1.this);
+            nDialog = new ProgressDialog(Vehicle2.this);
             nDialog.setMessage("Loading..");
             nDialog.setTitle("Checking Network");
             nDialog.setIndeterminate(false);
@@ -249,6 +248,7 @@ public class Vehicle1 extends Activity {
         }
     }
 
+
     private class ProcessDriverData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
@@ -281,6 +281,30 @@ public class Vehicle1 extends Activity {
             } else if (female.isChecked()) {
                 gender = "Female";
             }
+
+            dob = dob_one.getText().toString();
+            nationality = nationality_one.getText().toString();
+            licence = license_one.getText().toString();
+            occupation = occupation_one.getText().toString();
+            drug = drug_edit.getText().toString();
+            alcohol = alcohol_edit.getText().toString();
+            phone_use = phone_edit.getText().toString();
+            seatbelt_helmet = seat_belt_edit.getText().toString();
+
+            //driver details
+            surname = surname_one.getText().toString();
+            other_names = othernames_one.getText().toString();
+            physical_address = physical_address_one.getText().toString();
+            po_box = address_box_one.getText().toString();
+            national_id = national_id_one.getText().toString();
+
+            //getting the gender value
+            if (male.isChecked()) {
+                gender = "Male";
+            } else if (female.isChecked()) {
+                gender = "Female";
+            }
+
             dob = dob_one.getText().toString();
             nationality = nationality_one.getText().toString();
             licence = license_one.getText().toString();
@@ -291,7 +315,7 @@ public class Vehicle1 extends Activity {
             seatbelt_helmet = seat_belt_edit.getText().toString();
 
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -369,7 +393,7 @@ public class Vehicle1 extends Activity {
             vehicle_type = type_one.getText().toString();
             registration_number = othernames_one.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -445,7 +469,7 @@ public class Vehicle1 extends Activity {
             policy_period = policy_period_one.getText().toString();
             cost = repair_amount_one.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -520,7 +544,7 @@ public class Vehicle1 extends Activity {
             inf = infrastructure.getText().toString();
             estimated_cost = cost.getText().toString();
 
-            pDialog = new ProgressDialog(Vehicle1.this);
+            pDialog = new ProgressDialog(Vehicle2.this);
             pDialog.setTitle("Contacting Servers");
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
@@ -574,7 +598,6 @@ public class Vehicle1 extends Activity {
             }
         }
     }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB) // API 11
     void startMyTask(AsyncTask asyncTask) {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -582,5 +605,4 @@ public class Vehicle1 extends Activity {
         else
             asyncTask.execute();
     }
-
 }

@@ -151,21 +151,13 @@ public class UserFunctions {
         return json;
     }
 
-    public JSONObject addVehicle(String vehicle_type, String vehicle_reg_no, String owner_full_name, String nationality, String physical_address, String address_box, String vehicle_model, String manu_year,String chasis_no ) {
+    public JSONObject addVehicle(String vehicle_type, String vehicle_reg_no ) {
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
         params.add(new BasicNameValuePair("tag", vehicle_tag));
         params.add(new BasicNameValuePair("vehicle_type", vehicle_type));
         params.add(new BasicNameValuePair("vehicle_reg_no", vehicle_reg_no));
-        params.add(new BasicNameValuePair("owner_full_name", owner_full_name));
-        params.add(new BasicNameValuePair("nationality", nationality));
-        params.add(new BasicNameValuePair("physical_address", physical_address));
-        params.add(new BasicNameValuePair("address_box", address_box));
-        params.add(new BasicNameValuePair("vehicle_model", vehicle_model));
-        params.add(new BasicNameValuePair("manu_year", manu_year));
-        params.add(new BasicNameValuePair("chasis_no", chasis_no));
-
         JSONObject json = jsonParser.getJSONFromUrl(vehicleURL,params);
         return json;
     }
@@ -198,7 +190,7 @@ public class UserFunctions {
         return json;
     }
 
-    public JSONObject addInsurance(String insurance_company_name, String insurance_type, String insurance_phone_no, String policy_no, String policy_period, int expiration_period, double estimated_repair_costs ) {
+    public JSONObject addInsurance(String insurance_company_name, String insurance_type, String insurance_phone_no, String policy_no, String expiration_period, String estimated_repair_costs ) {
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
@@ -207,7 +199,6 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("insurance_type", insurance_type));
         params.add(new BasicNameValuePair("insurance_phone_no", insurance_phone_no));
         params.add(new BasicNameValuePair("policy_no", policy_no));
-        params.add(new BasicNameValuePair("policy_period", policy_period));
         params.add(new BasicNameValuePair("expiration_period", expiration_period +""));
         params.add(new BasicNameValuePair("estimated_repair_costs", estimated_repair_costs + ""));
 
@@ -217,7 +208,7 @@ public class UserFunctions {
 
 
 
-    public JSONObject addDamage(String vehicle, int vehicle_total, String infrastructure, double rescue_costs, String image_path ) {
+    public JSONObject addDamage(String vehicle, String vehicle_total, String infrastructure, String rescue_costs ) {
 
         // Building Parameters
 
@@ -225,10 +216,10 @@ public class UserFunctions {
 
         params.add(new BasicNameValuePair("tag", damage_tag));
         params.add(new BasicNameValuePair("vehicle", vehicle));
-        params.add(new BasicNameValuePair("vehicle_total", vehicle_total + ""));
+        params.add(new BasicNameValuePair("vehicle_total", vehicle_total));
         params.add(new BasicNameValuePair("infrastructure", infrastructure));
-        params.add(new BasicNameValuePair("rescue_costs", rescue_costs + ""));
-        params.add(new BasicNameValuePair("image_path", image_path));
+        params.add(new BasicNameValuePair("rescue_costs", rescue_costs));
+       // params.add(new BasicNameValuePair("image_path", image_path));
 
         JSONObject json = jsonParser.getJSONFromUrl(damageURL,params);
         return json;

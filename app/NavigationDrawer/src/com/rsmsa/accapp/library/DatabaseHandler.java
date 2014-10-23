@@ -213,7 +213,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_ACCIDENT_LOCATION = "CREATE TABLE " + TABLE_ACCIDENT_LOCATION
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement NOT NULL,"
             + KEY_AREA + " TEXT not null,"
-            + KEY_ACC_DATA_ID + " INTEGER not null,"
             + KEY_DISTRICT_ID + " INTEGER not null,"
             + KEY_REGION_ID + " INTEGER not null,"
             + KEY_ROAD_NAME + " TEXT not null,"
@@ -478,14 +477,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     //Storing accident location details in database
-    public void addLocation(String area, int accident_data_id,int district_id, int region_id, String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark) {
+    public void addLocation(String area, String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_AREA, area); // area
-        values.put(KEY_ACC_DATA_ID, accident_data_id); // accident_data_id
-        values.put(KEY_DISTRICT_ID, district_id); // district_id
-        values.put(KEY_REGION_ID, region_id); // region_id
         values.put(KEY_ROAD_NAME, road_name); // road_name
         values.put(KEY_ROAD_NO, road_no); // road_no
         values.put(KEY_ROAD_KILO_MARK, road_kilo_mark); // road_kilo_mark
@@ -497,7 +493,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert(TABLE_ACCIDENT_LOCATION, null, values);
         db.close(); // Closing database connection
     }
-
+/*
     //Storing accident details in database
     public void addAccident(String accident_reg_no, int driver_id1,int driver_id2, int vehicle1_id, int vehicle2_id, int road_type_id, int street_condition_id, int junction_type_id, int vehicle_defect_id,int damage_id, int violation_id , int category_id, int others_id) {
 
@@ -521,10 +517,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert(TABLE_ACCIDENT_DATA, null, values);
         db.close(); // Closing database connection
     }
+    */
 
 
     //Storing persons details in database
-    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String driving_license, String occupation ,String casuality, String alcohol ,String signature ,String seat_helmet, String vehicle_no, int acc_data_id , int status) {
+    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String driving_license, String occupation ,String casuality, String alcohol ,String signature ,String seat_helmet, String vehicle_no, int status) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -542,7 +539,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_SIGNATURE ,signature); //signature
         values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
         values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
-        values.put(KEY_ACC_DATA_ID ,acc_data_id); //acc_data_id
         values.put(KEY_STATUS ,status); //status
         // Inserting Row
         db.insert(TABLE_PERSON, null, values);
@@ -550,19 +546,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     //Storing vehicle details in database
-    public void addVehicle(String vehicle_type, String vehicle_reg_no, String owner_full_name, String nationality, String physical_address, String address_box, String vehicle_model, String manu_year,String chasis_no ) {
+    public void addVehicle(String vehicle_type, String vehicle_reg_no ) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_VEHICLE_TYPE, vehicle_type); // vehicle_type
         values.put(KEY_VEHICLE_REG_NO ,vehicle_reg_no); //vehicle_reg_no
-        values.put(KEY_OWNER_FULL_NAME ,owner_full_name); //owner_full_name
-        values.put(KEY_NATIONALITY ,nationality); //nationality
-        values.put(KEY_PHYSICAL_ADDRESS ,physical_address); //physical_address
-        values.put(KEY_ADDRESS_BOX ,address_box); //address_box
-        values.put(KEY_VEHICLE_MODEL ,vehicle_model); //vehicle_model
-        values.put(KEY_YEAR_MANUFACTURED ,manu_year); //manu_year
-        values.put(KEY_CHASIS ,chasis_no); //chasis_no
+
         // Inserting Row
         db.insert(TABLE_VEHICLE, null, values);
         db.close(); // Closing database connection
@@ -593,7 +583,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     //Storing insurance details in database
-    public void addInsurance(String insurance_company_name, String insurance_type, String insurance_phone_no, String policy_no, int policy_period, int expiration_period, double estimated_repair_costs ) {
+    public void addInsurance(String insurance_company_name, String insurance_type, String insurance_phone_no, String policy_no, String expiration_period, String estimated_repair_costs ) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -601,7 +591,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_INSURANCE__TYPE ,insurance_type); //insurance_type
         values.put(KEY_INSURANCE_PHONE_NO ,insurance_phone_no); //insurance_phone_no
         values.put(KEY_POLICY_NO ,policy_no); //policy_no
-        values.put(KEY_POLICY_PERIOD ,policy_period); //policy_period
         values.put(KEY_EXPIRATION ,expiration_period); //expiration_period
         values.put(KEY_ESTIMATED_REPAIR ,estimated_repair_costs); //estimated_repair_costs
         // Inserting Row
@@ -610,7 +599,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     //Storing damage details in database
-    public void addDamage(String vehicle, int vehicle_total, String infrastructure, double rescue_costs, String image_path ) {
+    public void addDamage(String vehicle, String vehicle_total, String infrastructure, String rescue_costs, String image_path ) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
