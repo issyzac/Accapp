@@ -1,5 +1,6 @@
 package com.rsmsa.accapp;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,6 +8,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,7 +47,7 @@ public class Vehicle2 extends Activity {
 
     //DRIVER ONE KEYS
     private static String KEY_SURNAME = "surname";
-    private static String KEY_OTHER_NAMES= "other_names";
+    private static String KEY_OTHER_NAMES = "other_names";
     private static String KEY_PHYSICAL_ADDRESS = "physical_address";
     private static String KEY_BOX_ADDRESS = "box_address";
     private static String KEY_NATIONAL_ID = "national_id";
@@ -53,31 +55,31 @@ public class Vehicle2 extends Activity {
     private static String KEY_GENDER = "gender";
     private static String KEY_DOB = "dob";
     private static String KEY_NATIONALITY = "nationality";
-    private static String KEY_LICENSE= "license";
+    private static String KEY_LICENSE = "license";
     private static String KEY_OCCUPATION = "occupation";
     private static String KEY_DRUG = "drug";
-    private static String KEY_ALCOHOL= "alcohol";
+    private static String KEY_ALCOHOL = "alcohol";
     private static String KEY_PHONE_USE = "phone_use";
     private static String KEY_SEAT_BELT = "seat_belt";
 
     //VEHICLE ONE KEYS
-    private static String KEY_VEHICLE_TYPE= "vehicle_type";
+    private static String KEY_VEHICLE_TYPE = "vehicle_type";
     private static String KEY_REG_NUMBER = "reg_number";
 
     //VEHICLE ONE INSURANCE_KEYS
-    private static String KEY_INSURANCE_COMPANY= "insurance_company";
+    private static String KEY_INSURANCE_COMPANY = "insurance_company";
     private static String KEY_INSURANCE_TYPE = "insurance_type";
     private static String KEY_INSURANCE_PHONE_NO = "insurance_phone_no";
-    private static String KEY_POLICY_NUMBER= "policy_no";
+    private static String KEY_POLICY_NUMBER = "policy_no";
     private static String KEY_POLICY_PERIOD = "policy_period";
     private static String KEY_ESTIMATED_REPAIR = "estimated_repair";
 
     //Vehicle one damage
-    private static String KEY_DAMAGE_VEHICLE= "vehicle";
+    private static String KEY_DAMAGE_VEHICLE = "vehicle";
     private static String KEY_VEHICLE_TOTAL = "vehicle_total";
     private static String KEY_INFRASTRUCTURE = "infrastructure";
-    private static String KEY_DAMAGE_COST= "cost";
-    private static String KEY_PATH= "path";
+    private static String KEY_DAMAGE_COST = "cost";
+    private static String KEY_PATH = "path";
     /**
      * Defining layout items.
      */
@@ -118,15 +120,13 @@ public class Vehicle2 extends Activity {
     EditText cost;
 
 
-
-
     /**
      * Called when the activity is first created.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vehicle_one);
+        setContentView(R.layout.vehicle_two);
         /**
          * Defining all layout items
          **/
@@ -175,16 +175,24 @@ public class Vehicle2 extends Activity {
         infrastructure = (EditText) findViewById(R.id.infrastructure_edit);
         cost = (EditText) findViewById(R.id.rescue_cost_edit);
 
+        new NetCheck().execute();
+
     }
 
     /**
      * Async Task to check whether internet connection is working
-     **/
-    private class NetCheck extends AsyncTask< String, String, Boolean>
-    {
+     */
+    private class NetCheck extends AsyncTask<String, String, Boolean> {
         private ProgressDialog nDialog;
+        private ProcessDriverData asyncTask2;
+        private ProcessInsuranceData asyncTask3;
+        private ProcessDamageData asyncTask4;
+
+
+
+
         @Override
-        protected void onPreExecute(){
+        protected void onPreExecute() {
             super.onPreExecute();
             nDialog = new ProgressDialog(Vehicle2.this);
             nDialog.setMessage("Loading..");
@@ -193,8 +201,9 @@ public class Vehicle2 extends Activity {
             nDialog.setCancelable(true);
             nDialog.show();
         }
+
         @Override
-        protected Boolean doInBackground(String... args){
+        protected Boolean doInBackground(String... args) {
 /**
  * Gets current device state and checks for working internet connection by trying Google.
  **/
@@ -219,30 +228,36 @@ public class Vehicle2 extends Activity {
             }
             return false;
         }
+
         @Override
-        protected void onPostExecute(Boolean th){
-            if(th == true){
+        protected void onPostExecute(Boolean th) {
+            if (th == true) {
                 nDialog.dismiss();
                 new ProcessVehicleData().execute();
-                new ProcessDriverData().execute();
-                new ProcessInsuranceData().execute();
-                new ProcessDamageData().execute();
-            }
-            else{
+                asyncTask2 = new ProcessDriverData();
+                asyncTask3 = new ProcessInsuranceData();
+                asyncTask4 = new ProcessDamageData();
+                startMyTask(asyncTask2);
+                startMyTask(asyncTask3);
+                startMyTask(asyncTask4);
+
+            } else {
                 nDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error in Network Connection.", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private class ProcessDriverData extends AsyncTask <String, String, JSONObject> {
+
+    private class ProcessDriverData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
-         **/
+         */
         private ProgressDialog pDialog;
-        String fatal,severe,simple,not_injured;
+        String fatal, severe, simple, not_injured;
         //driver one details
-        String surname,other_names, physical_address,po_box,national_id,phone_no,gender,dob,nationality,licence,occupation,drug,alcohol,phone_use,seatbelt_helmet;
+        String surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet;
+
         //
         @Override
         protected void onPreExecute() {
@@ -251,7 +266,7 @@ public class Vehicle2 extends Activity {
             fatal = inputFatal.getText().toString();
             severe = inputInjuries.getText().toString();
             simple = inputSimple.getText().toString();
-            not_injured= inputNotInjured.getText().toString();
+            not_injured = inputNotInjured.getText().toString();
 
             //driver details
             surname = surname_one.getText().toString();
@@ -261,9 +276,9 @@ public class Vehicle2 extends Activity {
             national_id = national_id_one.getText().toString();
             phone_no = phone_no_one.getText().toString();
             //getting the gender value
-            if(male.isChecked()) {
-                gender = "Male" ;
-            } else if(female.isChecked()) {
+            if (male.isChecked()) {
+                gender = "Male";
+            } else if (female.isChecked()) {
                 gender = "Female";
             }
 
@@ -284,9 +299,9 @@ public class Vehicle2 extends Activity {
             national_id = national_id_one.getText().toString();
 
             //getting the gender value
-            if(male.isChecked()) {
-                gender = "Male" ;
-            } else if(female.isChecked()) {
+            if (male.isChecked()) {
+                gender = "Male";
+            } else if (female.isChecked()) {
                 gender = "Female";
             }
 
@@ -307,6 +322,7 @@ public class Vehicle2 extends Activity {
             pDialog.setCancelable(true);
             pDialog.show();
         }
+
         @Override
         protected JSONObject doInBackground(String... args) {
 
@@ -315,16 +331,17 @@ public class Vehicle2 extends Activity {
             JSONObject json = userFunction.addDriver(surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet);
             return json;
         }
+
         @Override
         protected void onPostExecute(JSONObject json) {
             /**
              * Checks for success message.
              **/
             try {
-                if (json != null && json.getString(KEY_SUCCESS) != null){
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
                     String res = json.getString(KEY_SUCCESS);
 
-                    if(Integer.parseInt(res) == 1){
+                    if (Integer.parseInt(res) == 1) {
                         pDialog.setTitle("Getting Data");
                         pDialog.setMessage("Loading Info");
                         Toast.makeText(getApplicationContext(), "Driver One Details Stored.", Toast.LENGTH_SHORT).show();
@@ -349,24 +366,25 @@ public class Vehicle2 extends Activity {
 
 
                     }
-                }
-                else{
+                } else {
                     pDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }}
+        }
+    }
 
-    private class ProcessVehicleData extends AsyncTask <String, String, JSONObject> {
+    private class ProcessVehicleData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
-         **/
+         */
         private ProgressDialog pDialog;
-        String fatal,severe,simple,not_injured;
+        String fatal, severe, simple, not_injured;
         //driver one details
-        String vehicle_type,registration_number;
+        String vehicle_type, registration_number;
+
         //
         @Override
         protected void onPreExecute() {
@@ -382,6 +400,7 @@ public class Vehicle2 extends Activity {
             pDialog.setCancelable(true);
             pDialog.show();
         }
+
         @Override
         protected JSONObject doInBackground(String... args) {
 
@@ -390,16 +409,17 @@ public class Vehicle2 extends Activity {
             JSONObject json = userFunction.addVehicle(vehicle_type, registration_number);
             return json;
         }
+
         @Override
         protected void onPostExecute(JSONObject json) {
             /**
              * Checks for success message.
              **/
             try {
-                if (json != null && json.getString(KEY_SUCCESS) != null){
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
                     String res = json.getString(KEY_SUCCESS);
 
-                    if(Integer.parseInt(res) == 1){
+                    if (Integer.parseInt(res) == 1) {
                         pDialog.setTitle("Getting Data");
                         pDialog.setMessage("Loading Info");
                         Toast.makeText(getApplicationContext(), "Vehicle One Details Stored.", Toast.LENGTH_SHORT).show();
@@ -417,24 +437,25 @@ public class Vehicle2 extends Activity {
                          **/
                         db.addVehicle(json_vehicle.getString(KEY_VEHICLE_TYPE), json_vehicle.getString(KEY_REG_NUMBER));
                     }
-                }
-                else{
+                } else {
                     pDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }}
+        }
+    }
 
 
-    private class ProcessInsuranceData extends AsyncTask <String, String, JSONObject> {
+    private class ProcessInsuranceData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
-         **/
+         */
         private ProgressDialog pDialog;
         //driver one details
-        String insurance_company,type,phone_no,policy_no,policy_period, cost;
+        String insurance_company, type, phone_no, policy_no, policy_period, cost;
+
         //
         @Override
         protected void onPreExecute() {
@@ -455,6 +476,7 @@ public class Vehicle2 extends Activity {
             pDialog.setCancelable(true);
             pDialog.show();
         }
+
         @Override
         protected JSONObject doInBackground(String... args) {
 
@@ -463,16 +485,17 @@ public class Vehicle2 extends Activity {
             JSONObject json = userFunction.addInsurance(insurance_company, type, phone_no, policy_no, policy_period, cost);
             return json;
         }
+
         @Override
         protected void onPostExecute(JSONObject json) {
             /**
              * Checks for success message.
              **/
             try {
-                if (json != null && json.getString(KEY_SUCCESS) != null){
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
                     String res = json.getString(KEY_SUCCESS);
 
-                    if(Integer.parseInt(res) == 1){
+                    if (Integer.parseInt(res) == 1) {
                         pDialog.setTitle("Getting Data");
                         pDialog.setMessage("Loading Info");
                         Toast.makeText(getApplicationContext(), "Insurance Details Stored.", Toast.LENGTH_SHORT).show();
@@ -493,23 +516,24 @@ public class Vehicle2 extends Activity {
                                 json_insurance.getString(KEY_POLICY_PERIOD), json_insurance.getString(KEY_ESTIMATED_REPAIR)
                         );
                     }
-                }
-                else{
+                } else {
                     pDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }}
+        }
+    }
 
-    private class ProcessDamageData extends AsyncTask <String, String, JSONObject> {
+    private class ProcessDamageData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
-         **/
+         */
         private ProgressDialog pDialog;
         //damage one details
-        String v,total,inf, estimated_cost;
+        String v, total, inf, estimated_cost;
+
         //
         @Override
         protected void onPreExecute() {
@@ -527,6 +551,7 @@ public class Vehicle2 extends Activity {
             pDialog.setCancelable(true);
             pDialog.show();
         }
+
         @Override
         protected JSONObject doInBackground(String... args) {
 
@@ -535,16 +560,17 @@ public class Vehicle2 extends Activity {
             JSONObject json = userFunction.addDamage(v, total, inf, estimated_cost);
             return json;
         }
+
         @Override
         protected void onPostExecute(JSONObject json) {
             /**
              * Checks for success message.
              **/
             try {
-                if (json != null && json.getString(KEY_SUCCESS) != null){
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
                     String res = json.getString(KEY_SUCCESS);
 
-                    if(Integer.parseInt(res) == 1){
+                    if (Integer.parseInt(res) == 1) {
                         pDialog.setTitle("Getting Data");
                         pDialog.setMessage("Loading Info");
                         Toast.makeText(getApplicationContext(), "Damage Details Stored.", Toast.LENGTH_SHORT).show();
@@ -563,16 +589,20 @@ public class Vehicle2 extends Activity {
                         db.addDamage(json_damage.getString(KEY_DAMAGE_VEHICLE), json_damage.getString(KEY_VEHICLE_TOTAL),
                                 json_damage.getString(KEY_INFRASTRUCTURE), json_damage.getString(KEY_DAMAGE_COST), json_damage.getString(KEY_PATH));
                     }
-                }
-                else{
+                } else {
                     pDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }}
-
-    public void NetAsync(View view){
-        new NetCheck().execute();
-    }}
+        }
+    }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB) // API 11
+    void startMyTask(AsyncTask asyncTask) {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+            asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        else
+            asyncTask.execute();
+    }
+}

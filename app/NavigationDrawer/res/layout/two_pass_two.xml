@@ -11,7 +11,7 @@
         android:textStyle="bold"
         android:id="@+id/passenger_top_title"
         android:textColor="@color/teal_700"
-        android:text="Vehicle Two Passenger Three"
+        android:text="Vehicle Two Passenger Two"
         android:layout_marginLeft="8dp"/>
 
     <TextView

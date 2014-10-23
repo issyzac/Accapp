@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * next button instance
      */
-    Button nextButton;
+    public static Button nextButton;
 
     /**
      *
@@ -118,7 +118,13 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 Intent passenger = new Intent(MainActivity.this, Passenger.class);
-                startActivity(passenger);
+                Intent vehicle1 = new Intent(getApplicationContext(), Vehicle1.class);
+                Intent vehicle2 = new Intent(getApplicationContext(), Vehicle2.class);
+                Intent accident = new Intent(getApplicationContext(), AccidentActivity.class);
+                startActivity(vehicle1);
+               // startActivity(vehicle2);
+               // startActivity(accident);
+                //startActivity(passenger);
             }
         });
         mDrawer.setDrawerListener(mDrawerToggle);
@@ -144,6 +150,7 @@ public class MainActivity extends FragmentActivity {
          * instantiate next button
          */
         nextButton = (Button) header.findViewById(R.id.next_button);
+        nextButton.setVisibility(View.GONE);
 
 
         hasheader = false;
@@ -348,6 +355,12 @@ public class MainActivity extends FragmentActivity {
     private static class PageListener extends ViewPager.SimpleOnPageChangeListener {
         public void onPageSelected(int position) {
             Log.i("vp", "page selected " + position);
+            if(position == 0){
+                nextButton.setVisibility(View.GONE);
+            }
+            else{
+                nextButton.setVisibility(View.VISIBLE);
+            }
             currentPage = position;
         }
     }

@@ -801,9 +801,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/rescue_cost"
             android:layout_below="@id/vehicle_total_edit"
-            android:layout_toLeftOf="@id/rescure_cost_edit"
+            android:layout_toLeftOf="@id/rescue_cost_edit"
             android:text="Cost"
             android:layout_marginTop="16dp"/>
+
 
 
     </RelativeLayout>
