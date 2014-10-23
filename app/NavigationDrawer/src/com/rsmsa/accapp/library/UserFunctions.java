@@ -15,9 +15,10 @@ public class UserFunctions {
 
     //URL of the PHP API
     private static String loginURL = "http://inventory.unnett.com/android/";
-    private static String personURL,vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
+    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
+    private static String personURL = "http://192.168.43.251/PSMS/public/android/";
 
     private static String login_tag = "login";
     private static String accident_location_tag = "accident_location";

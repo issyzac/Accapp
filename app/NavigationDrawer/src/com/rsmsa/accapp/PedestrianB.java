@@ -73,7 +73,7 @@ public class PedestrianB extends Activity {
         /**
          * getting instances of our view elements
          */
-        okay_button = (Button)findViewById(R.id.finish);
+        okay_button = (Button)findViewById(R.id.pass_next_btn);
 
         ViewName = (EditText)findViewById(R.id.name_edit);
         ViewDateOfBirth = (EditText)findViewById(R.id.dob_one);

@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".Vehicle1"/>
         <activity android:name=".Vehicle2"/>
+        <activity android:name=".OnePassengerOne"/>
         <activity android:name=".AccidentActivity"/>
         <activity android:name=".Passenger"/>
             android:parentActivityName=".MainActivity"
