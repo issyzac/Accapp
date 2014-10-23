@@ -105,7 +105,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_GENDER = "gender";
     private static final String KEY_DOB = "dob";
     private static final String KEY_DRIVING_LICENSE = "driving_license";
-    private static final String KEY_OCCUPATION = "occupation";
     private static final String KEY_STATUS = "status";
     private static final String KEY_CASUALITY = "casuality";
     private static final String KEY_SIGNATURE = "signature";
@@ -138,6 +137,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_POLICY_PERIOD = "policy_period";
     private static final String KEY_EXPIRATION = "expiration";
     private static final String KEY_ESTIMATED_REPAIR = "estimated_repair";
+    private static final String KEY_OCCUPATION = "occupation";
 
     // TABLE_DAMAGE Table - column names
 
@@ -245,22 +245,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // 4. TABLE_PERSON table create statement
     private static final String CREATE_TABLE_PERSON = "CREATE TABLE " + TABLE_PERSON
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_NAME + " TEXT NOT NULL,"
-            + KEY_GENDER + " TEXT NOT NULL,"
-            + KEY_DOB + " TEXT NOT NULL,"
-            + KEY_PHYSICAL_ADDRESS + " TEXT NOT NULL,"
-            + KEY_ADDRESS_BOX + " TEXT NOT NULL,"
-            + KEY_NATIONALITY_NATIONAL_ID + " TEXT NOT NULL,"
-            + KEY_PHONE_NO + " TEXT NOT NULL,"
-            + KEY_DRIVING_LICENSE + " TEXT NOT NULL,"
-            + KEY_OCCUPATION + " TEXT NOT NULL,"
-            + KEY_CASUALITY + " TEXT NOT NULL,"
-            + KEY_ALCOHOL + " TEXT NOT NULL,"
-            + KEY_SIGNATURE + " TEXT NOT NULL,"
-            + KEY_SEAT_HELMET + " TEXT NOT NULL,"
-            + KEY_VEHICLE_NO + " TEXT NOT NULL,"
-            + KEY_ACC_DATA_ID + " INTEGER NOT NULL,"
-            + KEY_STATUS + " TEXT NOT NULL" + ")";
+            + KEY_NAME + " TEXT ,"
+            + KEY_GENDER + " TEXT ,"
+            + KEY_DOB + " TEXT ,"
+            + KEY_PHYSICAL_ADDRESS + " TEXT ,"
+            + KEY_ADDRESS_BOX + " TEXT ,"
+            + KEY_NATIONALITY_NATIONAL_ID + " TEXT ,"
+            + KEY_PHONE_NO + " TEXT ,"
+            + KEY_CASUALITY + " TEXT ,"
+            + KEY_ALCOHOL + " TEXT ,"
+            + KEY_SEAT_HELMET + " TEXT ,"
+            + KEY_VEHICLE_NO + " TEXT ,"
+            + KEY_STATUS + " TEXT " + ")";
 
 
     // 5. TABLE_VEHICLE table create statement
@@ -288,8 +284,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             + KEY_GENDER + " TEXT not null,"
             + KEY_DOB + " TEXT not null,"
             + KEY_NATIONALITY + " TEXT not null,"
-            + KEY_DRIVING_LICENSE + " TEXT not null,"
-            + KEY_OCCUPATION + " TEXT not null,"
+            + KEY_DRIVING_LICENSE + " TEXT ,"
+            + KEY_OCCUPATION + " TEXT ,"
             + KEY_ALCOHOL + " TEXT not null,"
             + KEY_DRUGS + " TEXT not null,"
             + KEY_PHONE_USE + " TEXT not null,"
@@ -348,14 +344,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
             + KEY_VEHECLE1_ID+ " TEXT NOT NULL,"
             + KEY_VEHECLE2_ID + " TEXT NOT NULL,"
-            + KEY_ACC_DATA_ID+ " TEXT NOT NULL,"+ ")";
+            + KEY_ACC_DATA_ID+ " TEXT NOT NULL"+ ")";
 
     // 13. TABLE_VEHICLE_DEFECTS table create statement
     private static final String CREATE_TABLE_VEHICLE_DEFECTS = "CREATE TABLE " + TABLE_VEHICLE_DEFECTS
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
             + KEY_VEHECLE1_ID+ " TEXT NOT NULL,"
             + KEY_VEHECLE2_ID + " TEXT NOT NULL,"
-            + KEY_ACC_DATA_ID+ " TEXT NOT NULL,"+ ")";
+            + KEY_ACC_DATA_ID+ " TEXT NOT NULL" + ")";
 
     // 14. TABLE_CATEGORY table create statement
     private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + TABLE_CATEGORY
@@ -521,7 +517,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     //Storing persons details in database
-    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String driving_license, String occupation ,String casuality, String alcohol ,String signature ,String seat_helmet, String vehicle_no, int status) {
+    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -532,11 +528,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_ADDRESS_BOX ,address_box); //address_box
         values.put(KEY_NATIONALITY_NATIONAL_ID ,nationality_id); //nationality
         values.put(KEY_PHONE_NO ,phone_no); //phone_no
-        values.put(KEY_DRIVING_LICENSE ,driving_license); //driving_license
-        values.put(KEY_OCCUPATION ,occupation); //occupation
         values.put(KEY_CASUALITY ,casuality); //casuality
         values.put(KEY_ALCOHOL ,alcohol); //alcohol
-        values.put(KEY_SIGNATURE ,signature); //signature
         values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
         values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
         values.put(KEY_STATUS ,status); //status
@@ -591,6 +584,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_INSURANCE__TYPE ,insurance_type); //insurance_type
         values.put(KEY_INSURANCE_PHONE_NO ,insurance_phone_no); //insurance_phone_no
         values.put(KEY_POLICY_NO ,policy_no); //policy_no
+        //values.put(KEY_POLICY_PERIOD ,policy_period); //policy_period
         values.put(KEY_EXPIRATION ,expiration_period); //expiration_period
         values.put(KEY_ESTIMATED_REPAIR ,estimated_repair_costs); //estimated_repair_costs
         // Inserting Row

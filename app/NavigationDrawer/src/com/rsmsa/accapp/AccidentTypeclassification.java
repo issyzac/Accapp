@@ -22,6 +22,8 @@ public class AccidentTypeclassification extends Activity {
      */
     Button accidentTypeSelectButton;
 
+    Button finishButton;
+
     /**
      *
      * Accident type classification spinner
@@ -48,6 +50,15 @@ public class AccidentTypeclassification extends Activity {
         setContentView(R.layout.atc);
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
+
+        finishButton = (Button)findViewById(R.id.finish_button);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent passOne = new Intent(AccidentTypeclassification.this, OnePassengerOne.class);
+                startActivity(passOne);
+            }
+        });
 
         atcSpinner = (Spinner) findViewById(R.id.atc_spinner);
         junctionStructureSpinner = (Spinner) findViewById(R.id.atc_spinner);
@@ -275,6 +286,7 @@ public class AccidentTypeclassification extends Activity {
                 startActivity(atcselectintent);
             }
         });
+
 
 
     }
