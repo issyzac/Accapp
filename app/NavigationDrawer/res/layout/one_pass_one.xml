@@ -49,7 +49,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
-            android:textSize="16sp"
             android:checked="true"
             android:id="@+id/male"/>
 
@@ -57,7 +56,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
-            android:textSize="16sp"
             android:id="@+id/female"/>
 
     </RadioGroup>
@@ -162,7 +160,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nationality"
+        android:id="@+id/drugs"
         android:text="Drugs/Alcohol % : "
         android:layout_below="@id/phone_no_one"
         android:layout_marginTop="16dp"
@@ -176,7 +174,7 @@
         android:layout_marginTop="4dp"
         android:minWidth="100dp"
         android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/nationality"
+        android:layout_toRightOf="@id/drugs"
         android:layout_below="@id/phone_no_one"/>
 
     <TextView

@@ -77,6 +77,8 @@ public class Passenger extends FragmentActivity{
         pPager.setPageTransformer(true, new DepthPageTransformer());
         pPager.setAdapter(pPagerAdapter);
 
+
+
     }
 
 

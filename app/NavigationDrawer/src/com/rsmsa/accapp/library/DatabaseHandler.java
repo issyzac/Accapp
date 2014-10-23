@@ -524,7 +524,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     //Storing persons details in database
-    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String driving_license, String occupation ,String casuality, String alcohol ,String signature ,String seat_helmet, String vehicle_no, int acc_data_id , int status) {
+    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -535,14 +535,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_ADDRESS_BOX ,address_box); //address_box
         values.put(KEY_NATIONALITY_NATIONAL_ID ,nationality_id); //nationality
         values.put(KEY_PHONE_NO ,phone_no); //phone_no
-        values.put(KEY_DRIVING_LICENSE ,driving_license); //driving_license
-        values.put(KEY_OCCUPATION ,occupation); //occupation
+
         values.put(KEY_CASUALITY ,casuality); //casuality
         values.put(KEY_ALCOHOL ,alcohol); //alcohol
-        values.put(KEY_SIGNATURE ,signature); //signature
+
         values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
         values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
-        values.put(KEY_ACC_DATA_ID ,acc_data_id); //acc_data_id
+
         values.put(KEY_STATUS ,status); //status
         // Inserting Row
         db.insert(TABLE_PERSON, null, values);
