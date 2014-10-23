@@ -188,13 +188,7 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 Intent passenger = new Intent(MainActivity.this, Passenger.class);
-                Intent vehicle1 = new Intent(getApplicationContext(), Vehicle1.class);
-                Intent vehicle2 = new Intent(getApplicationContext(), Vehicle2.class);
-                Intent accident = new Intent(getApplicationContext(), AccidentActivity.class);
-                startActivity(vehicle1);
-               // startActivity(vehicle2);
-               // startActivity(accident);
-                //startActivity(passenger);
+                startActivity(passenger);
             }
         });
         mDrawer.setDrawerListener(mDrawerToggle);
