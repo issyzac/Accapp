@@ -28,7 +28,12 @@
             android:windowSoftInputMode="stateHidden"
             />
 
-        <activity android:name=".AccidentTypeclassification"/>
+        <activity android:name=".AccidentTypeclassification"
+            />
+
+        <activity android:name=".AtcSelect"
+            android:theme="@android:style/Theme.Dialog"
+            />
 
     </application>
 

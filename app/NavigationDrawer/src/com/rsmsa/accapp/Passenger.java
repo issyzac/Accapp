@@ -1,12 +1,14 @@
 package com.rsmsa.accapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
+import android.view.View;
 import android.widget.Button;
 
 import Fragments.OtherOne;
@@ -76,6 +78,15 @@ public class Passenger extends FragmentActivity{
         pPagerAdapter = new PedestrianScreenSlidePagerAdapter(getSupportFragmentManager());
         pPager.setPageTransformer(true, new DepthPageTransformer());
         pPager.setAdapter(pPagerAdapter);
+
+        nextBtn = (Button)findViewById(R.id.pass_next_btn);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent atc = new Intent(Passenger.this, AccidentTypeclassification.class);
+                startActivity(atc);
+            }
+        });
 
     }
 
