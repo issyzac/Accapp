@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
+import android.widget.Button;
 
 import Fragments.OtherOne;
 import Fragments.OtherTwo;
@@ -52,6 +53,7 @@ public class Passenger extends FragmentActivity{
      */
     public static int currentPage;
 
+    public Button nextBtn;
 
 
     @Override

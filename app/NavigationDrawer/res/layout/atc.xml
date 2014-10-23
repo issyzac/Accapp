@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/atc_wrapper"
+        android:background="@drawable/card"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/atc_title"
+            android:text="Accident Type classification"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/deep_orange_a400"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/atc_strip"
+            android:layout_below="@id/atc_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/deep_orange_a100"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accident_type_heading"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/atc_strip"
+            android:text="Accident Type"/>
+
+        <Spinner
+            android:id="@+id/atc_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_prompt"
+            android:layout_toRightOf="@id/accident_type_heading"
+            android:layout_below="@id/atc_strip"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignRight="@+id/atc_title"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:text="Select"
+            android:layout_marginTop="8dp"
+            android:id="@+id/accident_type_select_button"
+            android:layout_below="@id/atc_strip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>
