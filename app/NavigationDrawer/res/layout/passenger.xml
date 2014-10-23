@@ -98,6 +98,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/finish"
             android:text="Next"
+            android:id="@+id/pass_next_btn"
             android:layout_below="@id/pedestrian_wraper"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"

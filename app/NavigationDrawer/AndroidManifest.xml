@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.rsmsa.accapp.MainActivity"
+            android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden"
             android:label="@string/app_name" >
             <intent-filter>
@@ -23,12 +23,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Passenger"
+        <activity android:name=".Vehicle1"/>
+        <activity android:name=".Vehicle2"/>
+        <activity android:name=".AccidentActivity"/>
+        <activity android:name=".Passenger"/>
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden"
             />
 
-        <activity android:name=".AccidentTypeclassification"/>
+        <activity android:name=".AccidentTypeclassification"
+            />
+
+        <activity android:name=".AtcSelect"
+            android:theme="@android:style/Theme.Dialog"
+            />
 
     </application>
 

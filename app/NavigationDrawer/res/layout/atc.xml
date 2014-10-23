@@ -48,7 +48,6 @@
             android:id="@+id/atc_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:prompt="@string/spinner_prompt"
             android:layout_toRightOf="@id/accident_type_heading"
             android:layout_below="@id/atc_strip"
             android:layout_marginLeft="16dp"
@@ -67,5 +66,15 @@
             android:layout_marginRight="8dp"/>
 
         </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish_button"
+        android:layout_below="@id/atc_wrapper"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button"
+        android:text="Finish"/>
 
 </RelativeLayout>
