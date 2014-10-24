@@ -18,7 +18,7 @@ import com.rsmsa.accapp.library.DatabaseHandler;
 /**
  * Created by martha shaka on 10/22/2014.
  */
-public class PedestrianC extends Activity {
+public class OtherOne extends Activity {
 
     /**
      * defining the instances of our view elements
@@ -56,7 +56,7 @@ public class PedestrianC extends Activity {
         getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
 
 
-        setContentView(R.layout.pedestrian_c);
+        setContentView(R.layout.other_one);
 
         /**
          * call the init() method to instantiate all our class variables
@@ -215,7 +215,7 @@ public class PedestrianC extends Activity {
         String alcohol=drugs11;
         String seat_helmet=SeatbeltHelmet11;
         String vehicle_no="12";
-        String status="pedestrian";
+        String status="other one";
         String ary[];
 
         db.addPerson( name, gender,  dob,  physical_address,  address_box, nationality_id, phone_no,
@@ -230,171 +230,3 @@ public class PedestrianC extends Activity {
 
 
 }
-
-///**
-// * Async Task to check whether internet connection is working.
-// **/
-//public class NetCheck extends AsyncTask<String, Void, Boolean>
-//{
-//    private ProgressDialog nDialog;
-//    @Override
-//    protected void onPreExecute(){
-//        super.onPreExecute();
-//        nDialog = new ProgressDialog(OnePassengerOne);
-//        nDialog.setTitle("Checking Network");
-////        nDialog.setMessage("Loading..");
-////        nDialog.setIndeterminate(false);
-////        nDialog.setCancelable(true);
-////        nDialog.show();
-//    }
-//    @Override
-//    protected Boolean doInBackground(String... args){
-///**
-// * Gets current device state and checks for working internet connection by trying Google.
-// **/
-//        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-//        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-//        if (netInfo != null && netInfo.isConnected()) {
-//            try {
-//                URL url = new URL("http://www.google.com");
-//                HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
-//                urlc.setConnectTimeout(3000);
-//                urlc.connect();
-//                if (urlc.getResponseCode() == 200) {
-//                    return true;
-//                }
-//            } catch (MalformedURLException e1) {
-//                // TODO Auto-generated catch block
-//                e1.printStackTrace();
-//            } catch (IOException e) {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//            }
-//        }
-//        return false;
-//    }
-//    @Override
-//    protected void onPostExecute(Boolean th){
-//        if(th == true){
-//            nDialog.dismiss();
-//            new ProcessPerson().execute();
-//        }
-//        else{
-//            nDialog.dismiss();
-//           // error.setText("Error in Network Connection");
-//        }
-//    }
-//}
-//
-///**
-// * Async Task to get and send data to MySql database through JSON response.
-// **/
-//private class ProcessPerson extends AsyncTask<String, Void, JSONObject> {
-//    private ProgressDialog pDialog = new ProgressDialog(OnePassengerOne.this);
-//    String User,Pword;
-//    @Override
-//    protected void onPreExecute() {
-//        super.onPreExecute();
-//
-//        pDialog.setTitle("Contacting Servers");
-//        pDialog.setMessage("verifying user ...");
-//        pDialog.setIndeterminate(false);
-//        pDialog.setCancelable(true);
-//        pDialog.show();
-//    }
-//    @Override
-//    protected JSONObject doInBackground(String... args) {
-//        UserFunctions pFunction = new UserFunctions();
-//        JSONObject json = pFunction.addPerson(User, Pword);
-//        return json;
-//    }
-//    @Override
-//    protected void onPostExecute(JSONObject json) {
-//        try {
-//
-//
-//
-//            if (json != null && json.getString(KEY_SUCCESS) != null){
-//                String res = json.getString(KEY_SUCCESS);
-//                if(Integer.parseInt(res) == 1){
-//
-//                    /**
-//                     * adding user information to shared preferences
-//                     */
-//
-//
-//                    pDialog.setMessage("Loading User Space");
-//                    pDialog.setTitle("Getting Data");
-//                    DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-//                    DatabaseHandler db1 = new DatabaseHandler(getApplicationContext());
-//                    JSONObject json_user = json.getJSONObject("user");
-//                    /**
-//                     * Clear all previous data in SQlite database.
-//                     **/
-//                    UserFunctions logout = new UserFunctions();
-//                    logout.logoutUser(getApplicationContext());
-//                    db.addUser(json_user.getString(KEY_USERNAME),json_user.getString(KEY_FULLNAME),
-//                            json_user.getString(KEY_STATION),json_user.getString(KEY_CREATED_AT));
-//
-//
-//                    /**
-//                     * create the offenceNature on the database
-//                     */
-//                    AndroidXMLParsingActivity object = new AndroidXMLParsingActivity();
-//
-//                    object.createOffence(db1);
-//
-//                    /**
-//                     *If JSON array details are stored in SQlite it launches the User Panel.
-//                     **/
-//                    Intent upanel = new Intent(getApplicationContext(), MainActivity.class);
-//                    upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    pDialog.dismiss();
-//                    startActivity(upanel);
-//                    /**
-//                     * Close Login Screen
-//                     *
-//                     *  finish();
-//                     */
-//                }else{
-//                    pDialog.dismiss();
-//                    error.setText("Incorrect username/password");
-//                }
-//            }
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        sharedpreferences=getSharedPreferences(MyPREFERENCES,
-//                Context.MODE_PRIVATE);
-//        if (sharedpreferences.contains(name))
-//        {
-//            if(sharedpreferences.contains(pass)){
-//                if(justBack == true)
-//                {
-//                    finish();
-//                    justBack = false;
-//                }
-//                else {
-//                    Intent i = new Intent(this, MainActivity.class);
-//                    startActivity(i);
-//                }
-//
-//            }
-//        }
-//        super.onResume();
-//    }
-//
-//    public void NetAsync(View view){
-//
-//        new NetCheck().execute();
-//    }
-//
-//
-//}
-
-
-
