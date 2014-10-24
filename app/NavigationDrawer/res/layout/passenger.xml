@@ -35,7 +35,7 @@
                 android:layout_height="1dp"
                 android:id="@+id/passenger_strip"
                 android:layout_below="@id/passanger_title"
-                android:background="@color/card_separator"
+                android:background="@color/light_blue_a100"
                 android:layout_marginTop="16dp"/>
 
             <customviews.AutoScrollViewPager
@@ -78,7 +78,7 @@
                 android:layout_height="1dp"
                 android:id="@+id/pedestrian_strip"
                 android:layout_below="@id/pedestrian_title"
-                android:background="@color/card_separator"
+                android:background="@color/light_blue_a100"
                 android:layout_marginTop="16dp"/>
 
             <customviews.AutoScrollViewPager
