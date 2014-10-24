@@ -2,6 +2,7 @@ package com.rsmsa.accapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,6 +11,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.larvalabs.svgandroid.SVG;
+import com.larvalabs.svgandroid.SVGParser;
 
 import Fragments.OtherOne;
 import Fragments.OtherTwo;
@@ -57,11 +62,11 @@ public class Passenger extends FragmentActivity{
 
     public Button nextBtn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.passenger);
+
 
         /**
          * instantiate Passenger ViewPager

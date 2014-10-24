@@ -2,12 +2,17 @@ package com.rsmsa.accapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.larvalabs.svgandroid.SVG;
+import com.larvalabs.svgandroid.SVGParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,10 +49,22 @@ public class AccidentTypeclassification extends Activity {
     Spinner defectOneSpinner;
     Spinner defectTwoSpinner;
 
+
+    ImageView scroller;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
+
+        /**
+         *  image from svg
+         */
+        scroller = (ImageView)findViewById(R.id.scroller);
+        scroller.setBackgroundColor(Color.WHITE);
+        SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android);
+        scroller.setImageDrawable(svg.createPictureDrawable());
+
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
 

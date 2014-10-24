@@ -486,6 +486,15 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/deep_orange_a100"/>
 
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/scroller"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/description_strip"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"/>
+
             </RelativeLayout>
 
         <Button
