@@ -305,7 +305,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_below="@id/light_spinner"
-                android:text="Wheather"/>
+                android:text="Weather"/>
 
             <Spinner
                 android:id="@+id/wheather_spinner"
