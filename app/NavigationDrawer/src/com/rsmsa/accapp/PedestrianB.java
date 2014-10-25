@@ -212,7 +212,7 @@ public class PedestrianB extends Activity {
         String casuality=casuality11;
         String alcohol=drugs11;
         String seat_helmet=SeatbeltHelmet11;
-        String vehicle_no="no";
+        String vehicle_no="12";
         String status="pedestrian";
         String ary[];
 

@@ -210,8 +210,8 @@ public class PedestrianA extends Activity {
         String casuality=casuality11;
         String alcohol=drugs11;
         String seat_helmet="";
-        String vehicle_no="2";
-        String status="passenger";
+        String vehicle_no="12";
+        String status="pedestrian";
         String ary[];
 
         db.addPerson( name, gender,  dob,  physical_address,  address_box, nationality_id, phone_no,

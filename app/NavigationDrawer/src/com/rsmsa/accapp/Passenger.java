@@ -9,9 +9,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 import Fragments.OtherOne;
 import Fragments.OtherTwo;
@@ -45,6 +48,140 @@ public class Passenger extends FragmentActivity{
     public static AutoScrollViewPager mPager;
 
     public static AutoScrollViewPager pPager;
+    /**
+     * Defining our class variables
+     */
+    public static String Name11;
+    public static String Gender11;
+    public static String DateOfBirth11;
+    public static String Address11;
+    public static String PhysicalAddress11;
+    public static String NationalId11;
+    public static String PhoneNo11;
+    public static String SeatbeltHelmet11;
+    public static String casuality11;
+    public static String drugs11;
+
+    public static String Name12;
+    public static String Gender12;
+    public static String DateOfBirth12;
+    public static String Address12;
+    public static String PhysicalAddress12;
+    public static String NationalId12;
+    public static String PhoneNo12;
+    public static String SeatbeltHelmet12;
+    public static String casuality12;
+    public static String drugs12;
+
+    public static String Name13;
+    public static String Gender13;
+    public static String DateOfBirth13;
+    public static String Address13;
+    public static String PhysicalAddress13;
+    public static String NationalId13;
+    public static String PhoneNo13;
+    public static String SeatbeltHelmet13;
+    public static String casuality13;
+    public static String drugs13;
+
+    public static String Name21;
+    public static String Gender21;
+    public static String DateOfBirth21;
+    public static String Address21;
+    public static String PhysicalAddress21;
+    public static String NationalId21;
+    public static String PhoneNo21;
+    public static String SeatbeltHelmet21;
+    public static String casuality21;
+    public static String drugs21;
+
+    public static String Name22;
+    public static String Gender22;
+    public static String DateOfBirth22;
+    public static String Address22;
+    public static String PhysicalAddress22;
+    public static String NationalId22;
+    public static String PhoneNo22;
+    public static String SeatbeltHelmet22;
+    public static String casuality22;
+    public static String drugs22;
+
+    public static String Name23;
+    public static String Gender23;
+    public static String DateOfBirth23;
+    public static String Address23;
+    public static String PhysicalAddress23;
+    public static String NationalId23;
+    public static String PhoneNo23;
+    public static String SeatbeltHelmet23;
+    public static String casuality23;
+    public static String drugs23;
+
+    public static String NameA;
+    public static String GenderA;
+    public static String DateOfBirthA;
+    public static String AddressA;
+    public static String PhysicalAddressA;
+    public static String NationalIdA;
+    public static String PhoneNoA;
+    public static String SeatbeltHelmetA;
+    public static String casualityA;
+    public static String drugsA;
+
+    public static String NameB;
+    public static String GenderB;
+    public static String DateOfBirthB;
+    public static String AddressB;
+    public static String PhysicalAddressB;
+    public static String NationalIdB;
+    public static String PhoneNoB;
+    public static String SeatbeltHelmetB;
+    public static String casualityB;
+    public static String drugsB;
+
+    public static String NameC;
+    public static String GenderC;
+    public static String DateOfBirthC;
+    public static String AddressC;
+    public static String PhysicalAddressC;
+    public static String NationalIdC;
+    public static String PhoneNoC;
+    public static String SeatbeltHelmetC;
+    public static String casualityC;
+    public static String drugsC;
+
+    public static String NameD;
+    public static String GenderD;
+    public static String DateOfBirthD;
+    public static String AddressD;
+    public static String PhysicalAddressD;
+    public static String NationalIdD;
+    public static String PhoneNoD;
+    public static String SeatbeltHelmetD;
+    public static String casualityD;
+    public static String drugsD;
+
+    public static String NameE;
+    public static String GenderE;
+    public static String DateOfBirthE;
+    public static String AddressE;
+    public static String PhysicalAddressE;
+    public static String NationalIdE;
+    public static String PhoneNoE;
+    public static String SeatbeltHelmetE;
+    public static String casualityE;
+    public static String drugsE;
+
+    public static String NameF;
+    public static String GenderF;
+    public static String DateOfBirthF;
+    public static String AddressF;
+    public static String PhysicalAddressF;
+    public static String NationalIdF;
+    public static String PhoneNoF;
+
+
+
 
     /**
      * The pager adapter, which provides the pages to the view pager widget.
@@ -58,6 +195,7 @@ public class Passenger extends FragmentActivity{
     public static int currentPage;
 
     public Button nextBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +230,9 @@ public class Passenger extends FragmentActivity{
 
     }
 
+    public static void logging (){
+        Log.d("isaya", Name11+"");
+    }
 
     /**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in

@@ -56,7 +56,7 @@ public class PedestrianC extends Activity {
         getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
 
 
-        setContentView(R.layout.two_pass_two);
+        setContentView(R.layout.pedestrian_c);
 
         /**
          * call the init() method to instantiate all our class variables
@@ -214,8 +214,8 @@ public class PedestrianC extends Activity {
         String casuality=casuality11;
         String alcohol=drugs11;
         String seat_helmet=SeatbeltHelmet11;
-        String vehicle_no="2";
-        String status="passenger";
+        String vehicle_no="12";
+        String status="pedestrian";
         String ary[];
 
         db.addPerson( name, gender,  dob,  physical_address,  address_box, nationality_id, phone_no,

@@ -231,9 +231,7 @@ public class OnePassengerOne extends Activity {
         db.addPerson(name, gender, dob, physical_address, address_box, nationality_id, phone_no,
                 casuality, alcohol, seat_helmet, vehicle_no, status);
         new NetCheck();
-//        UserFunctions functions = new UserFunctions();
-//        functions.addPerson(name, gender, dob, physical_address, address_box, nationality_id, phone_no,
-//                casuality, alcohol, seat_helmet, vehicle_no, status);
+
 
 
         super.finish();
