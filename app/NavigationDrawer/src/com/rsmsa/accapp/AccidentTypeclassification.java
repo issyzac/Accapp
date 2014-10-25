@@ -6,16 +6,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-import com.larvalabs.svgandroid.SVG;
-import com.larvalabs.svgandroid.SVGParser;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import adapters.SpinnerAdapter;
 
 /**
  *  Created by isaiah on 10/22/2014.
@@ -29,26 +29,21 @@ public class AccidentTypeclassification extends Activity {
 
     Button finishButton;
 
+    int selectedSpinner;
+
     /**
      *
      * Accident type classification spinner
      */
-    Spinner atcSpinner;
-    Spinner junctionStructureSpinner;
-    Spinner junctionControlSpinner;
-    Spinner roadTypeSpinner;
-    Spinner surfaceTypeSpinner;
-    Spinner roadStructureSpinner;
-    Spinner surfaceStatusSpinner;
-    Spinner roadSurfaceSpinner;
-    Spinner lightSpinner;
-    Spinner whetherSpinner;
-    Spinner controlSpinner;
-    Spinner violationOneSpinner;
-    Spinner violationTwoSpinner;
-    Spinner defectOneSpinner;
-    Spinner defectTwoSpinner;
+    public Spinner atcSpinner, junctionStructureSpinner, junctionControlSpinner, roadTypeSpinner, surfaceTypeSpinner, roadStructureSpinner,
+            surfaceStatusSpinner, roadSurfaceSpinner, lightSpinner, whetherSpinner, controlSpinner, violationOneSpinner, violationTwoSpinner
+            ,defectOneSpinner, defectTwoSpinner;
 
+
+    /**
+     * Spinner Adapter declaration
+     */
+    public SpinnerAdapter dataAdapter;
 
     ImageView scroller;
 
@@ -56,14 +51,6 @@ public class AccidentTypeclassification extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
-
-        /**
-         *  image from svg
-         */
-        scroller = (ImageView)findViewById(R.id.scroller);
-        scroller.setBackgroundColor(Color.WHITE);
-        SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android);
-        scroller.setImageDrawable(svg.createPictureDrawable());
 
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
@@ -78,21 +65,32 @@ public class AccidentTypeclassification extends Activity {
         });
 
         atcSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        junctionStructureSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        junctionControlSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        roadTypeSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        surfaceTypeSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        roadStructureSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        surfaceStatusSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        roadSurfaceSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        lightSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        whetherSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        controlSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        violationOneSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        violationTwoSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        defectOneSpinner = (Spinner) findViewById(R.id.atc_spinner);
-        defectTwoSpinner = (Spinner) findViewById(R.id.atc_spinner);
+        junctionStructureSpinner = (Spinner) findViewById(R.id.junction_structure_spinner);
+        junctionControlSpinner = (Spinner) findViewById(R.id.junction_control_spinner);
+        roadTypeSpinner = (Spinner) findViewById(R.id.road_type_spinner);
+        surfaceTypeSpinner = (Spinner) findViewById(R.id.surface_type_spinner);
+        roadStructureSpinner = (Spinner) findViewById(R.id.road_structure_spinner);
+        surfaceStatusSpinner = (Spinner) findViewById(R.id.road_status_spinner);
+        roadSurfaceSpinner = (Spinner) findViewById(R.id.road_surface_spinner);
+        lightSpinner = (Spinner) findViewById(R.id.light_spinner);
+        whetherSpinner = (Spinner) findViewById(R.id.wheather_spinner);
+        controlSpinner = (Spinner) findViewById(R.id.control_spinner);
+        violationOneSpinner = (Spinner) findViewById(R.id.one_violations_spinner);
+        violationTwoSpinner = (Spinner) findViewById(R.id.two_violations_spinner);
+        defectOneSpinner = (Spinner) findViewById(R.id.one_defects_spinner);
+        defectTwoSpinner = (Spinner) findViewById(R.id.two_defects_spinner);
 
+
+
+
+        List<String> list = new ArrayList<String>();
+        list.add("Single vehicle accident");
+        list.add("Accidents between vehicles driving same travel direction (2 or more vehicles)");
+        list.add("Accidents between vehicles driving opposite travel direction (2 or more vehicles)");
+        list.add("Accidents at a junction turning in same or opposite direction (2 or more vehi.)");
+        list.add("Collision at a junction between two or more participants");
+        list.add("Accident w. parked vehicles");
+        list.add("Pedestrian, animals and other accidents");
 
         List<String> junctionStructure = new ArrayList<String>();
         junctionStructure.add("Crossing Roads");
@@ -102,8 +100,8 @@ public class AccidentTypeclassification extends Activity {
         junctionStructure.add("Staggered Junction");
         junctionStructure.add("Junc > 4 Arms");
         junctionStructure.add("Bridge/Fly over");
-        junctionStructure.add("Rail Cros Manned");
-        junctionStructure.add("Rail Cros no Sign");
+        junctionStructure.add("Rail Cross Manned");
+        junctionStructure.add("Rail Cross No Sign");
         junctionStructure.add("Pedestrian Cross");
         junctionStructure.add("none");
 
@@ -174,14 +172,6 @@ public class AccidentTypeclassification extends Activity {
         control.add("Lane Marking");
         control.add("Speed Limit/Sign");
 
-        List<String> list = new ArrayList<String>();
-        list.add("Single vehicle accident");
-        list.add("Accidents between vehicles driving same travel direction (2 or more vehicles)");
-        list.add("Accidents between vehicles driving opposite travel direction (2 or more vehicles)");
-        list.add("Accidents at a junction turning in same or opposite direction (2 or more vehi.)");
-        list.add("Collision at a junction between two or more participants");
-        list.add("Accident w. parked vehicles");
-        list.add("Pedestrian, animals and other accidents");
 
         List<String> violation = new ArrayList<String>();
         violation.add("Overspeed");
@@ -204,101 +194,118 @@ public class AccidentTypeclassification extends Activity {
         defects.add("Tyre Burst");
         defects.add("Others");
 
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>
+        adapterSetter(1, list);
+
+        atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedSpinner = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+
+        ArrayAdapter<String> atc_adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item,list);
-        dataAdapter.setDropDownViewResource
+        atc_adapter.setDropDownViewResource
                 (android.R.layout.simple_spinner_dropdown_item);
-        atcSpinner.setAdapter(dataAdapter);
+        atcSpinner.setAdapter(atc_adapter);
 
-        dataAdapter = new ArrayAdapter<String>
+
+        ArrayAdapter<String> junction_structure = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item,junctionStructure);
-        dataAdapter.setDropDownViewResource
+        junction_structure.setDropDownViewResource
                 (android.R.layout.simple_spinner_dropdown_item);
-        junctionStructureSpinner.setAdapter(dataAdapter);
+        junctionStructureSpinner.setAdapter(junction_structure);
 
-//        ArrayAdapter<String> junctionControlAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,junctionControl);
-//        junctionControlAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        junctionControlSpinner.setAdapter(junctionControlAdapter);
-//
-//        ArrayAdapter<String> roadTypeAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,roadClass);
-//        roadTypeAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        roadTypeSpinner.setAdapter(roadTypeAdapter);
-//
-//        ArrayAdapter<String> surfaceTypeAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,surfaceType);
-//        surfaceTypeAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        surfaceTypeSpinner.setAdapter(surfaceTypeAdapter);
-//
-//        ArrayAdapter<String> roadStructureAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,roadStructure);
-//        roadStructureAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        roadStructureSpinner.setAdapter(roadStructureAdapter);
-//
-//        ArrayAdapter<String> surfaceStatusAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,roadStatus);
-//        surfaceStatusAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        surfaceStatusSpinner.setAdapter(surfaceStatusAdapter);
-//
-//        ArrayAdapter<String> roadSurfaceAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,roadSurface);
-//        roadSurfaceAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        roadSurfaceSpinner.setAdapter(roadSurfaceAdapter);
-//
-//        ArrayAdapter<String> lightAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,light);
-//        lightAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        lightSpinner.setAdapter(lightAdapter);
-//
-//        ArrayAdapter<String> weatherAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,weather);
-//        weatherAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        whetherSpinner.setAdapter(weatherAdapter);
-//
-//        ArrayAdapter<String> controlAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,control);
-//        controlAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        controlSpinner.setAdapter(controlAdapter);
-//
-//        ArrayAdapter<String> violationOneAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,violation);
-//        violationOneAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        violationOneSpinner.setAdapter(violationOneAdapter);
-//
-//        ArrayAdapter<String> violationTwoAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,violation);
-//        violationTwoAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        violationTwoSpinner.setAdapter(violationTwoAdapter);
-//
-//        ArrayAdapter<String> defectOneAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,defects);
-//        defectOneAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        defectOneSpinner.setAdapter(defectOneAdapter);
-//
-//        ArrayAdapter<String> defectTwoAdapter = new ArrayAdapter<String>
-//                (this, android.R.layout.simple_spinner_item,defects);
-//        defectTwoAdapter.setDropDownViewResource
-//                (android.R.layout.simple_spinner_dropdown_item);
-//        defectTwoSpinner.setAdapter(defectTwoAdapter);
+        ArrayAdapter<String> junctionControlAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,junctionControl);
+        junctionControlAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        junctionControlSpinner.setAdapter(junctionControlAdapter);
+
+        ArrayAdapter<String> roadTypeAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,roadClass);
+        roadTypeAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        roadTypeSpinner.setAdapter(roadTypeAdapter);
+
+        ArrayAdapter<String> surfaceTypeAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,surfaceType);
+        surfaceTypeAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        surfaceTypeSpinner.setAdapter(surfaceTypeAdapter);
+
+        ArrayAdapter<String> roadStructureAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,roadStructure);
+        roadStructureAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        roadStructureSpinner.setAdapter(roadStructureAdapter);
+
+        ArrayAdapter<String> surfaceStatusAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,roadStatus);
+        surfaceStatusAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        surfaceStatusSpinner.setAdapter(surfaceStatusAdapter);
+
+        ArrayAdapter<String> roadSurfaceAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,roadSurface);
+        roadSurfaceAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        roadSurfaceSpinner.setAdapter(roadSurfaceAdapter);
+
+        ArrayAdapter<String> lightAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,light);
+        lightAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        lightSpinner.setAdapter(lightAdapter);
+
+        ArrayAdapter<String> weatherAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,weather);
+        weatherAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        whetherSpinner.setAdapter(weatherAdapter);
+
+        ArrayAdapter<String> controlAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,control);
+        controlAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        controlSpinner.setAdapter(controlAdapter);
+
+        ArrayAdapter<String> violationOneAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,violation);
+        violationOneAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        violationOneSpinner.setAdapter(violationOneAdapter);
+
+        ArrayAdapter<String> violationTwoAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,violation);
+        violationTwoAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        violationTwoSpinner.setAdapter(violationTwoAdapter);
+
+        ArrayAdapter<String> defectOneAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,defects);
+        defectOneAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        defectOneSpinner.setAdapter(defectOneAdapter);
+
+        ArrayAdapter<String> defectTwoAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,defects);
+        defectTwoAdapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+        defectTwoSpinner.setAdapter(defectTwoAdapter);
 
         accidentTypeSelectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent atcselectintent = new Intent(AccidentTypeclassification.this, AtcSelect.class);
-                atcselectintent.putExtra("classification", atcSpinner.getSelectedItemId()+"");
+                atcselectintent.putExtra("classification", selectedSpinner+"");
                 Log.d("selected", atcSpinner.getSelectedItem()+"");
                 startActivity(atcselectintent);
             }
@@ -307,4 +314,17 @@ public class AccidentTypeclassification extends Activity {
 
 
     }
+
+    public void adapterSetter(int position, List<String> mList){
+        if(position == 1){
+            dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
+            atcSpinner.setAdapter(dataAdapter);
+        }
+        if(position == 2){
+            dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
+            junctionStructureSpinner.setAdapter(dataAdapter);
+        }
+
+    }
+
 }

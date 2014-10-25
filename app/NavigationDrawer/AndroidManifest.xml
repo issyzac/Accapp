@@ -24,13 +24,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".Vehicle1"/>
+
         <activity android:name=".Vehicle2"/>
+
         <activity android:name=".OnePassengerOne"/>
-        <activity android:name=".AccidentActivity"/>
-        <activity android:name=".Passenger"/>
+
+        <activity android:name=".AccidentActivity"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name=".Passenger"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateHidden"
-            />
+            android:windowSoftInputMode="stateHidden"/>
 
         <activity android:name=".AccidentTypeclassification"
             />

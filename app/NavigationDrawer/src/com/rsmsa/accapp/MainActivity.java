@@ -211,7 +211,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * Date change listender
      */
-    private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+    public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
             mDate.setText(selectedDay + " / " + (selectedMonth + 1) + " / "

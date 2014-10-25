@@ -13,9 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.larvalabs.svgandroid.SVG;
-import com.larvalabs.svgandroid.SVGParser;
-
 import Fragments.OtherOne;
 import Fragments.OtherTwo;
 import Fragments.PedestrianA;
