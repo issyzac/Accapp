@@ -39,29 +39,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/src/adapters/SpinnerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/spinner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragmentTwo.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragmentTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_one.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_one.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_three.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_three.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_two.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_two.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_one.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_one.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_three.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_three.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -95,14 +72,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleOnePassengerOneScreenSlide.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VehicleOnePassengerOneScreenSlide.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1071">
-              <caret line="35" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="35" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.5007752" vertical-offset="0" max-vertical-offset="3264">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
               <folding>
-                <element signature="e#1759#2065#0" expanded="true" />
-                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="e#2037#2324#0" expanded="true" />
+                <element signature="e#2313#2314#0" expanded="true" />
+                <element signature="e#3767#4090#0" expanded="true" />
+                <element signature="e#4079#4080#0" expanded="true" />
+                <element signature="e#4136#4459#0" expanded="true" />
+                <element signature="e#4448#4449#0" expanded="true" />
+                <element signature="e#4503#4875#0" expanded="true" />
+                <element signature="e#4864#4865#0" expanded="true" />
+                <element signature="e#4920#5292#0" expanded="true" />
+                <element signature="e#5281#5282#0" expanded="true" />
+                <element signature="e#5336#5708#0" expanded="true" />
+                <element signature="e#5697#5698#0" expanded="true" />
+                <element signature="e#6900#7206#0" expanded="true" />
+                <element signature="e#7199#7200#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleOnePassengerThree.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VehicleOnePassengerThree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4728682" vertical-offset="1" max-vertical-offset="1088">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1088">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#1658#1964#0" expanded="true" />
                 <element signature="e#1957#1958#0" expanded="true" />
@@ -641,7 +630,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="916" extended-state="1" />
+    <frame x="-8" y="-8" width="1456" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -657,7 +646,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114473686" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114473686" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1180,17 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1071">
-          <caret line="35" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <element signature="e#1759#2065#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1054">
@@ -1237,11 +1215,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4728682" vertical-offset="1" max-vertical-offset="1088">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1088">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#1658#1964#0" expanded="true" />
             <element signature="e#1957#1958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5007752" vertical-offset="0" max-vertical-offset="3264">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="e#2037#2324#0" expanded="true" />
+            <element signature="e#2313#2314#0" expanded="true" />
+            <element signature="e#3767#4090#0" expanded="true" />
+            <element signature="e#4079#4080#0" expanded="true" />
+            <element signature="e#4136#4459#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#4503#4875#0" expanded="true" />
+            <element signature="e#4864#4865#0" expanded="true" />
+            <element signature="e#4920#5292#0" expanded="true" />
+            <element signature="e#5281#5282#0" expanded="true" />
+            <element signature="e#5336#5708#0" expanded="true" />
+            <element signature="e#5697#5698#0" expanded="true" />
+            <element signature="e#6900#7206#0" expanded="true" />
+            <element signature="e#7199#7200#0" expanded="true" />
           </folding>
         </state>
       </provider>
