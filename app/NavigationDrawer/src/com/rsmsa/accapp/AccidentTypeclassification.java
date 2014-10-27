@@ -325,8 +325,6 @@ public class AccidentTypeclassification extends Activity {
     @Override
     public void onResume(){
         super.onResume();
-            sthinSelected.setVisibility(View.VISIBLE);
-            sthinSelected.setText("112 Selected");
 
     }
 
@@ -338,9 +336,6 @@ public class AccidentTypeclassification extends Activity {
                 // code for result
                 final Bundle bundle = data.getExtras();
                 Log.d("resulty", bundle.getString("item")+"############");
-                positionSelected = bundle.getString("item");
-                sthinSelected.setVisibility(View.VISIBLE);
-                sthinSelected.setText("112 Selected");
             }
             if (resultCode == RESULT_CANCELED) {
                 // Write your code on no result return
