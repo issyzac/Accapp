@@ -15,9 +15,10 @@ public class UserFunctions {
 
     //URL of the PHP API
     private static String loginURL = "http://inventory.unnett.com/android/";
-    private static String personURL,vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://inventory.unnett.com/android/";
+    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://inventory.unnett.com/android/";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
+    private static String personURL = "http://inventory.unnett.com/android/";
 
     private static String login_tag = "login";
     private static String accident_location_tag = "accident_location";
@@ -125,7 +126,7 @@ public class UserFunctions {
     /**
      * Function to  Register
      **/
-    public JSONObject addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String driving_license, String occupation ,String casuality, String alcohol ,String signature ,String seat_helmet, String vehicle_no, int acc_data_id , String status){
+    public JSONObject addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status){
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
@@ -137,14 +138,14 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("nationality_id", nationality_id));
         params.add(new BasicNameValuePair("phone_no", phone_no));
-        params.add(new BasicNameValuePair("driving_license", driving_license));
-        params.add(new BasicNameValuePair("occupation", occupation));
+        //  params.add(new BasicNameValuePair("driving_license", driving_license));
+        // params.add(new BasicNameValuePair("occupation", occupation));
         params.add(new BasicNameValuePair("casuality", casuality));
         params.add(new BasicNameValuePair("alcohol", alcohol));
-        params.add(new BasicNameValuePair("signature", signature));
+        //   params.add(new BasicNameValuePair("signature", signature));
         params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
         params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
-        params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
+        //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
         params.add(new BasicNameValuePair("status", status));
 
         JSONObject json = jsonParser.getJSONFromUrl(personURL,params);
@@ -219,7 +220,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("vehicle_total", vehicle_total));
         params.add(new BasicNameValuePair("infrastructure", infrastructure));
         params.add(new BasicNameValuePair("rescue_costs", rescue_costs));
-       // params.add(new BasicNameValuePair("image_path", image_path));
+        // params.add(new BasicNameValuePair("image_path", image_path));
 
         JSONObject json = jsonParser.getJSONFromUrl(damageURL,params);
         return json;
@@ -272,22 +273,22 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(junctionURL,params);
         return json;
     }
-/*
-    public JSONObject addViolation(int vehicle1_id, int vehicle2_id, int acc_data_id) {
+    /*
+        public JSONObject addViolation(int vehicle1_id, int vehicle2_id, int acc_data_id) {
 
-        // Building Parameters
+            // Building Parameters
 
-        List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+            List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
-        params.add(new BasicNameValuePair("tag", violation_tag));
-        params.add(new BasicNameValuePair("vehicle1_id", vehicle1_id +""));
-        params.add(new BasicNameValuePair("vehicle2_id", vehicle2_id +""));
-        params.add(new BasicNameValuePair("acc_data_id", acc_data_id +""));
+            params.add(new BasicNameValuePair("tag", violation_tag));
+            params.add(new BasicNameValuePair("vehicle1_id", vehicle1_id +""));
+            params.add(new BasicNameValuePair("vehicle2_id", vehicle2_id +""));
+            params.add(new BasicNameValuePair("acc_data_id", acc_data_id +""));
 
-        JSONObject json = jsonParser.getJSONFromUrl(violationURL,params);
-        return json;
-    }
-*/
+            JSONObject json = jsonParser.getJSONFromUrl(violationURL,params);
+            return json;
+        }
+    */
    /*
     public JSONObject addDefects(int vehicle1_id, int vehicle2_id, String acc_data_id) {
 

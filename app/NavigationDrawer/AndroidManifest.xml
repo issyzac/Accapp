@@ -8,6 +8,11 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="17" />
 
+    <!-- Allow to connect with internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_"
@@ -31,8 +36,7 @@
             android:windowSoftInputMode="stateHidden"
             />
 
-        <activity android:name=".AccidentTypeclassification"
-            />
+        <activity android:name=".AccidentTypeclassification"/>
 
         <activity android:name=".AtcSelect"
             android:theme="@android:style/Theme.Dialog"

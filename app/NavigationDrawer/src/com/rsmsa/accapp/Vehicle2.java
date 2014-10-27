@@ -175,7 +175,7 @@ public class Vehicle2 extends Activity {
         infrastructure = (EditText) findViewById(R.id.infrastructure_edit);
         cost = (EditText) findViewById(R.id.rescue_cost_edit);
 
-        new NetCheck().execute();
+        new ProcessDriverData().execute();
 
     }
 
@@ -453,14 +453,14 @@ public class Vehicle2 extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        //driver one details
+        //vehicle insurance  details
         String insurance_company, type, phone_no, policy_no, policy_period, cost;
 
         //
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //vehicle details
+            //vehicle  insurace data details
 
             insurance_company = company_one.getText().toString();
             type = insurance_type_one.getText().toString();
@@ -604,5 +604,9 @@ public class Vehicle2 extends Activity {
             asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         else
             asyncTask.execute();
+    }
+    public void NetAsync(View view){
+        new NetCheck().execute();
+
     }
 }

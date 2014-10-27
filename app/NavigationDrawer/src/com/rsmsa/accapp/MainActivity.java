@@ -46,6 +46,10 @@ import android.widget.TabHost;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.rsmsa.accapp.library.DatabaseHandler;
+
+import org.json.JSONObject;
+
 import java.util.Calendar;
 
 import adapters.gridViewAdapter;
@@ -56,11 +60,87 @@ import transformers.ZoomOutPageTransformer;
 
 public class MainActivity extends FragmentActivity {
 
-	private ListView mDrawerList;
-	private DrawerLayout mDrawer;
+    //values to be sent to the database
+
+    public static String V1_fatal;
+    public static String V1_injury;
+    public static String V1_simple;
+    public static String V1_not_injured;
+    public static String V1_surname;
+    public static String V1_othernames;
+    public static String V1_physical_address_one;
+    public static String V1_address_box_one;
+    public static String V1_national_id_one;
+    public static String V1_phone_no_one;
+    public static String V1_gender;
+    public static String V1_dob_one;
+    public static String V1_nationality_one;
+    public static String V1_license_one;
+    public static String V1_occupation;
+    public static String V1_drug_edit;
+    public static String V1_alcohol_edit;
+    public static String V1_phone_edit;
+    public static String V1_seat_belt_edit;
+    public static String V1_type_one;
+    public static String V1_registration_number_one;
+    public static String V1_company_one;
+    public static String V1_insurance_type_one;
+    public static String V1_insurance_phone;
+    public static String V1_policy_period_one;
+    public static String V1_policy_number_one;
+    public static String V1_repair_amount_one;
+    public static String V1_vehicle;
+    public static String V1_vehicle_total;
+    public static String V1_infrastructure;
+    public static String V1_cost;
+    public static String V1_path;
+
+    //vehicle 2
+    public static String V2_fatal;
+    public static String V2_injury;
+    public static String V2_simple;
+    public static String V2_not_injured;
+    public static String V2_surname;
+    public static String V2_othernames;
+    public static String V2_physical_address_one;
+    public static String V2_address_box_one;
+    public static String V2_national_id_one;
+    public static String V2_phone_no_one;
+    public static String V2_gender;
+    public static String V2_dob_one;
+    public static String V2_nationality_one;
+    public static String V2_license_one;
+    public static String V2_occupation;
+    public static String V2_drug_edit;
+    public static String V2_alcohol_edit;
+    public static String V2_phone_edit;
+    public static String V2_seat_belt_edit;
+    public static String V2_type_one;
+    public static String V2_registration_number_one;
+    public static String V2_company_one;
+    public static String V2_insurance_type_one;
+    public static String V2_insurance_phone;
+    public static String V2_policy_period_one;
+    public static String V2_policy_number_one;
+    public static String V2_repair_amount_one;
+    public static String V2_vehicle;
+    public static String V2_vehicle_total;
+    public static String V2_infrastructure;
+    public static String V2_cost;
+    public static String V2_path;
+
+
+    /**
+     * Defining layout items.
+     */
+    EditText inputFatal,inputInjuries,inputSimple,damage,date,time,area_name,district,city,region,road_name,road_no,road_mark,intersection_name,intersection_no,intersection_mark;
+
+
+    private ListView mDrawerList;
+    private DrawerLayout mDrawer;
     public ListView gridView;
-	private CustomActionBarDrawerToggle mDrawerToggle;
-	private String[] menuItems;
+    private CustomActionBarDrawerToggle mDrawerToggle;
+    private String[] menuItems;
     public static boolean hasheader;
 
     /**
@@ -123,25 +203,71 @@ public class MainActivity extends FragmentActivity {
 
 
     @Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main_drawer);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_drawer);
 
-		// enable ActionBar app icon to behave as action to toggle nav drawer
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setHomeButtonEnabled(true);
+        // enable ActionBar app icon to behave as action to toggle nav drawer
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
 
 
-		mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         /**
          * header instance
          */
         header = (View)getLayoutInflater().inflate(R.layout.activity_accident,null);
+        /**
+         * Defining all layout items
+         **/
+
+        inputFatal = (EditText)header.findViewById(R.id.fatal_edit);
+
+        inputInjuries = (EditText)header.findViewById(R.id.injury_edit);
+
+        inputSimple = (EditText)header.findViewById(R.id.simple_edit);
+
+        damage = (EditText)header.findViewById(R.id.not_injured_edit);
+
+        area_name = (EditText)header.findViewById(R.id.name);
+
+        district = (EditText)header.findViewById(R.id.district);
+
+        city = (EditText)header.findViewById(R.id.city);
+
+        region = (EditText)header.findViewById(R.id.city);
+
+        road_name = (EditText)header.findViewById(R.id.road_name);
+
+        road_no = (EditText)header.findViewById(R.id.road_number);
+
+        road_mark = (EditText)header.findViewById(R.id.road_mark);
+
+        intersection_name = (EditText)header.findViewById(R.id.intersection_name);
+
+        intersection_no = (EditText)header.findViewById(R.id.intersection_name);
+
+        intersection_mark = (EditText)header.findViewById(R.id.intersection_mark);
 
         mDate = (EditText)header.findViewById(R.id.date);
 
         mTime = (EditText)header.findViewById(R.id.time);
+
+        String fatal =  inputFatal.getText().toString();
+        String injury = inputInjuries.getText().toString();
+        String simple = inputSimple.getText().toString();
+        String vehicle_damage = damage.getText().toString();
+        String area = area_name.getText().toString();
+        String acc_district = district.getText().toString();
+        String acc_city =  city.getText().toString();
+        String acc_region = region.getText().toString();
+        String roadName = road_name.getText().toString();
+        String roadNumber = road_no.getText().toString();
+        String roadMark =  road_mark.getText().toString();
+        String intersectionName = intersection_name.getText().toString();
+        String intersectionNumber = intersection_no.getText().toString();
+        String intersectionMark = intersection_mark.getText().toString();
 
         cal = Calendar.getInstance();
 
@@ -177,16 +303,19 @@ public class MainActivity extends FragmentActivity {
         });
 
         // set a custom shadow that overlays the main content when the drawer
-		// opens
-		mDrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        // opens
+        mDrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
-		_initMenu();
+        _initMenu();
 
         mDrawerToggle = new CustomActionBarDrawerToggle(this, mDrawer);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                sendToSqlite();
+                    Toast.makeText(getApplicationContext(), "Data Stored", Toast.LENGTH_SHORT).show();
                 Intent passenger = new Intent(MainActivity.this, Passenger.class);
                 startActivity(passenger);
             }
@@ -208,10 +337,27 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    private void sendToSqlite() {
+        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+        db.addVehicle(V1_type_one, V1_registration_number_one);
+        Toast.makeText(getApplicationContext(), V1_registration_number_one, Toast.LENGTH_SHORT).show();
+        db.addVehicle(V2_type_one, V2_registration_number_one);
+
+        db.addDriver(V1_surname, V1_othernames,V1_physical_address_one, V1_address_box_one,V1_national_id_one,V1_phone_no_one,V1_gender,V1_dob_one,V1_nationality_one,V1_license_one,V1_occupation,V1_alcohol_edit,V1_drug_edit,V1_phone_edit,V1_seat_belt_edit);
+        db.addDriver(V1_surname, V2_othernames,V2_physical_address_one, V2_address_box_one,V2_national_id_one,V2_phone_no_one,V2_gender,V2_dob_one,V2_nationality_one,V2_license_one,V2_occupation,V2_alcohol_edit,V2_drug_edit,V2_phone_edit,V2_seat_belt_edit);
+
+
+        db.addInsurance(V1_company_one,V1_insurance_type_one,V1_insurance_phone,V1_policy_number_one,V1_policy_period_one,V1_repair_amount_one);
+        db.addInsurance(V2_company_one,V2_insurance_type_one,V2_insurance_phone,V2_policy_number_one,V2_policy_period_one,V2_repair_amount_one);
+
+        db.addDamage(V1_vehicle,V1_vehicle_total,V1_infrastructure,V1_cost,V1_path);
+        db.addDamage(V2_vehicle,V2_vehicle_total,V2_infrastructure,V2_cost,V2_path);
+    }
+
     /**
      * Date change listender
      */
-    private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+    public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
             mDate.setText(selectedDay + " / " + (selectedMonth + 1) + " / "
@@ -238,7 +384,7 @@ public class MainActivity extends FragmentActivity {
         }
     };
 
-	private void _initMenu() {
+    private void _initMenu() {
 
         /**
          * instantiate next button
@@ -248,58 +394,58 @@ public class MainActivity extends FragmentActivity {
 
 
         hasheader = false;
-		NsMenuAdapter mAdapter = new NsMenuAdapter(this);
+        NsMenuAdapter mAdapter = new NsMenuAdapter(this);
 
-		// Add Header
-		//mAdapter.addHeader(R.string.ns_menu_main_header);
+        // Add Header
+        //mAdapter.addHeader(R.string.ns_menu_main_header);
 
-		// Add first block
+        // Add first block
 
-		menuItems = getResources().getStringArray(
-				R.array.ns_menu_items);
-		String[] menuItemsIcon = getResources().getStringArray(
-				R.array.ns_menu_items_icon);
+        menuItems = getResources().getStringArray(
+                R.array.ns_menu_items);
+        String[] menuItemsIcon = getResources().getStringArray(
+                R.array.ns_menu_items_icon);
 
-		int res = 0;
-		for (String item : menuItems) {
+        int res = 0;
+        for (String item : menuItems) {
 
-			int id_title = getResources().getIdentifier(item, "string",
-					this.getPackageName());
-			int id_icon = getResources().getIdentifier(menuItemsIcon[res],
-					"drawable", this.getPackageName());
+            int id_title = getResources().getIdentifier(item, "string",
+                    this.getPackageName());
+            int id_icon = getResources().getIdentifier(menuItemsIcon[res],
+                    "drawable", this.getPackageName());
 
-			NsMenuItemModel mItem = new NsMenuItemModel(id_title, id_icon);
-			//if (res==1) mItem.counter=12; //it is just an example...
-			//if (res==3) mItem.counter=3; //it is just an example...
-			mAdapter.addItem(mItem);
-			res++;
-		}
+            NsMenuItemModel mItem = new NsMenuItemModel(id_title, id_icon);
+            //if (res==1) mItem.counter=12; //it is just an example...
+            //if (res==3) mItem.counter=3; //it is just an example...
+            mAdapter.addItem(mItem);
+            res++;
+        }
 
-		//mAdapter.addHeader(R.string.ns_menu_main_header2);
+        //mAdapter.addHeader(R.string.ns_menu_main_header2);
 
-		mDrawerList = (ListView) findViewById(R.id.drawer);
-		if (mDrawerList != null)
-			mDrawerList.setAdapter(mAdapter);
+        mDrawerList = (ListView) findViewById(R.id.drawer);
+        if (mDrawerList != null)
+            mDrawerList.setAdapter(mAdapter);
 
 
-		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-	}
+    }
 
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		// Sync the toggle state after onRestoreInstanceState has occurred.
-		mDrawerToggle.syncState();
-	}
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
+    }
 
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		mDrawerToggle.onConfigurationChanged(newConfig);
-	}
-	
-	@Override
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
@@ -315,19 +461,19 @@ public class MainActivity extends FragmentActivity {
         return super.onPrepareOptionsMenu(menu);
     }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 		/*
 		 * The action bar home/up should open or close the drawer.
 		 * ActionBarDrawerToggle will take care of this.
 		 */
-		if (mDrawerToggle.onOptionsItemSelected(item)) {
-			return true;
-		}
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
 
-		// Handle your other action bar items...
-		return super.onOptionsItemSelected(item);
-	}
+        // Handle your other action bar items...
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onBackPressed() {
@@ -344,33 +490,33 @@ public class MainActivity extends FragmentActivity {
 
     private class CustomActionBarDrawerToggle extends ActionBarDrawerToggle {
 
-		public CustomActionBarDrawerToggle(Activity mActivity,DrawerLayout mDrawerLayout){
-			super(
-			    mActivity,
-			    mDrawerLayout, 
-			    R.drawable.ic_drawer,
-			    R.string.ns_menu_open, 
-			    R.string.ns_menu_close);
-		}
+        public CustomActionBarDrawerToggle(Activity mActivity,DrawerLayout mDrawerLayout){
+            super(
+                    mActivity,
+                    mDrawerLayout,
+                    R.drawable.ic_drawer,
+                    R.string.ns_menu_open,
+                    R.string.ns_menu_close);
+        }
 
-		@Override
-		public void onDrawerClosed(View view) {
-			getActionBar().setTitle(getString(R.string.ns_menu_close));
-			invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-		}
+        @Override
+        public void onDrawerClosed(View view) {
+            getActionBar().setTitle(getString(R.string.ns_menu_close));
+            invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+        }
 
-		@Override
-		public void onDrawerOpened(View drawerView) {
-			getActionBar().setTitle(getString(R.string.ns_menu_open));
-			invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-		}
-	}
-	
-	private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onDrawerOpened(View drawerView) {
+            getActionBar().setTitle(getString(R.string.ns_menu_open));
+            invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+        }
+    }
 
-		@Override
-		public void onItemClick(AdapterView<?> parent, View view, int position,
-				long id) {
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position,
+                                long id) {
 
             if (position == 0){
 
@@ -395,9 +541,9 @@ public class MainActivity extends FragmentActivity {
                 gridView.setAdapter(new gridViewAdapter(MainActivity.this));
             }
 
-			// Highlight the selected item, update the title, and close the drawer
-			// update selected item and title, then close the drawer
-	        mDrawerList.setItemChecked(position, true);
+            // Highlight the selected item, update the title, and close the drawer
+            // update selected item and title, then close the drawer
+            mDrawerList.setItemChecked(position, true);
             if (position == 1) {
 
                 if(hasheader) {
@@ -409,10 +555,10 @@ public class MainActivity extends FragmentActivity {
                 //You should reset item counter
                 mDrawer.closeDrawer(mDrawerList);
             }
-			
-		}
-		
-	}
+
+        }
+
+    }
 
 
     /**
