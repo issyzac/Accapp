@@ -15,6 +15,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -171,6 +173,24 @@ public class ScreenSlidePageFragment extends Fragment {
 
         cal = Calendar.getInstance();
 
+
+        day = cal.get(Calendar.DAY_OF_MONTH);
+
+        month = cal.get(Calendar.MONTH);
+
+        year = cal.get(Calendar.YEAR);
+
+        pickDate = (Button) rootView.findViewById(R.id.date_picker);
+        pickDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity() , datePickerListener, year, month, day);
+                datePickerDialog.show();
+            }
+        });
+
+        cal = Calendar.getInstance();
+
         day = cal.get(Calendar.DAY_OF_MONTH);
 
         month = cal.get(Calendar.MONTH);
@@ -199,6 +219,7 @@ public class ScreenSlidePageFragment extends Fragment {
                     + selectedYear);
         }
     };
+
 
 
     private class EditTextWatcher implements TextWatcher {
@@ -309,5 +330,6 @@ public class ScreenSlidePageFragment extends Fragment {
 
         }
     }
+
 
 }

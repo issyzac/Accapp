@@ -1,5 +1,6 @@
 package com.rsmsa.accapp;
 
+
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,12 +20,27 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
+        import android.app.DatePickerDialog;
+        import android.os.Bundle;
+        import android.support.v4.app.Fragment;
+        import android.util.Log;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.Button;
+        import android.widget.DatePicker;
+        import android.widget.EditText;
+        import android.widget.TextView;
+
+        import java.util.Calendar;
+
 /**
  *  Created by isaiah on 10/20/2014.
  */
 public class ScreenSlidePageFragmentTwo extends Fragment {
 
     EditText tab_one;
+
     /**
      * Defining layout items.
      */
@@ -78,6 +94,7 @@ public class ScreenSlidePageFragmentTwo extends Fragment {
                 R.layout.vehicle_two, container, false);
 
         tab_one = (EditText) rootView.findViewById(R.id.dob_one);
+
 
         /**
          * Defining all layout items
@@ -169,6 +186,7 @@ public class ScreenSlidePageFragmentTwo extends Fragment {
         cost.addTextChangedListener(new EditTextWatcher(cost));
 
 
+
         cal = Calendar.getInstance();
 
         day = cal.get(Calendar.DAY_OF_MONTH);
@@ -201,6 +219,7 @@ public class ScreenSlidePageFragmentTwo extends Fragment {
                     + selectedYear);
         }
     };
+
 
     private class EditTextWatcher implements TextWatcher {
 

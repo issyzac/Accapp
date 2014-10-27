@@ -49,7 +49,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
-            android:textSize="16sp"
             android:checked="true"
             android:id="@+id/male"/>
 
@@ -57,7 +56,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
-            android:textSize="16sp"
             android:id="@+id/female"/>
 
     </RadioGroup>
@@ -75,12 +73,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dob_one"
+        android:minWidth="100dp"
         android:layout_below="@id/gender"
         android:layout_toRightOf="@id/dob"
-        android:hint="Pick Date"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="16dp"
         android:textSize="12sp"/>
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/date_picker"
+        android:layout_below="@id/gender"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:text="Pick"
+        android:textSize="14sp"
+        android:background="@drawable/button"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -162,7 +173,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nationality"
+        android:id="@+id/drugs"
         android:text="Drugs/Alcohol % : "
         android:layout_below="@id/phone_no_one"
         android:layout_marginTop="16dp"
@@ -176,7 +187,7 @@
         android:layout_marginTop="4dp"
         android:minWidth="100dp"
         android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/nationality"
+        android:layout_toRightOf="@id/drugs"
         android:layout_below="@id/phone_no_one"/>
 
     <TextView

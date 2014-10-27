@@ -15,10 +15,17 @@ public class UserFunctions {
 
     //URL of the PHP API
     private static String loginURL = "http://inventory.unnett.com/android/";
+<<<<<<< HEAD
     private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://inventory.unnett.com/android/";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
     private static String personURL = "http://inventory.unnett.com/android/";
+=======
+    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
+    private static String forpassURL = "http://inventory.unnett.com/android/";
+    private static String chgpassURL = "http://inventory.unnett.com/android/";
+    private static String personURL = "http://192.168.43.251/PSMS/public/android/";
+>>>>>>> e943e39af007213eb5cd17d13ee0498d98b35671
 
     private static String login_tag = "login";
     private static String accident_location_tag = "accident_location";
@@ -138,6 +145,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("nationality_id", nationality_id));
         params.add(new BasicNameValuePair("phone_no", phone_no));
+<<<<<<< HEAD
         //  params.add(new BasicNameValuePair("driving_license", driving_license));
         // params.add(new BasicNameValuePair("occupation", occupation));
         params.add(new BasicNameValuePair("casuality", casuality));
@@ -146,6 +154,16 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
         params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
         //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
+=======
+      //  params.add(new BasicNameValuePair("driving_license", driving_license));
+       // params.add(new BasicNameValuePair("occupation", occupation));
+        params.add(new BasicNameValuePair("casuality", casuality));
+        params.add(new BasicNameValuePair("alcohol", alcohol));
+     //   params.add(new BasicNameValuePair("signature", signature));
+        params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
+        params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
+     //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
+>>>>>>> e943e39af007213eb5cd17d13ee0498d98b35671
         params.add(new BasicNameValuePair("status", status));
 
         JSONObject json = jsonParser.getJSONFromUrl(personURL,params);

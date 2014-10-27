@@ -10,6 +10,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+
+import adapters.SpinnerAdapter;
 
 
 /**
@@ -66,9 +70,12 @@ public class AccidentTypeclassification extends Activity {
     /**
      * Spinner Adapter declaration
      */
+    public SpinnerAdapter dataAdapter;
 
-
-    ImageView scroller;
+    /**
+     * Spinner Adapter declaration
+     */
+  ImageView scroller;
     DatabaseHandler db = new DatabaseHandler(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +89,30 @@ public class AccidentTypeclassification extends Activity {
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 NetAsync(view);
             }
         });
 
+                Intent passOne = new Intent(AccidentTypeclassification.this, OnePassengerOne.class);
+                startActivity(passOne);
+
+
+        atcSpinner = (Spinner) findViewById(R.id.atc_spinner);
+        junctionStructureSpinner = (Spinner) findViewById(R.id.junction_structure_spinner);
+        junctionControlSpinner = (Spinner) findViewById(R.id.junction_control_spinner);
+        roadTypeSpinner = (Spinner) findViewById(R.id.road_type_spinner);
+        surfaceTypeSpinner = (Spinner) findViewById(R.id.surface_type_spinner);
+        roadStructureSpinner = (Spinner) findViewById(R.id.road_structure_spinner);
+        surfaceStatusSpinner = (Spinner) findViewById(R.id.road_status_spinner);
+        roadSurfaceSpinner = (Spinner) findViewById(R.id.road_surface_spinner);
+        lightSpinner = (Spinner) findViewById(R.id.light_spinner);
+        whetherSpinner = (Spinner) findViewById(R.id.wheather_spinner);
+        controlSpinner = (Spinner) findViewById(R.id.control_spinner);
+        violationOneSpinner = (Spinner) findViewById(R.id.one_violations_spinner);
+        violationTwoSpinner = (Spinner) findViewById(R.id.two_violations_spinner);
+        defectOneSpinner = (Spinner) findViewById(R.id.one_defects_spinner);
+        defectTwoSpinner = (Spinner) findViewById(R.id.two_defects_spinner);
 
 
 
@@ -202,6 +229,7 @@ public class AccidentTypeclassification extends Activity {
         defects.add("Tyre Burst");
         defects.add("Others");
 
+        adapterSetter(1, list);
 
 
         atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -223,7 +251,6 @@ public class AccidentTypeclassification extends Activity {
                 NetAsync(view);
             }
         });
-
 
 
         ArrayAdapter<String> atc_adapter = new ArrayAdapter<String>
@@ -317,6 +344,8 @@ public class AccidentTypeclassification extends Activity {
                 (android.R.layout.simple_spinner_dropdown_item);
         defectTwoSpinner.setAdapter(defectTwoAdapter);
 
+
+
         accidentTypeSelectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -333,6 +362,12 @@ public class AccidentTypeclassification extends Activity {
 
 
 
+
+
+
+
+
+
     /**
      * Async Task to check whether internet connection is working
      */
@@ -341,8 +376,6 @@ public class AccidentTypeclassification extends Activity {
         private ProcessDriverData asyncTask2;
         // private ProcessInsuranceData asyncTask3;
         // private ProcessDamageData asyncTask4;
-
-
 
 
         @Override
@@ -394,160 +427,170 @@ public class AccidentTypeclassification extends Activity {
                 Toast.makeText(getApplicationContext(), "Error in Network Connection.", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
-
-
-    private class ProcessDriverData extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal, severe, simple, not_injured;
-        //driver one details
-        String surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet;
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            HashMap driver = new HashMap();
-            driver = db.getDriver();
-
-            surname = (String) driver.get("surname");
-            other_names = (String) driver.get("names");
-            physical_address = (String) driver.get("address");
-            po_box = (String) driver.get("po_box");
-            national_id = (String) driver.get("national_id");
-            phone_no = (String) driver.get("phone");
-            gender = (String) driver.get("gender");
-            dob = (String) driver.get("dob");
-            nationality = (String) driver.get("nationality");
-            licence = (String) driver.get("license");
-            occupation = (String) driver.get("occupation");
-            alcohol = (String) driver.get("alcohol");
-            drug = (String) driver.get("drugs");
-            phone_use = (String) driver.get("phone_use");
-            seatbelt_helmet = (String) driver.get("helmet");
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addDriver(surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
+        private class ProcessDriverData extends AsyncTask<String, String, JSONObject> {
             /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
+             * Defining Process dialog
+             */
+            private ProgressDialog pDialog;
+            String fatal, severe, simple, not_injured;
+            //driver one details
+            String surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet;
 
-                    if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Driver One Details Stored.", Toast.LENGTH_SHORT).show();
+            //
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                HashMap driver = new HashMap();
+                driver = db.getDriver();
+
+                surname = (String) driver.get("surname");
+                other_names = (String) driver.get("names");
+                physical_address = (String) driver.get("address");
+                po_box = (String) driver.get("po_box");
+                national_id = (String) driver.get("national_id");
+                phone_no = (String) driver.get("phone");
+                gender = (String) driver.get("gender");
+                dob = (String) driver.get("dob");
+                nationality = (String) driver.get("nationality");
+                licence = (String) driver.get("license");
+                occupation = (String) driver.get("occupation");
+                alcohol = (String) driver.get("alcohol");
+                drug = (String) driver.get("drugs");
+                phone_use = (String) driver.get("phone_use");
+                seatbelt_helmet = (String) driver.get("helmet");
+
+                pDialog = new ProgressDialog(AccidentTypeclassification.this);
+                pDialog.setTitle("Contacting Servers");
+                pDialog.setMessage("Storing Data...");
+                pDialog.setIndeterminate(false);
+                pDialog.setCancelable(true);
+                pDialog.show();
+            }
+
+            @Override
+            protected JSONObject doInBackground(String... args) {
+
+                UserFunctions userFunction = new UserFunctions();
+
+                JSONObject json = userFunction.addDriver(surname, other_names, physical_address, po_box, national_id, phone_no, gender, dob, nationality, licence, occupation, drug, alcohol, phone_use, seatbelt_helmet);
+                return json;
+            }
+
+            @Override
+            protected void onPostExecute(JSONObject json) {
+                /**
+                 * Checks for success message.
+                 **/
+                try {
+                    if (json != null && json.getString(KEY_SUCCESS) != null) {
+                        String res = json.getString(KEY_SUCCESS);
+
+                        if (Integer.parseInt(res) == 1) {
+                            pDialog.setTitle("Getting Data");
+                            pDialog.setMessage("Loading Info");
+                            //Pass sqlite data
+                            Toast.makeText(getApplicationContext(), "Driver One Details Stored.", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        pDialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
         }
-    }
 
 
-
-    private class ProcessVehicleData extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal, severe, simple, not_injured;
-        //driver one details
-        String type, reg_no;
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            HashMap vehicle = new HashMap();
-            vehicle = db.getVehicle();
-
-            type = (String) vehicle.get("vehicle_type");
-            reg_no = (String) vehicle.get("vehicle_reg_no");
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addVehicle(type, reg_no);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
+        private class ProcessVehicleData extends AsyncTask<String, String, JSONObject> {
             /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
+             * Defining Process dialog
+             */
+            private ProgressDialog pDialog;
+            String fatal, severe, simple, not_injured;
+            //driver one details
+            String type, reg_no;
 
-                    if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle One Details Stored.", Toast.LENGTH_SHORT).show();
+            //
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                HashMap vehicle = new HashMap();
+                vehicle = db.getVehicle();
+
+                type = (String) vehicle.get("vehicle_type");
+                reg_no = (String) vehicle.get("vehicle_reg_no");
+
+                pDialog = new ProgressDialog(AccidentTypeclassification.this);
+                pDialog.setTitle("Contacting Servers");
+                pDialog.setMessage("Storing Data...");
+                pDialog.setIndeterminate(false);
+                pDialog.setCancelable(true);
+                pDialog.show();
+            }
+
+            @Override
+            protected JSONObject doInBackground(String... args) {
+
+                UserFunctions userFunction = new UserFunctions();
+
+                JSONObject json = userFunction.addVehicle(type, reg_no);
+                return json;
+            }
+
+            @Override
+            protected void onPostExecute(JSONObject json) {
+                /**
+                 * Checks for success message.
+                 **/
+                try {
+                    if (json != null && json.getString(KEY_SUCCESS) != null) {
+                        String res = json.getString(KEY_SUCCESS);
+
+                        if (Integer.parseInt(res) == 1) {
+                            pDialog.setTitle("Getting Data");
+                            pDialog.setMessage("Loading Info");
+                            //Pass sqlite data
+                            Toast.makeText(getApplicationContext(), "Vehicle One Details Stored.", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        pDialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
         }
+
+
+        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+            // API 11
+        void startMyTask(AsyncTask asyncTask) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            else
+                asyncTask.execute();
+        }
+
+
+        public void adapterSetter(int position, List<String> mList) {
+            if (position == 1) {
+                dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
+                atcSpinner.setAdapter(dataAdapter);
+            }
+            if (position == 2) {
+                dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
+                junctionStructureSpinner.setAdapter(dataAdapter);
+            }
+
+        }
+
+
+        public void NetAsync(View view) {
+            new NetCheck().execute();
+
+        }
     }
-
-
-
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB) // API 11
-    void startMyTask(AsyncTask asyncTask) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-            asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        else
-            asyncTask.execute();
-    }
-
-
-    public void NetAsync(View view){
-        new NetCheck().execute();
-
-    }
-
-}
