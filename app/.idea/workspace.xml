@@ -40,18 +40,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/p_112.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/p_181.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/p_777.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/p_778.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/p_779.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/src/adapters/ATCgridAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/grid_item_atc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AtcSelect.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/AtcSelect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/values/arrays.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/values/arrays.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc_select.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc_select.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -82,8 +70,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7419899" vertical-offset="87" max-vertical-offset="799">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.54468805" vertical-offset="0" max-vertical-offset="731">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -662,7 +650,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1221,8 +1209,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7419899" vertical-offset="87" max-vertical-offset="799">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.54468805" vertical-offset="0" max-vertical-offset="731">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding />
         </state>
       </provider>
