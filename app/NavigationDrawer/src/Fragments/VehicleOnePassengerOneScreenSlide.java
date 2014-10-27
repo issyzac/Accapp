@@ -68,7 +68,6 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
 
         init();
 
-
         cal = Calendar.getInstance();
 
         day = cal.get(Calendar.DAY_OF_MONTH);
@@ -199,7 +198,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
     }
 
     /**
-     * Date change listender
+     * Date change listener
      */
     public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,

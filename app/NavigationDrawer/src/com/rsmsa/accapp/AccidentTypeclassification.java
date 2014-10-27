@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +33,10 @@ public class AccidentTypeclassification extends Activity {
 
     int selectedSpinner;
 
+    public final int REPORT_RESULT = 1;
+
+    public String positionSelected = "-1";
+
     /**
      *
      * Accident type classification spinner
@@ -47,11 +53,14 @@ public class AccidentTypeclassification extends Activity {
 
     ImageView scroller;
 
+    public TextView sthinSelected;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
 
+        sthinSelected = (TextView)findViewById(R.id.selected_atc);
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
 
@@ -194,8 +203,6 @@ public class AccidentTypeclassification extends Activity {
         defects.add("Tyre Burst");
         defects.add("Others");
 
-        adapterSetter(1, list);
-
         atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -315,16 +322,31 @@ public class AccidentTypeclassification extends Activity {
 
     }
 
-    public void adapterSetter(int position, List<String> mList){
-        if(position == 1){
-            dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
-            atcSpinner.setAdapter(dataAdapter);
-        }
-        if(position == 2){
-            dataAdapter = new SpinnerAdapter(AccidentTypeclassification.this, mList);
-            junctionStructureSpinner.setAdapter(dataAdapter);
-        }
+    @Override
+    public void onResume(){
+        super.onResume();
+            sthinSelected.setVisibility(View.VISIBLE);
+            sthinSelected.setText("112 Selected");
 
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REPORT_RESULT) {
+            if (resultCode == RESULT_OK) {
+                // code for result
+                final Bundle bundle = data.getExtras();
+                Log.d("resulty", bundle.getString("item")+"############");
+                positionSelected = bundle.getString("item");
+                sthinSelected.setVisibility(View.VISIBLE);
+                sthinSelected.setText("112 Selected");
+            }
+            if (resultCode == RESULT_CANCELED) {
+                // Write your code on no result return
+            }
+        }
+    }
+
 
 }
