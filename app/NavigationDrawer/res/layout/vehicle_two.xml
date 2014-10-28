@@ -512,7 +512,30 @@
                 android:layout_marginTop="16dp"
                 android:layout_below="@id/strip_two"/>
 
+            <Spinner
+                android:id="@+id/vtype_spinner"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:minWidth="100dp"
+                android:layout_toRightOf="@id/type"
+                android:layout_below="@id/strip_two"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignRight="@+id/atc_title"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:text="Select"
+                android:layout_marginTop="4dp"
+                android:id="@+id/vehicle_type_select_button"
+                android:layout_below="@id/strip_two"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
             <EditText
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/type_one"
@@ -528,9 +551,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/registration_number"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:text="Registration Number : "
-                android:layout_below="@id/type_one"/>
+                android:layout_below="@id/vtype_spinner"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -539,9 +562,9 @@
                 android:layout_marginLeft="16dp"
                 android:textSize="12sp"
                 android:minWidth="100dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/registration_number"
-                android:layout_below="@id/type_one"/>
+                android:layout_below="@id/vtype_spinner"/>
 
 
 
