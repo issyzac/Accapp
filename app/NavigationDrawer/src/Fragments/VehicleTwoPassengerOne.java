@@ -1,5 +1,6 @@
 package Fragments;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -168,7 +169,7 @@ public class VehicleTwoPassengerOne extends Fragment {
                 }
             }
         });
-        Log.d("isaya", Passenger.casuality21+"");
+        Log.d("isaya", Passenger.casuality21 + "");
 
         ViewName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -183,7 +184,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.Name21=ViewName.getText().toString();
+                Passenger.Name21 = ViewName.getText().toString();
                 //  Log.d("isaya", Passenger.Name11+"");
                 //Passenger.logging();
             }
@@ -201,7 +202,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.DateOfBirth21=ViewDateOfBirth.getText().toString();
+                Passenger.DateOfBirth21 = ViewDateOfBirth.getText().toString();
 
             }
         });
@@ -218,7 +219,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.Address21=ViewAddress.getText().toString();
+                Passenger.Address21 = ViewAddress.getText().toString();
 
             }
         });
@@ -235,7 +236,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.PhysicalAddress21=ViewPhysicalAddress.getText().toString();
+                Passenger.PhysicalAddress21 = ViewPhysicalAddress.getText().toString();
 
             }
         });
@@ -252,7 +253,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.NationalId21=ViewNationalId.getText().toString();
+                Passenger.NationalId21 = ViewNationalId.getText().toString();
 
             }
         });
@@ -269,7 +270,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.PhoneNo21=ViewPhoneNo.getText().toString();
+                Passenger.PhoneNo21 = ViewPhoneNo.getText().toString();
 
             }
         });
@@ -286,7 +287,7 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.drugs21=ViewDrugsAlcohol.getText().toString();
+                Passenger.drugs21 = ViewDrugsAlcohol.getText().toString();
 
             }
         });
@@ -303,19 +304,12 @@ public class VehicleTwoPassengerOne extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                Passenger.SeatbeltHelmet21=ViewSeatbeltHelmet.getText().toString();
+                Passenger.SeatbeltHelmet21 = ViewSeatbeltHelmet.getText().toString();
 
             }
         });
 
-
-
-
-
-
-
     }
-
     /**
      * Date change listender
      */

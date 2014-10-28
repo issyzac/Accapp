@@ -40,7 +40,7 @@ import java.util.List;
 
 
 
-import adapters.SpinnerAdapter;
+
 
 /**
  *  Created by isaiah on 10/22/2014.
@@ -59,7 +59,7 @@ public class AccidentTypeclassification extends Activity {
 
     Button finishButton;
 
-    int selectedSpinner;
+
 
     int selectedSpinner;
 
@@ -79,9 +79,9 @@ public class AccidentTypeclassification extends Activity {
     /**
      * Spinner Adapter declaration
      */
-    public SpinnerAdapter dataAdapter;
+  //  public SpinnerAdapter dataAdapter;
 
-    ImageView scroller;
+   // ImageView scroller;
 
     public TextView sthinSelected;
 
@@ -220,14 +220,7 @@ public class AccidentTypeclassification extends Activity {
         control.add("Lane Marking");
         control.add("Speed Limit/Sign");
 
-        List<String> list = new ArrayList<String>();
-        list.add("Single vehicle accident");
-        list.add("Accidents between vehicles driving same travel direction (2 or more vehicles)");
-        list.add("Accidents between vehicles driving opposite travel direction (2 or more vehicles)");
-        list.add("Accidents at a junction turning in same or opposite direction (2 or more vehi.)");
-        list.add("Collision at a junction between two or more participants");
-        list.add("Accident w. parked vehicles");
-        list.add("Pedestrian, animals and other accidents");
+
 
         List<String> violation = new ArrayList<String>();
         violation.add("Overspeed");
@@ -273,7 +266,7 @@ public class AccidentTypeclassification extends Activity {
 
 
 
-        ArrayAdapter<String> atc_adapter = new ArrayAdapter<String>
+
         atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
