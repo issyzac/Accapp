@@ -53,8 +53,8 @@
 
             <Spinner
                 android:id="@+id/atc_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
                 android:minWidth="100dp"
                 android:layout_toRightOf="@id/accident_type_heading"
                 android:layout_below="@id/atc_strip"
@@ -74,6 +74,7 @@
                 android:layout_marginRight="8dp"/>
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/selected_atc"
@@ -485,6 +486,15 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@color/deep_orange_a100"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/scroller"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/description_strip"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"/>
 
             </RelativeLayout>
 

@@ -10,6 +10,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.Toast;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rsmsa.accapp.library.DatabaseHandler;
@@ -36,6 +39,8 @@ import java.util.HashMap;
 import java.util.List;
 
 
+
+import adapters.SpinnerAdapter;
 
 /**
  *  Created by isaiah on 10/22/2014.
@@ -56,6 +61,12 @@ public class AccidentTypeclassification extends Activity {
 
     int selectedSpinner;
 
+    int selectedSpinner;
+
+    public final int REPORT_RESULT = 1;
+
+    public String positionSelected = "-1";
+
     /**
      *
      * Accident type classification spinner
@@ -71,11 +82,23 @@ public class AccidentTypeclassification extends Activity {
     public SpinnerAdapter dataAdapter;
 
     ImageView scroller;
+
+    public TextView sthinSelected;
+
+
+    /**
+     * Spinner Adapter declaration
+     */
+    public SpinnerAdapter dataAdapter;
+
+    ImageView scroller;
    // DatabaseHandler db = new DatabaseHandler(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
+
+        sthinSelected = (TextView)findViewById(R.id.selected_atc);
 
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
@@ -197,6 +220,14 @@ public class AccidentTypeclassification extends Activity {
         control.add("Lane Marking");
         control.add("Speed Limit/Sign");
 
+        List<String> list = new ArrayList<String>();
+        list.add("Single vehicle accident");
+        list.add("Accidents between vehicles driving same travel direction (2 or more vehicles)");
+        list.add("Accidents between vehicles driving opposite travel direction (2 or more vehicles)");
+        list.add("Accidents at a junction turning in same or opposite direction (2 or more vehi.)");
+        list.add("Collision at a junction between two or more participants");
+        list.add("Accident w. parked vehicles");
+        list.add("Pedestrian, animals and other accidents");
 
         List<String> violation = new ArrayList<String>();
         violation.add("Overspeed");
@@ -237,6 +268,21 @@ public class AccidentTypeclassification extends Activity {
             @Override
             public void onClick(View view) {
                 NetAsync(view);
+            }
+        });
+
+
+
+        ArrayAdapter<String> atc_adapter = new ArrayAdapter<String>
+        atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedSpinner = i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
 
@@ -780,5 +826,28 @@ public class AccidentTypeclassification extends Activity {
         new NetCheck().execute();
 
     }
+
+
+    @Override
+    public void onResume(){
+        super.onResume();
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REPORT_RESULT) {
+            if (resultCode == RESULT_OK) {
+                // code for result
+                final Bundle bundle = data.getExtras();
+                Log.d("resulty", bundle.getString("item")+"############");
+            }
+            if (resultCode == RESULT_CANCELED) {
+                // Write your code on no result return
+            }
+        }
+    }
+
 
 }
