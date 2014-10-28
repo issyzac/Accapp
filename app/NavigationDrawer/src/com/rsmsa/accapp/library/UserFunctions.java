@@ -9,6 +9,9 @@ import java.util.List;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 import android.content.Context;
+import android.util.Log;
+
+import com.rsmsa.accapp.Passenger;
 
 public class UserFunctions {
     private JSONParser jsonParser;
@@ -18,7 +21,7 @@ public class UserFunctions {
     private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
-    private static String personURL = "http://192.168.43.251/PSMS/public/android/";
+    private static String personURL = "http://192.168.43.251/PSMS/public/android/index.php";
 
     private static String login_tag = "login";
     private static String accident_location_tag = "accident_location";
@@ -138,15 +141,13 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("nationality_id", nationality_id));
         params.add(new BasicNameValuePair("phone_no", phone_no));
-      //  params.add(new BasicNameValuePair("driving_license", driving_license));
-       // params.add(new BasicNameValuePair("occupation", occupation));
         params.add(new BasicNameValuePair("casuality", casuality));
         params.add(new BasicNameValuePair("alcohol", alcohol));
-     //   params.add(new BasicNameValuePair("signature", signature));
         params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
         params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
-     //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
         params.add(new BasicNameValuePair("status", status));
+
+
 
         JSONObject json = jsonParser.getJSONFromUrl(personURL,params);
         return json;
