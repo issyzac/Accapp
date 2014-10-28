@@ -47,6 +47,10 @@
             android:theme="@android:style/Theme.Dialog"
             />
 
+        <activity android:name=".VehicleType"
+            android:theme="@android:style/Theme.Dialog"
+            />
+
     </application>
 
 </manifest>
