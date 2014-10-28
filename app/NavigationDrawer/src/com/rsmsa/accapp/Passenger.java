@@ -124,7 +124,6 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddressA;
     public static String NationalIdA;
     public static String PhoneNoA;
-    public static String SeatbeltHelmetA;
     public static String casualityA;
     public static String drugsA;
 
@@ -135,7 +134,6 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddressB;
     public static String NationalIdB;
     public static String PhoneNoB;
-    public static String SeatbeltHelmetB;
     public static String casualityB;
     public static String drugsB;
 
@@ -146,7 +144,6 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddressC;
     public static String NationalIdC;
     public static String PhoneNoC;
-    public static String SeatbeltHelmetC;
     public static String casualityC;
     public static String drugsC;
 
@@ -157,7 +154,6 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddressD;
     public static String NationalIdD;
     public static String PhoneNoD;
-    public static String SeatbeltHelmetD;
     public static String casualityD;
     public static String drugsD;
 
@@ -168,7 +164,6 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddressE;
     public static String NationalIdE;
     public static String PhoneNoE;
-    public static String SeatbeltHelmetE;
     public static String casualityE;
     public static String drugsE;
 
@@ -223,6 +218,7 @@ public class Passenger extends FragmentActivity{
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent atc = new Intent(Passenger.this, AccidentTypeclassification.class);
                 startActivity(atc);
             }
@@ -230,9 +226,7 @@ public class Passenger extends FragmentActivity{
 
     }
 
-    public static void logging (){
-        Log.d("isaya", Name11+"");
-    }
+
 
     /**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in

@@ -9,19 +9,19 @@ import java.util.List;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 import android.content.Context;
+import android.util.Log;
+
+import com.rsmsa.accapp.Passenger;
 
 public class UserFunctions {
     private JSONParser jsonParser;
 
     //URL of the PHP API
     private static String loginURL = "http://inventory.unnett.com/android/";
-
-
-    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://inventory.unnett.com/android/";
+    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
-    private static String personURL = "http://192.168.43.251/PSMS/public/android/";
-
+    private static String personURL = "http://192.168.43.251/PSMS/public/android/index.php";
 
     private static String login_tag = "login";
     private static String accident_location_tag = "accident_location";
@@ -83,15 +83,15 @@ public class UserFunctions {
     /**
      * Function to  Register
      **/
-    public JSONObject addAccidentLocation(String area,String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
+    public JSONObject addAccidentLocation(String area, String accident_data_id,int district_id, int region_id, String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
         params.add(new BasicNameValuePair("tag", accident_location_tag));
         params.add(new BasicNameValuePair("accident_area", area));
-       // params.add(new BasicNameValuePair("accident_data_id", accident_data_id));
-       // params.add(new BasicNameValuePair("district_id", district_id +""));
-        //params.add(new BasicNameValuePair("region_id", region_id +""));
+        params.add(new BasicNameValuePair("accident_data_id", accident_data_id));
+        params.add(new BasicNameValuePair("district_id", district_id +""));
+        params.add(new BasicNameValuePair("region_id", region_id +""));
         params.add(new BasicNameValuePair("road_name", road_name));
         params.add(new BasicNameValuePair("road_no", road_no));
         params.add(new BasicNameValuePair("road_kilo_mark", road_kilo_mark));
@@ -141,26 +141,13 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("nationality_id", nationality_id));
         params.add(new BasicNameValuePair("phone_no", phone_no));
-
-        //  params.add(new BasicNameValuePair("driving_license", driving_license));
-        // params.add(new BasicNameValuePair("occupation", occupation));
         params.add(new BasicNameValuePair("casuality", casuality));
         params.add(new BasicNameValuePair("alcohol", alcohol));
-        //   params.add(new BasicNameValuePair("signature", signature));
         params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
         params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
-        //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
-
-      //  params.add(new BasicNameValuePair("driving_license", driving_license));
-       // params.add(new BasicNameValuePair("occupation", occupation));
-        params.add(new BasicNameValuePair("casuality", casuality));
-        params.add(new BasicNameValuePair("alcohol", alcohol));
-     //   params.add(new BasicNameValuePair("signature", signature));
-        params.add(new BasicNameValuePair("seat_helmet", seat_helmet));
-        params.add(new BasicNameValuePair("vehicle_no", vehicle_no));
-     //   params.add(new BasicNameValuePair("acc_data_id", acc_data_id + ""));
-
         params.add(new BasicNameValuePair("status", status));
+
+
 
         JSONObject json = jsonParser.getJSONFromUrl(personURL,params);
         return json;
@@ -189,6 +176,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("physical_address", physical_address));
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("national_id", national_id));
+        params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("phone_no", phone_no));
         params.add(new BasicNameValuePair("gender", gender));
         params.add(new BasicNameValuePair("dob", dob));
@@ -233,7 +221,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("vehicle_total", vehicle_total));
         params.add(new BasicNameValuePair("infrastructure", infrastructure));
         params.add(new BasicNameValuePair("rescue_costs", rescue_costs));
-        // params.add(new BasicNameValuePair("image_path", image_path));
+       // params.add(new BasicNameValuePair("image_path", image_path));
 
         JSONObject json = jsonParser.getJSONFromUrl(damageURL,params);
         return json;
@@ -286,22 +274,22 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(junctionURL,params);
         return json;
     }
-    /*
-        public JSONObject addViolation(int vehicle1_id, int vehicle2_id, int acc_data_id) {
+/*
+    public JSONObject addViolation(int vehicle1_id, int vehicle2_id, int acc_data_id) {
 
-            // Building Parameters
+        // Building Parameters
 
-            List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+        List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
-            params.add(new BasicNameValuePair("tag", violation_tag));
-            params.add(new BasicNameValuePair("vehicle1_id", vehicle1_id +""));
-            params.add(new BasicNameValuePair("vehicle2_id", vehicle2_id +""));
-            params.add(new BasicNameValuePair("acc_data_id", acc_data_id +""));
+        params.add(new BasicNameValuePair("tag", violation_tag));
+        params.add(new BasicNameValuePair("vehicle1_id", vehicle1_id +""));
+        params.add(new BasicNameValuePair("vehicle2_id", vehicle2_id +""));
+        params.add(new BasicNameValuePair("acc_data_id", acc_data_id +""));
 
-            JSONObject json = jsonParser.getJSONFromUrl(violationURL,params);
-            return json;
-        }
-    */
+        JSONObject json = jsonParser.getJSONFromUrl(violationURL,params);
+        return json;
+    }
+*/
    /*
     public JSONObject addDefects(int vehicle1_id, int vehicle2_id, String acc_data_id) {
 

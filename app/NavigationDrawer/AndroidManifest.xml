@@ -11,6 +11,7 @@
     <uses-permission
         android:name="android.permission.INTERNET"
         />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 
     <!-- Allow to connect with internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -36,6 +37,9 @@
 
         <activity android:name=".Vehicle2"/>
 
+        <activity android:name=".AccidentActivity"/>
+        <activity android:name=".Passenger"/>
+
         <activity android:name=".OnePassengerOne"/>
 
         <activity android:name=".AccidentActivity"
@@ -47,6 +51,10 @@
         <activity android:name=".AccidentTypeclassification"/>
 
         <activity android:name=".AtcSelect"
+            android:theme="@android:style/Theme.Dialog"
+            />
+
+        <activity android:name=".VehicleType"
             android:theme="@android:style/Theme.Dialog"
             />
 
