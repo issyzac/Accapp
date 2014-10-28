@@ -31,6 +31,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,12 +62,37 @@ import transformers.ZoomOutPageTransformer;
 
 public class MainActivity extends FragmentActivity {
 
-    //values to be sent to the database
+//values to be sent to the database
 
+    //Accident Severity
+    public static String fatal;
+    public static String injury;
+    public static String simple;
+    public static String vehicle_damage;
+
+    //Accident Time and Location
+    public static String acc_date;
+    public static String acc_time;
+    public static String acc_area;
+    public static String acc_district;
+    public static String acc_region;
+
+    public static String roadName;
+    public static String roadNumber;
+    public static String roadMark;
+    public static String intersectionName;
+    public static String intersectionNumber;
+    public static String intersectionMark;
+
+
+
+//Vehicle1 details
     public static String V1_fatal;
     public static String V1_injury;
     public static String V1_simple;
     public static String V1_not_injured;
+
+    //Vehicle1 driver details
     public static String V1_surname;
     public static String V1_othernames;
     public static String V1_physical_address_one;
@@ -81,14 +108,20 @@ public class MainActivity extends FragmentActivity {
     public static String V1_alcohol_edit;
     public static String V1_phone_edit;
     public static String V1_seat_belt_edit;
+
+    //Details for vehicle1
     public static String V1_type_one;
     public static String V1_registration_number_one;
+
+    //Details for vehicle1 insurance
     public static String V1_company_one;
     public static String V1_insurance_type_one;
     public static String V1_insurance_phone;
     public static String V1_policy_period_one;
     public static String V1_policy_number_one;
     public static String V1_repair_amount_one;
+
+    //Details for vehicle1 damage
     public static String V1_vehicle;
     public static String V1_vehicle_total;
     public static String V1_infrastructure;
@@ -100,6 +133,8 @@ public class MainActivity extends FragmentActivity {
     public static String V2_injury;
     public static String V2_simple;
     public static String V2_not_injured;
+
+    //Driver2 details
     public static String V2_surname;
     public static String V2_othernames;
     public static String V2_physical_address_one;
@@ -115,14 +150,20 @@ public class MainActivity extends FragmentActivity {
     public static String V2_alcohol_edit;
     public static String V2_phone_edit;
     public static String V2_seat_belt_edit;
+
+    //Vehicle2 details
     public static String V2_type_one;
     public static String V2_registration_number_one;
+
+    //Details for vehicle1 insurance
     public static String V2_company_one;
     public static String V2_insurance_type_one;
     public static String V2_insurance_phone;
     public static String V2_policy_period_one;
     public static String V2_policy_number_one;
     public static String V2_repair_amount_one;
+
+    //Details for vehicle2 damage
     public static String V2_vehicle;
     public static String V2_vehicle_total;
     public static String V2_infrastructure;
@@ -133,7 +174,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * Defining layout items.
      */
-    EditText inputFatal,inputInjuries,inputSimple,damage,date,time,area_name,district,city,region,road_name,road_no,road_mark,intersection_name,intersection_no,intersection_mark;
+    EditText inputFatal,inputInjuries,inputSimple,damage,area_name,district,city,region,road_name,road_no,road_mark,intersection_name,intersection_no,intersection_mark;
 
 
     private ListView mDrawerList;
@@ -234,8 +275,6 @@ public class MainActivity extends FragmentActivity {
 
         district = (EditText)header.findViewById(R.id.district);
 
-        city = (EditText)header.findViewById(R.id.city);
-
         region = (EditText)header.findViewById(R.id.city);
 
         road_name = (EditText)header.findViewById(R.id.road_name);
@@ -246,7 +285,7 @@ public class MainActivity extends FragmentActivity {
 
         intersection_name = (EditText)header.findViewById(R.id.intersection_name);
 
-        intersection_no = (EditText)header.findViewById(R.id.intersection_name);
+        intersection_no = (EditText)header.findViewById(R.id.intersection_number);
 
         intersection_mark = (EditText)header.findViewById(R.id.intersection_mark);
 
@@ -254,20 +293,30 @@ public class MainActivity extends FragmentActivity {
 
         mTime = (EditText)header.findViewById(R.id.time);
 
-        String fatal =  inputFatal.getText().toString();
-        String injury = inputInjuries.getText().toString();
-        String simple = inputSimple.getText().toString();
-        String vehicle_damage = damage.getText().toString();
-        String area = area_name.getText().toString();
-        String acc_district = district.getText().toString();
-        String acc_city =  city.getText().toString();
-        String acc_region = region.getText().toString();
-        String roadName = road_name.getText().toString();
-        String roadNumber = road_no.getText().toString();
-        String roadMark =  road_mark.getText().toString();
-        String intersectionName = intersection_name.getText().toString();
-        String intersectionNumber = intersection_no.getText().toString();
-        String intersectionMark = intersection_mark.getText().toString();
+
+
+        //Textchanges
+
+        inputFatal.addTextChangedListener(new EditTextWatcher(inputFatal));
+        inputInjuries.addTextChangedListener(new EditTextWatcher(inputInjuries));
+        inputSimple.addTextChangedListener(new EditTextWatcher(inputSimple));
+        damage.addTextChangedListener(new EditTextWatcher(damage));
+
+        area_name.addTextChangedListener(new EditTextWatcher(area_name));
+        district.addTextChangedListener(new EditTextWatcher(district));
+        region.addTextChangedListener(new EditTextWatcher(region));
+
+        mDate.addTextChangedListener(new EditTextWatcher(mDate));
+        mTime.addTextChangedListener(new EditTextWatcher(mTime));
+
+        road_name.addTextChangedListener(new EditTextWatcher(road_name));
+        road_no.addTextChangedListener(new EditTextWatcher(road_no));
+        road_mark.addTextChangedListener(new EditTextWatcher(road_mark));
+        intersection_name.addTextChangedListener(new EditTextWatcher(intersection_name));
+        intersection_no.addTextChangedListener(new EditTextWatcher(intersection_no));
+        intersection_mark.addTextChangedListener(new EditTextWatcher(intersection_mark));
+
+
 
         cal = Calendar.getInstance();
 
@@ -313,9 +362,6 @@ public class MainActivity extends FragmentActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                sendToSqlite();
-                    Toast.makeText(getApplicationContext(), "Data Stored", Toast.LENGTH_SHORT).show();
                 Intent passenger = new Intent(MainActivity.this, Passenger.class);
                 startActivity(passenger);
             }
@@ -323,7 +369,7 @@ public class MainActivity extends FragmentActivity {
         mDrawer.setDrawerListener(mDrawerToggle);
 
         /**
-         * instantiate ViewPaget
+         * instantiate ViewPager
          */
         mPager = (AutoScrollViewPager) header.findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
@@ -337,25 +383,88 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-    private void sendToSqlite() {
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        db.addVehicle(V1_type_one, V1_registration_number_one);
-        Toast.makeText(getApplicationContext(), V1_registration_number_one, Toast.LENGTH_SHORT).show();
-        db.addVehicle(V2_type_one, V2_registration_number_one);
+    //TextWatcher
+    private class EditTextWatcher implements TextWatcher {
 
-        db.addDriver(V1_surname, V1_othernames,V1_physical_address_one, V1_address_box_one,V1_national_id_one,V1_phone_no_one,V1_gender,V1_dob_one,V1_nationality_one,V1_license_one,V1_occupation,V1_alcohol_edit,V1_drug_edit,V1_phone_edit,V1_seat_belt_edit);
-        db.addDriver(V1_surname, V2_othernames,V2_physical_address_one, V2_address_box_one,V2_national_id_one,V2_phone_no_one,V2_gender,V2_dob_one,V2_nationality_one,V2_license_one,V2_occupation,V2_alcohol_edit,V2_drug_edit,V2_phone_edit,V2_seat_belt_edit);
+        EditText v;
+
+        public EditTextWatcher(EditText view) {
+            this.v = view;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        public void afterTextChanged(Editable s) {
+
+            // Only if the currently edited text field contains something
+            if (v.getText().toString().length() > 0) {
+                switch (v.getId()) {
+                    case R.id.fatal_edit:
+                        fatal = inputFatal.getText().toString();
+                        break;
+                    case R.id.injury_edit:
+                        injury = inputInjuries.getText().toString();
+                        break;
+                    case R.id.simple_edit:
+                        simple = inputSimple.getText().toString();
+                        break;
+                    case R.id.not_injured_edit:
+                        vehicle_damage = damage.getText().toString();
+                        break;
+                    case R.id.date:
+                        acc_date = mDate.getText().toString();
+                        break;
+                    case R.id.time:
+                        acc_time = mTime.getText().toString();
+                        break;
+                    case R.id.name:
+                        acc_area = area_name.getText().toString();
+                        break;
+                    case R.id.district:
+                        acc_district = district.getText().toString();
+
+                    case R.id.city:
+                        acc_region = region.getText().toString();
+                        break;
+                    case R.id.road_name:
+                        roadName= road_name.getText().toString();
+                        break;
+                    case R.id.road_number:
+                        roadNumber = road_no.getText().toString();
+                        break;
+                    case R.id.road_mark:
+                        roadMark = road_mark.getText().toString();
+                        break;
+                    case R.id.intersection_name:
+                        intersectionName = intersection_name.getText().toString();
+                        break;
+                    case R.id.intersection_number:
+                        intersectionNumber = intersection_no.getText().toString();
+                        break;
+
+                    case R.id.intersection_mark:
+                        intersectionMark = intersection_mark.getText().toString();
+                        break;
+                    default:
+                }
+            }
 
 
-        db.addInsurance(V1_company_one,V1_insurance_type_one,V1_insurance_phone,V1_policy_number_one,V1_policy_period_one,V1_repair_amount_one);
-        db.addInsurance(V2_company_one,V2_insurance_type_one,V2_insurance_phone,V2_policy_number_one,V2_policy_period_one,V2_repair_amount_one);
-
-        db.addDamage(V1_vehicle,V1_vehicle_total,V1_infrastructure,V1_cost,V1_path);
-        db.addDamage(V2_vehicle,V2_vehicle_total,V2_infrastructure,V2_cost,V2_path);
+        }
     }
 
+
+
     /**
-     * Date change listender
+     * Date change listener
      */
     public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,

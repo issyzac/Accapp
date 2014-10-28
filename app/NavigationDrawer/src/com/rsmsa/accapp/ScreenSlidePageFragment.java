@@ -173,24 +173,6 @@ public class ScreenSlidePageFragment extends Fragment {
 
         cal = Calendar.getInstance();
 
-
-        day = cal.get(Calendar.DAY_OF_MONTH);
-
-        month = cal.get(Calendar.MONTH);
-
-        year = cal.get(Calendar.YEAR);
-
-        pickDate = (Button) rootView.findViewById(R.id.date_picker);
-        pickDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity() , datePickerListener, year, month, day);
-                datePickerDialog.show();
-            }
-        });
-
-        cal = Calendar.getInstance();
-
         day = cal.get(Calendar.DAY_OF_MONTH);
 
         month = cal.get(Calendar.MONTH);
@@ -210,7 +192,7 @@ public class ScreenSlidePageFragment extends Fragment {
     }
 
     /**
-     * Date change listender
+     * Date change listener
      */
     public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
@@ -221,7 +203,7 @@ public class ScreenSlidePageFragment extends Fragment {
     };
 
 
-
+//TextWatcher
     private class EditTextWatcher implements TextWatcher {
 
         EditText v;

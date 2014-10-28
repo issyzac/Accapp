@@ -203,27 +203,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // 1.USERS Table create statement
     private static final String CREATE_TABLE_USER = "CREATE TABLE "
             + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_RANK+ " TEXT UNIQUE NOT NULL,"
-            + KEY_FULL_NAME + " TEXT NOT NULL,"
-            + KEY_EMAIL + " TEXT NOT NULL UNIQUE,"
-            + KEY_STATION + " TEXT NOT NULL,"
-            + KEY_REGION_ID + " TEXT NOT NULL,"
-            + KEY_DISTRICT_ID + " TEXT NOT NULL,"
-            + KEY_PASSWORD + " TEXT NOT NULL,"
+            + KEY_RANK+ " TEXT UNIQUE ,"
+            + KEY_FULL_NAME + " TEXT,"
+            + KEY_EMAIL + " TEXT  UNIQUE,"
+            + KEY_STATION + " TEXT,"
+            + KEY_REGION_ID + " TEXT ,"
+            + KEY_DISTRICT_ID + " TEXT ,"
+            + KEY_PASSWORD + " TEXT ,"
             + KEY_CREATED_AT + " DATETIME" + ")";
 
     // 2. TABLE_ACCIDENT_LOCATION table create statement
     private static final String CREATE_TABLE_ACCIDENT_LOCATION = "CREATE TABLE " + TABLE_ACCIDENT_LOCATION
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement NOT NULL,"
-            + KEY_AREA + " TEXT not null,"
-            + KEY_DISTRICT_ID + " INTEGER not null,"
-            + KEY_REGION_ID + " INTEGER not null,"
-            + KEY_ROAD_NAME + " TEXT not null,"
-            + KEY_ROAD_NO + " TEXT not null,"
-            + KEY_ROAD_KILO_MARK + " TEXT not null,"
-            + KEY_INTERSECTION_NAME + " TEXT not null,"
-            + KEY_INTERSECTION_NO + " TEXT not null,"
-            + KEY_INTERSECTION_KILO_MARK + " TEXT not null" + ")";
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement L,"
+            + KEY_AREA + " TEXT ,"
+            + KEY_DISTRICT_ID + " INTEGER ,"
+            + KEY_REGION_ID + " INTEGER ,"
+            + KEY_ROAD_NAME + " TEXT ,"
+            + KEY_ROAD_NO + " TEXT l,"
+            + KEY_ROAD_KILO_MARK + " TEXT ,"
+            + KEY_INTERSECTION_NAME + " TEXT ,"
+            + KEY_INTERSECTION_NO + " TEXT ,"
+            + KEY_INTERSECTION_KILO_MARK + " TEXT " + ")";
 
 
 
@@ -265,46 +265,46 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // 5. TABLE_VEHICLE table create statement
     private static final String CREATE_TABLE_VEHICLE = "CREATE TABLE " + TABLE_VEHICLE
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_VEHICLE_TYPE + " TEXT not null,"
-            + KEY_VEHICLE_REG_NO + " TEXT not null,"
-            + KEY_OWNER_FULL_NAME + " TEXT not null,"
-            + KEY_NATIONALITY + " TEXT not null,"
-            + KEY_PHYSICAL_ADDRESS + " TEXT not null,"
-            + KEY_ADDRESS_BOX + " TEXT not null,"
-            + KEY_VEHICLE_MODEL + " TEXT not null,"
-            + KEY_YEAR_MANUFACTURED + " TEXT not null,"
-            + KEY_CHASIS + " TEXT not null" + ")";
+            + KEY_VEHICLE_TYPE + " TEXT ,"
+            + KEY_VEHICLE_REG_NO + " TEXT,"
+            + KEY_OWNER_FULL_NAME + " TEXT ,"
+            + KEY_NATIONALITY + " TEXT,"
+            + KEY_PHYSICAL_ADDRESS + " TEXT,"
+            + KEY_ADDRESS_BOX + " TEXT,"
+            + KEY_VEHICLE_MODEL + " TEXT,"
+            + KEY_YEAR_MANUFACTURED + " TEXT,"
+            + KEY_CHASIS + " TEXT" + ")";
 
     // 6. TABLE_DRIVER table create statement
     private static final String CREATE_TABLE_DRIVER = "CREATE TABLE " + TABLE_DRIVER
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_SURNAME + " TEXT not null,"
-            + KEY_OTHER_NAMES + " TEXT not null,"
-            + KEY_PHYSICAL_ADDRESS + " TEXT not null,"
-            + KEY_ADDRESS_BOX + " TEXT not null,"
-            + KEY_NATIONAL_ID + " TEXT not null,"
-            + KEY_PHONE_NO + " TEXT not null, "
-            + KEY_GENDER + " TEXT not null,"
-            + KEY_DOB + " TEXT not null,"
-            + KEY_NATIONALITY + " TEXT not null,"
+            + KEY_SURNAME + " TEXT,"
+            + KEY_OTHER_NAMES + " TEXT,"
+            + KEY_PHYSICAL_ADDRESS + " TEXT,"
+            + KEY_ADDRESS_BOX + " TEXT,"
+            + KEY_NATIONAL_ID + " TEXT,"
+            + KEY_PHONE_NO + " TEXT, "
+            + KEY_GENDER + " TEXT,"
+            + KEY_DOB + " TEXT,"
+            + KEY_NATIONALITY + " TEXT,"
             + KEY_DRIVING_LICENSE + " TEXT ,"
             + KEY_OCCUPATION + " TEXT ,"
-            + KEY_ALCOHOL + " TEXT not null,"
-            + KEY_DRUGS + " TEXT not null,"
-            + KEY_PHONE_USE + " TEXT not null,"
-            + KEY_SEAT_HELMET + " TEXT not null" +")";
+            + KEY_ALCOHOL + " TEXT,"
+            + KEY_DRUGS + " TEXT,"
+            + KEY_PHONE_USE + " TEXT,"
+            + KEY_SEAT_HELMET + " TEXT" +")";
 
 
     // 7. TABLE_INSURANCE table create statement
     private static final String CREATE_TABLE_INSURANCE = "CREATE TABLE " + TABLE_INSURANCE
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_INSURANCE_COMPANY + " TEXT not null,"
-            + KEY_INSURANCE__TYPE + " TEXT not null,"
-            + KEY_INSURANCE_PHONE_NO + " TEXT not null,"
-            + KEY_POLICY_NO + " TEXT not null,"
-            + KEY_POLICY_PERIOD + " INTEGER not null,"
-            + KEY_EXPIRATION + " TEXT not null,"
-            + KEY_ESTIMATED_REPAIR + " TEXT not null" + ")";
+            + KEY_INSURANCE_COMPANY + " TEXT ,"
+            + KEY_INSURANCE__TYPE + " TEXT ,"
+            + KEY_INSURANCE_PHONE_NO + " TEXT ,"
+            + KEY_POLICY_NO + " TEXT,"
+            + KEY_POLICY_PERIOD + " INTEGER ,"
+            + KEY_EXPIRATION + " TEXT ,"
+            + KEY_ESTIMATED_REPAIR + " TEXT " + ")";
 
 
 
@@ -345,16 +345,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // 12. TABLE_VIOLATIONS table create statement
     private static final String CREATE_TABLE_VIOLATIONS = "CREATE TABLE " + TABLE_VIOLATIONS
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_VEHECLE1_ID+ " TEXT NOT NULL,"
-            + KEY_VEHECLE2_ID + " TEXT NOT NULL,"
-            + KEY_ACC_DATA_ID+ " TEXT NOT NULL"+ ")";
+            + KEY_VEHECLE1_ID+ " TEXT,"
+            + KEY_VEHECLE2_ID + " TEXT,"
+            + KEY_ACC_DATA_ID+ " TEXT"+ ")";
 
     // 13. TABLE_VEHICLE_DEFECTS table create statement
     private static final String CREATE_TABLE_VEHICLE_DEFECTS = "CREATE TABLE " + TABLE_VEHICLE_DEFECTS
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_VEHECLE1_ID+ " TEXT NOT NULL,"
-            + KEY_VEHECLE2_ID + " TEXT NOT NULL,"
-            + KEY_ACC_DATA_ID+ " TEXT NOT NULL" + ")";
+            + KEY_VEHECLE1_ID+ " TEXT,"
+            + KEY_VEHECLE2_ID + " TEXT ,"
+            + KEY_ACC_DATA_ID+ " TEXT  " + ")";
 
     // 14. TABLE_CATEGORY table create statement
     private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + TABLE_CATEGORY
@@ -367,31 +367,31 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // 15. TABLE_OTHER_DAMAGES table create statement
     private static final String CREATE_TABLE_OTHER_DAMAGES = "CREATE TABLE " + TABLE_OTHER_DAMAGES
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_DESCRIPTION+ " TEXT not null,"
-            + KEY_OTHER_OWNER_NAME + " TEXT not null,"
-            + KEY_OTHER_ESTIMATED_COSTS + " REAL not null" + ")";
+            + KEY_DESCRIPTION+ " TEXT  ,"
+            + KEY_OTHER_OWNER_NAME + " TEXT  ,"
+            + KEY_OTHER_ESTIMATED_COSTS + " REAL  " + ")";
 
 
     // 16. TABLE_ACCIDENT_DESCRIPTION table create statement
     private static final String CREATE_TABLE_ACCIDENT_DESCRIPTION = "CREATE TABLE " + TABLE_ACCIDENT_DESCRIPTION
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement NOT NULL,"
-            + KEY_SITE_DESCRIPTION+ " TEXT NOT NULL,"
-            + KEY_DIRECTION + " TEXT NOT NULL,"
-            + KEY_IMAGE_PATH + " TEXT NOT NULL" + ")";
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement  ,"
+            + KEY_SITE_DESCRIPTION+ " TEXT  ,"
+            + KEY_DIRECTION + " TEXT  ,"
+            + KEY_IMAGE_PATH + " TEXT  " + ")";
 
 
     // 17. TABLE_STANDARD table create statement
     private static final String CREATE_TABLE_STANDARD = "CREATE TABLE " + TABLE_STANDARD
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement NOT NULL,"
-            + KEY_STANDARD_ID+ " INTEGER NOT NULL,"
-            + KEY_STANDARD_DESC_ID + " TEXT NOT NULL,"
-            + KEY_STANDARD_NAME + " TEXT NOT NULL" + ")";
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement  ,"
+            + KEY_STANDARD_ID+ " INTEGER  ,"
+            + KEY_STANDARD_DESC_ID + " TEXT  ,"
+            + KEY_STANDARD_NAME + " TEXT  " + ")";
 
 
     // 18. TABLE_STANDARD_DESCRIPTION table create statement
     private static final String CREATE_TABLE_STANDARD_DESCRIPTION = "CREATE TABLE " + TABLE_STANDARD_DESCRIPTION
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY  NOT NULL,"
-            + KEY_DESCRIPTION_NAME + " TEXT NOT NULL" + ")";
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY   ,"
+            + KEY_DESCRIPTION_NAME + " TEXT  " + ")";
 
 
     public DatabaseHandler(Context context) {
