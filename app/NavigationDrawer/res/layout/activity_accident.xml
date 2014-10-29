@@ -29,10 +29,43 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/register"
+                    android:background="@drawable/card"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/reg_title"
+                        android:text="Accident Reg Ref . "/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="100dp"
+                        android:maxWidth="150dp"
+                        android:id="@+id/reg_ref"
+                        android:layout_toRightOf="@id/reg_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"/>
+
+
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/register"
                     android:background="@drawable/card"
                     android:layout_marginLeft="8dp"
                     android:paddingBottom="16dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp">
 
                     <TextView

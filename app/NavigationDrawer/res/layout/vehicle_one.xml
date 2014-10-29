@@ -30,7 +30,7 @@
             android:textStyle="bold"
             android:textSize="14sp"/>
     </RelativeLayout>
-
+/
     <RelativeLayout
         android:layout_below="@id/fake_tabs"
         android:id="@+id/summary"
