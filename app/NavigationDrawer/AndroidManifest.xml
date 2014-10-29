@@ -32,8 +32,6 @@
 
         <activity android:name=".Vehicle2"/>
 
-        <activity android:name=".AccidentActivity"/>
-        <activity android:name=".Passenger"/>
 
         <activity android:name=".OnePassengerOne"/>
 
