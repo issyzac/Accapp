@@ -10,6 +10,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.HashMap;
 
@@ -196,6 +197,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // TABLE_STANDARD_DESCRIPTION Table - column names
 
     private static final String KEY_DESCRIPTION_NAME = "description_name";
+    private static final String TABLE_ACCIDENT_REGISTRATION = "accident_registration";
 
     // Table Create Statements
 
@@ -394,6 +396,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             + KEY_DESCRIPTION_NAME + " TEXT  " + ")";
 
 
+    // 19. TABLE_STANDARD_DESCRIPTION table create statement
+    private static final String CREATE_TABLE_ACCIDENT_REGISTRATION = "CREATE TABLE " + TABLE_ACCIDENT_REGISTRATION
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY  NOT NULL,"
+            + KEY_ACC_REG_NUMBER + " TEXT NOT NULL" + ")";
+
     public DatabaseHandler(Context context) {
 
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -421,6 +428,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_ACCIDENT_DESCRIPTION);
         db.execSQL(CREATE_TABLE_STANDARD);
         db.execSQL(CREATE_TABLE_STANDARD_DESCRIPTION);
+        db.execSQL(CREATE_TABLE_ACCIDENT_REGISTRATION );
 
     }
 
@@ -445,6 +453,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ACCIDENT_DESCRIPTION);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_STANDARD);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_STANDARD_DESCRIPTION);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ACCIDENT_REGISTRATION);
 
         // create new tables
         onCreate(db);
@@ -518,7 +527,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // return location
         return loc;
     }
-/*
+
     //Storing accident details in database
     public void addAccident(String accident_reg_no, int driver_id1,int driver_id2, int vehicle1_id, int vehicle2_id, int road_type_id, int street_condition_id, int junction_type_id, int vehicle_defect_id,int damage_id, int violation_id , int category_id, int others_id) {
 
@@ -542,29 +551,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert(TABLE_ACCIDENT_DATA, null, values);
         db.close(); // Closing database connection
     }
-    */
+
 
 
     //Storing persons details in database
     public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status) {
 
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(KEY_NAME, name); // name
-        values.put(KEY_GENDER ,gender); //gender
-        values.put(KEY_DOB ,dob); //dob
-        values.put(KEY_PHYSICAL_ADDRESS ,physical_address); //physical_address
-        values.put(KEY_ADDRESS_BOX ,address_box); //address_box
-        values.put(KEY_NATIONALITY_NATIONAL_ID ,nationality_id); //nationality
-        values.put(KEY_PHONE_NO ,phone_no); //phone_no
-        values.put(KEY_CASUALITY ,casuality); //casuality
-        values.put(KEY_ALCOHOL ,alcohol); //alcohol
-        values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
-        values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
-        values.put(KEY_STATUS ,status); //status
-        // Inserting Row
-        db.insert(TABLE_PERSON, null, values);
-        db.close(); // Closing database connection
+        if (name==""&&dob==""&&physical_address==""&&address_box==""&&nationality_id==""&&phone_no==""&&alcohol=="") {
+
+        }else{
+
+            SQLiteDatabase db = this.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put(KEY_NAME, name); // name
+            values.put(KEY_GENDER ,gender); //gender
+            values.put(KEY_DOB ,dob); //dob
+            values.put(KEY_PHYSICAL_ADDRESS ,physical_address); //physical_address
+            values.put(KEY_ADDRESS_BOX ,address_box); //address_box
+            values.put(KEY_NATIONALITY_NATIONAL_ID ,nationality_id); //nationality
+            values.put(KEY_PHONE_NO ,phone_no); //phone_no
+            values.put(KEY_CASUALITY ,casuality); //casuality
+            values.put(KEY_ALCOHOL ,alcohol); //alcohol
+            values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
+            values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
+            values.put(KEY_STATUS ,status); //status
+            // Inserting Row
+            db.insert(TABLE_PERSON, null, values);
+            db.close(); // Closing database connection
+
+        }
     }
 
 
@@ -936,6 +951,38 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Inserting Row
         db.insert(TABLE_ACCIDENT_DESCRIPTION, null, values);
         db.close(); // Closing database connection
+    }
+
+    //Storing ACCIDENT_REGISTRATION details in database
+    public void addAccidentRegistration(String reg_no ) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_ACC_REG_NUMBER,reg_no); // reg number
+
+        // Inserting Row
+        db.insert(TABLE_ACCIDENT_REGISTRATION, null, values);
+        db.close(); // Closing database connection
+    }
+
+    /**
+     * Getting road data from database
+     * */
+    public HashMap<String, String> getAccidentRegistration(){
+        HashMap<String, String> registration = new HashMap<String, String>();
+        String selectQuery = "SELECT  * FROM " + TABLE_ACCIDENT_REGISTRATION;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        // Move to first row
+        cursor.moveToFirst();
+        if(cursor.getCount() > 0){
+            registration.put(KEY_ACC_REG_NUMBER, cursor.getString(1));
+
+        }
+        cursor.close();
+        db.close();
+        // return junction
+        return registration;
     }
 
 

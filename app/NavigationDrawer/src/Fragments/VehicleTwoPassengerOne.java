@@ -185,8 +185,7 @@ public class VehicleTwoPassengerOne extends Fragment {
             @Override
             public void afterTextChanged(Editable editable) {
                 Passenger.Name21 = ViewName.getText().toString();
-                //  Log.d("isaya", Passenger.Name11+"");
-                //Passenger.logging();
+
             }
         });
         ViewDateOfBirth.addTextChangedListener(new TextWatcher() {
