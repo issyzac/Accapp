@@ -116,7 +116,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
 
 
         Male.setChecked(true);
-        Fatal.setChecked(true);
+     //   Fatal.setChecked(true);
 
         Male.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -143,7 +143,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
                 if (b == true) {
                     severe.setChecked(false);
                     Light.setChecked(false);
-                    Passenger.casuality11 = "fatal";
+                    Passenger.casuality11= "fatal";
                 }
             }
         });
@@ -153,7 +153,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
                 if (b == true) {
                     Fatal.setChecked(false);
                     Light.setChecked(false);
-                    Passenger.casuality11 = "severe";
+                    Passenger.casuality11= "severe";
                 }
             }
         });
@@ -163,11 +163,13 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
                 if (b == true) {
                     Fatal.setChecked(false);
                     severe.setChecked(false);
-                    Passenger.casuality11 = "light";
+                    Passenger.casuality11= "light";
+
                 }
             }
         });
-
+        Log.d("isaya1", Passenger.casuality11+"");
+        Log.d("isaya2", Passenger.Gender11+"");
 
         ViewName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -183,17 +185,135 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
             @Override
             public void afterTextChanged(Editable editable) {
                 Passenger.Name11=ViewName.getText().toString();
-                Log.d("isaya", Passenger.Name11+"");
+
                 //Passenger.logging();
             }
         });
-        Passenger.DateOfBirth11=ViewDateOfBirth.getText().toString();
-        Passenger.Address11=ViewAddress.getText().toString();
-        Passenger.PhysicalAddress11=ViewPhysicalAddress.getText().toString();
-        Passenger.NationalId11=ViewNationalId.getText().toString();
-        Passenger.PhoneNo11=ViewPhoneNo.getText().toString();
-        Passenger.drugs11=ViewDrugsAlcohol.getText().toString();
-        Passenger.SeatbeltHelmet11=ViewSeatbeltHelmet.getText().toString();
+        ViewDateOfBirth.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.DateOfBirth11=ViewDateOfBirth.getText().toString();
+
+            }
+        });
+        ViewAddress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.Address11=ViewAddress.getText().toString();
+
+            }
+        });
+        ViewPhysicalAddress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.PhysicalAddress11=ViewPhysicalAddress.getText().toString();
+
+            }
+        });
+        ViewNationalId.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.NationalId11=ViewNationalId.getText().toString();
+
+            }
+        });
+        ViewPhoneNo.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.PhoneNo11=ViewPhoneNo.getText().toString();
+
+            }
+        });
+        ViewDrugsAlcohol.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.drugs11=ViewDrugsAlcohol.getText().toString();
+
+            }
+        });
+        ViewSeatbeltHelmet.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                Passenger.SeatbeltHelmet11=ViewSeatbeltHelmet.getText().toString();
+
+            }
+        });
+
+
+
+
+
+
 
     }
 
