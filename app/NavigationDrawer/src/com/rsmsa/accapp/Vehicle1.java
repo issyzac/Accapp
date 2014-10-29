@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -15,22 +16,21 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rsmsa.accapp.R;
 import com.rsmsa.accapp.library.DatabaseHandler;
 import com.rsmsa.accapp.library.UserFunctions;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 
-/**
- * Created by PETER on 10/21/2014.
- */
 public class Vehicle1 extends Activity {
 
     /**
@@ -116,8 +116,7 @@ public class Vehicle1 extends Activity {
     EditText vehicle_total;
     EditText infrastructure;
     EditText cost;
-    Button btn;
-
+    Button next;
 
     /**
      * Called when the activity is first created.
@@ -173,17 +172,22 @@ public class Vehicle1 extends Activity {
         vehicle_total = (EditText) findViewById(R.id.vehicle_total_edit);
         infrastructure = (EditText) findViewById(R.id.infrastructure_edit);
         cost = (EditText) findViewById(R.id.rescue_cost_edit);
+        next = (Button) findViewById(R.id.next_button);
 
-        new NetCheck().execute();
+        next.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), Vehicle1.class);
+                startActivityForResult(myIntent, 0);
+                finish();
+            }
+        });
     }
-     
-
-    
 
     /**
      * Async Task to check whether internet connection is working
      */
-    private class NetCheck extends AsyncTask<String, String, Boolean> {
+        private class NetCheck extends AsyncTask<String, String, Boolean> {
         private ProgressDialog nDialog;
         private ProcessDriverData asyncTask2;
         private ProcessInsuranceData asyncTask3;
@@ -249,6 +253,7 @@ public class Vehicle1 extends Activity {
         }
     }
 
+
     private class ProcessDriverData extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
@@ -281,6 +286,30 @@ public class Vehicle1 extends Activity {
             } else if (female.isChecked()) {
                 gender = "Female";
             }
+
+            dob = dob_one.getText().toString();
+            nationality = nationality_one.getText().toString();
+            licence = license_one.getText().toString();
+            occupation = occupation_one.getText().toString();
+            drug = drug_edit.getText().toString();
+            alcohol = alcohol_edit.getText().toString();
+            phone_use = phone_edit.getText().toString();
+            seatbelt_helmet = seat_belt_edit.getText().toString();
+
+            //driver details
+            surname = surname_one.getText().toString();
+            other_names = othernames_one.getText().toString();
+            physical_address = physical_address_one.getText().toString();
+            po_box = address_box_one.getText().toString();
+            national_id = national_id_one.getText().toString();
+
+            //getting the gender value
+            if (male.isChecked()) {
+                gender = "Male";
+            } else if (female.isChecked()) {
+                gender = "Female";
+            }
+
             dob = dob_one.getText().toString();
             nationality = nationality_one.getText().toString();
             licence = license_one.getText().toString();
@@ -429,14 +458,14 @@ public class Vehicle1 extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        //driver one details
+        //vehicle insurance  details
         String insurance_company, type, phone_no, policy_no, policy_period, cost;
 
         //
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //vehicle details
+            //vehicle  insurace data details
 
             insurance_company = company_one.getText().toString();
             type = insurance_type_one.getText().toString();
@@ -574,7 +603,6 @@ public class Vehicle1 extends Activity {
             }
         }
     }
-
     @TargetApi(Build.VERSION_CODES.HONEYCOMB) // API 11
     void startMyTask(AsyncTask asyncTask) {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -582,5 +610,9 @@ public class Vehicle1 extends Activity {
         else
             asyncTask.execute();
     }
+    public void NetAsync(View view){
+        new NetCheck().execute();
 
+    }
 }
+
