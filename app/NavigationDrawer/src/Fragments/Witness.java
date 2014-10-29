@@ -70,9 +70,7 @@ public class Witness extends Fragment {
 
         final RadioButton Male = (RadioButton) rootView.findViewById(R.id.male);
         final RadioButton Female = (RadioButton) rootView.findViewById(R.id.female);
-        final RadioButton Fatal = (RadioButton) rootView.findViewById(R.id.fatal);
-        final RadioButton severe = (RadioButton) rootView.findViewById(R.id.severe);
-        final RadioButton Light = (RadioButton) rootView.findViewById(R.id.light);
+
 
         /**
          * getting values of our view elements
@@ -80,7 +78,7 @@ public class Witness extends Fragment {
 
 
         Male.setChecked(true);
-        Fatal.setChecked(true);
+
 
         Male.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
