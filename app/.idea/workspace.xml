@@ -39,9 +39,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.rsmsa.accapp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="" />
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -156,8 +154,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41708544" vertical-offset="361" max-vertical-offset="8721">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.5025126" vertical-offset="463" max-vertical-offset="8721">
+              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -645,7 +643,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -962,18 +960,9 @@
           <folding>
             <element signature="e#2036#2323#0" expanded="false" />
             <element signature="e#2312#2313#0" expanded="false" />
-            <element signature="e#3766#4089#0" expanded="false" />
-            <element signature="e#4078#4079#0" expanded="false" />
-            <element signature="e#4135#4458#0" expanded="false" />
-            <element signature="e#4447#4448#0" expanded="false" />
-            <element signature="e#4502#4874#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4919#5291#0" expanded="false" />
             <element signature="e#5280#5281#0" expanded="false" />
             <element signature="e#5335#5707#0" expanded="false" />
             <element signature="e#5696#5697#0" expanded="false" />
-            <element signature="e#6898#7204#0" expanded="false" />
-            <element signature="e#7197#7198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1067,7 +1056,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="4460" max-vertical-offset="5610">
           <caret line="314" column="66" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="79" />
           <folding>
-            <element signature="e#7982#7990#0" expanded="true" />
+            <element signature="e#9467#9475#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1208,8 +1197,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41708544" vertical-offset="361" max-vertical-offset="8721">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.5025126" vertical-offset="463" max-vertical-offset="8721">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding />
         </state>
       </provider>
