@@ -42,6 +42,7 @@ public class AccidentActivity extends Activity {
     private static String KEY_CREATED_AT = "created_at";
 
 
+public static String mcity ;
 
     /**
      * Defining layout items.

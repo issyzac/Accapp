@@ -18,7 +18,7 @@ public class UserFunctions {
 
     //URL of the PHP API
     private static String loginURL = "http://inventory.unnett.com/android/";
-    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://10.0.2.2/PSMS/public/android/index.php";
+    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL, road_typeURL,street_conditionURL,categoryURL, other_damageURL, acc_descURL, junctionURL,violationURL, defectURL  = "http://192.168.43.251/PSMS/public/android/index.php";
     private static String forpassURL = "http://inventory.unnett.com/android/";
     private static String chgpassURL = "http://inventory.unnett.com/android/";
     private static String personURL = "http://192.168.43.251/PSMS/public/android/index.php";
@@ -83,15 +83,15 @@ public class UserFunctions {
     /**
      * Function to  Register
      **/
-    public JSONObject addAccidentLocation(String area, String accident_data_id,int district_id, int region_id, String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
+    public JSONObject addAccidentLocation(String area,String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
         params.add(new BasicNameValuePair("tag", accident_location_tag));
         params.add(new BasicNameValuePair("accident_area", area));
-        params.add(new BasicNameValuePair("accident_data_id", accident_data_id));
-        params.add(new BasicNameValuePair("district_id", district_id +""));
-        params.add(new BasicNameValuePair("region_id", region_id +""));
+        //params.add(new BasicNameValuePair("accident_data_id", accident_data_id));
+       // params.add(new BasicNameValuePair("district_id", district_id +""));
+       // params.add(new BasicNameValuePair("region_id", region_id +""));
         params.add(new BasicNameValuePair("road_name", road_name));
         params.add(new BasicNameValuePair("road_no", road_no));
         params.add(new BasicNameValuePair("road_kilo_mark", road_kilo_mark));
@@ -160,10 +160,10 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("tag", vehicle_tag));
         params.add(new BasicNameValuePair("vehicle_type", vehicle_type));
         params.add(new BasicNameValuePair("vehicle_reg_no", vehicle_reg_no));
+
         JSONObject json = jsonParser.getJSONFromUrl(vehicleURL,params);
         return json;
     }
-
 
     public JSONObject addDriver(String surname, String other_names,String physical_address,String address_box,String national_id,String phone_no,String gender,String dob, String nationality,String driving_licence, String occupation, String alcohol, String drugs,String phone_use, String seat_helmet) {
 
@@ -176,7 +176,6 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("physical_address", physical_address));
         params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("national_id", national_id));
-        params.add(new BasicNameValuePair("address_box", address_box));
         params.add(new BasicNameValuePair("phone_no", phone_no));
         params.add(new BasicNameValuePair("gender", gender));
         params.add(new BasicNameValuePair("dob", dob));
@@ -207,8 +206,6 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(insuranceURL,params);
         return json;
     }
-
-
 
     public JSONObject addDamage(String vehicle, String vehicle_total, String infrastructure, String rescue_costs ) {
 
@@ -243,7 +240,6 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(road_typeURL,params);
         return json;
     }
-
 
     public JSONObject addStreetCondition(String road_surface, String light, String weather, String road_control ) {
 
