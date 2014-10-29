@@ -460,10 +460,11 @@
         <RelativeLayout
             android:layout_below="@id/atc_wrapper"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:paddingBottom="16dp"
             android:id="@+id/accident_description_wrapper"
             android:background="@drawable/card">
 
@@ -488,13 +489,38 @@
                 android:background="@color/deep_orange_a100"/>
 
             <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:id="@+id/scroller"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/sketch"
                 android:scaleType="centerCrop"
                 android:layout_below="@id/description_strip"
+                android:src="@drawable/site_sketch"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cross_direction"
+                android:id="@+id/cross_direction"
+                android:layout_below="@id/description_strip"
+                android:layout_toRightOf="@id/sketch"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"/>
+
+
+            <customviews.TouchFeedbackEnabledRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/acc_description"
+                android:layout_below="@id/cross_direction"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/card">
+
+
+                </customviews.TouchFeedbackEnabledRelativeLayout>
 
             </RelativeLayout>
 
