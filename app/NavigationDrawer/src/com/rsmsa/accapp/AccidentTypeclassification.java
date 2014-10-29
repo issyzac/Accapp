@@ -440,10 +440,15 @@ public class AccidentTypeclassification extends Activity {
 
                 new ProcessPassengerDB().execute();
                 new ProcessVehicle1Data().execute();
-                new ProcessDriver1().execute();
-                new ProcessDriver2().execute();
-                new ProcessVehicle1Data().execute();
-                new ProcessVehicle2Data().execute();
+                //new ProcessDriver1().execute();
+               // new ProcessDriver2().execute();
+                //new ProcessVehicle1Data().execute();
+                //new ProcessVehicle2Data().execute();
+                //new ProcessInsurance1Data().execute();
+               // new ProcessInsurance2Data().execute();
+               // new Processdamage1Data().execute();
+               // new Processdamage2Data().execute();
+               // new ProcessLocationData().execute();
 
             } else {
                 nDialog.dismiss();
@@ -964,12 +969,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.casuality11="";
      Passenger.drugs11="";
      Passenger.SeatbeltHelmet11="";
-    private class ProcessDriver1 extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal, severe, simple, not_injured;
+
 
      //passenger two vehicle onedetails
      Passenger.Name12="";
@@ -1096,6 +1096,10 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNoF="";
 
  }
+
+    private class ProcessDriver1 extends AsyncTask<String, String, JSONObject> {
+
+        private ProgressDialog pDialog;
         //driver one details
         String surname1 = MainActivity.V1_surname;
         String other_names1 = MainActivity.V1_othernames;
@@ -1118,14 +1122,19 @@ public class AccidentTypeclassification extends Activity {
         //
         @Override
         protected void onPreExecute() {
-            super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            //pDialog.setTitle("Contacting Servers");
-            //pDialog.setMessage("Storing Data...");
-            //pDialog.setIndeterminate(false);
-            //pDialog.setCancelable(true);
-            //pDialog.show();
+            super.onPreExecute();
+/**
+ * Defining Process dialog
+ */
+
+            String fatal, severe, simple, not_injured;
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
         }
 
         @Override
