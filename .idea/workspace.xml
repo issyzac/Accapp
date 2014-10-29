@@ -24,11 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3689f9e-1315-4d4d-b477-dd52f08ef70a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/Witness.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/Witness.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Accapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +65,8 @@
       <file leaf-file-name="DatabaseHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8154982" vertical-offset="16167" max-vertical-offset="19737">
-              <caret line="984" column="27" selection-start-line="984" selection-start-column="27" selection-end-line="984" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.78413284" vertical-offset="16167" max-vertical-offset="19737">
+              <caret line="983" column="30" selection-start-line="983" selection-start-column="30" selection-end-line="983" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -569,7 +565,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1174,8 +1170,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8154982" vertical-offset="16167" max-vertical-offset="19737">
-          <caret line="984" column="27" selection-start-line="984" selection-start-column="27" selection-end-line="984" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.78413284" vertical-offset="16167" max-vertical-offset="19737">
+          <caret line="983" column="30" selection-start-line="983" selection-start-column="30" selection-end-line="983" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -981,7 +981,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         cursor.close();
         db.close();
-        // return junction
+        // return registration
         return registration;
     }
 
