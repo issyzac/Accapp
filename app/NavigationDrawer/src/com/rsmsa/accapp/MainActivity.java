@@ -86,7 +86,7 @@ public class MainActivity extends FragmentActivity {
 
 
 
-//Vehicle1 details
+    //Vehicle1 details
     public static String V1_fatal;
     public static String V1_injury;
     public static String V1_simple;

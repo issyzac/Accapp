@@ -1,7 +1,6 @@
 package com.rsmsa.accapp;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -10,8 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -20,12 +17,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 /**
  *  Created by isaiah on 10/17/2014.
@@ -70,12 +64,6 @@ public class ScreenSlidePageFragment extends Fragment {
     EditText vehicle_total;
     EditText infrastructure;
     EditText cost;
-
-    Spinner vehicle_category;
-
-    Button vehicle_type;
-
-    private int selectedSpinner;
 
     private Calendar cal;
 
@@ -182,9 +170,6 @@ public class ScreenSlidePageFragment extends Fragment {
         infrastructure.addTextChangedListener(new EditTextWatcher(infrastructure));
         cost.addTextChangedListener(new EditTextWatcher(cost));
 
-        vehicle_category = (Spinner)rootView.findViewById(R.id.vtype_spinner);
-
-        vehicle_type = (Button)rootView.findViewById(R.id.vehicle_type_select_button);
 
         cal = Calendar.getInstance();
 
@@ -203,40 +188,6 @@ public class ScreenSlidePageFragment extends Fragment {
             }
         });
 
-        List<String> vehicle_category_list = new ArrayList<String>();
-        vehicle_category_list.add("Private");
-        vehicle_category_list.add("Commercial");
-        vehicle_category_list.add("Government");
-        vehicle_category_list.add("Emergency");
-        vehicle_category_list.add("Passenger Service Vehicles");
-
-        vehicle_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selectedSpinner = i;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        vehicle_type.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), VehicleType.class);
-                intent.putExtra("category", selectedSpinner+"");
-                startActivity(intent);
-            }
-        });
-
-        ArrayAdapter<String> atc_adapter = new ArrayAdapter<String>
-                (getActivity(), android.R.layout.simple_spinner_item,vehicle_category_list);
-        atc_adapter.setDropDownViewResource
-                (android.R.layout.simple_spinner_dropdown_item);
-        vehicle_category.setAdapter(atc_adapter);
-
         return rootView;
     }
 
@@ -246,12 +197,13 @@ public class ScreenSlidePageFragment extends Fragment {
     public DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
-            tab_one.setText(selectedDay + " / " + (selectedMonth + 1) + " / "  + selectedYear);
+            tab_one.setText(selectedDay + " / " + (selectedMonth + 1) + " / "
+                    + selectedYear);
         }
     };
 
 
-//TextWatcher
+    //TextWatcher
     private class EditTextWatcher implements TextWatcher {
 
         EditText v;

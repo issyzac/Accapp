@@ -40,13 +40,6 @@
         <activity android:name=".AccidentActivity"/>
         <activity android:name=".Passenger"/>
 
-        <activity android:name=".OnePassengerOne"/>
-
-        <activity android:name=".AccidentActivity"
-            android:windowSoftInputMode="stateHidden"/>
-
-        <activity android:name=".Passenger"
-            android:windowSoftInputMode="stateHidden"/>
 
         <activity android:name=".AccidentTypeclassification"/>
 
