@@ -293,20 +293,14 @@ public class VehicleOnePassengerThree extends Fragment {
 
             }
         });
-        ViewSeatbeltHelmet.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
+        ViewSeatbeltHelmet.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                Passenger.SeatbeltHelmet13=ViewSeatbeltHelmet.getText().toString();
+            public void onClick(View v) {
+                //is chkIos checked?
+                if (((CheckBox) v).isChecked()) {
+                    Passenger.SeatbeltHelmet13="Yes";
+                }
 
             }
         });

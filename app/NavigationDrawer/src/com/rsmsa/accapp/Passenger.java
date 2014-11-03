@@ -58,7 +58,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress11;
     public static String NationalId11;
     public static String PhoneNo11;
-    public static String SeatbeltHelmet11;
+    public static String SeatbeltHelmet11="No";
     public static String casuality11;
     public static String drugs11;
 
@@ -69,7 +69,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress12;
     public static String NationalId12;
     public static String PhoneNo12;
-    public static String SeatbeltHelmet12;
+    public static String SeatbeltHelmet12="No";
     public static String casuality12;
     public static String drugs12;
 
@@ -80,7 +80,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress13;
     public static String NationalId13;
     public static String PhoneNo13;
-    public static String SeatbeltHelmet13;
+    public static String SeatbeltHelmet13="No";
     public static String casuality13;
     public static String drugs13;
 
@@ -91,7 +91,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress21;
     public static String NationalId21;
     public static String PhoneNo21;
-    public static String SeatbeltHelmet21;
+    public static String SeatbeltHelmet21="No";
     public static String casuality21;
     public static String drugs21;
 
@@ -102,7 +102,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress22;
     public static String NationalId22;
     public static String PhoneNo22;
-    public static String SeatbeltHelmet22;
+    public static String SeatbeltHelmet22="No";
     public static String casuality22;
     public static String drugs22;
 
@@ -113,7 +113,7 @@ public class Passenger extends FragmentActivity{
     public static String PhysicalAddress23;
     public static String NationalId23;
     public static String PhoneNo23;
-    public static String SeatbeltHelmet23;
+    public static String SeatbeltHelmet23="No";
     public static String casuality23;
     public static String drugs23;
 

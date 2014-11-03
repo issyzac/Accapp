@@ -19,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rsmsa.accapp.MainActivity;
 import com.rsmsa.accapp.Passenger;
@@ -116,7 +117,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
 
 
         Male.setChecked(true);
-     //   Fatal.setChecked(true);
+        //   Fatal.setChecked(true);
 
         Male.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -168,8 +169,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
                 }
             }
         });
-        Log.d("isaya1", Passenger.casuality11+"");
-        Log.d("isaya2", Passenger.Gender11+"");
+
 
         ViewName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -291,20 +291,14 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
 
             }
         });
-        ViewSeatbeltHelmet.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
+        ViewSeatbeltHelmet.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                Passenger.SeatbeltHelmet11=ViewSeatbeltHelmet.getText().toString();
+            public void onClick(View v) {
+                //is chkIos checked?
+                if (((CheckBox) v).isChecked()) {
+                    Passenger.SeatbeltHelmet11="Yes";
+                }
 
             }
         });

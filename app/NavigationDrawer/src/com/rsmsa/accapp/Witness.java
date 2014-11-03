@@ -133,28 +133,6 @@ public class Witness extends Activity {
          * checking for null values of our entered data from view elements
          */
 
-        if(Name11=="") {
-            Name11 ="No";
-        }
-        if(DateOfBirth11=="") {
-            DateOfBirth11 ="No";
-        }
-        if(Address11=="") {
-            Address11 ="No";
-        }
-        if(PhysicalAddress11=="") {
-            PhysicalAddress11 ="No";
-        }
-        if(NationalId11=="") {
-            NationalId11 ="No";
-        }
-        if(PhoneNo11=="") {
-            PhoneNo11 ="No";
-        }
-
-        if(SeatbeltHelmet11=="") {
-            SeatbeltHelmet11 ="No";
-        }
 
 
         okay_button.setOnClickListener(new View.OnClickListener() {
@@ -170,23 +148,6 @@ public class Witness extends Activity {
      */
     @Override
     public void finish(){
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        String name=Name11;
-        String gender=Gender11;
-        String dob=DateOfBirth11;
-        String physical_address=PhysicalAddress11;
-        String address_box=Address11;
-        String nationality_id=NationalId11;
-        String phone_no=PhoneNo11;
-        String casuality=casuality11;
-        String alcohol=drugs11;
-        String seat_helmet=SeatbeltHelmet11;
-        String vehicle_no="12";
-        String status="witness";
-        String ary[];
-
-        db.addPerson( name, gender,  dob,  physical_address,  address_box, nationality_id, phone_no,
-                casuality, alcohol , seat_helmet,  vehicle_no, status);
 
 
 
