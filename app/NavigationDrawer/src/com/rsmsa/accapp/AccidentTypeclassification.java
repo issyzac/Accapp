@@ -820,7 +820,7 @@ public class AccidentTypeclassification extends Activity {
     private class ProcessSqlite extends AsyncTask<String, String, String> {
 
         DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-
+        String accident_reg_no = MainActivity.accidentd_registration_no;
 
         //passenger one vehicle one details
         String name11 = Passenger.Name11;
@@ -1136,28 +1136,28 @@ public class AccidentTypeclassification extends Activity {
                 db.addDamage(vehicle2, total2, infrastructure2, costs2);
             }
 
-            db.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11);
-            db.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12);
+            db.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11,accident_reg_no);
+            db.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12,accident_reg_no);
 
-            db.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13);
+            db.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13,accident_reg_no);
 
-            db.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21);
+            db.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21,accident_reg_no);
 
-            db.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22);
+            db.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22,accident_reg_no);
 
-            db.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23);
+            db.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23,accident_reg_no);
 
-            db.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA);
+            db.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA,accident_reg_no);
 
-            db.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB);
+            db.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB,accident_reg_no);
 
-            db.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC);
+            db.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC,accident_reg_no);
 
-            db.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD);
+            db.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD,accident_reg_no);
 
-            db.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE);
+            db.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE,accident_reg_no);
 
-            db.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF);
+            db.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF,accident_reg_no);
 
 
             return null;
@@ -1532,474 +1532,25 @@ public class AccidentTypeclassification extends Activity {
 
         }
     }
-    public class ProcessDataSQLLITE extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
-
-        //passenger one vehicle one details
-        String name11=Passenger.Name11;
-        String gender11=Passenger.Gender11;
-        String dob11=Passenger.DateOfBirth11;
-        String physical_address11=Passenger.PhysicalAddress11;
-        String address_box11=Passenger.Address11;
-        String nationality_id11=Passenger.NationalId11;
-        String phone_no11=Passenger.PhoneNo11;
-        String casuality11=Passenger.casuality11;
-        String alcohol11=Passenger.drugs11;
-        String seat_helmet11=Passenger.SeatbeltHelmet11;
-        String vehicle_no11="1";
-        String status11="passenger";
-
-        //passenger two vehicle onedetails
-        String name12=Passenger.Name12;
-        String gender12=Passenger.Gender12;
-        String dob12=Passenger.DateOfBirth12;
-        String physical_address12=Passenger.PhysicalAddress12;
-        String address_box12=Passenger.Address12;
-        String nationality_id12=Passenger.NationalId12;
-        String phone_no12=Passenger.PhoneNo12;
-        String casuality12=Passenger.casuality12;
-        String alcohol12=Passenger.drugs12;
-        String seat_helmet12=Passenger.SeatbeltHelmet12;
-        String vehicle_no12="1";
-        String status12="passenger";
-
-
-
-        //passenger three vehicle one details
-        String name13=Passenger.Name13;
-        String gender13=Passenger.Gender13;
-        String dob13=Passenger.DateOfBirth13;
-        String physical_address13=Passenger.PhysicalAddress13;
-        String address_box13=Passenger.Address13;
-        String nationality_id13=Passenger.NationalId13;
-        String phone_no13=Passenger.PhoneNo13;
-        String casuality13=Passenger.casuality13;
-        String alcohol13=Passenger.drugs13;
-        String seat_helmet13=Passenger.SeatbeltHelmet13;
-        String vehicle_no13="1";
-        String status13="passenger";
-
-
-        //passenger one vehicle two details
-        String name21=Passenger.Name21;
-        String gender21=Passenger.Gender21;
-        String dob21=Passenger.DateOfBirth21;
-        String physical_address21=Passenger.PhysicalAddress21;
-        String address_box21=Passenger.Address21;
-        String nationality_id21=Passenger.NationalId21;
-        String phone_no21=Passenger.PhoneNo21;
-        String casuality21=Passenger.casuality21;
-        String alcohol21=Passenger.drugs21;
-        String seat_helmet21=Passenger.SeatbeltHelmet21;
-        String vehicle_no21="2";
-        String status21="passenger";
-
-        //passenger two vehicle two details
-        String name22=Passenger.Name22;
-        String gender22=Passenger.Gender22;
-        String dob22=Passenger.DateOfBirth22;
-        String physical_address22=Passenger.PhysicalAddress22;
-        String address_box22=Passenger.Address22;
-        String nationality_id22=Passenger.NationalId22;
-        String phone_no22=Passenger.PhoneNo22;
-        String casuality22=Passenger.casuality22;
-        String alcohol22=Passenger.drugs22;
-        String seat_helmet22=Passenger.SeatbeltHelmet22;
-        String vehicle_no22="2";
-        String status22="passenger";
-
-        //passenger three vehicle two details
-        String name23=Passenger.Name23;
-        String gender23=Passenger.Gender23;
-        String dob23=Passenger.DateOfBirth23;
-        String physical_address23=Passenger.PhysicalAddress23;
-        String address_box23=Passenger.Address23;
-        String nationality_id23=Passenger.NationalId23;
-        String phone_no23=Passenger.PhoneNo23;
-        String casuality23=Passenger.casuality23;
-        String alcohol23=Passenger.drugs23;
-        String seat_helmet23=Passenger.SeatbeltHelmet23;
-        String vehicle_no23="2";
-        String status23="passenger";
-
-        //Pedestrian A
-        String nameA=Passenger.NameA;
-        String genderA=Passenger.GenderA;
-        String dobA=Passenger.DateOfBirthA;
-        String physical_addressA=Passenger.PhysicalAddressA;
-        String address_boxA=Passenger.AddressA;
-        String nationality_idA=Passenger.NationalIdA;
-        String phone_noA=Passenger.PhoneNoA;
-        String casualityA=Passenger.casualityA;
-        String alcoholA=Passenger.drugsA;
-        String seat_helmetA="";
-        String vehicle_noA="ALL";
-        String statusA="pedestrian";
-
-        //passenger one vehicle one details
-        String nameB=Passenger.NameB;
-        String genderB=Passenger.GenderB;
-        String dobB=Passenger.DateOfBirthB;
-        String physical_addressB=Passenger.PhysicalAddressB;
-        String address_boxB=Passenger.AddressB;
-        String nationality_idB=Passenger.NationalIdB;
-        String phone_noB=Passenger.PhoneNoB;
-        String casualityB=Passenger.casualityB;
-        String alcoholB=Passenger.drugsB;
-        String seat_helmetB="";
-        String vehicle_noB="ALL";
-        String statusB="pedestrian";
-
-        //passenger one vehicle one details
-        String nameC=Passenger.NameC;
-        String genderC=Passenger.GenderC;
-        String dobC=Passenger.DateOfBirthC;
-        String physical_addressC=Passenger.PhysicalAddressC;
-        String address_boxC=Passenger.AddressC;
-        String nationality_idC=Passenger.NationalIdC;
-        String phone_noC=Passenger.PhoneNoC;
-        String casualityC=Passenger.casualityC;
-        String alcoholC=Passenger.drugsC;
-        String seat_helmetC="";
-        String vehicle_noC="ALL";
-        String statusC="pedestrian";
-
-        //passenger one vehicle one details
-        String nameD=Passenger.NameD;
-        String genderD=Passenger.GenderD;
-        String dobD=Passenger.DateOfBirthD;
-        String physical_addressD=Passenger.PhysicalAddressD;
-        String address_boxD=Passenger.AddressD;
-        String nationality_idD=Passenger.NationalIdD;
-        String phone_noD=Passenger.PhoneNoD;
-        String casualityD=Passenger.casualityD;
-        String alcoholD=Passenger.drugsD;
-        String seat_helmetD="";
-        String vehicle_noD="ALL";
-        String statusD="Others";
-
-        //passenger one vehicle one details
-        String nameE=Passenger.NameE;
-        String genderE=Passenger.GenderE;
-        String dobE=Passenger.DateOfBirthE;
-        String physical_addressE=Passenger.PhysicalAddressE;
-        String address_boxE=Passenger.AddressE;
-        String nationality_idE=Passenger.NationalIdE;
-        String phone_noE=Passenger.PhoneNoE;
-        String casualityE=Passenger.casualityE;
-        String alcoholE=Passenger.drugsE;
-        String seat_helmetE="";
-        String vehicle_noE="ALL";
-        String statusE="Others";
-
-        //passenger one vehicle one details
-        String nameF=Passenger.NameF;
-        String genderF=Passenger.GenderF;
-        String dobF=Passenger.DateOfBirthF;
-        String physical_addressF=Passenger.PhysicalAddressF;
-        String address_boxF=Passenger.AddressF;
-        String nationality_idF=Passenger.NationalIdF;
-        String phone_noF=Passenger.PhoneNoF;
-        String seat_helmetF="";
-        String alcoholF="";
-        String casualityF="";
-        String vehicle_noF="ALL";
-        String statusF="Witness";
-
-
-        //location details
-
-        String area = MainActivity.acc_area;
-        String district = MainActivity.acc_district;
-        String region = MainActivity.acc_region;
-        String roadName = MainActivity.roadName;
-        String roadNo = MainActivity.roadNumber;
-        String roadMark = MainActivity.roadMark;
-        String IntersectionName = MainActivity.intersectionName;
-        String IntersectionNo = MainActivity.intersectionNumber;
-        String IntersectionMark = MainActivity.intersectionMark;
-
-        //driver one details
-        String surname1 = MainActivity.V1_surname;
-        String other_names1 = MainActivity.V1_othernames;
-        String physical_address1 = MainActivity.V1_physical_address_one;
-        String po_box1 = MainActivity.V1_address_box_one;
-        String national_id1 = MainActivity.V1_national_id_one;
-        String driver_phone_no1= MainActivity.V1_phone_no_one;
-        String gender1 = MainActivity.V1_gender;
-        String dob1 = MainActivity.V1_dob_one;
-        String nationality1 = MainActivity.V1_nationality_one;
-        String licence1 = MainActivity.V1_license_one;
-        String occupation1  = MainActivity.V1_occupation;
-        String drug1 = MainActivity.V1_drug_edit;
-        String alcohol1 = MainActivity.V1_alcohol_edit;
-        String phone_use1  = MainActivity.V1_phone_edit;
-        String seatbelt_helmet1 = MainActivity.V1_seat_belt_edit;
-
-
-
-        //driver two details
-        String surname2 = MainActivity.V2_surname;
-        String other_names2 = MainActivity.V2_othernames;
-        String physical_address2 = MainActivity.V2_physical_address_one;
-        String po_box2 = MainActivity.V2_address_box_one;
-        String national_id2 = MainActivity.V2_national_id_one;
-        String driver_phone_no2= MainActivity.V2_phone_no_one;
-        String gender2 = MainActivity.V2_gender;
-        String dob2 = MainActivity.V2_dob_one;
-        String nationality2 = MainActivity.V2_nationality_one;
-        String licence2 = MainActivity.V2_license_one;
-        String occupation2  = MainActivity.V2_occupation;
-        String drug2 = MainActivity.V2_drug_edit;
-        String alcohol2 = MainActivity.V2_alcohol_edit;
-        String phone_use2  = MainActivity.V2_phone_edit;
-        String seatbelt_helmet2 = MainActivity.V2_seat_belt_edit;
-
-
-        //Vehicle one details
-        String type1 = MainActivity.V1_type_one;
-        String reg_no1 = MainActivity.V1_registration_number_one;
-
-        //Vehicle one details
-        String type2 = MainActivity.V2_type_one;
-        String reg_no2 = MainActivity.V2_registration_number_one;
-
-        //insurance one data
-        String company_name1 = MainActivity.V1_company_one;
-        String company_type1 = MainActivity.V1_insurance_type_one;
-        String phone_no1 = MainActivity.V1_phone_no_one;
-        String policy_no1 = MainActivity.V1_policy_number_one;
-        String expire_period1 = MainActivity.V1_policy_period_one;
-        String repair_costs1 = MainActivity.V1_repair_amount_one;
-
-        //insurance two data
-        String company_name2 = MainActivity.V2_company_one;
-        String company_type2 = MainActivity.V2_insurance_type_one;
-        String phone_no2 = MainActivity.V2_phone_no_one;
-        String policy_no2 = MainActivity.V2_policy_number_one;
-        String expire_period2 = MainActivity.V2_policy_period_one;
-        String repair_costs2 = MainActivity.V2_repair_amount_one;
-
-        //Damage one data
-        String vehicle1 = MainActivity.V1_vehicle;
-        String total1 = MainActivity.V1_vehicle_total;
-        String infrastructure1 = MainActivity.V1_infrastructure;
-        String costs1 = MainActivity.V1_cost;
-
-        //damage two data
-        String vehicle2 = MainActivity.V2_vehicle;
-        String total2 = MainActivity.V2_vehicle_total;
-        String infrastructure2 = MainActivity.V2_infrastructure;
-        String costs2 = MainActivity.V2_cost;
-
-
-//insert data to sqlite  on no internet
-
-        db.addLocation(area,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
-        db.addVehicle(type1, reg_no1);
-        db.addVehicle(type2, reg_no2);
-        db.addDriver(surname1, other_names1, physical_address1, po_box1, national_id1, phone_no1, gender1, dob1, nationality1, licence1, occupation1, drug1, alcohol1, phone_use1, seatbelt_helmet1);
-        db.addDriver(surname2, other_names2, physical_address2, po_box2, national_id2, phone_no2, gender1, dob2, nationality2, licence2, occupation2, drug2, alcohol2, phone_use2, seatbelt_helmet2);
-        db.addInsurance(company_name1, company_type1, phone_no1, policy_no1, expire_period1,repair_costs1);
-        db.addInsurance(company_name2, company_type2, phone_no2, policy_no2, expire_period2,repair_costs2);
-        db.addDamage(vehicle1,total1,infrastructure1,costs1);
-        db.addDamage(vehicle2,total2,infrastructure2,costs2);
-
-
-
-        db.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11);
-        db.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12);
-
-        db.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13);
-
-        db.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21);
-
-        db.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22);
-
-        db.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23);
-
-        db.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA);
-
-        db.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB);
-
-        db.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC);
-
-        db.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD);
-
-        db.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE);
-
-        db.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF);
-
-        restore_person_values();
-
-    }
-
-
-
-      public void restore_person_values(){
-
-     MainActivity.accidentd_registration_no="";
-     //passenger one vehicle one details
-     Passenger.Name11="";
-     Passenger.Gender11="";
-     Passenger.DateOfBirth11="";
-     Passenger.PhysicalAddress11="";
-     Passenger.Address11="";
-     Passenger.NationalId11="";
-     Passenger.PhoneNo11="";
-     Passenger.casuality11="";
-     Passenger.drugs11="";
-     Passenger.SeatbeltHelmet11="No";
 
     private class ProcessVehicleDetails extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
          */
+
+        String accident_registration_number= MainActivity.accidentd_registration_no;
+
         private ProgressDialog pDialog;
 
-     //passenger two vehicle onedetails
-     Passenger.Name12="";
-     Passenger.Gender12="";
-     Passenger.DateOfBirth12="";
-     Passenger.PhysicalAddress12="";
-     Passenger.Address12="";
-     Passenger.NationalId12="";
-     Passenger.PhoneNo12="";
-     Passenger.casuality12="";
-     Passenger.drugs12="";
-     Passenger.SeatbeltHelmet12="No";
-        //location details
+        //location
 
-     //passenger three vehicle one details
-     Passenger.Name13="";
-     Passenger.Gender13="";
-     Passenger.DateOfBirth13="";
-     Passenger.PhysicalAddress13="";
-     Passenger.Address13="";
-     Passenger.NationalId13="";
-     Passenger.PhoneNo13="";
-     Passenger.casuality13="";
-     Passenger.drugs13="";
-     Passenger.SeatbeltHelmet13="No";
-        String area = MainActivity.acc_area;
-        String district = MainActivity.acc_district;
-        String region = MainActivity.acc_region;
-        String roadName = MainActivity.roadName;
-        String roadNo = MainActivity.roadNumber;
-        String roadMark = MainActivity.roadMark;
-        String IntersectionName = MainActivity.intersectionName;
-        String IntersectionNo = MainActivity.intersectionNumber;
+         String area = MainActivity.acc_area;
+         String roadName = MainActivity.roadName;
+         String roadNo = MainActivity.roadNumber;
+         String roadMark = MainActivity.roadMark;
+         String  IntersectionName = MainActivity.intersectionName;
+         String IntersectionNo = MainActivity.intersectionNumber;
         String IntersectionMark = MainActivity.intersectionMark;
-
-     //passenger one vehicle two details
-     Passenger.Name21="";
-     Passenger.Gender21="";
-     Passenger.DateOfBirth21="";
-     Passenger.PhysicalAddress21="";
-     Passenger.Address21="";
-     Passenger.NationalId21="";
-     Passenger.PhoneNo21="";
-     Passenger.casuality21="";
-     Passenger.drugs21="";
-     Passenger.SeatbeltHelmet21="No";
-
-     //passenger two vehicle two details
-     Passenger.Name22="";
-     Passenger.Gender22="";
-     Passenger.DateOfBirth22="";
-     Passenger.PhysicalAddress22="";
-     Passenger.Address22="";
-     Passenger.NationalId22="";
-     Passenger.PhoneNo22="";
-     Passenger.casuality22="";
-     Passenger.drugs22="";
-     Passenger.SeatbeltHelmet22="No";
-
-     //passenger three vehicle two details
-     Passenger.Name23="";
-     Passenger.Gender23="";
-     Passenger.DateOfBirth23="";
-     Passenger.PhysicalAddress23="";
-     Passenger.Address11="";
-     Passenger.NationalId23="";
-     Passenger.PhoneNo23="";
-     Passenger.casuality23="";
-     Passenger.drugs23="";
-     Passenger.SeatbeltHelmet23="No";
-
-     //Pedestrian A
-     Passenger.NameA="";
-     Passenger.GenderA="";
-     Passenger.DateOfBirthA="";
-     Passenger.PhysicalAddressA="";
-     Passenger.AddressA="";
-     Passenger.NationalIdA="";
-     Passenger.PhoneNoA="";
-     Passenger.casualityA="";
-     Passenger.drugsA="";
-
-     //passenger one vehicle one details
-     Passenger.NameB="";
-     Passenger.GenderB="";
-     Passenger.DateOfBirthB="";
-     Passenger.PhysicalAddressB="";
-     Passenger.AddressB="";
-     Passenger.NationalIdB="";
-     Passenger.PhoneNoB="";
-     Passenger.casualityB="";
-     Passenger.drugsB="";
-
-     //passenger one vehicle one details
-     Passenger.NameC="";
-     Passenger.GenderC="";
-     Passenger.DateOfBirthC="";
-     Passenger.PhysicalAddressC="";
-     Passenger.AddressC="";
-     Passenger.NationalIdC="";
-     Passenger.PhoneNoC="";
-     Passenger.casualityC="";
-     Passenger.drugsC="";
-
-     //passenger one vehicle one details
-     Passenger.NameD="";
-     Passenger.GenderD="";
-     Passenger.DateOfBirthD="";
-     Passenger.PhysicalAddressD="";
-     Passenger.AddressD="";
-     Passenger.NationalIdD="";
-     Passenger.PhoneNoD="";
-     Passenger.casualityD="";
-     Passenger.drugsD="";
-
-     //passenger one vehicle one details
-     Passenger.NameE="";
-     Passenger.GenderE="";
-     Passenger.DateOfBirthE="";
-     Passenger.PhysicalAddressE="";
-     Passenger.AddressE="";
-     Passenger.NationalIdE="";
-     Passenger.PhoneNoE="";
-     Passenger.casualityE="";
-     Passenger.drugsE="";
-
-     //passenger one vehicle one details
-     Passenger.NameF="";
-     Passenger.GenderF="";
-     Passenger.DateOfBirthF="";
-     Passenger.PhysicalAddressF="";
-     Passenger.AddressF="";
-     Passenger.NationalIdF="";
-     Passenger.PhoneNoF="";
-
- }
-
-    private class ProcessDriver1 extends AsyncTask<String, String, JSONObject> {
-
-        private ProgressDialog pDialog;
         //driver one details
         String surname1 = MainActivity.V1_surname;
         String other_names1 = MainActivity.V1_othernames;
@@ -2182,6 +1733,152 @@ public class AccidentTypeclassification extends Activity {
             }
         }
     }
+
+
+
+      public void restore_person_values(){
+
+     MainActivity.accidentd_registration_no="";
+     //passenger one vehicle one details
+     Passenger.Name11="";
+     Passenger.Gender11="";
+     Passenger.DateOfBirth11="";
+     Passenger.PhysicalAddress11="";
+     Passenger.Address11="";
+     Passenger.NationalId11="";
+     Passenger.PhoneNo11="";
+     Passenger.casuality11="";
+     Passenger.drugs11="";
+     Passenger.SeatbeltHelmet11="No";
+
+
+     //passenger two vehicle onedetails
+     Passenger.Name12="";
+     Passenger.Gender12="";
+     Passenger.DateOfBirth12="";
+     Passenger.PhysicalAddress12="";
+     Passenger.Address12="";
+     Passenger.NationalId12="";
+     Passenger.PhoneNo12="";
+     Passenger.casuality12="";
+     Passenger.drugs12="";
+     Passenger.SeatbeltHelmet12="No";
+        //location details
+
+     //passenger three vehicle one details
+     Passenger.Name13="";
+     Passenger.Gender13="";
+     Passenger.DateOfBirth13="";
+     Passenger.PhysicalAddress13="";
+     Passenger.Address13="";
+     Passenger.NationalId13="";
+     Passenger.PhoneNo13="";
+     Passenger.casuality13="";
+     Passenger.drugs13="";
+     Passenger.SeatbeltHelmet13="No";
+
+     //passenger one vehicle two details
+     Passenger.Name21="";
+     Passenger.Gender21="";
+     Passenger.DateOfBirth21="";
+     Passenger.PhysicalAddress21="";
+     Passenger.Address21="";
+     Passenger.NationalId21="";
+     Passenger.PhoneNo21="";
+     Passenger.casuality21="";
+     Passenger.drugs21="";
+     Passenger.SeatbeltHelmet21="No";
+
+     //passenger two vehicle two details
+     Passenger.Name22="";
+     Passenger.Gender22="";
+     Passenger.DateOfBirth22="";
+     Passenger.PhysicalAddress22="";
+     Passenger.Address22="";
+     Passenger.NationalId22="";
+     Passenger.PhoneNo22="";
+     Passenger.casuality22="";
+     Passenger.drugs22="";
+     Passenger.SeatbeltHelmet22="No";
+
+     //passenger three vehicle two details
+     Passenger.Name23="";
+     Passenger.Gender23="";
+     Passenger.DateOfBirth23="";
+     Passenger.PhysicalAddress23="";
+     Passenger.Address11="";
+     Passenger.NationalId23="";
+     Passenger.PhoneNo23="";
+     Passenger.casuality23="";
+     Passenger.drugs23="";
+     Passenger.SeatbeltHelmet23="No";
+
+     //Pedestrian A
+     Passenger.NameA="";
+     Passenger.GenderA="";
+     Passenger.DateOfBirthA="";
+     Passenger.PhysicalAddressA="";
+     Passenger.AddressA="";
+     Passenger.NationalIdA="";
+     Passenger.PhoneNoA="";
+     Passenger.casualityA="";
+     Passenger.drugsA="";
+
+     //passenger one vehicle one details
+     Passenger.NameB="";
+     Passenger.GenderB="";
+     Passenger.DateOfBirthB="";
+     Passenger.PhysicalAddressB="";
+     Passenger.AddressB="";
+     Passenger.NationalIdB="";
+     Passenger.PhoneNoB="";
+     Passenger.casualityB="";
+     Passenger.drugsB="";
+
+     //passenger one vehicle one details
+     Passenger.NameC="";
+     Passenger.GenderC="";
+     Passenger.DateOfBirthC="";
+     Passenger.PhysicalAddressC="";
+     Passenger.AddressC="";
+     Passenger.NationalIdC="";
+     Passenger.PhoneNoC="";
+     Passenger.casualityC="";
+     Passenger.drugsC="";
+
+     //passenger one vehicle one details
+     Passenger.NameD="";
+     Passenger.GenderD="";
+     Passenger.DateOfBirthD="";
+     Passenger.PhysicalAddressD="";
+     Passenger.AddressD="";
+     Passenger.NationalIdD="";
+     Passenger.PhoneNoD="";
+     Passenger.casualityD="";
+     Passenger.drugsD="";
+
+     //passenger one vehicle one details
+     Passenger.NameE="";
+     Passenger.GenderE="";
+     Passenger.DateOfBirthE="";
+     Passenger.PhysicalAddressE="";
+     Passenger.AddressE="";
+     Passenger.NationalIdE="";
+     Passenger.PhoneNoE="";
+     Passenger.casualityE="";
+     Passenger.drugsE="";
+
+     //passenger one vehicle one details
+     Passenger.NameF="";
+     Passenger.GenderF="";
+     Passenger.DateOfBirthF="";
+     Passenger.PhysicalAddressF="";
+     Passenger.AddressF="";
+     Passenger.NationalIdF="";
+     Passenger.PhoneNoF="";
+
+ }
+
 
 
     public void NetAsync(View view){
