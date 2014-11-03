@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -65,6 +66,10 @@ public class ScreenSlidePageFragment extends Fragment {
     EditText infrastructure;
     EditText cost;
 
+    CheckBox drug,phone_use,seat_belt;
+
+
+
     private Calendar cal;
 
     private int day;
@@ -82,9 +87,12 @@ public class ScreenSlidePageFragment extends Fragment {
         tab_one = (EditText) rootView.findViewById(R.id.dob_one);
         Log.d("vp", "current page "+MainActivity.currentPage);
         Log.d("vp", "tab text "+tab_one.getText());
+
         /**
          * Defining all layout items
          **/
+
+
 
         inputFatal = (EditText) rootView.findViewById(R.id.fatal_edit);
         inputInjuries = (EditText) rootView.findViewById(R.id.injury_edit);
@@ -99,17 +107,17 @@ public class ScreenSlidePageFragment extends Fragment {
         national_id_one = (EditText) rootView.findViewById(R.id.national_id_one);
         phone_no_one = (EditText) rootView.findViewById(R.id.phone_no_one);
         gender = (RadioGroup) rootView.findViewById(R.id.gender);
-        RadioButton male = (RadioButton) rootView.findViewById(R.id.male);
-        RadioButton female = (RadioButton) rootView.findViewById(R.id.female);
+        final RadioButton male = (RadioButton) rootView.findViewById(R.id.male);
+        final RadioButton female = (RadioButton) rootView.findViewById(R.id.female);
         nationality_one = (EditText) rootView.findViewById(R.id.nationality_one);
         license_one = (EditText) rootView.findViewById(R.id.license_one);
         occupation_one = (EditText) rootView.findViewById(R.id.occupation_one);
 
 
         alcohol_edit = (EditText) rootView.findViewById(R.id.alcohol_edit);
-        drug_edit = (CheckBox) rootView.findViewById(R.id.drug_edit);
-        phone_edit = (CheckBox) rootView.findViewById(R.id.phone_edit);
-        seat_belt_edit = (CheckBox) rootView.findViewById(R.id.seat_belt_edit);
+        drug = (CheckBox) rootView.findViewById(R.id.drug_edit);
+        phone_use = (CheckBox) rootView.findViewById(R.id.phone_edit);
+        seat_belt = (CheckBox) rootView.findViewById(R.id.seat_belt_edit);
 
         //Vehicle one details
         type_one = (EditText) rootView.findViewById(R.id.type_one);
@@ -129,6 +137,68 @@ public class ScreenSlidePageFragment extends Fragment {
         infrastructure = (EditText) rootView.findViewById(R.id.infrastructure_edit);
         cost = (EditText) rootView.findViewById(R.id.rescue_cost_edit);
 
+
+
+        /**
+         * getting values of our view elements
+         */
+        drug.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                if (((CheckBox) v).isChecked()) {
+
+                    MainActivity.V1_drug_edit= "Drugs";
+               }
+            else{ MainActivity.V1_drug_edit= " No Drug use";}
+            }
+   });
+
+        phone_use.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                if (((CheckBox) v).isChecked()) {
+
+                    MainActivity.V1_phone_edit= "Was using Phone";
+                }else{ MainActivity.V1_phone_edit= " No phone use";}
+            }
+        });
+
+        seat_belt.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                if (((CheckBox) v).isChecked()) {
+
+                    MainActivity.V1_seat_belt_edit= "Seat belt not fastened";
+                }else{ MainActivity.V1_seat_belt_edit= "Seat belt fastened";}
+            }
+        });
+
+        male.setChecked(true);
+        //   Fatal.setChecked(true);
+
+        male.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b == true) {
+                    female.setChecked(false);
+                   MainActivity.V1_gender = "male";
+                }
+            }
+        });
+
+        female.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b == true) {
+                    male.setChecked(false);
+                    MainActivity.V1_gender = "female";
+                }
+            }
+        });
+
 //Textchange
         inputFatal.addTextChangedListener(new EditTextWatcher(inputFatal));
         inputInjuries.addTextChangedListener(new EditTextWatcher(inputInjuries));
@@ -145,15 +215,11 @@ public class ScreenSlidePageFragment extends Fragment {
         inputInjuries.addTextChangedListener(new EditTextWatcher(inputInjuries));
         inputSimple.addTextChangedListener(new EditTextWatcher(inputSimple));
         inputNotInjured.addTextChangedListener(new EditTextWatcher(inputNotInjured));
-        // gender.addTextChangedListener(new EditTextWatcher(gender));
         nationality_one.addTextChangedListener(new EditTextWatcher(nationality_one));
         license_one.addTextChangedListener(new EditTextWatcher(license_one));
         occupation_one.addTextChangedListener(new EditTextWatcher(occupation_one));
 
         alcohol_edit.addTextChangedListener(new EditTextWatcher(alcohol_edit));
-        //drug_edit.addTextChangedListener(new EditTextWatcher(drug_edit));
-        //phone_edit.addTextChangedListener(new EditTextWatcher(phone_edit));
-        //seat_belt_edit.addTextChangedListener(new EditTextWatcher(seat_belt_edit));
 
         type_one.addTextChangedListener(new EditTextWatcher(type_one));
         registration_number_one.addTextChangedListener(new EditTextWatcher(registration_number_one));

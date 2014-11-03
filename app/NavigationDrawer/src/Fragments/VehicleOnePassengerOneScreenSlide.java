@@ -116,7 +116,7 @@ public class VehicleOnePassengerOneScreenSlide extends Fragment {
 
 
         Male.setChecked(true);
-     //   Fatal.setChecked(true);
+        //   Fatal.setChecked(true);
 
         Male.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
