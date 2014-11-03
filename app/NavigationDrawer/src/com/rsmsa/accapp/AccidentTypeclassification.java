@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -12,7 +14,9 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,6 +34,7 @@ import com.rsmsa.accapp.library.UserFunctions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -38,8 +43,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
-
+import customviews.TouchFeedbackEnabledRelativeLayout;
 
 
 /**
@@ -59,6 +63,16 @@ public class AccidentTypeclassification extends Activity {
     Button accidentTypeSelectButton;
 
     Button finishButton;
+
+    public final int POLICE_SIGNATURE = 12;
+
+    public final int DRIVER_A_SIGNATURE = 17;
+
+    public final int DRIVER_B_SIGNATURE = 23;
+
+    public final int WITNES_SIGNATURE = 24;
+
+    public static final int DESC_SKETCH = 24;
 
 
 
@@ -92,15 +106,48 @@ public class AccidentTypeclassification extends Activity {
      */
     public SpinnerAdapter dataAdapter;
 
-    ImageView scroller;
+    public ImageView scroller;
+
+    public ImageView policeImage;
+    public ImageView driverAImage;
+    public ImageView driverBImage;
+    public ImageView witnessImage;
+
+    public TextView policeHint;
+    public TextView driverAHint;
+    public TextView driverBHint;
+    public TextView witnessHint;
+
+    public TextView sketchHint;
+
+    public static int currentSignature;
+
+    public static final int SIGNATURE_ACTIVITY = 2;
+
+
    // DatabaseHandler db = new DatabaseHandler(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
 
+        scroller = (ImageView) findViewById(R.id.sign_capture);
+
+        sketchHint = (TextView)findViewById(R.id.sketch_hint);
+
         sthinSelected = (TextView)findViewById(R.id.selected_atc);
 
+        policeImage = (ImageView)findViewById(R.id.img_police);
+        policeHint = (TextView)findViewById(R.id.police_hint);
+
+        driverAImage = (ImageView)findViewById(R.id.img_driverA);
+        driverAHint = (TextView)findViewById(R.id.driverA_hint);
+
+        driverBImage = (ImageView)findViewById(R.id.img_driverB);
+        driverBHint = (TextView)findViewById(R.id.driverB_hint);
+
+        witnessImage = (ImageView)findViewById(R.id.img_witness);
+        witnessHint = (TextView)findViewById(R.id.witness_hint);
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
 
@@ -110,6 +157,56 @@ public class AccidentTypeclassification extends Activity {
             public void onClick(View view) {
                NetAsync(view);
 
+            }
+        });
+
+        TouchFeedbackEnabledRelativeLayout rp = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_police_sign);
+        rp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = POLICE_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rd1 = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_dr_a_sign);
+        rd1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DRIVER_A_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rd2 = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_dr_b_sign);
+        rd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DRIVER_B_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rw = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_witness_sign);
+        rw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = WITNES_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+            }
+        });
+
+        TouchFeedbackEnabledRelativeLayout rl = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.acc_description);
+        rl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DESC_SKETCH;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
             }
         });
 
@@ -1679,7 +1776,71 @@ public class AccidentTypeclassification extends Activity {
                 // Write your code on no result return
             }
         }
-    }
 
+        else if(requestCode == SIGNATURE_ACTIVITY){
+
+            if (resultCode == RESULT_OK) {
+
+                Bundle bundle = data.getExtras();
+                String status  = bundle.getString("status");
+                String myfile = bundle.getString("path");
+                String myStringImage = bundle.getString("mystringimage");
+                if(status.equalsIgnoreCase("done")){
+                    Log.d("parr ", myfile+"");
+                    Bitmap bmImg = BitmapFactory.decodeFile(myfile);
+                    if (currentSignature == POLICE_SIGNATURE){
+                        policeHint.setVisibility(View.GONE);
+                        policeImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DRIVER_A_SIGNATURE){
+                        driverAHint.setVisibility(View.GONE);
+                        driverAImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DESC_SKETCH){
+                        sketchHint.setVisibility(View.GONE);
+                        scroller.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DRIVER_B_SIGNATURE){
+                        driverBHint.setVisibility(View.GONE);
+                        driverBImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == WITNES_SIGNATURE){
+                        witnessHint.setVisibility(View.GONE);
+                        witnessImage.setImageBitmap(bmImg);
+                    }
+//                    //convert the string to byte array
+//                    byte[] imageAsBytes = Base64.decode(myStringImage.getBytes());
+//                    //get reference to the image view where you want to display the image
+//                    ImageView image = (ImageView)this.findViewById(R.id.sign_capture);
+//                    //set the image by decoding the byte array to bitmap
+//                    image.setImageBitmap(
+//                            BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length)
+//                    );
+//                    //Base64.encodeFromFile(mypath.toString(
+                    Toast toast = Toast.makeText(this, "Signature capture successful!", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.TOP, 105, 50);
+                    toast.show();
+                }
+            }
+            else {
+                if (currentSignature == POLICE_SIGNATURE){
+                    policeHint.setVisibility(View.VISIBLE);
+                    policeImage.setImageBitmap(null);
+                }
+                else if (currentSignature == DRIVER_A_SIGNATURE){
+                    driverAHint.setVisibility(View.VISIBLE);
+                    driverAImage.setImageBitmap(null);
+                }
+                else if (currentSignature == DRIVER_B_SIGNATURE){
+                    driverBHint.setVisibility(View.VISIBLE);
+                    driverBImage.setImageBitmap(null);
+                }
+                else if (currentSignature == WITNES_SIGNATURE){
+                    witnessHint.setVisibility(View.VISIBLE);
+                    witnessImage.setImageBitmap(null);
+                }
+            }
+        }
+    }
 
 }
