@@ -262,7 +262,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             + KEY_ALCOHOL + " TEXT ,"
             + KEY_SEAT_HELMET + " TEXT ,"
             + KEY_VEHICLE_NO + " TEXT ,"
-            + KEY_STATUS + " TEXT " + ")";
+            + KEY_STATUS + " TEXT ,"
+            + KEY_ACC_REG_NUMBER + " TEXT " + ")";
 
 
     // 5. TABLE_VEHICLE table create statement
@@ -559,7 +560,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     //Storing persons details in database
-    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status) {
+    public void addPerson(String name, String gender, String dob, String physical_address, String address_box, String nationality_id, String phone_no,String casuality, String alcohol ,String seat_helmet, String vehicle_no, String status, String reg_no) {
 
         if (name==""&&dob==""&&physical_address==""&&address_box==""&&nationality_id==""&&phone_no==""&&alcohol=="") {
 
@@ -579,6 +580,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             values.put(KEY_SEAT_HELMET ,seat_helmet); //seat_helmet
             values.put(KEY_VEHICLE_NO ,vehicle_no); //vehicle_no
             values.put(KEY_STATUS ,status); //status
+            values.put(KEY_ACC_REG_NUMBER ,reg_no); // registration number
             // Inserting Row
             db.insert(TABLE_PERSON, null, values);
             db.close(); // Closing database connection

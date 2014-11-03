@@ -15,6 +15,8 @@ import android.widget.Spinner;
 
 import com.rsmsa.accapp.library.DatabaseHandler;
 
+import customviews.TouchFeedbackEnabledRelativeLayout;
+
 
 /**
  * Created by martha shaka on 10/22/2014.
@@ -70,6 +72,15 @@ public class Atc extends Activity {
 
 
         setContentView(R.layout.atc);
+
+
+        TouchFeedbackEnabledRelativeLayout rl = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.acc_description);
+        rl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         /**
          * call the init() method to instantiate all our class variables
