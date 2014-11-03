@@ -63,6 +63,20 @@ public class AccidentTypeclassification extends Activity {
 
 
     int selectedSpinner;
+    int selectedjunctionStructureSpinner;
+    int selectedjunctionControlSpinner;
+    int selectedroadTypeSpinner;
+    int selectedsurfaceTypeSpinner;
+    int selectedroadStructureSpinner;
+    int selectedsurfaceStatusSpinner;
+    int selectedroadSurfaceSpinner;
+    int selectedlightSpinner;
+    int selectedwhetherSpinner;
+    int selectedcontrolSpinner;
+    int selectedviolationOneSpinner;
+    int selectedviolationTwoSpinner;
+    int selecteddefectOneSpinner;
+    int selecteddefectTwoSpinner;
 
     public final int REPORT_RESULT = 1;
 
@@ -245,17 +259,7 @@ public class AccidentTypeclassification extends Activity {
         defects.add("Others");
 
 
-        atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selectedSpinner = i;
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
         finishButton = (Button) findViewById(R.id.finish_button);
         finishButton.setOnClickListener(new View.OnClickListener() {
@@ -272,6 +276,9 @@ public class AccidentTypeclassification extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedSpinner = i;
+                if (i == 0){
+                    selectedSpinner = 234;
+                }
             }
 
             @Override
@@ -279,6 +286,377 @@ public class AccidentTypeclassification extends Activity {
 
             }
         });
+
+        junctionControlSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedjunctionControlSpinner = 178;
+                }else if(i==1){
+                    selectedjunctionControlSpinner = 177;
+                }else if(i==2){
+                    selectedjunctionControlSpinner = 176;
+                }else if(i==3){
+                    selectedjunctionControlSpinner = 175;
+                }else if(i==4){
+                    selectedjunctionControlSpinner = 174;
+                }else if(i==5){
+                    selectedjunctionControlSpinner = 173;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        junctionStructureSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedjunctionStructureSpinner = 189;
+                }else if(i==1){
+                    selectedjunctionStructureSpinner = 188;
+                }else if(i==2){
+                    selectedjunctionStructureSpinner = 187;
+                }else if(i==3){
+                    selectedjunctionStructureSpinner = 186;
+                }else if(i==4){
+                    selectedjunctionStructureSpinner = 185;
+                }else if(i==5){
+                    selectedjunctionStructureSpinner = 184;
+                }else if(i==6){
+                    selectedjunctionStructureSpinner = 183;
+                }else if(i==7){
+                    selectedjunctionStructureSpinner = 182;
+                }else if(i==8){
+                    selectedjunctionStructureSpinner = 181;
+                }else if(i==9){
+                    selectedjunctionStructureSpinner = 180;
+                }else if(i==10){
+                    selectedjunctionStructureSpinner = 179;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        roadTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedroadTypeSpinner = 172;
+                }else if(i==1){
+                    selectedroadTypeSpinner  = 171;
+                }else if(i==2){
+                    selectedroadTypeSpinner  = 170;
+                }else if(i==3){
+                    selectedroadTypeSpinner  = 169;
+                }else if(i==4){
+                    selectedroadTypeSpinner  = 168;
+                }else if(i==5){
+                    selectedroadTypeSpinner  = 167;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        surfaceTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedsurfaceTypeSpinner = 166;
+                }else if(i==1){
+                    selectedsurfaceTypeSpinner  = 165;
+                }else if(i==2){
+                    selectedsurfaceTypeSpinner  = 164;
+                }else if(i==3){
+                    selectedsurfaceTypeSpinner  = 163;
+                }else if(i==4){
+                    selectedsurfaceTypeSpinner  = 162;
+                }else if(i==5){
+                    selectedsurfaceTypeSpinner  = 161;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        roadStructureSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedroadStructureSpinner = 160;
+                }else if(i==1){
+                    selectedroadStructureSpinner = 159;
+                }else if(i==2){
+                    selectedroadStructureSpinner = 158;
+                }else if(i==3){
+                    selectedroadStructureSpinner = 157;
+                }else if(i==4){
+                    selectedroadStructureSpinner = 156;
+                }else if(i==5){
+                    selectedroadStructureSpinner = 155;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        surfaceStatusSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedsurfaceStatusSpinner = 154;
+                }else if(i==1){
+                    selectedsurfaceStatusSpinner = 153;
+                }else if(i==2){
+                    selectedsurfaceStatusSpinner = 152;
+                }else if(i==3){
+                    selectedsurfaceStatusSpinner = 151;
+                }else if(i==4){
+                    selectedsurfaceStatusSpinner = 150;
+                }else if(i==5){
+                    selectedsurfaceStatusSpinner = 149;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        roadSurfaceSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedroadSurfaceSpinner = 148;
+                }else if(i==1){
+                    selectedroadSurfaceSpinner = 147;
+                }else if(i==2){
+                    selectedroadSurfaceSpinner = 146;
+                }else if(i==3){
+                    selectedroadSurfaceSpinner = 145;
+                }else if(i==4){
+                    selectedroadSurfaceSpinner = 144;
+                }else if(i==5){
+                    selectedroadSurfaceSpinner = 143;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        lightSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedlightSpinner = 142;
+                }else if(i==1){
+                    selectedlightSpinner = 141;
+                }else if(i==2){
+                    selectedlightSpinner = 140;
+                }else if(i==3){
+                    selectedlightSpinner = 139;
+                }else if(i==4){
+                    selectedlightSpinner = 138;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        whetherSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedwhetherSpinner = 137;
+                }else if(i==1){
+                    selectedwhetherSpinner = 136;
+                }else if(i==2){
+                    selectedwhetherSpinner = 135;
+                }else if(i==3){
+                    selectedwhetherSpinner = 134;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        controlSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedcontrolSpinner = 133;
+                }else if(i==1){
+                    selectedcontrolSpinner = 132;
+                }else if(i==2){
+                    selectedcontrolSpinner = 131;
+                }else if(i==3){
+                    selectedcontrolSpinner = 130;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        violationOneSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedviolationOneSpinner = 129;
+                }else if(i==1){
+                    selectedviolationOneSpinner = 128;
+                }else if(i==2){
+                    selectedviolationOneSpinner = 127;
+                }else if(i==3){
+                    selectedviolationOneSpinner = 126;
+                }else if(i==4){
+                    selectedviolationOneSpinner = 125;
+                }else if(i==5){
+                    selectedviolationOneSpinner = 124;
+                }else if(i==6){
+                    selectedviolationOneSpinner = 123;
+                }else if(i==7){
+                    selectedviolationOneSpinner = 122;
+                }else if(i==8){
+                    selectedviolationOneSpinner = 121;
+                }else if(i==9){
+                    selectedviolationOneSpinner = 120;
+                }else if(i==10){
+                    selectedviolationOneSpinner = 119;
+                }else if(i==11){
+                    selectedviolationOneSpinner = 118;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        violationTwoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selectedviolationTwoSpinner = 129;
+                }else if(i==1){
+                    selectedviolationTwoSpinner = 128;
+                }else if(i==2){
+                    selectedviolationTwoSpinner = 127;
+                }else if(i==3){
+                    selectedviolationTwoSpinner = 126;
+                }else if(i==4){
+                    selectedviolationTwoSpinner = 125;
+                }else if(i==5){
+                    selectedviolationTwoSpinner = 124;
+                }else if(i==6){
+                    selectedviolationTwoSpinner = 123;
+                }else if(i==7){
+                    selectedviolationTwoSpinner = 122;
+                }else if(i==8){
+                    selectedviolationTwoSpinner = 121;
+                }else if(i==9){
+                    selectedviolationTwoSpinner = 120;
+                }else if(i==10){
+                    selectedviolationTwoSpinner = 119;
+                }else if(i==11){
+                    selectedviolationTwoSpinner = 118;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        defectOneSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selecteddefectOneSpinner = 117;
+                }else if(i==1){
+                    selecteddefectOneSpinner = 116;
+                }else if(i==2){
+                    selecteddefectOneSpinner = 115;
+                }else if(i==3){
+                    selecteddefectOneSpinner = 114;
+                }else if(i==4){
+                    selecteddefectOneSpinner = 113;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        defectTwoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0){
+                    selecteddefectTwoSpinner = 117;
+                }else if(i==1){
+                    selecteddefectTwoSpinner = 116;
+                }else if(i==2){
+                    selecteddefectTwoSpinner = 115;
+                }else if(i==3){
+                    selecteddefectTwoSpinner = 114;
+                }else if(i==4){
+                    selecteddefectTwoSpinner = 113;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
 
 
@@ -437,9 +815,9 @@ public class AccidentTypeclassification extends Activity {
         protected void onPostExecute(Boolean th) {
             if (th == true) {
                 nDialog.dismiss();
-
+                new ProcessSpinnerrDB().execute();
                 new ProcessPassengerDB().execute();
-                new ProcessVehicle1Data().execute();
+                //new ProcessVehicle1Data().execute();
                 //new ProcessDriver1().execute();
                // new ProcessDriver2().execute();
                 //new ProcessVehicle1Data().execute();
@@ -453,7 +831,8 @@ public class AccidentTypeclassification extends Activity {
             } else {
                 nDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error in Network Connection Data will be processed later.", Toast.LENGTH_SHORT).show();
-                 ProcessPassengerSQLLITE();
+                 //ProcessDataSQLLITE();
+
             }
         }
     }
@@ -464,6 +843,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
+        String accident_registration_number=MainActivity.accidentd_registration_no;
 
         //passenger one vehicle one details
         String name11=Passenger.Name11;
@@ -647,7 +1027,7 @@ public class AccidentTypeclassification extends Activity {
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
-           // pDialog.show();
+            pDialog.show();
         }
 
         @Override
@@ -657,68 +1037,68 @@ public class AccidentTypeclassification extends Activity {
             if (name11==""&&dob11==""&&physical_address11==""&&address_box11==""&&nationality_id11==""&&phone_no11==""&&casuality11==""&&alcohol11=="") {
 
             }else{
-                json = userFunction.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11);
+                json = userFunction.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11,accident_registration_number);
             }
 
             if (name12==""&&dob12==""&&physical_address12==""&&address_box12==""&&nationality_id12==""&&phone_no12==""&&alcohol12=="") {
 
             }else{
-                json = userFunction.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12);
+                json = userFunction.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12,accident_registration_number);
             }
 
             if (name13==""&&dob13==""&&physical_address13==""&&address_box13==""&&nationality_id13==""&&phone_no13==""&&alcohol13=="") {
 
             }else{
-                json = userFunction.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13);
+                json = userFunction.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13,accident_registration_number);
             }
 
             if (name21==""&&dob21==""&&physical_address21==""&&address_box21==""&&nationality_id21==""&&phone_no21==""&&alcohol21=="") {
 
             }else{
-                json = userFunction.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21);
+                json = userFunction.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21,accident_registration_number);
             }
 
             if (name22==""&&dob22==""&&physical_address22==""&&address_box22==""&&nationality_id22==""&&phone_no22==""&&alcohol22=="") {
 
             }else{
-                json = userFunction.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22);
+                json = userFunction.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22,accident_registration_number);
             }
 
             if (name23==""&&dob23==""&&physical_address23==""&&address_box23==""&&nationality_id23==""&&phone_no23==""&&alcohol23=="") {
 
             }else{
-                json = userFunction.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23);
+                json = userFunction.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23,accident_registration_number);
             }
             if (nameA==""&&dobA==""&&physical_addressA==""&&address_boxA==""&&nationality_idA==""&&phone_noA==""&&alcoholA=="") {
 
             }else{
-                json = userFunction.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA);
+                json = userFunction.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA,accident_registration_number);
             }
 
             if (nameB==""&&dobB==""&&physical_addressB==""&&address_boxB==""&&nationality_idB==""&&phone_noB==""&&alcoholB=="") {
 
             }else{
-                json = userFunction.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB);
+                json = userFunction.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB,accident_registration_number);
             }
             if (nameC==""&&dobC==""&&physical_addressC==""&&address_boxC==""&&nationality_idC==""&&phone_noC==""&&alcoholC=="") {
 
             }else{
-                json = userFunction.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC);
+                json = userFunction.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC,accident_registration_number);
             }
             if (nameD==""&&dobD==""&&physical_addressD==""&&address_boxD==""&&nationality_idD==""&&phone_noD==""&&alcoholD=="") {
 
             }else{
-                json = userFunction.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD);
+                json = userFunction.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD,accident_registration_number);
             }
             if (nameE==""&&dobE==""&&physical_addressE==""&&address_boxE==""&&nationality_idE==""&&phone_noE==""&&alcoholE=="") {
 
             }else{
-                json = userFunction.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE);
+                json = userFunction.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE,accident_registration_number);
             }
              if (nameF==""&& dobF=="" && casualityF=="" && physical_addressF=="" && address_boxF=="" && nationality_idF=="" && phone_noF=="" && alcoholF=="") {
 
             }else{
-                json = userFunction.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF);
+                json = userFunction.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF,accident_registration_number);
             }
 
             return json;
@@ -736,7 +1116,7 @@ public class AccidentTypeclassification extends Activity {
                     if (Integer.parseInt(res) == 1) {
                         pDialog.setTitle("Getting Data");
                         pDialog.setMessage("Loading Info");
-
+                        pDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
                         restore_person_values();
 
@@ -748,15 +1128,83 @@ public class AccidentTypeclassification extends Activity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
         }
     }
 
-    public void ProcessPassengerSQLLITE () {
+    private class ProcessSpinnerrDB extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
          */
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+        private ProgressDialog pDialog;
+        String accident_registration_number=MainActivity.accidentd_registration_no;
 
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+
+
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
+
+        @Override
+        protected JSONObject doInBackground(String... args) {
+            JSONObject json=new JSONObject();
+            UserFunctions userFunction = new UserFunctions();
+                int num1=1;
+                int num2=2;
+                  userFunction.addDefects(num1,selecteddefectOneSpinner,accident_registration_number);
+                  userFunction.addDefects(num2,selecteddefectTwoSpinner,accident_registration_number);
+                  userFunction.addJunctionType(selectedjunctionStructureSpinner,selectedjunctionControlSpinner);
+                  userFunction.addStreetCondition(selectedroadSurfaceSpinner, selectedlightSpinner, selectedwhetherSpinner, selectedcontrolSpinner);
+                  userFunction.addRoadType(selectedroadTypeSpinner, selectedsurfaceTypeSpinner,selectedroadStructureSpinner,selectedsurfaceStatusSpinner);
+                  userFunction.addViolation(num1, selectedviolationOneSpinner,accident_registration_number);
+                json = userFunction.addViolation(num2, selectedviolationTwoSpinner, accident_registration_number);
+
+                return json;
+
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject json) {
+            /**
+             * Checks for success message.
+             **/
+            try {
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
+                    String res = json.getString(KEY_SUCCESS);
+
+                    if (Integer.parseInt(res) == 1) {
+                        pDialog.setTitle("Getting Data");
+                        pDialog.setMessage("Loading Info");
+                        pDialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
+                        restore_person_values();
+
+                    }
+                } else {
+                    pDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+    public class ProcessDataSQLLITE extends AsyncTask<String, String, JSONObject> {
+        /**
+         * Defining Process dialog
+         */
+        private ProgressDialog pDialog;
+        String accident_registration_number=MainActivity.accidentd_registration_no;
 
         //passenger one vehicle one details
         String name11=Passenger.Name11;
@@ -771,7 +1219,7 @@ public class AccidentTypeclassification extends Activity {
         String seat_helmet11=Passenger.SeatbeltHelmet11;
         String vehicle_no11="1";
         String status11="passenger";
-        Log.d("mat",name11);
+
         //passenger two vehicle onedetails
         String name12=Passenger.Name12;
         String gender12=Passenger.Gender12;
@@ -928,36 +1376,128 @@ public class AccidentTypeclassification extends Activity {
         String casualityF="";
         String vehicle_noF="ALL";
         String statusF="Witness";
+        //
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
 
 
-        db.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11);
-        db.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12);
 
-        db.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
 
-        db.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21);
+        @Override
+        protected JSONObject doInBackground(String... args) {
+            JSONObject json=new JSONObject();
+            UserFunctions userFunction = new UserFunctions();
+            if (name11==""&&dob11==""&&physical_address11==""&&address_box11==""&&nationality_id11==""&&phone_no11==""&&casuality11==""&&alcohol11=="") {
 
-        db.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22);
+            }else{
+                json = userFunction.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11,accident_registration_number);
+            }
 
-        db.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23);
+            if (name12==""&&dob12==""&&physical_address12==""&&address_box12==""&&nationality_id12==""&&phone_no12==""&&alcohol12=="") {
 
-        db.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA);
+            }else{
+                json = userFunction.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12,accident_registration_number);
+            }
 
-        db.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB);
+            if (name13==""&&dob13==""&&physical_address13==""&&address_box13==""&&nationality_id13==""&&phone_no13==""&&alcohol13=="") {
 
-        db.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC);
+            }else{
+                json = userFunction.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13,accident_registration_number);
+            }
 
-        db.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD);
+            if (name21==""&&dob21==""&&physical_address21==""&&address_box21==""&&nationality_id21==""&&phone_no21==""&&alcohol21=="") {
 
-        db.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE);
+            }else{
+                json = userFunction.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21,accident_registration_number);
+            }
 
-        db.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF);
+            if (name22==""&&dob22==""&&physical_address22==""&&address_box22==""&&nationality_id22==""&&phone_no22==""&&alcohol22=="") {
 
-        restore_person_values();
+            }else{
+                json = userFunction.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22,accident_registration_number);
+            }
 
+            if (name23==""&&dob23==""&&physical_address23==""&&address_box23==""&&nationality_id23==""&&phone_no23==""&&alcohol23=="") {
+
+            }else{
+                json = userFunction.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23,accident_registration_number);
+            }
+            if (nameA==""&&dobA==""&&physical_addressA==""&&address_boxA==""&&nationality_idA==""&&phone_noA==""&&alcoholA=="") {
+
+            }else{
+                json = userFunction.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA,accident_registration_number);
+            }
+
+            if (nameB==""&&dobB==""&&physical_addressB==""&&address_boxB==""&&nationality_idB==""&&phone_noB==""&&alcoholB=="") {
+
+            }else{
+                json = userFunction.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB,accident_registration_number);
+            }
+            if (nameC==""&&dobC==""&&physical_addressC==""&&address_boxC==""&&nationality_idC==""&&phone_noC==""&&alcoholC=="") {
+
+            }else{
+                json = userFunction.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC,accident_registration_number);
+            }
+            if (nameD==""&&dobD==""&&physical_addressD==""&&address_boxD==""&&nationality_idD==""&&phone_noD==""&&alcoholD=="") {
+
+            }else{
+                json = userFunction.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD,accident_registration_number);
+            }
+            if (nameE==""&&dobE==""&&physical_addressE==""&&address_boxE==""&&nationality_idE==""&&phone_noE==""&&alcoholE=="") {
+
+            }else{
+                json = userFunction.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE,accident_registration_number);
+            }
+            if (nameF==""&& dobF=="" && casualityF=="" && physical_addressF=="" && address_boxF=="" && nationality_idF=="" && phone_noF=="" && alcoholF=="") {
+
+            }else{
+                json = userFunction.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF,accident_registration_number);
+            }
+
+            return json;
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject json) {
+            /**
+             * Checks for success message.
+             **/
+            try {
+                if (json != null && json.getString(KEY_SUCCESS) != null) {
+                    String res = json.getString(KEY_SUCCESS);
+
+                    if (Integer.parseInt(res) == 1) {
+                        pDialog.setTitle("Getting Data");
+                        pDialog.setMessage("Loading Info");
+                        pDialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
+                        restore_person_values();
+
+                    }
+                } else {
+                    pDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
- public void restore_person_values(){
+
+
+      public void restore_person_values(){
+
+     MainActivity.accidentd_registration_no="";
      //passenger one vehicle one details
      Passenger.Name11="";
      Passenger.Gender11="";
@@ -968,7 +1508,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo11="";
      Passenger.casuality11="";
      Passenger.drugs11="";
-     Passenger.SeatbeltHelmet11="";
+     Passenger.SeatbeltHelmet11="No";
 
 
      //passenger two vehicle onedetails
@@ -981,7 +1521,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo12="";
      Passenger.casuality12="";
      Passenger.drugs12="";
-     Passenger.SeatbeltHelmet12="";
+     Passenger.SeatbeltHelmet12="No";
 
      //passenger three vehicle one details
      Passenger.Name13="";
@@ -993,7 +1533,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo13="";
      Passenger.casuality13="";
      Passenger.drugs13="";
-     Passenger.SeatbeltHelmet13="";
+     Passenger.SeatbeltHelmet13="No";
 
      //passenger one vehicle two details
      Passenger.Name21="";
@@ -1005,7 +1545,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo21="";
      Passenger.casuality21="";
      Passenger.drugs21="";
-     Passenger.SeatbeltHelmet21="";
+     Passenger.SeatbeltHelmet21="No";
 
      //passenger two vehicle two details
      Passenger.Name22="";
@@ -1017,7 +1557,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo22="";
      Passenger.casuality22="";
      Passenger.drugs22="";
-     Passenger.SeatbeltHelmet22="";
+     Passenger.SeatbeltHelmet22="No";
 
      //passenger three vehicle two details
      Passenger.Name23="";
@@ -1029,7 +1569,7 @@ public class AccidentTypeclassification extends Activity {
      Passenger.PhoneNo23="";
      Passenger.casuality23="";
      Passenger.drugs23="";
-     Passenger.SeatbeltHelmet23="";
+     Passenger.SeatbeltHelmet23="No";
 
      //Pedestrian A
      Passenger.NameA="";
@@ -1134,7 +1674,7 @@ public class AccidentTypeclassification extends Activity {
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
-            pDialog.show();
+            //pDialog.show();
         }
 
         @Override
@@ -1201,11 +1741,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            //pDialog.setTitle("Contacting Servers");
-            //pDialog.setMessage("Storing Data...");
-            //pDialog.setIndeterminate(false);
-            //pDialog.setCancelable(true);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
             //pDialog.show();
         }
 
@@ -1257,11 +1797,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            // pDialog.setTitle("Contacting Servers");
-            // pDialog.setMessage("Storing Data...");
-            // pDialog.setIndeterminate(false);
-            // pDialog.setCancelable(true);
+             pDialog = new ProgressDialog(AccidentTypeclassification.this);
+             pDialog.setTitle("Contacting Servers");
+             pDialog.setMessage("Storing Data...");
+             pDialog.setIndeterminate(false);
+             pDialog.setCancelable(true);
             // pDialog.show();
         }
 
@@ -1284,8 +1824,8 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
+                         pDialog.setTitle("Getting Data");
+                         pDialog.setMessage("Loading Info");
                         //Pass sqlite data
                         Toast.makeText(getApplicationContext(), "Vehicle One Details Stored.", Toast.LENGTH_SHORT).show();
                     }
@@ -1314,11 +1854,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            // pDialog.setTitle("Contacting Servers");
-            // pDialog.setMessage("Storing Data...");
-            // pDialog.setIndeterminate(false);
-            // pDialog.setCancelable(true);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
             // pDialog.show();
         }
 
@@ -1375,11 +1915,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            // pDialog.setTitle("Contacting Servers");
-            // pDialog.setMessage("Storing Data...");
-            // pDialog.setIndeterminate(false);
-            // pDialog.setCancelable(true);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+             pDialog.setCancelable(true);
             // pDialog.show();
         }
 
@@ -1401,8 +1941,8 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
+                         pDialog.setTitle("Getting Data");
+                         pDialog.setMessage("Loading Info");
                         //Pass sqlite data
                         Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
                     }
@@ -1435,11 +1975,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            // pDialog.setTitle("Contacting Servers");
-            // pDialog.setMessage("Storing Data...");
-            // pDialog.setIndeterminate(false);
-            // pDialog.setCancelable(true);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
             // pDialog.show();
         }
 
@@ -1461,8 +2001,8 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
+                        pDialog.setTitle("Getting Data");
+                        pDialog.setMessage("Loading Info");
                         //Pass sqlite data
                         Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
                     }
@@ -1519,9 +2059,10 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
+                         pDialog.setTitle("Getting Data");
+                         pDialog.setMessage("Loading Info");
+
+                       //Pass sqlite data
                         Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
                     }
                 } else {
@@ -1556,7 +2097,7 @@ public class AccidentTypeclassification extends Activity {
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
-             pDialog.show();
+            pDialog.show();
         }
 
         @Override
@@ -1577,8 +2118,8 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
+                        pDialog.setTitle("Getting Data");
+                        pDialog.setMessage("Loading Info");
                         //Pass sqlite data
                         Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
                     }
@@ -1613,11 +2154,11 @@ public class AccidentTypeclassification extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            //pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            // pDialog.setTitle("Contacting Servers");
-            // pDialog.setMessage("Storing Data...");
-            // pDialog.setIndeterminate(false);
-            // pDialog.setCancelable(true);
+            pDialog = new ProgressDialog(AccidentTypeclassification.this);
+            pDialog.setTitle("Contacting Servers");
+            pDialog.setMessage("Storing Data...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
             // pDialog.show();
         }
 

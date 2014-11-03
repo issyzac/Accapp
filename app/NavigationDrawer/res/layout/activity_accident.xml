@@ -261,7 +261,7 @@
                     android:layout_below="@id/date_picker"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
-                    android:text="Pick" 
+                    android:text="Pick"
                     android:textSize="14sp"
                     android:background="@drawable/button"/>
 

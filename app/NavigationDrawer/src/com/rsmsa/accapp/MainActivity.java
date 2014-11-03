@@ -65,6 +65,9 @@ public class MainActivity extends FragmentActivity {
 //values to be sent to the database
 
     //Accident Severity
+    public static String accidentd_registration_no;
+
+    //Accident Severity
     public static String fatal;
     public static String injury;
     public static String simple;
@@ -83,8 +86,6 @@ public class MainActivity extends FragmentActivity {
     public static String intersectionName;
     public static String intersectionNumber;
     public static String intersectionMark;
-
-
 
     //Vehicle1 details
     public static String V1_fatal;
@@ -174,7 +175,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * Defining layout items.
      */
-    EditText inputFatal,inputInjuries,inputSimple,damage,area_name,district,city,region,road_name,road_no,road_mark,intersection_name,intersection_no,intersection_mark;
+    EditText inputFatal,inputReg,inputInjuries,inputSimple,damage,area_name,district,city,region,road_name,road_no,road_mark,intersection_name,intersection_no,intersection_mark;
 
 
     private ListView mDrawerList;
@@ -262,6 +263,7 @@ public class MainActivity extends FragmentActivity {
         /**
          * Defining all layout items
          **/
+        inputReg = (EditText)header.findViewById(R.id.reg_ref);
 
         inputFatal = (EditText)header.findViewById(R.id.fatal_edit);
 
@@ -296,6 +298,8 @@ public class MainActivity extends FragmentActivity {
 
 
         //Textchanges
+
+        inputReg.addTextChangedListener(new EditTextWatcher(inputReg));
 
         inputFatal.addTextChangedListener(new EditTextWatcher(inputFatal));
         inputInjuries.addTextChangedListener(new EditTextWatcher(inputInjuries));
@@ -409,6 +413,9 @@ public class MainActivity extends FragmentActivity {
                 switch (v.getId()) {
                     case R.id.fatal_edit:
                         fatal = inputFatal.getText().toString();
+                        break;
+                    case R.id.reg_ref:
+                        accidentd_registration_no = inputReg.getText().toString();
                         break;
                     case R.id.injury_edit:
                         injury = inputInjuries.getText().toString();

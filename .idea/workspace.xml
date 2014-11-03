@@ -19,11 +19,23 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.rsmsa.accapp" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3689f9e-1315-4d4d-b477-dd52f08ef70a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java" afterPath="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml" afterPath="$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,128 +65,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Passenger.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java">
+      <file leaf-file-name="OtherTwo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/OtherTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4777">
-              <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4352" max-vertical-offset="4641">
+              <caret line="256" column="10" selection-start-line="256" selection-start-column="10" selection-end-line="256" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java">
+      <file leaf-file-name="UserFunctions.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="16288" max-vertical-offset="19737">
-              <caret line="977" column="34" selection-start-line="977" selection-start-column="34" selection-end-line="977" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4187" max-vertical-offset="6171">
+              <caret line="258" column="52" selection-start-line="258" selection-start-column="43" selection-end-line="258" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccidentTypeclassification.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JSONParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/JSONParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1071">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccidentTypeclassification.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="18651" max-vertical-offset="19193">
-              <caret line="735" column="48" selection-start-line="735" selection-start-column="48" selection-end-line="735" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="19011" max-vertical-offset="37332">
+              <caret line="1165" column="16" selection-start-line="1165" selection-start-column="16" selection-end-line="1165" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2744#2895#0" expanded="true" />
-                <element signature="e#2884#2885#0" expanded="true" />
-                <element signature="e#4116#4124#0" expanded="true" />
-                <element signature="e#4719#4727#0" expanded="true" />
-                <element signature="e#5315#5323#0" expanded="true" />
-                <element signature="e#5643#5651#0" expanded="true" />
-                <element signature="e#5933#5941#0" expanded="true" />
-                <element signature="e#6213#6221#0" expanded="true" />
-                <element signature="e#6524#6532#0" expanded="true" />
-                <element signature="e#6820#6828#0" expanded="true" />
-                <element signature="e#7075#7083#0" expanded="true" />
-                <element signature="e#7280#7288#0" expanded="true" />
-                <element signature="e#7456#7464#0" expanded="true" />
-                <element signature="e#7674#7682#0" expanded="true" />
-                <element signature="e#8206#8214#0" expanded="true" />
-                <element signature="e#8869#9020#0" expanded="true" />
-                <element signature="e#9009#9010#0" expanded="true" />
-                <element signature="e#9467#9475#0" expanded="true" />
-                <element signature="e#9764#9772#0" expanded="true" />
-                <element signature="e#10105#10113#0" expanded="true" />
-                <element signature="e#10443#10451#0" expanded="true" />
-                <element signature="e#10757#10765#0" expanded="true" />
-                <element signature="e#11084#11092#0" expanded="true" />
-                <element signature="e#11419#11427#0" expanded="true" />
-                <element signature="e#11749#11757#0" expanded="true" />
-                <element signature="e#12068#12076#0" expanded="true" />
-                <element signature="e#12365#12373#0" expanded="true" />
-                <element signature="e#12670#12678#0" expanded="true" />
-                <element signature="e#12980#12988#0" expanded="true" />
-                <element signature="e#13307#13315#0" expanded="true" />
-                <element signature="e#13631#13639#0" expanded="true" />
-                <element signature="e#13944#13952#0" expanded="true" />
-                <element signature="e#14245#14663#0" expanded="true" />
-                <element signature="e#14652#14653#0" expanded="true" />
+                <element signature="e#3243#3394#0" expanded="true" />
+                <element signature="e#3383#3384#0" expanded="true" />
+                <element signature="e#4615#4623#0" expanded="true" />
+                <element signature="e#5218#5226#0" expanded="true" />
+                <element signature="e#5814#5822#0" expanded="true" />
+                <element signature="e#6142#6150#0" expanded="true" />
+                <element signature="e#6432#6440#0" expanded="true" />
+                <element signature="e#6712#6720#0" expanded="true" />
+                <element signature="e#7023#7031#0" expanded="true" />
+                <element signature="e#7319#7327#0" expanded="true" />
+                <element signature="e#7574#7582#0" expanded="true" />
+                <element signature="e#7779#7787#0" expanded="true" />
+                <element signature="e#7955#7963#0" expanded="true" />
+                <element signature="e#8173#8181#0" expanded="true" />
+                <element signature="e#8705#8713#0" expanded="true" />
+                <element signature="e#8991#9142#0" expanded="true" />
+                <element signature="e#9131#9132#0" expanded="true" />
+                <element signature="e#22936#22944#0" expanded="true" />
+                <element signature="e#23233#23241#0" expanded="true" />
+                <element signature="e#23574#23582#0" expanded="true" />
+                <element signature="e#23912#23920#0" expanded="true" />
+                <element signature="e#24226#24234#0" expanded="true" />
+                <element signature="e#24553#24561#0" expanded="true" />
+                <element signature="e#24888#24896#0" expanded="true" />
+                <element signature="e#25218#25226#0" expanded="true" />
+                <element signature="e#25537#25545#0" expanded="true" />
+                <element signature="e#25834#25842#0" expanded="true" />
+                <element signature="e#26139#26147#0" expanded="true" />
+                <element signature="e#26449#26457#0" expanded="true" />
+                <element signature="e#26776#26784#0" expanded="true" />
+                <element signature="e#27100#27108#0" expanded="true" />
+                <element signature="e#27413#27421#0" expanded="true" />
+                <element signature="e#27714#28132#0" expanded="true" />
+                <element signature="e#28121#28122#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="6749">
-              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScreenSlidePageFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="425">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_accident.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9128788" vertical-offset="3989" max-vertical-offset="8721">
-              <caret line="263" column="40" selection-start-line="263" selection-start-column="40" selection-end-line="263" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main_drawer.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_main_drawer.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5555556" vertical-offset="203" max-vertical-offset="731">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -203,16 +165,12 @@
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/TwoPassengerTwo.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/OnePassengerOne.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/OtherOne.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/PedestrianC.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/PedestrianB.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/PedestrianA.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/OtherTwo.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/res/layout/atc.xml" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Atc.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/PedestrianA.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/PedestrianB.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/PedestrianC.java" />
@@ -220,15 +178,20 @@
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/OtherTwo.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/JSONParser.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/Witness.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
-        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java" />
+        <option value="$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java" />
       </list>
     </option>
   </component>
@@ -348,7 +311,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,10 +334,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,19 +388,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -459,6 +413,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -586,33 +553,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25359577" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.005119454" sideWeight="0.11052233" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.11119516" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.005119454" sideWeight="0.88947767" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7829047" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.94880545" sideWeight="0.88880485" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17486753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.8895613" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13918306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48122868" sideWeight="0.8895613" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25359577" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -622,14 +589,14 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11945392" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -642,8 +609,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -665,7 +632,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -681,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="3825">
           <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="4641">
           <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4301" max-vertical-offset="4641">
           <caret line="253" column="32" selection-start-line="253" selection-start-column="32" selection-end-line="253" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="4641">
           <caret line="247" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,41 +677,40 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5609" max-vertical-offset="9826">
           <caret line="486" column="41" selection-start-line="486" selection-start-column="41" selection-end-line="486" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2744#2895#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#4116#4124#0" expanded="true" />
-            <element signature="e#4719#4727#0" expanded="true" />
-            <element signature="e#5315#5323#0" expanded="true" />
-            <element signature="e#5643#5651#0" expanded="true" />
-            <element signature="e#5933#5941#0" expanded="true" />
-            <element signature="e#6213#6221#0" expanded="true" />
-            <element signature="e#6524#6532#0" expanded="true" />
-            <element signature="e#6820#6828#0" expanded="true" />
-            <element signature="e#7075#7083#0" expanded="true" />
-            <element signature="e#7280#7288#0" expanded="true" />
-            <element signature="e#7456#7464#0" expanded="true" />
-            <element signature="e#7674#7682#0" expanded="true" />
-            <element signature="e#8206#8214#0" expanded="true" />
-            <element signature="e#8869#9020#0" expanded="true" />
-            <element signature="e#9009#9010#0" expanded="true" />
-            <element signature="e#9467#9475#0" expanded="true" />
-            <element signature="e#9764#9772#0" expanded="true" />
-            <element signature="e#10105#10113#0" expanded="true" />
-            <element signature="e#10443#10451#0" expanded="true" />
-            <element signature="e#10757#10765#0" expanded="true" />
-            <element signature="e#11084#11092#0" expanded="true" />
-            <element signature="e#11419#11427#0" expanded="true" />
-            <element signature="e#11749#11757#0" expanded="true" />
-            <element signature="e#12068#12076#0" expanded="true" />
-            <element signature="e#12365#12373#0" expanded="true" />
-            <element signature="e#12670#12678#0" expanded="true" />
-            <element signature="e#12980#12988#0" expanded="true" />
-            <element signature="e#13307#13315#0" expanded="true" />
-            <element signature="e#13631#13639#0" expanded="true" />
-            <element signature="e#13944#13952#0" expanded="true" />
-            <element signature="e#14245#14663#0" expanded="true" />
-            <element signature="e#14652#14653#0" expanded="true" />
+            <element signature="e#3243#3394#0" expanded="true" />
+            <element signature="e#3383#3384#0" expanded="true" />
+            <element signature="e#4615#4623#0" expanded="true" />
+            <element signature="e#5218#5226#0" expanded="true" />
+            <element signature="e#5814#5822#0" expanded="true" />
+            <element signature="e#6142#6150#0" expanded="true" />
+            <element signature="e#6432#6440#0" expanded="true" />
+            <element signature="e#6712#6720#0" expanded="true" />
+            <element signature="e#7023#7031#0" expanded="true" />
+            <element signature="e#7319#7327#0" expanded="true" />
+            <element signature="e#7574#7582#0" expanded="true" />
+            <element signature="e#7779#7787#0" expanded="true" />
+            <element signature="e#7955#7963#0" expanded="true" />
+            <element signature="e#8173#8181#0" expanded="true" />
+            <element signature="e#8705#8713#0" expanded="true" />
+            <element signature="e#8991#9142#0" expanded="true" />
+            <element signature="e#9131#9132#0" expanded="true" />
+            <element signature="e#22936#22944#0" expanded="true" />
+            <element signature="e#23233#23241#0" expanded="true" />
+            <element signature="e#23574#23582#0" expanded="true" />
+            <element signature="e#23912#23920#0" expanded="true" />
+            <element signature="e#24226#24234#0" expanded="true" />
+            <element signature="e#24553#24561#0" expanded="true" />
+            <element signature="e#24888#24896#0" expanded="true" />
+            <element signature="e#25218#25226#0" expanded="true" />
+            <element signature="e#25537#25545#0" expanded="true" />
+            <element signature="e#25834#25842#0" expanded="true" />
+            <element signature="e#26139#26147#0" expanded="true" />
+            <element signature="e#26449#26457#0" expanded="true" />
+            <element signature="e#26776#26784#0" expanded="true" />
+            <element signature="e#27100#27108#0" expanded="true" />
+            <element signature="e#27413#27421#0" expanded="true" />
+            <element signature="e#27714#28132#0" expanded="true" />
+            <element signature="e#28121#28122#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,14 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2551" max-vertical-offset="3094">
-          <caret line="194" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/atc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="8653">
@@ -914,15 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="3468">
           <caret line="200" column="76" selection-start-line="200" selection-start-column="76" selection-end-line="200" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="4352">
-          <caret line="64" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,35 +892,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2703" max-vertical-offset="4352">
-          <caret line="219" column="38" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/PedestrianA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3369" max-vertical-offset="4080">
           <caret line="247" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/OtherTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3777" max-vertical-offset="4335">
-          <caret line="256" column="10" selection-start-line="256" selection-start-column="10" selection-end-line="256" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="4080">
           <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,19 +910,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4080">
           <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/vehicle_one.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13923">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/one_pass_one.xml">
@@ -1018,89 +924,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2342" max-vertical-offset="6188">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/JSONParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="1071">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/PedestrianC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3267" max-vertical-offset="4080">
           <caret line="253" column="32" selection-start-line="253" selection-start-column="32" selection-end-line="253" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/Witness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="3383">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3825" max-vertical-offset="4964">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="4947">
-          <caret line="145" column="51" selection-start-line="145" selection-start-column="51" selection-end-line="145" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4423" max-vertical-offset="4981">
-          <caret line="329" column="1" selection-start-line="329" selection-start-column="1" selection-end-line="329" selection-end-column="1" />
-          <folding>
-            <element signature="e#10020#10326#0" expanded="true" />
-            <element signature="e#10319#10320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3009" max-vertical-offset="4845">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-          <folding>
-            <element signature="e#9987#10293#0" expanded="true" />
-            <element signature="e#10286#10287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4777">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16288" max-vertical-offset="19737">
-          <caret line="977" column="34" selection-start-line="977" selection-start-column="34" selection-end-line="977" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,21 +935,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="6749">
-          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_main_drawer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5555556" vertical-offset="203" max-vertical-offset="731">
+        <state vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="731">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding />
         </state>
@@ -1131,53 +949,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18651" max-vertical-offset="19193">
-          <caret line="735" column="48" selection-start-line="735" selection-start-column="48" selection-end-line="735" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2744#2895#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#4116#4124#0" expanded="true" />
-            <element signature="e#4719#4727#0" expanded="true" />
-            <element signature="e#5315#5323#0" expanded="true" />
-            <element signature="e#5643#5651#0" expanded="true" />
-            <element signature="e#5933#5941#0" expanded="true" />
-            <element signature="e#6213#6221#0" expanded="true" />
-            <element signature="e#6524#6532#0" expanded="true" />
-            <element signature="e#6820#6828#0" expanded="true" />
-            <element signature="e#7075#7083#0" expanded="true" />
-            <element signature="e#7280#7288#0" expanded="true" />
-            <element signature="e#7456#7464#0" expanded="true" />
-            <element signature="e#7674#7682#0" expanded="true" />
-            <element signature="e#8206#8214#0" expanded="true" />
-            <element signature="e#8869#9020#0" expanded="true" />
-            <element signature="e#9009#9010#0" expanded="true" />
-            <element signature="e#9467#9475#0" expanded="true" />
-            <element signature="e#9764#9772#0" expanded="true" />
-            <element signature="e#10105#10113#0" expanded="true" />
-            <element signature="e#10443#10451#0" expanded="true" />
-            <element signature="e#10757#10765#0" expanded="true" />
-            <element signature="e#11084#11092#0" expanded="true" />
-            <element signature="e#11419#11427#0" expanded="true" />
-            <element signature="e#11749#11757#0" expanded="true" />
-            <element signature="e#12068#12076#0" expanded="true" />
-            <element signature="e#12365#12373#0" expanded="true" />
-            <element signature="e#12670#12678#0" expanded="true" />
-            <element signature="e#12980#12988#0" expanded="true" />
-            <element signature="e#13307#13315#0" expanded="true" />
-            <element signature="e#13631#13639#0" expanded="true" />
-            <element signature="e#13944#13952#0" expanded="true" />
-            <element signature="e#14245#14663#0" expanded="true" />
-            <element signature="e#14652#14653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="425">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
@@ -1186,15 +960,181 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml">
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/vehicle_one.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9128788" vertical-offset="3989" max-vertical-offset="8721">
-          <caret line="263" column="40" selection-start-line="263" selection-start-column="40" selection-end-line="263" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.6478343" vertical-offset="14123" max-vertical-offset="14654">
+          <caret line="851" column="0" selection-start-line="851" selection-start-column="0" selection-end-line="851" selection-end-column="0" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Witness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3780822" vertical-offset="1851" max-vertical-offset="2431">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1054">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4641" max-vertical-offset="11067">
+          <caret line="346" column="0" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/DatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8443" max-vertical-offset="19771">
+          <caret line="603" column="59" selection-start-line="603" selection-start-column="59" selection-end-line="603" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/res/layout/activity_accident.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="8721">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerOneScreenSlide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4134" max-vertical-offset="4981">
+          <caret line="294" column="0" selection-start-line="293" selection-start-column="5" selection-end-line="303" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4131" max-vertical-offset="4862">
+          <caret line="301" column="46" selection-start-line="301" selection-start-column="46" selection-end-line="301" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4223" max-vertical-offset="4828">
+          <caret line="299" column="46" selection-start-line="299" selection-start-column="46" selection-end-line="299" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4189" max-vertical-offset="4692">
+          <caret line="298" column="45" selection-start-line="298" selection-start-column="45" selection-end-line="298" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4070" max-vertical-offset="4811">
+          <caret line="299" column="46" selection-start-line="299" selection-start-column="46" selection-end-line="299" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/VehicleTwoPassengerTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4216" max-vertical-offset="4879">
+          <caret line="302" column="46" selection-start-line="302" selection-start-column="46" selection-end-line="302" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/Witness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1758" max-vertical-offset="3383">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/Fragments/OtherTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3777" max-vertical-offset="4335">
+          <caret line="256" column="10" selection-start-line="256" selection-start-column="10" selection-end-line="256" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/Passenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="4777">
+          <caret line="115" column="46" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1071">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/library/UserFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4187" max-vertical-offset="6171">
+          <caret line="258" column="52" selection-start-line="258" selection-start-column="43" selection-end-line="258" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NavigationDrawer/src/com/rsmsa/accapp/AccidentTypeclassification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19011" max-vertical-offset="37332">
+          <caret line="1165" column="16" selection-start-line="1165" selection-start-column="16" selection-end-line="1165" selection-end-column="16" />
+          <folding>
+            <element signature="e#3243#3394#0" expanded="true" />
+            <element signature="e#3383#3384#0" expanded="true" />
+            <element signature="e#4615#4623#0" expanded="true" />
+            <element signature="e#5218#5226#0" expanded="true" />
+            <element signature="e#5814#5822#0" expanded="true" />
+            <element signature="e#6142#6150#0" expanded="true" />
+            <element signature="e#6432#6440#0" expanded="true" />
+            <element signature="e#6712#6720#0" expanded="true" />
+            <element signature="e#7023#7031#0" expanded="true" />
+            <element signature="e#7319#7327#0" expanded="true" />
+            <element signature="e#7574#7582#0" expanded="true" />
+            <element signature="e#7779#7787#0" expanded="true" />
+            <element signature="e#7955#7963#0" expanded="true" />
+            <element signature="e#8173#8181#0" expanded="true" />
+            <element signature="e#8705#8713#0" expanded="true" />
+            <element signature="e#8991#9142#0" expanded="true" />
+            <element signature="e#9131#9132#0" expanded="true" />
+            <element signature="e#22936#22944#0" expanded="true" />
+            <element signature="e#23233#23241#0" expanded="true" />
+            <element signature="e#23574#23582#0" expanded="true" />
+            <element signature="e#23912#23920#0" expanded="true" />
+            <element signature="e#24226#24234#0" expanded="true" />
+            <element signature="e#24553#24561#0" expanded="true" />
+            <element signature="e#24888#24896#0" expanded="true" />
+            <element signature="e#25218#25226#0" expanded="true" />
+            <element signature="e#25537#25545#0" expanded="true" />
+            <element signature="e#25834#25842#0" expanded="true" />
+            <element signature="e#26139#26147#0" expanded="true" />
+            <element signature="e#26449#26457#0" expanded="true" />
+            <element signature="e#26776#26784#0" expanded="true" />
+            <element signature="e#27100#27108#0" expanded="true" />
+            <element signature="e#27413#27421#0" expanded="true" />
+            <element signature="e#27714#28132#0" expanded="true" />
+            <element signature="e#28121#28122#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
