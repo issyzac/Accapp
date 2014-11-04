@@ -39,274 +39,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7fd98b-7015-4903-bc88-9d61988026f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/CaptureSignature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/signature.xml" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherOne.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\OtherTwo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianA.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianB.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\PedestrianC.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerOneScreenSlide.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerThree.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleOnePassengerTwo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerOne.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerThree.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$12.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$13.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$14.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$15.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\VehicleTwoPassengerTwo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\Fragments\Witness.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\NavigationDrawer.apk" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\NavigationDrawer.unaligned.apk" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\adapters\ATCgridAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\adapters\SpinnerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\adapters\VehicleTwoTypeGridViewAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\adapters\VehicleTypeGridViewAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\adapters\gridViewAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$NetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$ProcessDriver1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$ProcessDriver2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$ProcessPassengerDB.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification$ProcessVehicle1Data.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AccidentTypeclassification.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Atc.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AtcSelect$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\AtcSelect.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$CustomActionBarDrawerToggle.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$DrawerItemClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$EditTextWatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$PageListener.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity$ScreenSlidePagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\NsMenuAdapter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\NsMenuAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\NsMenuItemModel.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Passenger$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Passenger$PedestrianScreenSlidePagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Passenger$ScreenSlidePagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Passenger.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\R.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragment$EditTextWatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragmentTwo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragmentTwo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragmentTwo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragmentTwo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\ScreenSlidePageFragmentTwo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$NetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$ProcessDamageData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$ProcessDriverData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$ProcessInsuranceData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1$ProcessVehicleData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$NetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$ProcessDamageData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$ProcessDriverData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$ProcessInsuranceData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2$ProcessVehicleData.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Vehicle2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\VehicleType.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Witness$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Witness$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Witness$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\Witness.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\library\DatabaseHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\library\JSONParser.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\com\rsmsa\accapp\library\UserFunctions.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\AutoScrollViewPager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\AutoScrollViewPager$MyHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\AutoScrollViewPager.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\CustomDurationScroller.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\HeaderGridView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\HeaderGridView$FixedViewInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\HeaderGridView$FullWidthFixedViewLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\HeaderGridView$HeaderViewGridAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\customviews\HeaderGridView.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\transformers\DepthPageTransformer.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\gogo\Documents\android\Accapp\out\production\NavigationDrawer\transformers\ZoomOutPageTransformer.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../out/production/NavigationDrawer/com/rsmsa/accapp/AccidentActivity.class" afterPath="$PROJECT_DIR$/../out/production/NavigationDrawer/com/rsmsa/accapp/AccidentActivity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/cross_direction.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/site_sketch.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/src/customviews/TouchFeedbackEnabledRelativeLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavigationDrawer/res/drawable/touch_selector.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/NavigationDrawer.iml" afterPath="$PROJECT_DIR$/NavigationDrawer/NavigationDrawer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Atc.java" afterPath="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Atc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" afterPath="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -330,81 +69,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PedestrianA.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianA.java">
+      <file leaf-file-name="ScreenSlidePageFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4981" max-vertical-offset="5321">
-              <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="715" max-vertical-offset="6392">
+              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8530#8818#0" expanded="true" />
+                <element signature="e#8807#8808#0" expanded="true" />
+                <element signature="e#8881#8889#0" expanded="true" />
+                <element signature="e#9576#9877#0" expanded="true" />
+                <element signature="e#9866#9867#0" expanded="true" />
+                <element signature="e#9940#9948#0" expanded="true" />
+                <element signature="e#10345#10651#0" expanded="true" />
+                <element signature="e#10644#10645#0" expanded="true" />
+                <element signature="e#10800#10801#0" expanded="true" />
+                <element signature="e#10837#10838#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="atc.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.703704" vertical-offset="8476" max-vertical-offset="9265">
+              <caret line="514" column="48" selection-start-line="514" selection-start-column="33" selection-end-line="514" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PedestrianB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianB.java">
+      <file leaf-file-name="Atc.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Atc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="5440">
-              <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
+              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PedestrianC.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianC.java">
+      <file leaf-file-name="TouchFeedbackEnabledRelativeLayout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/customviews/TouchFeedbackEnabledRelativeLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="5457">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="986">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OtherTwo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherTwo.java">
+      <file leaf-file-name="ScreenSlidePageFragmentTwo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/ScreenSlidePageFragmentTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="5457">
-              <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#1843#2131#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2193#2201#0" expanded="true" />
+                <element signature="e#2888#3189#0" expanded="true" />
+                <element signature="e#3178#3179#0" expanded="true" />
+                <element signature="e#3252#3260#0" expanded="true" />
+                <element signature="e#3658#3945#0" expanded="true" />
+                <element signature="e#3938#3939#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OtherOne.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherOne.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="5457">
-              <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-              <folding />
-            </state>
+      <file leaf-file-name="vehicle_one.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Witness.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/Witness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2142" max-vertical-offset="4607">
-              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaptureSignature.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/CaptureSignature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="5389">
-              <caret line="67" column="66" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5049" max-vertical-offset="10948">
-              <caret line="361" column="38" selection-start-line="361" selection-start-column="38" selection-end-line="361" selection-end-column="38" />
+            <state vertical-scroll-proportion="-14.703704" vertical-offset="13781" max-vertical-offset="14484">
+              <caret line="834" column="32" selection-start-line="834" selection-start-column="32" selection-end-line="834" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -413,18 +161,36 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04850214" vertical-offset="0" max-vertical-offset="1054">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="0.10071942" vertical-offset="29" max-vertical-offset="1037">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#1068#1086#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signature.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/signature.xml">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1700">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5010" max-vertical-offset="10999">
+              <caret line="361" column="38" selection-start-line="361" selection-start-column="38" selection-end-line="361" selection-end-column="38" />
+              <folding>
+                <element signature="e#11577#11821#0" expanded="true" />
+                <element signature="e#11810#11811#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vehicle_two.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="446.07407" vertical-offset="13727" max-vertical-offset="14535">
+              <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -445,6 +211,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherTwo.java" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherOne.java" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/activity_main_drawer.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/empty.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/svg/svg.xml" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/raw/short.svg" />
+        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/passenger.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/res/raw/android.svg" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/svgtestclass.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/adapters/SpinnerAdapter.java" />
@@ -481,20 +261,6 @@
         <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Atc.java" />
         <option value="$PROJECT_DIR$/NavigationDrawer/src/customviews/TouchFeedbackEnabledRelativeLayout.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianA.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianB.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianC.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherTwo.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherOne.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/Fragments/Witness.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/CaptureSignature.java" />
-        <option value="$PROJECT_DIR$/NavigationDrawer/res/layout/signature.xml" />
         <option value="$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml" />
       </list>
     </option>
@@ -577,24 +343,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Fragments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NavigationDrawer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="customviews" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -659,11 +407,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -677,7 +421,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -697,8 +441,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="FullScreen" value="false" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
@@ -728,13 +472,47 @@
       <recent name="C:\Users\gogo\Documents\android\app\NavigationDrawer\libs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android Application.NavigationDrawer">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -762,19 +540,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -811,6 +576,26 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="false" name="NavigationDrawer" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="NavigationDrawer" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -833,7 +618,9 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.NavigationDrawer" />
+    </list>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
@@ -860,16 +647,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3223684" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3223684" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.10458453" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.8954155" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -877,18 +672,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21776505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24383561" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.8954155" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -896,14 +683,14 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2234957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24473684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24473684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3223684" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -916,8 +703,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5907895" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -941,10 +728,161 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/Vehicle1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44549763" vertical-offset="2387" max-vertical-offset="9605">
+          <caret line="183" column="46" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="425">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_main_drawer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="731">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/empty.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/passenger.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29852942" vertical-offset="664" max-vertical-offset="1938">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/adapters/gridViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/adapters/SpinnerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1071">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/spinner.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_one.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667" vertical-offset="1052" max-vertical-offset="4488">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_two.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.481482" vertical-offset="1035" max-vertical-offset="4522">
+          <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/one_pass_three.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.481482" vertical-offset="1035" max-vertical-offset="4522">
+          <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_one.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.185185" vertical-offset="1035" max-vertical-offset="4522">
+          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_two.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.185185" vertical-offset="1018" max-vertical-offset="4505">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_three.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27831715" vertical-offset="1035" max-vertical-offset="4522">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1054">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleTwoPassengerOne.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -952,6 +890,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1054">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -959,6 +898,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1071">
           <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1088">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -966,6 +914,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="3247">
           <caret line="200" column="25" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
+          <folding>
+            <element signature="e#2036#2323#0" expanded="false" />
+            <element signature="e#2312#2313#0" expanded="false" />
+            <element signature="e#5280#5281#0" expanded="false" />
+            <element signature="e#5335#5707#0" expanded="false" />
+            <element signature="e#5696#5697#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -978,6 +933,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40620154" vertical-offset="13423" max-vertical-offset="20094">
           <caret line="810" column="31" selection-start-line="810" selection-start-column="31" selection-end-line="810" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,6 +968,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/atc_select.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.9259257" vertical-offset="102" max-vertical-offset="731">
           <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
@@ -1020,6 +979,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/grid_item_atc.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="731">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
@@ -1041,10 +1003,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="715" max-vertical-offset="2924">
           <caret line="164" column="29" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_type.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.074074" vertical-offset="0" max-vertical-offset="561">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -1056,6 +1022,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="2125">
           <caret line="75" column="65" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="65" />
+          <folding>
+            <element signature="e#6860#7098#0" expanded="true" />
+            <element signature="e#7087#7088#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,6 +1033,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="1343">
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,6 +1043,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="711" max-vertical-offset="1326">
           <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,6 +1053,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1292">
           <caret line="59" column="0" selection-start-line="16" selection-start-column="40" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,6 +1063,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1292">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,6 +1075,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/activity_accident.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0" vertical-offset="463" max-vertical-offset="8721">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
@@ -1110,9 +1095,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml">
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1683" max-vertical-offset="14535">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5010" max-vertical-offset="10999">
+          <caret line="361" column="38" selection-start-line="361" selection-start-column="38" selection-end-line="361" selection-end-column="38" />
+          <folding>
+            <element signature="e#11577#11821#0" expanded="true" />
+            <element signature="e#11810#11811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_two.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="446.07407" vertical-offset="13727" max-vertical-offset="14535">
           <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
           <folding />
         </state>
@@ -1122,12 +1121,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="715" max-vertical-offset="6392">
           <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8530#8818#0" expanded="true" />
+            <element signature="e#8807#8808#0" expanded="true" />
+            <element signature="e#8881#8889#0" expanded="true" />
+            <element signature="e#9576#9877#0" expanded="true" />
+            <element signature="e#9866#9867#0" expanded="true" />
+            <element signature="e#9940#9948#0" expanded="true" />
+            <element signature="e#10345#10651#0" expanded="true" />
+            <element signature="e#10644#10645#0" expanded="true" />
+            <element signature="e#10800#10801#0" expanded="true" />
+            <element signature="e#10837#10838#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/atc.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8476" max-vertical-offset="9265">
+        <state vertical-scroll-proportion="-9.703704" vertical-offset="8476" max-vertical-offset="9265">
           <caret line="514" column="48" selection-start-line="514" selection-start-column="33" selection-end-line="514" selection-end-column="48" />
           <folding />
         </state>
@@ -1137,6 +1152,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
           <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,6 +1160,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="662">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,6 +1168,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="986">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1158,10 +1178,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#1843#2131#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2193#2201#0" expanded="true" />
+            <element signature="e#2888#3189#0" expanded="true" />
+            <element signature="e#3178#3179#0" expanded="true" />
+            <element signature="e#3252#3260#0" expanded="true" />
+            <element signature="e#3658#3945#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/vehicle_one.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.703704" vertical-offset="13781" max-vertical-offset="14484">
           <caret line="834" column="32" selection-start-line="834" selection-start-column="32" selection-end-line="834" selection-end-column="32" />
@@ -1169,147 +1202,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/two_pass_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.740741" vertical-offset="1290" max-vertical-offset="4522">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_a.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.333334" vertical-offset="1120" max-vertical-offset="4216">
-          <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/witness.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4814816" vertical-offset="1137" max-vertical-offset="3128">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_two.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4814816" vertical-offset="1086" max-vertical-offset="4182">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/other_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4814816" vertical-offset="1086" max-vertical-offset="4165">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_c.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.333334" vertical-offset="1086" max-vertical-offset="4182">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/pedestrian_b.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5185184" vertical-offset="1235" max-vertical-offset="4182">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/VehicleOnePassengerThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1377">
-          <caret line="70" column="65" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4034" max-vertical-offset="4590">
-          <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="4709">
-          <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/PedestrianC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="804" max-vertical-offset="4726">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="4726">
-          <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/OtherOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4726">
-          <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/Fragments/Witness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1467" max-vertical-offset="4029">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/res/layout/signature.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1700">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/CaptureSignature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="5389">
-          <caret line="67" column="66" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NavigationDrawer/src/com/rsmsa/accapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5049" max-vertical-offset="10948">
-          <caret line="361" column="38" selection-start-line="361" selection-start-column="38" selection-end-line="361" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NavigationDrawer/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04850214" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.10071942" vertical-offset="29" max-vertical-offset="1037">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#1068#1086#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,7 +1229,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1370,6 +1269,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

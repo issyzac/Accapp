@@ -105,6 +105,7 @@
                         android:id="@+id/fatal_edit"
                         android:layout_toRightOf="@id/fatal_text"
                         android:textSize="12sp"
+                        android:inputType="number"
                         android:layout_marginLeft="8dp"/>
 
                     <EditText
@@ -113,6 +114,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/injury_edit"
+                        android:inputType="number"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="8dp"
                         android:textSize="12sp"
@@ -143,6 +145,7 @@
                         android:layout_below="@id/fatal_edit"
                         android:layout_toRightOf="@id/simple_text"
                         android:textSize="12sp"
+                        android:inputType="number"
                         android:layout_marginTop="4dp"
                         android:layout_marginLeft="8dp"/>
 
@@ -153,6 +156,7 @@
                         android:layout_below="@id/injury_edit"
                         android:layout_marginTop="4dp"
                         android:textSize="16sp"
+                        android:inputType="number"
                         android:layout_marginRight="8dp"
                         android:id="@+id/not_injured_edit"/>
 
@@ -436,6 +440,7 @@
                     android:layout_toRightOf="@id/road_number_title"
                     android:layout_marginLeft="8dp"
                     android:textSize="12sp"
+                    android:inputType="number"
                     android:layout_marginTop="4dp"/>
 
                 <EditText
@@ -446,6 +451,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
                     android:textSize="12sp"
+                    android:inputType="number"
                     android:layout_marginTop="4dp"/>
 
                 <TextView
@@ -465,6 +471,7 @@
                     android:layout_toRightOf="@id/km_title"
                     android:layout_marginLeft="8dp"
                     android:textSize="12sp"
+                    android:inputType="number"
                     android:layout_marginTop="4dp"/>
 
                 <EditText
@@ -475,6 +482,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
                     android:textSize="12sp"
+                    android:inputType="number"
                     android:layout_marginTop="4dp"/>
 
 

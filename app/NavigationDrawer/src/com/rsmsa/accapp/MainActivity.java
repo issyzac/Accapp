@@ -242,6 +242,10 @@ public class MainActivity extends FragmentActivity {
 
     public EditText mTime;
 
+    public View tempHeader;
+
+    public boolean tempFlag = false;
+
 
 
     @Override
@@ -255,6 +259,19 @@ public class MainActivity extends FragmentActivity {
 
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        gridView = (ListView) findViewById(R.id.headergridview);
+
+        /**
+         * Temporary header
+         */
+        if (!hasheader){
+            tempHeader = (View)getLayoutInflater().inflate(R.layout.temp,null);
+            gridView.addHeaderView(tempHeader);
+            gridView.setAdapter(new gridViewAdapter(MainActivity.this));
+            hasheader = true;
+            tempFlag = true;
+        }
 
         /**
          * header instance
@@ -636,15 +653,16 @@ public class MainActivity extends FragmentActivity {
 
             if (position == 0){
 
+                gridView.removeHeaderView(tempHeader);
 
                 if(hasheader) {
                     gridView.removeHeaderView(header);
+                    gridView.removeHeaderView(tempHeader);
                     Log.d("headercheck", "yes there is header " + hasheader);
                 }
                 /**
                  * instance of a gridview
                  */
-                gridView = (ListView) findViewById(R.id.headergridview);
 
                 mDrawer.closeDrawer(mDrawerList);
 
@@ -654,6 +672,8 @@ public class MainActivity extends FragmentActivity {
 
                 MainActivity.hasheader = true;
 
+                gridView.deferNotifyDataSetChanged();
+
                 gridView.setAdapter(new gridViewAdapter(MainActivity.this));
             }
 
@@ -662,8 +682,14 @@ public class MainActivity extends FragmentActivity {
             mDrawerList.setItemChecked(position, true);
             if (position == 1) {
 
+                if (tempFlag){
+                    gridView.removeHeaderView(tempHeader);
+                    tempHeader.setVisibility(View.GONE);
+                }
+
                 if(hasheader) {
                     gridView.removeHeaderView(header);
+                    gridView.removeHeaderView(tempHeader);
                     Log.d("headercheck", "yes there is header two " + hasheader);
                 }
 

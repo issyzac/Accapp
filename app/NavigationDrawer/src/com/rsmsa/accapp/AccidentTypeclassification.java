@@ -67,7 +67,7 @@ public class AccidentTypeclassification extends Activity {
 
     public final int WITNES_SIGNATURE = 24;
 
-    public static final int DESC_SKETCH = 24;
+    public static final int DESC_SKETCH = 14;
 
 
 
@@ -2045,9 +2045,9 @@ public class AccidentTypeclassification extends Activity {
 //                            BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length)
 //                    );
 //                    //Base64.encodeFromFile(mypath.toString(
-                    Toast toast = Toast.makeText(this, "Signature capture successful!", Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.TOP, 105, 50);
-                    toast.show();
+//                    Toast toast = Toast.makeText(this, "Signature capture successful!", Toast.LENGTH_SHORT);
+//                    toast.setGravity(Gravity.TOP, 105, 50);
+//                    toast.show();
                 }
             }
             else {
