@@ -922,7 +922,7 @@ public class AccidentTypeclassification extends Activity {
     private class ProcessSqlite extends AsyncTask<String, String, String> {
 
         DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        String accident_reg_no = MainActivity.accidentd_registration_no;
+        String accident_reg_no = MainActivity.accident_registration_no;
 
         //passenger one vehicle one details
         String name11 = Passenger.Name11;
@@ -1278,7 +1278,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
+        String accident_registration_number=MainActivity.accident_registration_no;
 
         //passenger one vehicle one details
         String name11=Passenger.Name11;
@@ -1572,7 +1572,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
+        String accident_registration_number=MainActivity.accident_registration_no;
 
 
         @Override
@@ -1623,7 +1623,7 @@ public class AccidentTypeclassification extends Activity {
                         pDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
                         restore_person_values();
-
+                        pDialog.dismiss();
                     }
                 } else {
                     pDialog.dismiss();
@@ -1641,7 +1641,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
 
-        String accident_registration_number= MainActivity.accidentd_registration_no;
+
 
         private ProgressDialog pDialog;
 
@@ -1841,7 +1841,7 @@ public class AccidentTypeclassification extends Activity {
 
       public void restore_person_values(){
 
-     MainActivity.accidentd_registration_no="";
+     MainActivity.accident_registration_no="";
      //passenger one vehicle one details
      Passenger.Name11="";
      Passenger.Gender11="";

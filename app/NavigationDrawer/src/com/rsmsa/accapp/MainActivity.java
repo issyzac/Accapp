@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity {
 //values to be sent to the database
 
     //Accident Severity
-    public static String accidentd_registration_no;
+    public static String accident_registration_no;
 
     //Accident Severity
     public static String fatal;
@@ -415,7 +415,7 @@ public class MainActivity extends FragmentActivity {
                         fatal = inputFatal.getText().toString();
                         break;
                     case R.id.reg_ref:
-                        accidentd_registration_no = inputReg.getText().toString();
+                        accident_registration_no = inputReg.getText().toString();
                         break;
                     case R.id.injury_edit:
                         injury = inputInjuries.getText().toString();
