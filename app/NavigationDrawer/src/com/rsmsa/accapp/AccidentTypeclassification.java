@@ -350,6 +350,9 @@ public class AccidentTypeclassification extends Activity {
         defects.add("Tyre Burst");
         defects.add("Others");
 
+
+
+
         finishButton = (Button) findViewById(R.id.finish_button);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -902,9 +905,10 @@ public class AccidentTypeclassification extends Activity {
             if (th == true) {
                 nDialog.dismiss();
 
+
                 new ProcessVehicleDetails().execute();
-                new ProcessSpinnerrDB().execute();
                 new ProcessPassengerDB().execute();
+                new ProcessSpinnerrDB().execute();
 
 
             } else {
@@ -918,7 +922,7 @@ public class AccidentTypeclassification extends Activity {
     private class ProcessSqlite extends AsyncTask<String, String, String> {
 
         DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        String accident_reg_no = MainActivity.accidentd_registration_no;
+        String accident_reg_no = MainActivity.accident_registration_no;
 
         //passenger one vehicle one details
         String name11 = Passenger.Name11;
@@ -1274,7 +1278,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
+        String accident_registration_number=MainActivity.accident_registration_no;
 
         //passenger one vehicle one details
         String name11=Passenger.Name11;
@@ -1568,7 +1572,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
+        String accident_registration_number=MainActivity.accident_registration_no;
 
 
         @Override
@@ -1597,6 +1601,7 @@ public class AccidentTypeclassification extends Activity {
                   userFunction.addStreetCondition(selectedroadSurfaceSpinner, selectedlightSpinner, selectedwhetherSpinner, selectedcontrolSpinner);
                   userFunction.addRoadType(selectedroadTypeSpinner, selectedsurfaceTypeSpinner,selectedroadStructureSpinner,selectedsurfaceStatusSpinner);
                   userFunction.addViolation(num1, selectedviolationOneSpinner,accident_registration_number);
+               //   userFunction.addAccidentData(accident_registration_number);
                 json = userFunction.addViolation(num2, selectedviolationTwoSpinner, accident_registration_number);
 
                 return json;
@@ -1618,7 +1623,7 @@ public class AccidentTypeclassification extends Activity {
                         pDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
                         restore_person_values();
-
+                        pDialog.dismiss();
                     }
                 } else {
                     pDialog.dismiss();
@@ -1636,7 +1641,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
 
-        String accident_registration_number= MainActivity.accidentd_registration_no;
+
 
         private ProgressDialog pDialog;
 
@@ -1735,7 +1740,7 @@ public class AccidentTypeclassification extends Activity {
             pDialog.setMessage("Storing Data...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
-            //pDialog.show();
+            pDialog.show();
         }
 
         @Override
@@ -1836,7 +1841,7 @@ public class AccidentTypeclassification extends Activity {
 
       public void restore_person_values(){
 
-     MainActivity.accidentd_registration_no="";
+     MainActivity.accident_registration_no="";
      //passenger one vehicle one details
      Passenger.Name11="";
      Passenger.Gender11="";
@@ -1861,7 +1866,6 @@ public class AccidentTypeclassification extends Activity {
      Passenger.casuality12="";
      Passenger.drugs12="";
      Passenger.SeatbeltHelmet12="No";
-        //location details
 
      //passenger three vehicle one details
      Passenger.Name13="";
