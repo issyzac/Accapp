@@ -1,6 +1,5 @@
 package adapters;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -46,7 +45,8 @@ public class ATCgridAdapter extends BaseAdapter {
             // get layout from mobile.xml
             gridView = inflater.inflate(R.layout.grid_item_atc, null);
 
-        } else {
+        }
+        else {
             gridView = (View) convertView;
         }
 

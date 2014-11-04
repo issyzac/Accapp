@@ -17,4 +17,7 @@
     <string name="ns_menu_snippet1">Accident</string>
     <string name="ns_menu_snippet2">Offence</string>
 
+    <string name="external_dir">GetSignature</string>
+    <string name="hello">Hello World, CaptureSignatureActivity!</string>
+
 </resources>

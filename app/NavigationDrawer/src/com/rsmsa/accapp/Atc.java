@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.rsmsa.accapp.library.DatabaseHandler;
 
@@ -22,6 +24,9 @@ import customviews.TouchFeedbackEnabledRelativeLayout;
  * Created by martha shaka on 10/22/2014.
  */
 public class Atc extends Activity {
+
+
+
 
     /**
      * defining the instances of our view elements
@@ -69,18 +74,9 @@ public class Atc extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-
-
         setContentView(R.layout.atc);
 
 
-        TouchFeedbackEnabledRelativeLayout rl = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.acc_description);
-        rl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
         /**
          * call the init() method to instantiate all our class variables
