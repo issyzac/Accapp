@@ -17,10 +17,19 @@ public class UserFunctions {
     private JSONParser jsonParser;
 
     //URL of the PHP API
-    private static String loginURL = "http://inventory.unnett.com/android/";
-    private static String vehicleURL, accident_locationURL,accident_dataURL, driverURL, insuranceURL, damageURL,categoryURL, other_damageURL, acc_descURL,  defectURL  = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String forpassURL = "http://inventory.unnett.com/android/";
-    private static String chgpassURL = "http://inventory.unnett.com/android/";
+    private static String loginURL = "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String defectURL  = "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String forpassURL = "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String chgpassURL = "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String driverURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String insuranceURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String damageURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String acc_descURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String categoryURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String accident_locationURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String accident_dataURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String other_damageURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String vehicleURL= "http://192.168.43.251/PSMS/public/android/index.php";
     private static String personURL= "http://192.168.43.251/PSMS/public/android/index.php";
 
     private static String road_typeURL = "http://192.168.43.251/PSMS/public/android/index.php";
@@ -106,30 +115,21 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(accident_locationURL,params);
         return json;
     }
-/*
-    public JSONObject addAccidentData(String accident_reg_no, int driver_id1,int driver_id2, int vehicle1_id, int vehicle2_id, int road_type_id, int street_condition_id, int junction_type_id, int vehicle_defect_id,int damage_id, int violation_id , int category_id, int others_id) {
+
+    public JSONObject addAccidentData(String accident_reg_no) {
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
         params.add(new BasicNameValuePair("tag", accident_data_tag));
         params.add(new BasicNameValuePair("accident_reg_no", accident_reg_no));
-        params.add(new BasicNameValuePair("driver_id1", driver_id1 + ""));
-        params.add(new BasicNameValuePair("driver_id2", driver_id2 +""));
-        params.add(new BasicNameValuePair("vehicle1_id", vehicle1_id +""));
-        params.add(new BasicNameValuePair("vehicle2_id", vehicle2_id +""));
-        params.add(new BasicNameValuePair("road_type_id", road_type_id +""));
-        params.add(new BasicNameValuePair("street_condition_id", street_condition_id +""));
-        params.add(new BasicNameValuePair("junction_type_id", junction_type_id +""));
-        params.add(new BasicNameValuePair("vehicle_defect_id", vehicle_defect_id+""));
-        params.add(new BasicNameValuePair("damage_id", damage_id +""));
-        params.add(new BasicNameValuePair("violation_id", violation_id +""));
-        params.add(new BasicNameValuePair("category_id", category_id +""));
-        params.add(new BasicNameValuePair("others_id", others_id+""));
+
+
+    //    params.add(new BasicNameValuePair("others_id", others_id+""));
 
         JSONObject json = jsonParser.getJSONFromUrl(accident_dataURL,params);
         return json;
     }
-*/
+
     /**
      * Function to  Register
      **/

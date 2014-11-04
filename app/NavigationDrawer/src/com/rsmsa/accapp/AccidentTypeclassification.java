@@ -815,18 +815,10 @@ public class AccidentTypeclassification extends Activity {
         protected void onPostExecute(Boolean th) {
             if (th == true) {
                 nDialog.dismiss();
-                new ProcessSpinnerrDB().execute();
+
                 new ProcessPassengerDB().execute();
-                //new ProcessVehicle1Data().execute();
-                //new ProcessDriver1().execute();
-               // new ProcessDriver2().execute();
-                //new ProcessVehicle1Data().execute();
-                //new ProcessVehicle2Data().execute();
-                //new ProcessInsurance1Data().execute();
-               // new ProcessInsurance2Data().execute();
-               // new Processdamage1Data().execute();
-               // new Processdamage2Data().execute();
-               // new ProcessLocationData().execute();
+                new ProcessSpinnerrDB().execute();
+
 
             } else {
                 nDialog.dismiss();
@@ -1166,6 +1158,7 @@ public class AccidentTypeclassification extends Activity {
                   userFunction.addStreetCondition(selectedroadSurfaceSpinner, selectedlightSpinner, selectedwhetherSpinner, selectedcontrolSpinner);
                   userFunction.addRoadType(selectedroadTypeSpinner, selectedsurfaceTypeSpinner,selectedroadStructureSpinner,selectedsurfaceStatusSpinner);
                   userFunction.addViolation(num1, selectedviolationOneSpinner,accident_registration_number);
+               //   userFunction.addAccidentData(accident_registration_number);
                 json = userFunction.addViolation(num2, selectedviolationTwoSpinner, accident_registration_number);
 
                 return json;
