@@ -12,6 +12,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
@@ -310,38 +311,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             + KEY_ESTIMATED_REPAIR + " TEXT " + ")";
 
 
-
     // 8. TABLE_DAMAGE table create statement
     private static final String CREATE_TABLE_DAMAGE = "CREATE TABLE " + TABLE_DAMAGE
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_VEHICLE + " TEXT"
-            + KEY_VEHICLE_TOTAL + " INTEGER"
-            + KEY_INFRASTRUCTURE + " TEXT"
-            + KEY_RESCUE_COST + " REAL"
-            + KEY_IMAGE_PATH + " TEXT" + ")";
-
+            + KEY_VEHICLE + " TEXT ,"
+            + KEY_VEHICLE_TOTAL + " TEXT ,"
+            + KEY_INFRASTRUCTURE + " TEXT ,"
+            + KEY_RESCUE_COST + " TEXT " + ")";
 
     // 9.TABLE_ROAD_TYPE table create statement
     private static final String CREATE_TABLE_ROAD_TYPE = "CREATE TABLE " + TABLE_ROAD_TYPE
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_ROAD_CLASS + " TEXT"
-            + KEY_SURFACE_TYPE + " TEXT"
-            + KEY_ROAD_STRUCTURE + " TEXT"
-            + KEY_INFRASTRUCTURE + " TEXT"
+            + KEY_ROAD_CLASS + " TEXT ,"
+            + KEY_SURFACE_TYPE + " TEXT ,"
+            + KEY_ROAD_STRUCTURE + " TEXT ,"
+            + KEY_INFRASTRUCTURE + " TEXT ,"
             + KEY_ROAD_STATUS + " TEXT" + ")";
 
     // 10. TABLE_STREET_CONDITION table create statement
     private static final String CREATE_TABLE_STREET_CONDITION = "CREATE TABLE " + TABLE_STREET_CONDITION
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_ROAD_SURFACE+ " TEXT"
-            + KEY_LIGHT + " TEXT"
-            + KEY_WEATHER + " TEXT"
+            + KEY_ROAD_SURFACE+ " TEXT,"
+            + KEY_LIGHT + " TEXT,"
+            + KEY_WEATHER + " TEXT,"
             + KEY_ROAD_CONTROL + " TEXT" + ")";
 
     // 11. TABLE_JUNCTION_TYPE table create statement
     private static final String CREATE_TABLE_JUNCTION_TYPE = "CREATE TABLE " + TABLE_JUNCTION_TYPE
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_JUNCTION_STRUCTURE+ " TEXT"
+            + KEY_JUNCTION_STRUCTURE+ " TEXT,"
             + KEY_JUNCTION_CONTROL + " TEXT" + ")";
 
 
@@ -363,7 +361,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + TABLE_CATEGORY
             + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
             + KEY_CAT_NAME+ " TEXT"
-            + KEY_CAT_NUMBER + " INTEGER"
+            + KEY_CAT_NUMBER + " INTEGER,"
             + KEY_CAT_DESCRIPTION + " TEXT" + ")";
 
 
@@ -399,8 +397,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     // 19. TABLE_STANDARD_DESCRIPTION table create statement
     private static final String CREATE_TABLE_ACCIDENT_REGISTRATION = "CREATE TABLE " + TABLE_ACCIDENT_REGISTRATION
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY  NOT NULL,"
-            + KEY_ACC_REG_NUMBER + " TEXT NOT NULL" + ")";
+            + "(" + KEY_ID + " INTEGER PRIMARY KEY   ,"
+            + KEY_ACC_REG_NUMBER + " TEXT  " + ")";
 
     public DatabaseHandler(Context context) {
 
@@ -507,28 +505,34 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting user data from database
      * */
-    public HashMap<String, String> getLocation(){
-        HashMap<String, String> loc = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getLocation() {
+        ArrayList<HashMap<String, String>> locList = new ArrayList<HashMap<String, String>>();
+
         String selectQuery = "SELECT  * FROM " + TABLE_ACCIDENT_LOCATION;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            loc.put("area", cursor.getString(1));
-            loc.put("road_name", cursor.getString(2));
-            loc.put("road_no", cursor.getString(3));
-            loc.put("road_mark", cursor.getString(4));
-            loc.put("interName", cursor.getString(5));
-            loc.put("interNo", cursor.getString(6));
-            loc.put("interMark", cursor.getString(7));
-        }
-        cursor.close();
-        db.close();
-        // return location
-        return loc;
-    }
 
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String , String> loc = new HashMap<String , String> ();
+                loc.put("area", cursor.getString(0));
+                loc.put("road_name", cursor.getString(1));
+                loc.put("road_no", cursor.getString(2));
+                loc.put("road_mark", cursor.getString(3));
+                loc.put("interName", cursor.getString(4));
+                loc.put("interNo", cursor.getString(5));
+                loc.put("interMark", cursor.getString(6));
+                locList.add(loc);
+            } while (cursor.moveToNext());
+            Log.d("Count", Integer.toString(cursor.getCount()));
+        }
+            cursor.close();
+            db.close();
+            // return location
+            return locList;
+
+    }
     //Storing accident details in database
     public void addAccident(String accident_reg_no, int driver_id1,int driver_id2, int vehicle1_id, int vehicle2_id, int road_type_id, int street_condition_id, int junction_type_id, int vehicle_defect_id,int damage_id, int violation_id , int category_id, int others_id) {
 
@@ -588,31 +592,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting user data from database
      * */
-    public HashMap<String, String> getPerson(){
-        HashMap<String, String> person = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getPerson(){
+        ArrayList<HashMap<String, String>> personList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_PERSON;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            person.put("name", cursor.getString(1));
-            person.put("gender", cursor.getString(2));
-            person.put("dob", cursor.getString(3));
-            person.put("address", cursor.getString(4));
-            person.put("po_box", cursor.getString(5));
-            person.put("nationality", cursor.getString(6));
-            person.put("phone_no", cursor.getString(7));
-            person.put("casuality", cursor.getString(8));
-            person.put("alcohol", cursor.getString(9));
-            person.put("seat", cursor.getString(10));
-            person.put("vehicle_no", cursor.getString(11));
-            person.put("status", cursor.getString(12));
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String , String> person = new HashMap<String , String> ();
+                person.put("name", cursor.getString(0));
+                person.put("gender", cursor.getString(1));
+                person.put("dob", cursor.getString(2));
+                person.put("address", cursor.getString(3));
+                person.put("po_box", cursor.getString(4));
+                person.put("nationality", cursor.getString(5));
+                person.put("phone_no", cursor.getString(6));
+                person.put("casuality", cursor.getString(7));
+                person.put("alcohol", cursor.getString(8));
+                person.put("seat", cursor.getString(9));
+                person.put("vehicle_no", cursor.getString(10));
+                person.put("status", cursor.getString(11));
+                personList.add(person);
+            } while (cursor.moveToNext());
+            Log.d("Count", Integer.toString(cursor.getCount()));
         }
         cursor.close();
         db.close();
         // return person
-        return person;
+        return personList;
     }
     //Storing vehicle details in database
     public void addVehicle(String vehicle_type, String vehicle_reg_no ) {
@@ -630,21 +638,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting user data from database
      * */
-    public HashMap<String, String> getVehicle(){
-        HashMap<String, String> vehicle = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getVehicle(){
+        ArrayList<HashMap<String, String>> vehicleList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_VEHICLE;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+
+       do {
+            HashMap<String , String> vehicle = new HashMap<String , String> ();
             vehicle.put("type", cursor.getString(1));
             vehicle.put("reg_no", cursor.getString(2));
-        }
+            vehicleList.add(vehicle);
+        }while (cursor.moveToNext());
+        Log.d("Count", Integer.toString(cursor.getCount()));
+    }
         cursor.close();
         db.close();
         // return vehicle
-        return vehicle;
+        return vehicleList;
     }
     //Storing driver details in database
     public void addDriver(String surname, String other_names,String physical_address,String address_box,String national_id,String phone_no,String gender,String dob, String nationality,String driving_licence, String occupation, String alcohol, String drugs,String phone_use, String seat_helmet) {
@@ -674,34 +688,40 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting driver data from database
      * */
-    public HashMap<String, String> getDriver(){
-        HashMap<String, String> driver = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getDriver(){
+        ArrayList<HashMap<String, String>> driverList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_DRIVER;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            driver.put("surname", cursor.getString(1));
-            driver.put("names", cursor.getString(2));
-            driver.put("address", cursor.getString(3));
-            driver.put("po_box", cursor.getString(4));
-            driver.put("national_id", cursor.getString(5));
-            driver.put("phone", cursor.getString(6));
-            driver.put("gender", cursor.getString(7));
-            driver.put("dob", cursor.getString(8));
-            driver.put("nationality", cursor.getString(9));
-            driver.put("license", cursor.getString(10));
-            driver.put("occupation", cursor.getString(11));
-            driver.put("alcohol", cursor.getString(12));
-            driver.put("drugs", cursor.getString(13));
-            driver.put("phone_use", cursor.getString(14));
-            driver.put("helmet", cursor.getString(15));
-        }
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+            HashMap<String, String> driver = new HashMap<String, String>();
+            driver.put("surname", cursor.getString(0));
+            driver.put("names", cursor.getString(1));
+            driver.put("address", cursor.getString(2));
+            driver.put("po_box", cursor.getString(3));
+            driver.put("national_id", cursor.getString(4));
+            driver.put("phone", cursor.getString(5));
+            driver.put("gender", cursor.getString(6));
+            driver.put("dob", cursor.getString(7));
+            driver.put("nationality", cursor.getString(8));
+            driver.put("license", cursor.getString(9));
+            driver.put("occupation", cursor.getString(10));
+            driver.put("alcohol", cursor.getString(11));
+            driver.put("drugs", cursor.getString(12));
+            driver.put("phone_use", cursor.getString(13));
+            driver.put("helmet", cursor.getString(14));
+
+            driverList.add(driver);
+        }while (cursor.moveToNext());
+        Log.d("Count", Integer.toString(cursor.getCount()));
+    }
         cursor.close();
         db.close();
         // return driver
-        return driver;
+        return driverList;
     }
     //Storing insurance details in database
     public void addInsurance(String insurance_company_name, String insurance_type, String insurance_phone_no, String policy_no, String expiration_period, String estimated_repair_costs ) {
@@ -724,30 +744,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting insurance data from database
      * */
-    public HashMap<String, String> getInsurance(){
-        HashMap<String, String> insurance = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getInsurance(){
+        ArrayList<HashMap<String, String>>insuranceList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_INSURANCE;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+            HashMap<String, String> insurance = new HashMap<String, String>();
             insurance.put("company_name", cursor.getString(1));
             insurance.put("company_type", cursor.getString(2));
             insurance.put("company_phone", cursor.getString(3));
             insurance.put("policy_no", cursor.getString(4));
             insurance.put("expire", cursor.getString(5));
             insurance.put("costs", cursor.getString(6));
-        }
+            insuranceList.add(insurance);
+        }while (cursor.moveToNext());
+        Log.d("Count", Integer.toString(cursor.getCount()));
+    }
         cursor.close();
         db.close();
         // return insurance
-        return insurance;
+        return insuranceList;
     }
 
 
     //Storing damage details in database
-    public void addDamage(String vehicle, String vehicle_total, String infrastructure, String rescue_costs, String image_path ) {
+    public void addDamage(String vehicle, String vehicle_total, String infrastructure, String rescue_costs ) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -755,7 +780,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_VEHICLE_TOTAL ,vehicle_total); //vehicle_total
         values.put(KEY_INFRASTRUCTURE ,infrastructure); //infrastructure
         values.put(KEY_RESCUE_COST ,rescue_costs); //rescue_costs
-        values.put(KEY_IMAGE_PATH ,image_path); //image_path
+        //values.put(KEY_IMAGE_PATH ,image_path); //image_path
         // Inserting Row
         db.insert(TABLE_DAMAGE, null, values);
         db.close(); // Closing database connection
@@ -764,24 +789,29 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting damage data from database
      * */
-    public HashMap<String, String> getDamage(){
-        HashMap<String, String> damage = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getDamage(){
+        ArrayList<HashMap<String, String>> damageList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_DAMAGE;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            damage.put("vehicle", cursor.getString(1));
-            damage.put("total", cursor.getString(2));
-            damage.put("infrastructure", cursor.getString(3));
-            damage.put("costs", cursor.getString(4));
-            damage.put("img_ath", cursor.getString(5));
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+            HashMap<String, String> damage = new HashMap<String, String>();
+            damage.put("vehicle", cursor.getString(0));
+            damage.put("total", cursor.getString(1));
+            damage.put("infrastructure", cursor.getString(2));
+            damage.put("costs", cursor.getString(3));
+            //damage.put("img_ath", cursor.getString(4));
+            damageList.add(damage);
+            }while (cursor.moveToNext());
+            Log.d("Count", Integer.toString(cursor.getCount()));
         }
         cursor.close();
         db.close();
         // return insurance
-        return damage;
+        return damageList;
     }
 
     //Storing road_type details in database
@@ -802,24 +832,28 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     /**
      * Getting road data from database
      * */
-    public HashMap<String, String> getRoadType(){
-        HashMap<String, String> road = new HashMap<String, String>();
+    public ArrayList<HashMap<String, String>> getRoadType(){
+        ArrayList<HashMap<String, String>> roadList = new ArrayList<HashMap<String, String>>();
         String selectQuery = "SELECT  * FROM " + TABLE_ROAD_TYPE;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            road.put("class", cursor.getString(1));
-            road.put("surface", cursor.getString(2));
-            road.put("structure", cursor.getString(3));
-            road.put("infrastructure", cursor.getString(4));
-            road.put("status", cursor.getString(5));
-        }
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do { HashMap<String, String> road = new HashMap<String, String>();
+            road.put("class", cursor.getString(0));
+            road.put("surface", cursor.getString(1));
+            road.put("structure", cursor.getString(2));
+            road.put("infrastructure", cursor.getString(3));
+            road.put("status", cursor.getString(4));
+            roadList.add(road);
+        }while (cursor.moveToNext());
+        Log.d("Count", Integer.toString(cursor.getCount()));
+    }
         cursor.close();
         db.close();
         // return road
-        return road;
+        return roadList;
     }
     //Storing STREET_CONDITION details in database
     public void addStreetCondition(String road_surface, String light, String weather, String road_control ) {
@@ -844,13 +878,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_STREET_CONDITION;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
             street.put("surface", cursor.getString(1));
             street.put("light", cursor.getString(2));
             street.put("weather", cursor.getString(3));
             street.put("control", cursor.getString(4));
+            }while (cursor.moveToNext());
+            Log.d("Count", Integer.toString(cursor.getCount()));
         }
         cursor.close();
         db.close();
@@ -879,12 +916,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_JUNCTION_TYPE;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
             junction.put("structure", cursor.getString(1));
             junction.put("control", cursor.getString(2));
-        }
+        }while (cursor.moveToNext());
+        Log.d("Count", Integer.toString(cursor.getCount()));
+    }
         cursor.close();
         db.close();
         // return junction
@@ -975,15 +1015,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_ACCIDENT_REGISTRATION;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        // Move to first row
-        cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            registration.put("registration_number", cursor.getString(1));
 
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+            registration.put(KEY_ACC_REG_NUMBER, cursor.getString(1));
+
+            }while (cursor.moveToNext());
+            Log.d("Count", Integer.toString(cursor.getCount()));
         }
-        cursor.close();
-        db.close();
-        // return registration
+        // return junction
         return registration;
     }
 

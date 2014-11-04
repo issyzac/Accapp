@@ -592,7 +592,7 @@ public class Vehicle1 extends Activity {
                          * Stores registered data in SQlite Database
                          **/
                         db.addDamage(json_damage.getString(KEY_DAMAGE_VEHICLE), json_damage.getString(KEY_VEHICLE_TOTAL),
-                                json_damage.getString(KEY_INFRASTRUCTURE), json_damage.getString(KEY_DAMAGE_COST), json_damage.getString(KEY_PATH));
+                                json_damage.getString(KEY_INFRASTRUCTURE), json_damage.getString(KEY_DAMAGE_COST));
                     }
                 } else {
                     pDialog.dismiss();

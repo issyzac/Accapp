@@ -37,7 +37,7 @@ public class UserFunctions {
     private static String street_conditionURL = "http://192.168.43.251/PSMS/public/android/index.php";
     private static String violationURL = "http://192.168.43.251/PSMS/public/android/index.php";
     private static String login_tag = "login";
-    private static String accident_location_tag = "accident_location";
+    private static String accident_location_tag = "location";
     private static String accident_data_tag = "accident_data";
     private static String person_tag = "person";
     private static String vehicle_tag = "vehicle";
@@ -94,7 +94,7 @@ public class UserFunctions {
     }
 
     /**
-     * Function to  Register
+     * Function to  add AccidentLocation
      **/
     public JSONObject addAccidentLocation(String area,String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
         // Building Parameters
@@ -205,8 +205,8 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("insurance_type", insurance_type));
         params.add(new BasicNameValuePair("insurance_phone_no", insurance_phone_no));
         params.add(new BasicNameValuePair("policy_no", policy_no));
-        params.add(new BasicNameValuePair("expiration_period", expiration_period +""));
-        params.add(new BasicNameValuePair("estimated_repair_costs", estimated_repair_costs + ""));
+        params.add(new BasicNameValuePair("expiration_period", expiration_period ));
+        params.add(new BasicNameValuePair("estimated_repair_costs", estimated_repair_costs));
 
         JSONObject json = jsonParser.getJSONFromUrl(insuranceURL,params);
         return json;

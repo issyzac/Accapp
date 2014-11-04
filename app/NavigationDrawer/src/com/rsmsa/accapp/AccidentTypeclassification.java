@@ -1,18 +1,19 @@
 package com.rsmsa.accapp;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,7 +23,6 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rsmsa.accapp.library.DatabaseHandler;
 import com.rsmsa.accapp.library.UserFunctions;
@@ -30,16 +30,15 @@ import com.rsmsa.accapp.library.UserFunctions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-
-
+import customviews.TouchFeedbackEnabledRelativeLayout;
 
 
 /**
@@ -59,6 +58,16 @@ public class AccidentTypeclassification extends Activity {
     Button accidentTypeSelectButton;
 
     Button finishButton;
+
+    public final int POLICE_SIGNATURE = 12;
+
+    public final int DRIVER_A_SIGNATURE = 17;
+
+    public final int DRIVER_B_SIGNATURE = 23;
+
+    public final int WITNES_SIGNATURE = 24;
+
+    public static final int DESC_SKETCH = 24;
 
 
 
@@ -106,15 +115,48 @@ public class AccidentTypeclassification extends Activity {
      */
     public SpinnerAdapter dataAdapter;
 
-    ImageView scroller;
+    public ImageView scroller;
+
+    public ImageView policeImage;
+    public ImageView driverAImage;
+    public ImageView driverBImage;
+    public ImageView witnessImage;
+
+    public TextView policeHint;
+    public TextView driverAHint;
+    public TextView driverBHint;
+    public TextView witnessHint;
+
+    public TextView sketchHint;
+
+    public static int currentSignature;
+
+    public static final int SIGNATURE_ACTIVITY = 2;
+
+
    // DatabaseHandler db = new DatabaseHandler(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atc);
 
+        scroller = (ImageView) findViewById(R.id.sign_capture);
+
+        sketchHint = (TextView)findViewById(R.id.sketch_hint);
+
         sthinSelected = (TextView)findViewById(R.id.selected_atc);
 
+        policeImage = (ImageView)findViewById(R.id.img_police);
+        policeHint = (TextView)findViewById(R.id.police_hint);
+
+        driverAImage = (ImageView)findViewById(R.id.img_driverA);
+        driverAHint = (TextView)findViewById(R.id.driverA_hint);
+
+        driverBImage = (ImageView)findViewById(R.id.img_driverB);
+        driverBHint = (TextView)findViewById(R.id.driverB_hint);
+
+        witnessImage = (ImageView)findViewById(R.id.img_witness);
+        witnessHint = (TextView)findViewById(R.id.witness_hint);
 
         accidentTypeSelectButton = (Button)findViewById(R.id.accident_type_select_button);
 
@@ -124,6 +166,56 @@ public class AccidentTypeclassification extends Activity {
             public void onClick(View view) {
                NetAsync(view);
 
+            }
+        });
+
+        TouchFeedbackEnabledRelativeLayout rp = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_police_sign);
+        rp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = POLICE_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rd1 = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_dr_a_sign);
+        rd1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DRIVER_A_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rd2 = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_dr_b_sign);
+        rd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DRIVER_B_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+            }
+        });
+        TouchFeedbackEnabledRelativeLayout rw = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.img_witness_sign);
+        rw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = WITNES_SIGNATURE;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
+            }
+        });
+
+        TouchFeedbackEnabledRelativeLayout rl = (TouchFeedbackEnabledRelativeLayout)findViewById(R.id.acc_description);
+        rl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccidentTypeclassification.this, CaptureSignature.class);
+                currentSignature = DESC_SKETCH;
+                startActivityForResult(intent,SIGNATURE_ACTIVITY);
             }
         });
 
@@ -268,10 +360,7 @@ public class AccidentTypeclassification extends Activity {
                 NetAsync(view);
             }
         });
-
-
-
-
+        
         atcSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -816,6 +905,8 @@ public class AccidentTypeclassification extends Activity {
             if (th == true) {
                 nDialog.dismiss();
 
+
+                new ProcessVehicleDetails().execute();
                 new ProcessPassengerDB().execute();
                 new ProcessSpinnerrDB().execute();
 
@@ -823,13 +914,365 @@ public class AccidentTypeclassification extends Activity {
             } else {
                 nDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error in Network Connection Data will be processed later.", Toast.LENGTH_SHORT).show();
-                 //ProcessDataSQLLITE();
-
+                new ProcessSqlite().execute();
             }
         }
     }
 
+    private class ProcessSqlite extends AsyncTask<String, String, String> {
 
+        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+        String accident_reg_no = MainActivity.accidentd_registration_no;
+
+        //passenger one vehicle one details
+        String name11 = Passenger.Name11;
+        String gender11 = Passenger.Gender11;
+        String dob11 = Passenger.DateOfBirth11;
+        String physical_address11 = Passenger.PhysicalAddress11;
+        String address_box11 = Passenger.Address11;
+        String nationality_id11 = Passenger.NationalId11;
+        String phone_no11 = Passenger.PhoneNo11;
+        String casuality11 = Passenger.casuality11;
+        String alcohol11 = Passenger.drugs11;
+        String seat_helmet11 = Passenger.SeatbeltHelmet11;
+        String vehicle_no11 = "1";
+        String status11 = "passenger";
+
+        //passenger two vehicle onedetails
+        String name12 = Passenger.Name12;
+        String gender12 = Passenger.Gender12;
+        String dob12 = Passenger.DateOfBirth12;
+        String physical_address12 = Passenger.PhysicalAddress12;
+        String address_box12 = Passenger.Address12;
+        String nationality_id12 = Passenger.NationalId12;
+        String phone_no12 = Passenger.PhoneNo12;
+        String casuality12 = Passenger.casuality12;
+        String alcohol12 = Passenger.drugs12;
+        String seat_helmet12 = Passenger.SeatbeltHelmet12;
+        String vehicle_no12 = "1";
+        String status12 = "passenger";
+
+
+        //passenger three vehicle one details
+        String name13 = Passenger.Name13;
+        String gender13 = Passenger.Gender13;
+        String dob13 = Passenger.DateOfBirth13;
+        String physical_address13 = Passenger.PhysicalAddress13;
+        String address_box13 = Passenger.Address13;
+        String nationality_id13 = Passenger.NationalId13;
+        String phone_no13 = Passenger.PhoneNo13;
+        String casuality13 = Passenger.casuality13;
+        String alcohol13 = Passenger.drugs13;
+        String seat_helmet13 = Passenger.SeatbeltHelmet13;
+        String vehicle_no13 = "1";
+        String status13 = "passenger";
+
+
+        //passenger one vehicle two details
+        String name21 = Passenger.Name21;
+        String gender21 = Passenger.Gender21;
+        String dob21 = Passenger.DateOfBirth21;
+        String physical_address21 = Passenger.PhysicalAddress21;
+        String address_box21 = Passenger.Address21;
+        String nationality_id21 = Passenger.NationalId21;
+        String phone_no21 = Passenger.PhoneNo21;
+        String casuality21 = Passenger.casuality21;
+        String alcohol21 = Passenger.drugs21;
+        String seat_helmet21 = Passenger.SeatbeltHelmet21;
+        String vehicle_no21 = "2";
+        String status21 = "passenger";
+
+        //passenger two vehicle two details
+        String name22 = Passenger.Name22;
+        String gender22 = Passenger.Gender22;
+        String dob22 = Passenger.DateOfBirth22;
+        String physical_address22 = Passenger.PhysicalAddress22;
+        String address_box22 = Passenger.Address22;
+        String nationality_id22 = Passenger.NationalId22;
+        String phone_no22 = Passenger.PhoneNo22;
+        String casuality22 = Passenger.casuality22;
+        String alcohol22 = Passenger.drugs22;
+        String seat_helmet22 = Passenger.SeatbeltHelmet22;
+        String vehicle_no22 = "2";
+        String status22 = "passenger";
+
+        //passenger three vehicle two details
+        String name23 = Passenger.Name23;
+        String gender23 = Passenger.Gender23;
+        String dob23 = Passenger.DateOfBirth23;
+        String physical_address23 = Passenger.PhysicalAddress23;
+        String address_box23 = Passenger.Address23;
+        String nationality_id23 = Passenger.NationalId23;
+        String phone_no23 = Passenger.PhoneNo23;
+        String casuality23 = Passenger.casuality23;
+        String alcohol23 = Passenger.drugs23;
+        String seat_helmet23 = Passenger.SeatbeltHelmet23;
+        String vehicle_no23 = "2";
+        String status23 = "passenger";
+
+        //Pedestrian A
+        String nameA = Passenger.NameA;
+        String genderA = Passenger.GenderA;
+        String dobA = Passenger.DateOfBirthA;
+        String physical_addressA = Passenger.PhysicalAddressA;
+        String address_boxA = Passenger.AddressA;
+        String nationality_idA = Passenger.NationalIdA;
+        String phone_noA = Passenger.PhoneNoA;
+        String casualityA = Passenger.casualityA;
+        String alcoholA = Passenger.drugsA;
+        String seat_helmetA = "";
+        String vehicle_noA = "ALL";
+        String statusA = "pedestrian";
+
+        //passenger one vehicle one details
+        String nameB = Passenger.NameB;
+        String genderB = Passenger.GenderB;
+        String dobB = Passenger.DateOfBirthB;
+        String physical_addressB = Passenger.PhysicalAddressB;
+        String address_boxB = Passenger.AddressB;
+        String nationality_idB = Passenger.NationalIdB;
+        String phone_noB = Passenger.PhoneNoB;
+        String casualityB = Passenger.casualityB;
+        String alcoholB = Passenger.drugsB;
+        String seat_helmetB = "";
+        String vehicle_noB = "ALL";
+        String statusB = "pedestrian";
+
+        //passenger one vehicle one details
+        String nameC = Passenger.NameC;
+        String genderC = Passenger.GenderC;
+        String dobC = Passenger.DateOfBirthC;
+        String physical_addressC = Passenger.PhysicalAddressC;
+        String address_boxC = Passenger.AddressC;
+        String nationality_idC = Passenger.NationalIdC;
+        String phone_noC = Passenger.PhoneNoC;
+        String casualityC = Passenger.casualityC;
+        String alcoholC = Passenger.drugsC;
+        String seat_helmetC = "";
+        String vehicle_noC = "ALL";
+        String statusC = "pedestrian";
+
+        //passenger one vehicle one details
+        String nameD = Passenger.NameD;
+        String genderD = Passenger.GenderD;
+        String dobD = Passenger.DateOfBirthD;
+        String physical_addressD = Passenger.PhysicalAddressD;
+        String address_boxD = Passenger.AddressD;
+        String nationality_idD = Passenger.NationalIdD;
+        String phone_noD = Passenger.PhoneNoD;
+        String casualityD = Passenger.casualityD;
+        String alcoholD = Passenger.drugsD;
+        String seat_helmetD = "";
+        String vehicle_noD = "ALL";
+        String statusD = "Others";
+
+        //passenger one vehicle one details
+        String nameE = Passenger.NameE;
+        String genderE = Passenger.GenderE;
+        String dobE = Passenger.DateOfBirthE;
+        String physical_addressE = Passenger.PhysicalAddressE;
+        String address_boxE = Passenger.AddressE;
+        String nationality_idE = Passenger.NationalIdE;
+        String phone_noE = Passenger.PhoneNoE;
+        String casualityE = Passenger.casualityE;
+        String alcoholE = Passenger.drugsE;
+        String seat_helmetE = "";
+        String vehicle_noE = "ALL";
+        String statusE = "Others";
+
+        //passenger one vehicle one details
+        String nameF = Passenger.NameF;
+        String genderF = Passenger.GenderF;
+        String dobF = Passenger.DateOfBirthF;
+        String physical_addressF = Passenger.PhysicalAddressF;
+        String address_boxF = Passenger.AddressF;
+        String nationality_idF = Passenger.NationalIdF;
+        String phone_noF = Passenger.PhoneNoF;
+        String seat_helmetF = "";
+        String alcoholF = "";
+        String casualityF = "";
+        String vehicle_noF = "ALL";
+        String statusF = "Witness";
+
+
+        //location details
+
+        String area = MainActivity.acc_area;
+        String district = MainActivity.acc_district;
+        String region = MainActivity.acc_region;
+        String roadName = MainActivity.roadName;
+        String roadNo = MainActivity.roadNumber;
+        String roadMark = MainActivity.roadMark;
+        String IntersectionName = MainActivity.intersectionName;
+        String IntersectionNo = MainActivity.intersectionNumber;
+        String IntersectionMark = MainActivity.intersectionMark;
+
+        //driver one details
+        String surname1 = MainActivity.V1_surname;
+        String other_names1 = MainActivity.V1_othernames;
+        String physical_address1 = MainActivity.V1_physical_address_one;
+        String po_box1 = MainActivity.V1_address_box_one;
+        String national_id1 = MainActivity.V1_national_id_one;
+        String driver_phone_no1 = MainActivity.V1_phone_no_one;
+        String gender1 = MainActivity.V1_gender;
+        String dob1 = MainActivity.V1_dob_one;
+        String nationality1 = MainActivity.V1_nationality_one;
+        String licence1 = MainActivity.V1_license_one;
+        String occupation1 = MainActivity.V1_occupation;
+        String drug1 = MainActivity.V1_drug_edit;
+        String alcohol1 = MainActivity.V1_alcohol_edit;
+        String phone_use1 = MainActivity.V1_phone_edit;
+        String seatbelt_helmet1 = MainActivity.V1_seat_belt_edit;
+
+
+        //driver two details
+        String surname2 = MainActivity.V2_surname;
+        String other_names2 = MainActivity.V2_othernames;
+        String physical_address2 = MainActivity.V2_physical_address_one;
+        String po_box2 = MainActivity.V2_address_box_one;
+        String national_id2 = MainActivity.V2_national_id_one;
+        String driver_phone_no2 = MainActivity.V2_phone_no_one;
+        String gender2 = MainActivity.V2_gender;
+        String dob2 = MainActivity.V2_dob_one;
+        String nationality2 = MainActivity.V2_nationality_one;
+        String licence2 = MainActivity.V2_license_one;
+        String occupation2 = MainActivity.V2_occupation;
+        String drug2 = MainActivity.V2_drug_edit;
+        String alcohol2 = MainActivity.V2_alcohol_edit;
+        String phone_use2 = MainActivity.V2_phone_edit;
+        String seatbelt_helmet2 = MainActivity.V2_seat_belt_edit;
+
+
+        //Vehicle one details
+        String type1 = MainActivity.V1_type_one;
+        String reg_no1 = MainActivity.V1_registration_number_one;
+
+        //Vehicle one details
+        String type2 = MainActivity.V2_type_one;
+        String reg_no2 = MainActivity.V2_registration_number_one;
+
+        //insurance one data
+        String company_name1 = MainActivity.V1_company_one;
+        String company_type1 = MainActivity.V1_insurance_type_one;
+        String phone_no1 = MainActivity.V1_phone_no_one;
+        String policy_no1 = MainActivity.V1_policy_number_one;
+        String expire_period1 = MainActivity.V1_policy_period_one;
+        String repair_costs1 = MainActivity.V1_repair_amount_one;
+
+        //insurance two data
+        String company_name2 = MainActivity.V2_company_one;
+        String company_type2 = MainActivity.V2_insurance_type_one;
+        String phone_no2 = MainActivity.V2_phone_no_one;
+        String policy_no2 = MainActivity.V2_policy_number_one;
+        String expire_period2 = MainActivity.V2_policy_period_one;
+        String repair_costs2 = MainActivity.V2_repair_amount_one;
+
+        //Damage one data
+        String vehicle1 = MainActivity.V1_vehicle;
+        String total1 = MainActivity.V1_vehicle_total;
+        String infrastructure1 = MainActivity.V1_infrastructure;
+        String costs1 = MainActivity.V1_cost;
+
+        //damage two data
+        String vehicle2 = MainActivity.V2_vehicle;
+        String total2 = MainActivity.V2_vehicle_total;
+        String infrastructure2 = MainActivity.V2_infrastructure;
+        String costs2 = MainActivity.V2_cost;
+
+        @Override
+        protected String doInBackground(String... params) {
+
+
+//insert data to sqlite  on no internet
+
+            //accident Location
+            if (area == "" && roadName == "" &&  roadNo =="" && roadMark == "" && IntersectionName =="" && IntersectionNo=="" && IntersectionMark=="")
+            {}
+            else {
+                db.addLocation(area, roadName, roadNo, roadMark, IntersectionName, IntersectionNo, IntersectionMark);
+            }
+            //vehicle
+            if (type1==""&&reg_no1=="") {
+            }
+            else{ db.addVehicle(type1, reg_no1);
+            }
+            //vehicle
+            if (type2==""&&reg_no2=="") {
+
+            }else {
+                db.addVehicle(type2, reg_no2);
+            }
+
+            if (surname1==""&&other_names1==""&&physical_address1==""&&po_box1==""&&national_id1==""&&driver_phone_no1==""&&gender1==""&&dob1=="") {
+
+            }else {
+                db.addDriver(surname1, other_names1, physical_address1, po_box1, national_id1, phone_no1, gender1, dob1, nationality1, licence1, occupation1, drug1, alcohol1, phone_use1, seatbelt_helmet1);
+            }
+
+            if (surname2==""&&other_names2==""&&physical_address2==""&&po_box2==""&&national_id2==""&&driver_phone_no2==""&&gender2==""&&dob2=="") {
+
+            }else {
+                db.addDriver(surname2, other_names2, physical_address2, po_box2, national_id2, phone_no2, gender1, dob2, nationality2, licence2, occupation2, drug2, alcohol2, phone_use2, seatbelt_helmet2);
+            }
+
+            if (company_name1 == "" ) {
+
+            }else {
+                db.addInsurance(company_name1, company_type1, phone_no1, policy_no1, expire_period1, repair_costs1);
+            }
+
+            if (company_name2 == "" && company_type2 == "" && phone_no2 == "" && policy_no2 == "" && expire_period2 == "" &&repair_costs2 == "") {
+
+            }else {
+                db.addInsurance(company_name2, company_type2, phone_no2, policy_no2, expire_period2, repair_costs2);
+            }
+            if (vehicle1 == ""&&total1== "" && infrastructure1 == ""&& costs1 == "") {
+
+            }else {
+                db.addDamage(vehicle1, total1, infrastructure1, costs1);
+            }
+
+            if (vehicle2==""&&total2==""&&infrastructure2==""&&costs2 == "") {
+
+            }else {
+                db.addDamage(vehicle2, total2, infrastructure2, costs2);
+            }
+
+            db.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11,accident_reg_no);
+            db.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12,accident_reg_no);
+
+            db.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13,accident_reg_no);
+
+            db.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21,accident_reg_no);
+
+            db.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22,accident_reg_no);
+
+            db.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23,accident_reg_no);
+
+            db.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA,accident_reg_no);
+
+            db.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB,accident_reg_no);
+
+            db.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC,accident_reg_no);
+
+            db.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD,accident_reg_no);
+
+            db.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE,accident_reg_no);
+
+            db.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF,accident_reg_no);
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            super.onPostExecute(result);
+            Toast.makeText(getApplicationContext(), "Accident Reported On Local database.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
     private class ProcessPassengerDB extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
@@ -1192,184 +1635,100 @@ public class AccidentTypeclassification extends Activity {
 
         }
     }
-    public class ProcessDataSQLLITE extends AsyncTask<String, String, JSONObject> {
+
+    private class ProcessVehicleDetails extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
          */
+
+        String accident_registration_number= MainActivity.accidentd_registration_no;
+
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accidentd_registration_no;
 
-        //passenger one vehicle one details
-        String name11=Passenger.Name11;
-        String gender11=Passenger.Gender11;
-        String dob11=Passenger.DateOfBirth11;
-        String physical_address11=Passenger.PhysicalAddress11;
-        String address_box11=Passenger.Address11;
-        String nationality_id11=Passenger.NationalId11;
-        String phone_no11=Passenger.PhoneNo11;
-        String casuality11=Passenger.casuality11;
-        String alcohol11=Passenger.drugs11;
-        String seat_helmet11=Passenger.SeatbeltHelmet11;
-        String vehicle_no11="1";
-        String status11="passenger";
+        //location
 
-        //passenger two vehicle onedetails
-        String name12=Passenger.Name12;
-        String gender12=Passenger.Gender12;
-        String dob12=Passenger.DateOfBirth12;
-        String physical_address12=Passenger.PhysicalAddress12;
-        String address_box12=Passenger.Address12;
-        String nationality_id12=Passenger.NationalId12;
-        String phone_no12=Passenger.PhoneNo12;
-        String casuality12=Passenger.casuality12;
-        String alcohol12=Passenger.drugs12;
-        String seat_helmet12=Passenger.SeatbeltHelmet12;
-        String vehicle_no12="1";
-        String status12="passenger";
+         String area = MainActivity.acc_area;
+         String roadName = MainActivity.roadName;
+         String roadNo = MainActivity.roadNumber;
+         String roadMark = MainActivity.roadMark;
+         String  IntersectionName = MainActivity.intersectionName;
+         String IntersectionNo = MainActivity.intersectionNumber;
+        String IntersectionMark = MainActivity.intersectionMark;
+        //driver one details
+        String surname1 = MainActivity.V1_surname;
+        String other_names1 = MainActivity.V1_othernames;
+        String physical_address1 = MainActivity.V1_physical_address_one;
+        String po_box1 = MainActivity.V1_address_box_one;
+        String national_id1 = MainActivity.V1_national_id_one;
+        String driver_phone_no1= MainActivity.V1_phone_no_one;
+        String gender1 = MainActivity.V1_gender;
+        String dob1 = MainActivity.V1_dob_one;
+        String nationality1 = MainActivity.V1_nationality_one;
+        String licence1 = MainActivity.V1_license_one;
+        String occupation1  = MainActivity.V1_occupation;
+        String drug1 = MainActivity.V1_drug_edit;
+        String alcohol1 = MainActivity.V1_alcohol_edit;
+        String phone_use1  = MainActivity.V1_phone_edit;
+        String seatbelt_helmet1 = MainActivity.V1_seat_belt_edit;
 
 
 
-        //passenger three vehicle one details
-        String name13=Passenger.Name13;
-        String gender13=Passenger.Gender13;
-        String dob13=Passenger.DateOfBirth13;
-        String physical_address13=Passenger.PhysicalAddress13;
-        String address_box13=Passenger.Address13;
-        String nationality_id13=Passenger.NationalId13;
-        String phone_no13=Passenger.PhoneNo13;
-        String casuality13=Passenger.casuality13;
-        String alcohol13=Passenger.drugs13;
-        String seat_helmet13=Passenger.SeatbeltHelmet13;
-        String vehicle_no13="1";
-        String status13="passenger";
+        //driver two details
+        String surname2 = MainActivity.V2_surname;
+        String other_names2 = MainActivity.V2_othernames;
+        String physical_address2 = MainActivity.V2_physical_address_one;
+        String po_box2 = MainActivity.V2_address_box_one;
+        String national_id2 = MainActivity.V2_national_id_one;
+        String driver_phone_no2= MainActivity.V2_phone_no_one;
+        String gender2 = MainActivity.V2_gender;
+        String dob2 = MainActivity.V2_dob_one;
+        String nationality2 = MainActivity.V2_nationality_one;
+        String licence2 = MainActivity.V2_license_one;
+        String occupation2  = MainActivity.V2_occupation;
+        String drug2 = MainActivity.V2_drug_edit;
+        String alcohol2 = MainActivity.V2_alcohol_edit;
+        String phone_use2  = MainActivity.V2_phone_edit;
+        String seatbelt_helmet2 = MainActivity.V2_seat_belt_edit;
 
 
-        //passenger one vehicle two details
-        String name21=Passenger.Name21;
-        String gender21=Passenger.Gender21;
-        String dob21=Passenger.DateOfBirth21;
-        String physical_address21=Passenger.PhysicalAddress21;
-        String address_box21=Passenger.Address21;
-        String nationality_id21=Passenger.NationalId21;
-        String phone_no21=Passenger.PhoneNo21;
-        String casuality21=Passenger.casuality21;
-        String alcohol21=Passenger.drugs21;
-        String seat_helmet21=Passenger.SeatbeltHelmet21;
-        String vehicle_no21="2";
-        String status21="passenger";
+        //Vehicle one details
+        String type1 = MainActivity.V1_type_one;
+        String reg_no1 = MainActivity.V1_registration_number_one;
 
-        //passenger two vehicle two details
-        String name22=Passenger.Name22;
-        String gender22=Passenger.Gender22;
-        String dob22=Passenger.DateOfBirth22;
-        String physical_address22=Passenger.PhysicalAddress22;
-        String address_box22=Passenger.Address22;
-        String nationality_id22=Passenger.NationalId22;
-        String phone_no22=Passenger.PhoneNo22;
-        String casuality22=Passenger.casuality22;
-        String alcohol22=Passenger.drugs22;
-        String seat_helmet22=Passenger.SeatbeltHelmet22;
-        String vehicle_no22="2";
-        String status22="passenger";
+        //Vehicle one details
+        String type2 = MainActivity.V2_type_one;
+        String reg_no2 = MainActivity.V2_registration_number_one;
 
-        //passenger three vehicle two details
-        String name23=Passenger.Name23;
-        String gender23=Passenger.Gender23;
-        String dob23=Passenger.DateOfBirth23;
-        String physical_address23=Passenger.PhysicalAddress23;
-        String address_box23=Passenger.Address23;
-        String nationality_id23=Passenger.NationalId23;
-        String phone_no23=Passenger.PhoneNo23;
-        String casuality23=Passenger.casuality23;
-        String alcohol23=Passenger.drugs23;
-        String seat_helmet23=Passenger.SeatbeltHelmet23;
-        String vehicle_no23="2";
-        String status23="passenger";
+        //insurance one data
+        String company_name1 = MainActivity.V1_company_one;
+        String company_type1 = MainActivity.V1_insurance_type_one;
+        String phone_no1 = MainActivity.V1_phone_no_one;
+        String policy_no1 = MainActivity.V1_policy_number_one;
+        String expire_period1 = MainActivity.V1_policy_period_one;
+        String repair_costs1 = MainActivity.V1_repair_amount_one;
 
-        //Pedestrian A
-        String nameA=Passenger.NameA;
-        String genderA=Passenger.GenderA;
-        String dobA=Passenger.DateOfBirthA;
-        String physical_addressA=Passenger.PhysicalAddressA;
-        String address_boxA=Passenger.AddressA;
-        String nationality_idA=Passenger.NationalIdA;
-        String phone_noA=Passenger.PhoneNoA;
-        String casualityA=Passenger.casualityA;
-        String alcoholA=Passenger.drugsA;
-        String seat_helmetA="";
-        String vehicle_noA="ALL";
-        String statusA="pedestrian";
+        //insurance two data
+        String company_name2 = MainActivity.V2_company_one;
+        String company_type2 = MainActivity.V2_insurance_type_one;
+        String phone_no2 = MainActivity.V2_phone_no_one;
+        String policy_no2 = MainActivity.V2_policy_number_one;
+        String expire_period2 = MainActivity.V2_policy_period_one;
+        String repair_costs2 = MainActivity.V2_repair_amount_one;
 
-        //passenger one vehicle one details
-        String nameB=Passenger.NameB;
-        String genderB=Passenger.GenderB;
-        String dobB=Passenger.DateOfBirthB;
-        String physical_addressB=Passenger.PhysicalAddressB;
-        String address_boxB=Passenger.AddressB;
-        String nationality_idB=Passenger.NationalIdB;
-        String phone_noB=Passenger.PhoneNoB;
-        String casualityB=Passenger.casualityB;
-        String alcoholB=Passenger.drugsB;
-        String seat_helmetB="";
-        String vehicle_noB="ALL";
-        String statusB="pedestrian";
+        //Damage one data
+        String vehicle1 = MainActivity.V1_vehicle;
+        String total1 = MainActivity.V1_vehicle_total;
+        String infrastructure1 = MainActivity.V1_infrastructure;
+        String costs1 = MainActivity.V1_cost;
 
-        //passenger one vehicle one details
-        String nameC=Passenger.NameC;
-        String genderC=Passenger.GenderC;
-        String dobC=Passenger.DateOfBirthC;
-        String physical_addressC=Passenger.PhysicalAddressC;
-        String address_boxC=Passenger.AddressC;
-        String nationality_idC=Passenger.NationalIdC;
-        String phone_noC=Passenger.PhoneNoC;
-        String casualityC=Passenger.casualityC;
-        String alcoholC=Passenger.drugsC;
-        String seat_helmetC="";
-        String vehicle_noC="ALL";
-        String statusC="pedestrian";
+        //damage two data
+        String vehicle2 = MainActivity.V2_vehicle;
+        String total2 = MainActivity.V2_vehicle_total;
+        String infrastructure2 = MainActivity.V2_infrastructure;
+        String costs2 = MainActivity.V2_cost;
 
-        //passenger one vehicle one details
-        String nameD=Passenger.NameD;
-        String genderD=Passenger.GenderD;
-        String dobD=Passenger.DateOfBirthD;
-        String physical_addressD=Passenger.PhysicalAddressD;
-        String address_boxD=Passenger.AddressD;
-        String nationality_idD=Passenger.NationalIdD;
-        String phone_noD=Passenger.PhoneNoD;
-        String casualityD=Passenger.casualityD;
-        String alcoholD=Passenger.drugsD;
-        String seat_helmetD="";
-        String vehicle_noD="ALL";
-        String statusD="Others";
 
-        //passenger one vehicle one details
-        String nameE=Passenger.NameE;
-        String genderE=Passenger.GenderE;
-        String dobE=Passenger.DateOfBirthE;
-        String physical_addressE=Passenger.PhysicalAddressE;
-        String address_boxE=Passenger.AddressE;
-        String nationality_idE=Passenger.NationalIdE;
-        String phone_noE=Passenger.PhoneNoE;
-        String casualityE=Passenger.casualityE;
-        String alcoholE=Passenger.drugsE;
-        String seat_helmetE="";
-        String vehicle_noE="ALL";
-        String statusE="Others";
 
-        //passenger one vehicle one details
-        String nameF=Passenger.NameF;
-        String genderF=Passenger.GenderF;
-        String dobF=Passenger.DateOfBirthF;
-        String physical_addressF=Passenger.PhysicalAddressF;
-        String address_boxF=Passenger.AddressF;
-        String nationality_idF=Passenger.NationalIdF;
-        String phone_noF=Passenger.PhoneNoF;
-        String seat_helmetF="";
-        String alcoholF="";
-        String casualityF="";
-        String vehicle_noF="ALL";
-        String statusF="Witness";
-        //
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -1388,74 +1747,70 @@ public class AccidentTypeclassification extends Activity {
         protected JSONObject doInBackground(String... args) {
             JSONObject json=new JSONObject();
             UserFunctions userFunction = new UserFunctions();
-            if (name11==""&&dob11==""&&physical_address11==""&&address_box11==""&&nationality_id11==""&&phone_no11==""&&casuality11==""&&alcohol11=="") {
+
+            //vehicle
+            if (type1==""&&reg_no1=="") {
 
             }else{
-                json = userFunction.addPerson(name11, gender11, dob11, physical_address11, address_box11, nationality_id11, phone_no11, casuality11, alcohol11, seat_helmet11, vehicle_no11, status11,accident_registration_number);
+                json = userFunction.addVehicle(type1, reg_no1);
             }
-
-            if (name12==""&&dob12==""&&physical_address12==""&&address_box12==""&&nationality_id12==""&&phone_no12==""&&alcohol12=="") {
+            if (type2==""&&reg_no1=="") {
 
             }else{
-                json = userFunction.addPerson(name12, gender12, dob12, physical_address12, address_box12, nationality_id12, phone_no12, casuality12, alcohol12, seat_helmet12, vehicle_no12, status12,accident_registration_number);
+
+                json = userFunction.addVehicle(type2, reg_no2);
             }
 
-            if (name13==""&&dob13==""&&physical_address13==""&&address_box13==""&&nationality_id13==""&&phone_no13==""&&alcohol13=="") {
+            //driver
+
+            if (surname1==""&&other_names1==""&&physical_address1==""&&po_box1==""&&national_id1==""&&driver_phone_no1==""&&gender1==""&&dob1=="") {
 
             }else{
-                json = userFunction.addPerson(name13, gender13, dob13, physical_address13, address_box13, nationality_id13, phone_no13, casuality13, alcohol13, seat_helmet13, vehicle_no13, status13,accident_registration_number);
+                json = userFunction.addDriver(surname1, other_names1, physical_address1, po_box1, national_id1, phone_no1, gender1, dob1, nationality1, licence1, occupation1, drug1, alcohol1, phone_use1, seatbelt_helmet1);
             }
-
-            if (name21==""&&dob21==""&&physical_address21==""&&address_box21==""&&nationality_id21==""&&phone_no21==""&&alcohol21=="") {
+            if (surname2==""&&other_names2==""&&physical_address2==""&&po_box2==""&&national_id2==""&&driver_phone_no2==""&&gender2==""&&dob2=="") {
 
             }else{
-                json = userFunction.addPerson(name21, gender21, dob21, physical_address21, address_box21, nationality_id21, phone_no21, casuality21, alcohol21, seat_helmet21, vehicle_no21, status21,accident_registration_number);
+                json = userFunction.addDriver(surname2, other_names2, physical_address2, po_box2, national_id2, phone_no2, gender1, dob2, nationality2, licence2, occupation2, drug2, alcohol2, phone_use2, seatbelt_helmet2);
             }
 
-            if (name22==""&&dob22==""&&physical_address22==""&&address_box22==""&&nationality_id22==""&&phone_no22==""&&alcohol22=="") {
+
+
+            //insurance
+            if (company_name1 == "" ) {
 
             }else{
-                json = userFunction.addPerson(name22, gender22, dob22, physical_address22, address_box22, nationality_id22, phone_no22, casuality22, alcohol22, seat_helmet22, vehicle_no22, status22,accident_registration_number);
+                json = userFunction.addInsurance(company_name1, company_type1, phone_no1, policy_no1, expire_period1,repair_costs1);
             }
-
-            if (name23==""&&dob23==""&&physical_address23==""&&address_box23==""&&nationality_id23==""&&phone_no23==""&&alcohol23=="") {
+            if (company_name2 == "" && company_type2 == "" && phone_no2 == "" && policy_no2 == "" && expire_period2 == "" &&repair_costs2 == "") {
 
             }else{
-                json = userFunction.addPerson(name23, gender23, dob23, physical_address23, address_box23, nationality_id23, phone_no23, casuality23, alcohol23, seat_helmet23, vehicle_no23, status23,accident_registration_number);
+                json = userFunction.addInsurance(company_name2, company_type2, phone_no2, policy_no2, expire_period2,repair_costs2);
             }
-            if (nameA==""&&dobA==""&&physical_addressA==""&&address_boxA==""&&nationality_idA==""&&phone_noA==""&&alcoholA=="") {
+
+
+            //damage
+
+            if (vehicle1 == ""&&total1== "" && infrastructure1 == ""&& costs1 == "") {
 
             }else{
-                json = userFunction.addPerson(nameA, genderA, dobA, physical_addressA, address_boxA, nationality_idA, phone_noA, casualityA, alcoholA, seat_helmetA, vehicle_noA, statusA,accident_registration_number);
+                json = userFunction.addDamage(vehicle1,total1,infrastructure1,costs1);
             }
-
-            if (nameB==""&&dobB==""&&physical_addressB==""&&address_boxB==""&&nationality_idB==""&&phone_noB==""&&alcoholB=="") {
+            if (vehicle2==""&&total2==""&&infrastructure2==""&&costs2 == "") {
 
             }else{
-                json = userFunction.addPerson(nameB, genderB, dobB, physical_addressB, address_boxB, nationality_idB, phone_noB, casualityB, alcoholB, seat_helmetB, vehicle_noB, statusB,accident_registration_number);
-            }
-            if (nameC==""&&dobC==""&&physical_addressC==""&&address_boxC==""&&nationality_idC==""&&phone_noC==""&&alcoholC=="") {
-
-            }else{
-                json = userFunction.addPerson(nameC, genderC, dobC, physical_addressC, address_boxC, nationality_idC, phone_noC, casualityC, alcoholC, seat_helmetC, vehicle_noC, statusC,accident_registration_number);
-            }
-            if (nameD==""&&dobD==""&&physical_addressD==""&&address_boxD==""&&nationality_idD==""&&phone_noD==""&&alcoholD=="") {
-
-            }else{
-                json = userFunction.addPerson(nameD, genderD, dobD, physical_addressD, address_boxD, nationality_idD, phone_noD, casualityD, alcoholD, seat_helmetD, vehicle_noD, statusD,accident_registration_number);
-            }
-            if (nameE==""&&dobE==""&&physical_addressE==""&&address_boxE==""&&nationality_idE==""&&phone_noE==""&&alcoholE=="") {
-
-            }else{
-                json = userFunction.addPerson(nameE, genderE, dobE, physical_addressE, address_boxE, nationality_idE, phone_noE, casualityE, alcoholE, seat_helmetE, vehicle_noE, statusE,accident_registration_number);
-            }
-            if (nameF==""&& dobF=="" && casualityF=="" && physical_addressF=="" && address_boxF=="" && nationality_idF=="" && phone_noF=="" && alcoholF=="") {
-
-            }else{
-                json = userFunction.addPerson(nameF, genderF, dobF, physical_addressF, address_boxF, nationality_idF, phone_noF, casualityF, alcoholF, seat_helmetF, vehicle_noF, statusF,accident_registration_number);
+                json = userFunction.addDamage(vehicle2,total2,infrastructure2,costs2);
             }
 
+
+            //accident Location
+            if (area == "" && roadName == "" &&  roadNo =="" && roadMark == "" && IntersectionName =="" && IntersectionNo=="" && IntersectionMark=="")
+            {}
+            else{
+                json = userFunction.addAccidentLocation(area,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
+            }
             return json;
+
         }
 
         @Override
@@ -1468,11 +1823,8 @@ public class AccidentTypeclassification extends Activity {
                     String res = json.getString(KEY_SUCCESS);
 
                     if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        pDialog.dismiss();
-                        Toast.makeText(getApplicationContext(), "Accident Reported.", Toast.LENGTH_SHORT).show();
-                        restore_person_values();
+
+                        Toast.makeText(getApplicationContext(), "Data have been sent to server.", Toast.LENGTH_SHORT).show();
 
                     }
                 } else {
@@ -1482,7 +1834,6 @@ public class AccidentTypeclassification extends Activity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
@@ -1630,563 +1981,7 @@ public class AccidentTypeclassification extends Activity {
 
  }
 
-    private class ProcessDriver1 extends AsyncTask<String, String, JSONObject> {
 
-        private ProgressDialog pDialog;
-        //driver one details
-        String surname1 = MainActivity.V1_surname;
-        String other_names1 = MainActivity.V1_othernames;
-        String physical_address1 = MainActivity.V1_physical_address_one;
-        String po_box1 = MainActivity.V1_address_box_one;
-        String national_id1 = MainActivity.V1_national_id_one;
-        String phone_no1= MainActivity.V1_phone_no_one;
-        String gender1 = MainActivity.V1_gender;
-        String dob1 = MainActivity.V1_dob_one;
-        String nationality1 = MainActivity.V1_nationality_one;
-        String licence1 = MainActivity.V1_license_one;
-        String occupation1  = MainActivity.V1_occupation;
-        String drug1 = MainActivity.V1_drug_edit;
-        String alcohol1 = MainActivity.V1_alcohol_edit;
-        String phone_use1  = MainActivity.V1_phone_edit;
-        String seatbelt_helmet1 = MainActivity.V1_seat_belt_edit;
-
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-
-            super.onPreExecute();
-/**
- * Defining Process dialog
- */
-
-            String fatal, severe, simple, not_injured;
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            //pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addDriver(surname1, other_names1, physical_address1, po_box1, national_id1, phone_no1, gender1, dob1, nationality1, licence1, occupation1, drug1, alcohol1, phone_use1, seatbelt_helmet1);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Drivers Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessDriver2 extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal, severe, simple, not_injured;
-
-        //driver two details
-        String surname2 = MainActivity.V2_surname;
-        String other_names2 = MainActivity.V2_othernames;
-        String physical_address2 = MainActivity.V2_physical_address_one;
-        String po_box2 = MainActivity.V2_address_box_one;
-        String national_id2 = MainActivity.V2_national_id_one;
-        String phone_no2= MainActivity.V2_phone_no_one;
-        String gender2 = MainActivity.V2_gender;
-        String dob2 = MainActivity.V2_dob_one;
-        String nationality2 = MainActivity.V2_nationality_one;
-        String licence2 = MainActivity.V2_license_one;
-        String occupation2  = MainActivity.V2_occupation;
-        String drug2 = MainActivity.V2_drug_edit;
-        String alcohol2 = MainActivity.V2_alcohol_edit;
-        String phone_use2  = MainActivity.V2_phone_edit;
-        String seatbelt_helmet2 = MainActivity.V2_seat_belt_edit;
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            //pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addDriver(surname2, other_names2, physical_address2, po_box2, national_id2, phone_no2, gender2, dob2, nationality2, licence2, occupation2, drug2, alcohol2, phone_use2, seatbelt_helmet2);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Drivers Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred Occured Storing Driver two.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessVehicle1Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal1, severe1, simple1, not_injured1;
-
-        //Vehicle one details
-        String type1 = MainActivity.V1_type_one;
-        String reg_no1 = MainActivity.V1_registration_number_one;
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-             pDialog = new ProgressDialog(AccidentTypeclassification.this);
-             pDialog.setTitle("Contacting Servers");
-             pDialog.setMessage("Storing Data...");
-             pDialog.setIndeterminate(false);
-             pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addVehicle(type1, reg_no1);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                         pDialog.setTitle("Getting Data");
-                         pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle One Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessVehicle2Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-        String fatal1, severe1, simple1, not_injured1;
-
-        //Vehicle one details
-        String type2 = MainActivity.V2_type_one; String reg_no2 = MainActivity.V2_registration_number_one;
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addVehicle(type2, reg_no2);
-            return json;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessInsurance1Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-
-        String company_name1 = MainActivity.V1_company_one;
-        String company_type1 = MainActivity.V1_insurance_type_one;
-        String phone_no1 = MainActivity.V1_phone_no_one;
-        String policy_no1 = MainActivity.V1_policy_number_one;
-        String expire_period = MainActivity.V1_policy_period_one;
-        String repair_costs1 = MainActivity.V1_repair_amount_one;
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-             pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addInsurance(company_name1, company_type1,phone_no1,policy_no1,expire_period,repair_costs1);
-            return json;
-        }
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                         pDialog.setTitle("Getting Data");
-                         pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessInsurance2Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-
-        String company_name = MainActivity.V2_company_one;
-        String company_type = MainActivity.V2_insurance_type_one;
-        String phone_no = MainActivity.V2_phone_no_one;
-        String policy_no = MainActivity.V2_policy_number_one;
-        String expire_period = MainActivity.V2_policy_period_one;
-        String repair_costs = MainActivity.V2_repair_amount_one;
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addInsurance(company_name, company_type,phone_no,policy_no,expire_period,repair_costs);
-            return json;
-        }
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class Processdamage1Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-
-        String vehicle = MainActivity.V1_vehicle;
-        String total = MainActivity.V1_vehicle_total;
-        String infrastructure = MainActivity.V1_infrastructure;
-        String costs = MainActivity.V1_cost;
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-             pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addDamage(vehicle,total,infrastructure,costs);
-            return json;
-        }
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                         pDialog.setTitle("Getting Data");
-                         pDialog.setMessage("Loading Info");
-
-                       //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class Processdamage2Data extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-
-        String vehicle = MainActivity.V2_vehicle;
-        String total = MainActivity.V2_vehicle_total;
-        String infrastructure = MainActivity.V2_infrastructure;
-        String costs = MainActivity.V2_cost;
-
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addDamage(vehicle,total,infrastructure,costs);
-            return json;
-        }
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        pDialog.setTitle("Getting Data");
-                        pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private class ProcessLocationData extends AsyncTask<String, String, JSONObject> {
-        /**
-         * Defining Process dialog
-         */
-        private ProgressDialog pDialog;
-
-        String area = MainActivity.acc_area;
-        String district = MainActivity.acc_district;
-        String region = MainActivity.acc_region;
-        String roadName = MainActivity.roadName;
-        String roadNo = MainActivity.roadNumber;
-        String roadMark = MainActivity.roadMark;
-        String IntersectionName = MainActivity.intersectionName;
-        String IntersectionNo = MainActivity.intersectionNumber;
-        String IntersectionMark = MainActivity.intersectionMark;
-
-        //
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pDialog = new ProgressDialog(AccidentTypeclassification.this);
-            pDialog.setTitle("Contacting Servers");
-            pDialog.setMessage("Storing Data...");
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            // pDialog.show();
-        }
-
-        @Override
-        protected JSONObject doInBackground(String... args) {
-
-            UserFunctions userFunction = new UserFunctions();
-
-            JSONObject json = userFunction.addAccidentLocation(area,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark);
-            return json;
-        }
-        @Override
-        protected void onPostExecute(JSONObject json) {
-            /**
-             * Checks for success message.
-             **/
-            try {
-                if (json != null && json.getString(KEY_SUCCESS) != null) {
-                    String res = json.getString(KEY_SUCCESS);
-
-                    if (Integer.parseInt(res) == 1) {
-                        // pDialog.setTitle("Getting Data");
-                        // pDialog.setMessage("Loading Info");
-                        //Pass sqlite data
-                        Toast.makeText(getApplicationContext(), "Vehicle Two Details Stored.", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    pDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Error Occurred.", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     public void NetAsync(View view){
         new NetCheck().execute();
@@ -2213,7 +2008,71 @@ public class AccidentTypeclassification extends Activity {
                 // Write your code on no result return
             }
         }
-    }
 
+        else if(requestCode == SIGNATURE_ACTIVITY){
+
+            if (resultCode == RESULT_OK) {
+
+                Bundle bundle = data.getExtras();
+                String status  = bundle.getString("status");
+                String myfile = bundle.getString("path");
+                String myStringImage = bundle.getString("mystringimage");
+                if(status.equalsIgnoreCase("done")){
+                    Log.d("parr ", myfile+"");
+                    Bitmap bmImg = BitmapFactory.decodeFile(myfile);
+                    if (currentSignature == POLICE_SIGNATURE){
+                        policeHint.setVisibility(View.GONE);
+                        policeImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DRIVER_A_SIGNATURE){
+                        driverAHint.setVisibility(View.GONE);
+                        driverAImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DESC_SKETCH){
+                        sketchHint.setVisibility(View.GONE);
+                        scroller.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == DRIVER_B_SIGNATURE){
+                        driverBHint.setVisibility(View.GONE);
+                        driverBImage.setImageBitmap(bmImg);
+                    }
+                    else if (currentSignature == WITNES_SIGNATURE){
+                        witnessHint.setVisibility(View.GONE);
+                        witnessImage.setImageBitmap(bmImg);
+                    }
+//                    //convert the string to byte array
+//                    byte[] imageAsBytes = Base64.decode(myStringImage.getBytes());
+//                    //get reference to the image view where you want to display the image
+//                    ImageView image = (ImageView)this.findViewById(R.id.sign_capture);
+//                    //set the image by decoding the byte array to bitmap
+//                    image.setImageBitmap(
+//                            BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length)
+//                    );
+//                    //Base64.encodeFromFile(mypath.toString(
+                    Toast toast = Toast.makeText(this, "Signature capture successful!", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.TOP, 105, 50);
+                    toast.show();
+                }
+            }
+            else {
+                if (currentSignature == POLICE_SIGNATURE){
+                    policeHint.setVisibility(View.VISIBLE);
+                    policeImage.setImageBitmap(null);
+                }
+                else if (currentSignature == DRIVER_A_SIGNATURE){
+                    driverAHint.setVisibility(View.VISIBLE);
+                    driverAImage.setImageBitmap(null);
+                }
+                else if (currentSignature == DRIVER_B_SIGNATURE){
+                    driverBHint.setVisibility(View.VISIBLE);
+                    driverBImage.setImageBitmap(null);
+                }
+                else if (currentSignature == WITNES_SIGNATURE){
+                    witnessHint.setVisibility(View.VISIBLE);
+                    witnessImage.setImageBitmap(null);
+                }
+            }
+        }
+    }
 
 }
