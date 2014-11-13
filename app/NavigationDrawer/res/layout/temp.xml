@@ -46,15 +46,41 @@
             android:scaleType="centerCrop"
             android:id="@+id/prof_pic"/>
 
-        <TextView
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/lorem_ipsa"
-            android:text="Mwita Marwa"
+            android:layout_marginTop="8dp"
             android:layout_below="@id/prof_pic"
-            android:layout_marginRight="18dp"
-            android:layout_marginTop="8dp"/>
+            android:id="@+id/cameraOptions"
+            android:background="@color/card_white">
+            <!-- Capture picture button -->
+
+            <Button
+                android:id="@+id/btnCapturePicture"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:text="Photo"/>
+
+
+            <!-- Record video button -->
+            <Button
+                android:id="@+id/btnCaptureVideo"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:text="Video"/>
+
+
+        </RelativeLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -133,12 +159,79 @@
 
         </RelativeLayout>
 
+
+    <RelativeLayout
+        android:id="@+id/preview"
+        android:layout_below="@+id/mid"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/strip"
+            android:layout_marginRight="8dp"
+            android:background="@color/green_200"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/preview_text"
+            android:text="Preview"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+ <RelativeLayout
+    android:layout_width="350sp"
+    android:layout_height="180sp"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/preview_text"
+     android:layout_alignRight="@+id/preview_text">
+
+        <!-- To display picture taken -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+
+     <!-- To preview video recorded -->
+     <VideoView
+         android:id="@+id/videoPreview"
+         android:layout_width="300dp"
+         android:layout_height="150dp"
+         android:layout_marginRight="8dp"
+         android:layout_marginLeft="8dp"
+         android:visibility="gone"
+         android:scaleType="centerCrop" />
+
+
+</RelativeLayout>
+
+
+    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:id="@+id/reported_accidents_layout"
-        android:layout_below="@id/mid">
+        android:layout_below="@id/preview">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/strip1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/green_200"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
