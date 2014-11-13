@@ -44,6 +44,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
@@ -100,7 +101,7 @@ public class MainActivity extends FragmentActivity {
 
     private ImageView imgPreview;
     private VideoView videoPreview;
-    private Button btnCapturePicture, btnRecordVideo;
+    private ImageButton btnCapturePicture, btnRecordVideo;
 
     //Accident Severity
     public static String accident_registration_no;
@@ -316,8 +317,8 @@ public class MainActivity extends FragmentActivity {
 
             imgPreview = (ImageView) tempHeader.findViewById(R.id.imgPreview);
             videoPreview = (VideoView) tempHeader.findViewById(R.id.videoPreview);
-            btnCapturePicture = (Button) tempHeader.findViewById(R.id.btnCapturePicture);
-            btnRecordVideo = (Button) tempHeader.findViewById(R.id.btnCaptureVideo);
+            btnCapturePicture = (ImageButton) tempHeader.findViewById(R.id.btnCapturePicture);
+            btnRecordVideo = (ImageButton) tempHeader.findViewById(R.id.btnCaptureVideo);
         }
 
 
