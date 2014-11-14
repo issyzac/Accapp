@@ -17,7 +17,6 @@ package com.rsmsa.accapp;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.TabActivity;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -39,7 +38,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -47,7 +45,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -57,34 +55,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.VideoView;
-
-
-import com.rsmsa.accapp.library.DatabaseHandler;
-
-import org.json.JSONObject;
 
 import java.util.Calendar;
 
 import adapters.gridViewAdapter;
 import customviews.AutoScrollViewPager;
-import customviews.HeaderGridView;
 import transformers.DepthPageTransformer;
-import transformers.ZoomOutPageTransformer;
 
 public class MainActivity extends FragmentActivity {
 
@@ -93,6 +74,11 @@ public class MainActivity extends FragmentActivity {
     private static final int CAMERA_CAPTURE_VIDEO_REQUEST_CODE = 200;
     public static final int MEDIA_TYPE_IMAGE = 1;
     public static final int MEDIA_TYPE_VIDEO = 2;
+
+    // GPSTracker class to get GPS Location
+    GPSTracker gps;
+
+    Button SetLocation;
 
     // directory name to store captured images and videos
     private static final String IMAGE_DIRECTORY_NAME = "AccidentFile";
@@ -313,12 +299,13 @@ public class MainActivity extends FragmentActivity {
             hasheader = true;
             tempFlag = true;
 
-
-
             imgPreview = (ImageView) tempHeader.findViewById(R.id.imgPreview);
             videoPreview = (VideoView) tempHeader.findViewById(R.id.videoPreview);
             btnCapturePicture = (ImageButton) tempHeader.findViewById(R.id.btnCapturePicture);
             btnRecordVideo = (ImageButton) tempHeader.findViewById(R.id.btnCaptureVideo);
+
+
+
         }
 
 
@@ -354,6 +341,41 @@ public class MainActivity extends FragmentActivity {
             // will close the app if the device does't have camera
             finish();
         }
+
+
+//get GPS location
+
+        SetLocation = (Button)tempHeader.findViewById(R.id.btnLoc);
+
+        SetLocation.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                // create class object
+                gps = new GPSTracker(MainActivity.this);
+
+                // check if GPS enabled
+                if (gps.canGetLocation()) {
+
+                    double latitude = gps.getLatitude();
+                    double longitude = gps.getLongitude();
+
+                    //location text view
+                    TextView location = (TextView) tempHeader.findViewById(R.id.loc);
+
+                    location.setText("Lat: " + latitude + "Long: " + longitude);
+
+                } else {
+                    // can't get location
+                    // GPS or Network is not enabled
+                    // Ask user to enable GPS/network in settings
+                    gps.showSettingsAlert();
+                }
+
+            }
+        });
+
+
 
         /**
          * header instance

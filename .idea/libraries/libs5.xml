@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="libs">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/NavigationDrawer/libs/android-support-v4.jar!/" />
       <root url="jar://$PROJECT_DIR$/app/NavigationDrawer/libs/android-support-v7-appcompat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/NavigationDrawer/libs/android-support-v4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
