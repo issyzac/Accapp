@@ -20,6 +20,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -546,7 +547,7 @@ public class MainActivity extends FragmentActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        // save file url in bundle as it will be null on scren orientation
+        // save file url in bundle as it will be null on screen orientation
         // changes
         outState.putParcelable("file_uri", fileUri);
     }
@@ -628,7 +629,7 @@ public class MainActivity extends FragmentActivity {
 
             imgPreview.setVisibility(View.VISIBLE);
 
-            // bimatp factory
+            // bitmap factory
             BitmapFactory.Options options = new BitmapFactory.Options();
 
             // downsizing image as it throws OutOfMemory Exception for larger
@@ -637,8 +638,8 @@ public class MainActivity extends FragmentActivity {
 
             final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
                     options);
+            getResizedBitmap(bitmap, 640,1024);
 
-            imgPreview.setImageBitmap(bitmap);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
@@ -653,12 +654,39 @@ public class MainActivity extends FragmentActivity {
             imgPreview.setVisibility(View.GONE);
 
             videoPreview.setVisibility(View.VISIBLE);
+
             videoPreview.setVideoPath(fileUri.getPath());
             // start playing
             videoPreview.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+
+        int width = bm.getWidth();
+
+        int height = bm.getHeight();
+
+        float scaleWidth = ((float) newWidth) / width;
+
+        float scaleHeight = ((float) newHeight) / height;
+
+// CREATE A MATRIX FOR THE MANIPULATION
+
+        Matrix matrix = new Matrix();
+
+// RESIZE THE BIT MAP
+
+        matrix.postScale(scaleWidth, scaleHeight);
+
+// RECREATE THE NEW BITMAP
+
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+        imgPreview.setImageBitmap(resizedBitmap);
+        return resizedBitmap;
+
     }
 
     /**

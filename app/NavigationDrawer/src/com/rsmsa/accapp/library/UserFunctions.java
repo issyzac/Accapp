@@ -17,25 +17,25 @@ public class UserFunctions {
     private JSONParser jsonParser;
 
     //URL of the PHP API
-    private static String loginURL = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String defectURL  = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String forpassURL = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String chgpassURL = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String driverURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String insuranceURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String damageURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String acc_descURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String categoryURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String accident_locationURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String accident_dataURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String other_damageURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String vehicleURL= "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String personURL= "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String loginURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String defectURL  = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String forpassURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String chgpassURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String driverURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String insuranceURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String damageURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String acc_descURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String categoryURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String accident_locationURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String accident_dataURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String other_damageURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String vehicleURL= "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String personURL= "http://192.168.42.250/PSMS/public/android/index.php";
 
-    private static String road_typeURL = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String junctionURL  = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String street_conditionURL = "http://192.168.43.251/PSMS/public/android/index.php";
-    private static String violationURL = "http://192.168.43.251/PSMS/public/android/index.php";
+    private static String road_typeURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String junctionURL  = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String street_conditionURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    private static String violationURL = "http://192.168.42.250/PSMS/public/android/index.php";
     private static String login_tag = "login";
     private static String accident_location_tag = "location";
     private static String accident_data_tag = "accident_data";
@@ -54,6 +54,8 @@ public class UserFunctions {
     private static String other_damage_tag = "road_type";
     private static String forget_pass_tag = "forpass";
     private static String change_pass_tag = "chgpass";
+
+
     // constructor
     public UserFunctions(){
         jsonParser = new JSONParser();
@@ -61,9 +63,8 @@ public class UserFunctions {
     /**
      * Function to Login
      **/
-    public JSONObject loginUser(String RankNO, String password){
+    public JSONObject loginPolice(String RankNO, String password){
         // Building Parameters
-// Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
         params.add(new BasicNameValuePair("tag", login_tag));
         params.add(new BasicNameValuePair("username", RankNO));
@@ -71,6 +72,7 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(loginURL, params);
         return json;
     }
+
     /**
      * Function to change password
      **/

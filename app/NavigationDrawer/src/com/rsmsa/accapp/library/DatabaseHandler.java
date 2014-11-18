@@ -68,12 +68,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     // USERS Table - column names
 
+    //table columns user
+    private static final String KEY_USERNAME = "rankNo";
+    private static final String KEY_FULLNAME = "fullName";
+    private static final String KEY_STATION = "station";
+    private static final String CREATED_AT = "created_at";
+
     private static final String KEY_RANK = "rank_no";
     private static final String KEY_FULL_NAME = "fullName";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_PASSWORD = "password";
     private static final String KEY_REMEMBER_TOKEN = "rem_token";
-    private static final String KEY_STATION = "station";
 
     // TABLE_ACCIDENT_LOCATION Table - column names
 
@@ -464,20 +469,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
      */
 
 
-    //Storing user details in database
-    public void addUser(String rank, String full_name,String email,String station,int region_id,int district_id,String password, String created_at) {
-
+    public void addUser(String rankNo, String fullName, String station,  String created_at) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_RANK, rank); // Rank number
-        values.put(KEY_FULL_NAME, full_name); // Name
-        values.put(KEY_EMAIL, email); // email
-        values.put(KEY_STATION, station); // email
-        values.put(KEY_REGION_ID, region_id); // email
-        values.put(KEY_DISTRICT_ID, district_id); // email
-        values.put(KEY_PASSWORD, password); // email
-        values.put(KEY_CREATED_AT, created_at); // Created At
-
+        values.put(KEY_USERNAME, rankNo); // rankno
+        values.put(KEY_FULLNAME, fullName); // fullname
+        values.put(KEY_STATION, station); // station
+        values.put(CREATED_AT, created_at); // Created At
         // Inserting Row
         db.insert(TABLE_USER, null, values);
         db.close(); // Closing database connection
