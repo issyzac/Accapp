@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/driver_info_head"
+        android:background="@drawable/button4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="DRIVER INFORMATION"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:layout_below="@id/driver_info_head"
+        android:background="@drawable/layout2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_name"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Name :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/driver_name"
+            android:layout_marginTop="8dp"
+            android:id="@+id/name"
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_license"
+            android:layout_below="@id/driver_name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:text="License No :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/license"
+            android:textSize="18sp"
+            android:layout_below="@id/driver_name"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/driver_license"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plate_no_title_"
+            android:layout_below="@id/license"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Plate No : "
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plate_no_"
+            android:layout_below="@id/license"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/plate_no_title_"
+            android:layout_marginLeft="16dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plate_no_title_"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/court"
+                android:text="Court"
+                android:paddingRight="8dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept Charges"
+                android:id="@+id/guilty"
+                android:paddingRight="8dp"
+                android:layout_marginLeft="16dp"/>
+
+            </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout"
+        android:id="@+id/car_info"
+        android:paddingBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/car_info_head"
+            android:background="@color/light_blue_a400">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="CAR INFORMATION"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_info_head"
+            android:id="@+id/plate_no_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:text="Plate No :"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plate_no"
+            android:layout_below="@id/car_info_head"
+            android:layout_toRightOf="@id/plate_no_title"
+            android:textSize="18sp"
+            android:hint="Enter Plate Number"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:layout_marginLeft="16dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card"
+            android:layout_below="@id/car_info_head"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:text="Verify"/>
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/offense_type"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/car_info">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/offense_type_text"
+            android:text="Select Offense Type"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/offense_type"
+        android:id="@+id/issuer_info_head"
+        android:background="@drawable/button4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="ISSUER INFORMATION"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/issuer"
+        android:paddingBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/layout2"
+        android:layout_below="@id/issuer_info_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/issuer_name"
+            android:text="Name : "
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/issuer_name_text"
+            android:textSize="18sp"
+            android:text="Mwita Marwa"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/issuer_name"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rank_no"
+            android:textSize="18sp"
+            android:layout_below="@id/issuer_name"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Station :"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rank_no_text"
+            android:textSize="18sp"
+            android:text="B8943"
+            android:layout_below="@id/issuer_name"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/rank_no"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:textSize="18sp"
+            android:layout_below="@id/rank_no"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Date : "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_text"
+            android:textSize="18sp"
+            android:text="12/7/2013"
+            android:layout_below="@id/rank_no"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/date"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_text"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/location_title"
+            android:layout_marginTop="8dp"
+            android:text="Location : "
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/date_text"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/location_title"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/latitude"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_layout"
+        android:background="@drawable/button4"
+        android:layout_below="@id/issuer"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            android:id="@+id/submit_text"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/plate_no_info"
+            android:layout_centerInParent="true"
+            android:layout_alignBottom="@id/submit_text"
+            android:id="@+id/pbar_report"
+            android:scrollbarStyle="insideInset"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_msg"
+        android:textColor="@color/red_600"
+        android:layout_below="@id/issuer"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="18sp"
+        android:layout_toLeftOf="@id/submit_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"/>
+
+</RelativeLayout>

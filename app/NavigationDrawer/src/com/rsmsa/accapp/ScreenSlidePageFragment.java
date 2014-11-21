@@ -219,6 +219,9 @@ public class ScreenSlidePageFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedSpinner = i;
+                if (i == 0){
+                    selectedSpinner = 234;
+                }
             }
 
             @Override

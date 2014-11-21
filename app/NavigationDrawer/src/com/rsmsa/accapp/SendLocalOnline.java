@@ -90,7 +90,7 @@ public class SendLocalOnline extends Activity {
                 if (area == "" && roadName == "" &&  roadNo =="" && roadMark == "" && IntersectionName =="" && IntersectionNo=="" && IntersectionMark=="")
                 {}
                 else{
-                    json = userFunction.addAccidentLocation(area,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
+                    json = userFunction.addAccidentLocation(area,district,district,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
                 }
 
             }

@@ -1,0 +1,361 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:background="@android:color/transparent"
+    android:id="@+id/title"
+    android:paddingBottom="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:id="@+id/input_information"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/layout2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/license_info">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/license_title"
+                android:text="License : "
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/license_"
+                android:layout_toRightOf="@id/license_title"
+                android:layout_marginLeft="8dp"
+                android:hint="Enter Licence No"
+                android:background="@null"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scan_button"
+                android:text="SCAN"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button2"
+                android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/plate_no_info"
+            android:layout_below="@id/license_info">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/plate_no_title"
+                android:text="Plate No : "
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/plate_no"
+                android:layout_toRightOf="@id/plate_no_title"
+                android:layout_marginLeft="8dp"
+                android:hint="Enter Plate No"
+                android:background="@null"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"/>
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:id="@+id/verify"
+            android:text="VERIFY"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/plate_no_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/button2"
+            android:textSize="16sp"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/plate_no_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_alignBottom="@id/verify"
+            android:layout_marginTop="8dp"
+            android:id="@+id/pbar_main"
+            android:scrollbarStyle="insideInset"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/verify"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plate_no_info"
+            android:id="@+id/error"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="14sp"
+            android:text=""
+            android:layout_marginLeft="4dp"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/button4"
+        android:layout_below="@id/input_information"
+        android:id="@+id/history_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HISTORY"
+            android:layout_centerInParent="true"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:textColor="@android:color/white"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/history_title"
+        android:id="@+id/history_list_"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/layout2">
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/history_strip"
+            android:background="@color/card_border"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/history_strip"
+            android:id="@+id/hist_one">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="No History Found"
+                android:textColor="@color/card_border"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/hist_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/history_strip"
+                android:paddingBottom="16dp"
+                android:layout_marginTop="4dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date_one_title"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Date       : "
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/date_one"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/date_one_title"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_one_title"
+                    android:layout_below="@id/date_one_title"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:text="Offense : "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_one"
+                    android:layout_below="@id/date_one_title"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/offense_one_title"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/offense_one"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/strip_one"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/stroke"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/strip_one"
+                    android:id="@+id/date_two_title"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Date       : "
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date_two"
+                    android:textSize="16sp"
+                    android:layout_below="@id/strip_one"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/date_two_title"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_two_title"
+                    android:layout_below="@id/date_two_title"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:text="Offense : "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_two"
+                    android:layout_below="@id/date_two_title"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/offense_one_title"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/offense_two"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/strip_two"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/stroke"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date_three_title"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/strip_two"
+                    android:layout_marginLeft="8dp"
+                    android:text="Date       : "
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/strip_two"
+                    android:id="@+id/date_three"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/date_one_title"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_three_title"
+                    android:layout_below="@id/date_three_title"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:text="Offense : "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offense_three"
+                    android:text=""
+                    android:layout_below="@id/date_three_title"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/offense_one_title"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="8dp"/>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:layout_below="@id/history_list_"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:text="REPORT"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:id="@+id/report_button"/>
+
+</RelativeLayout>
+</ScrollView>

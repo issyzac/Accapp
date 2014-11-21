@@ -906,9 +906,9 @@ public class AccidentTypeclassification extends Activity {
                 nDialog.dismiss();
 
 
-                new ProcessVehicleDetails().execute();
+                //new ProcessVehicleDetails().execute();
                 new ProcessPassengerDB().execute();
-                new ProcessSpinnerrDB().execute();
+                //new ProcessSpinnerrDB().execute();
 
 
             } else {
@@ -1273,6 +1273,7 @@ public class AccidentTypeclassification extends Activity {
         }
 
     }
+
     private class ProcessPassengerDB extends AsyncTask<String, String, JSONObject> {
         /**
          * Defining Process dialog
@@ -1572,7 +1573,7 @@ public class AccidentTypeclassification extends Activity {
          * Defining Process dialog
          */
         private ProgressDialog pDialog;
-        String accident_registration_number=MainActivity.accident_registration_no;
+        String accident_registration_number = MainActivity.accident_registration_no;
 
 
         @Override
@@ -1646,14 +1647,16 @@ public class AccidentTypeclassification extends Activity {
         private ProgressDialog pDialog;
 
         //location
-
          String area = MainActivity.acc_area;
+         String district = MainActivity.acc_district;
+         String region = MainActivity.acc_region;
          String roadName = MainActivity.roadName;
          String roadNo = MainActivity.roadNumber;
          String roadMark = MainActivity.roadMark;
          String  IntersectionName = MainActivity.intersectionName;
          String IntersectionNo = MainActivity.intersectionNumber;
-        String IntersectionMark = MainActivity.intersectionMark;
+         String IntersectionMark = MainActivity.intersectionMark;
+
         //driver one details
         String surname1 = MainActivity.V1_surname;
         String other_names1 = MainActivity.V1_othernames;
@@ -1748,6 +1751,29 @@ public class AccidentTypeclassification extends Activity {
             JSONObject json=new JSONObject();
             UserFunctions userFunction = new UserFunctions();
 
+/**
+            //driver
+
+            if (surname1==""&&other_names1==""&&physical_address1==""&&po_box1==""&&national_id1==""&&driver_phone_no1==""&&gender1==""&&dob1=="") {
+
+            }else{
+                json = userFunction.addDriver(surname1, other_names1, physical_address1, po_box1, national_id1, phone_no1, gender1, dob1, nationality1, licence1, occupation1, drug1, alcohol1, phone_use1, seatbelt_helmet1);
+            }
+            if (surname2==""&&other_names2==""&&physical_address2==""&&po_box2==""&&national_id2==""&&driver_phone_no2==""&&gender2==""&&dob2=="") {
+
+            }else{
+                json = userFunction.addDriver(surname2, other_names2, physical_address2, po_box2, national_id2, phone_no2, gender1, dob2, nationality2, licence2, occupation2, drug2, alcohol2, phone_use2, seatbelt_helmet2);
+            }
+
+
+ *
+ *
+ //accident Location
+ if (area == "" && roadName == "" &&  roadNo =="" && roadMark == "" && IntersectionName =="" && IntersectionNo=="" && IntersectionMark=="")
+ {}
+ else{
+ json = userFunction.addAccidentLocation(area,district,district,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
+ }
             //vehicle
             if (type1==""&&reg_no1=="") {
 
@@ -1761,7 +1787,7 @@ public class AccidentTypeclassification extends Activity {
                 json = userFunction.addVehicle(type2, reg_no2);
             }
 
-            //driver
+           //driver
 
             if (surname1==""&&other_names1==""&&physical_address1==""&&po_box1==""&&national_id1==""&&driver_phone_no1==""&&gender1==""&&dob1=="") {
 
@@ -1803,15 +1829,13 @@ public class AccidentTypeclassification extends Activity {
             }
 
 
-            //accident Location
-            if (area == "" && roadName == "" &&  roadNo =="" && roadMark == "" && IntersectionName =="" && IntersectionNo=="" && IntersectionMark=="")
-            {}
-            else{
-                json = userFunction.addAccidentLocation(area,roadName,roadNo,roadMark,IntersectionName,IntersectionNo,IntersectionMark );
-            }
+
+**/
             return json;
 
         }
+
+
 
         @Override
         protected void onPostExecute(JSONObject json) {
@@ -1824,7 +1848,7 @@ public class AccidentTypeclassification extends Activity {
 
                     if (Integer.parseInt(res) == 1) {
 
-                        Toast.makeText(getApplicationContext(), "Data have been sent to server.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
 
                     }
                 } else {
@@ -1842,6 +1866,7 @@ public class AccidentTypeclassification extends Activity {
       public void restore_person_values(){
 
      MainActivity.accident_registration_no="";
+
      //passenger one vehicle one details
      Passenger.Name11="";
      Passenger.Gender11="";

@@ -207,14 +207,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     // Table Create Statements
 
-
     // 1.USERS Table create statement
     private static final String CREATE_TABLE_USER = "CREATE TABLE "
             + TABLE_USER + "(" + KEY_ID + " INTEGER PRIMARY KEY autoincrement,"
-            + KEY_RANK+ " TEXT UNIQUE ,"
-            + KEY_FULL_NAME + " TEXT,"
-            + KEY_EMAIL + " TEXT  UNIQUE,"
+            + KEY_USERNAME + " TEXT,"
+            + KEY_FULLNAME + " TEXT,"
             + KEY_STATION + " TEXT,"
+            + KEY_EMAIL + " TEXT ,"
             + KEY_REGION_ID + " TEXT ,"
             + KEY_DISTRICT_ID + " TEXT ,"
             + KEY_PASSWORD + " TEXT ,"

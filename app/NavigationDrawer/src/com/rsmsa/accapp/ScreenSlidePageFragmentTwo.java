@@ -297,82 +297,82 @@ public class ScreenSlidePageFragmentTwo extends Fragment {
             if (v.getText().toString().length() > 0) {
                 switch (v.getId()) {
                     case R.id.fatal_edit:
-                        MainActivity.V1_fatal = inputFatal.getText().toString();
+                        MainActivity.V2_fatal = inputFatal.getText().toString();
                         break;
                     case R.id.injury_edit:
-                        MainActivity.V1_injury = inputInjuries.getText().toString();
+                        MainActivity.V2_injury = inputInjuries.getText().toString();
                         break;
                     case R.id.simple_edit:
-                        MainActivity.V1_simple = inputSimple.getText().toString();
+                        MainActivity.V2_simple = inputSimple.getText().toString();
                         break;
                     case R.id.not_injured_edit:
-                        MainActivity.V1_not_injured = inputNotInjured.getText().toString();
+                        MainActivity.V2_not_injured = inputNotInjured.getText().toString();
                         break;
                     case R.id.surname_one:
-                        MainActivity.V1_surname = surname_one.getText().toString();
+                        MainActivity.V2_surname = surname_one.getText().toString();
                         break;
                     case R.id.othernames_one:
-                        MainActivity.V1_othernames = othernames_one.getText().toString();
+                        MainActivity.V2_othernames = othernames_one.getText().toString();
                         break;
                     case R.id.physical_address_one:
-                        MainActivity.V1_physical_address_one = physical_address_one.getText().toString();
+                        MainActivity.V2_physical_address_one = physical_address_one.getText().toString();
                         break;
                     case R.id.address_box_one:
-                        MainActivity.V1_address_box_one = address_box_one.getText().toString();
+                        MainActivity.V2_address_box_one = address_box_one.getText().toString();
 
                     case R.id.national_id_one:
-                        MainActivity.V1_national_id_one = national_id_one.getText().toString();
+                        MainActivity.V2_national_id_one = national_id_one.getText().toString();
                         break;
                     case R.id.phone_no_one:
-                        MainActivity.V1_phone_no_one = phone_no_one.getText().toString();
+                        MainActivity.V2_phone_no_one = phone_no_one.getText().toString();
                         break;
                     case R.id.nationality_one:
-                        MainActivity.V1_nationality_one = nationality_one.getText().toString();
+                        MainActivity.V2_nationality_one = nationality_one.getText().toString();
                         break;
                     case R.id.license_one:
-                        MainActivity.V1_license_one = license_one.getText().toString();
+                        MainActivity.V2_license_one = license_one.getText().toString();
                         break;
                     case R.id.occupation_one:
-                        MainActivity.V1_occupation = occupation_one.getText().toString();
+                        MainActivity.V2_occupation = occupation_one.getText().toString();
                         break;
                     case R.id.alcohol_edit:
-                        MainActivity.V1_alcohol_edit = alcohol_edit.getText().toString();
+                        MainActivity.V2_alcohol_edit = alcohol_edit.getText().toString();
                         break;
 
                     case R.id.type_one:
-                        MainActivity.V1_type_one = type_one.getText().toString();
+                        MainActivity.V2_type_one = type_one.getText().toString();
                         break;
                     case R.id.registration_number_one:
-                        MainActivity.V1_registration_number_one  = registration_number_one.getText().toString();
+                        MainActivity.V2_registration_number_one  = registration_number_one.getText().toString();
 
                     case R.id.company_one:
-                        MainActivity.V1_company_one = company_one.getText().toString();
+                        MainActivity.V2_company_one = company_one.getText().toString();
                         break;
                     case R.id.insurance_type_one:
-                        MainActivity.V1_insurance_type_one = insurance_type_one.getText().toString();
+                        MainActivity.V2_insurance_type_one = insurance_type_one.getText().toString();
                         break;
                     case R.id.insurance_phone:
-                        MainActivity.V1_insurance_phone = insurance_phone.getText().toString();
+                        MainActivity.V2_insurance_phone = insurance_phone.getText().toString();
                         break;
                     case R.id.policy_period_one:
-                        MainActivity.V1_policy_period_one = policy_period_one.getText().toString();
+                        MainActivity.V2_policy_period_one = policy_period_one.getText().toString();
                         break;
                     case R.id.policy_number_one:
-                        MainActivity.V1_policy_number_one = policy_period_one.getText().toString();
+                        MainActivity.V2_policy_number_one = policy_period_one.getText().toString();
                         break;
                     case R.id.repair_amount_one:
-                        MainActivity.V1_repair_amount_one = repair_amount_one.getText().toString();
+                        MainActivity.V2_repair_amount_one = repair_amount_one.getText().toString();
                     case R.id.vehicle_title_edit:
-                        MainActivity.V1_vehicle = vehicle.getText().toString();
+                        MainActivity.V2_vehicle = vehicle.getText().toString();
                         break;
                     case R.id.vehicle_total_edit:
-                        MainActivity.V1_vehicle_total = vehicle_total.getText().toString();
+                        MainActivity.V2_vehicle_total = vehicle_total.getText().toString();
                         break;
                     case R.id.infrastructure_edit:
-                        MainActivity.V1_infrastructure = infrastructure.getText().toString();
+                        MainActivity.V2_infrastructure = infrastructure.getText().toString();
 
                     case R.id.rescue_cost_edit:
-                        MainActivity.V1_cost = cost.getText().toString();
+                        MainActivity.V2_cost = cost.getText().toString();
                         break;
                     default:
                 }

@@ -18,7 +18,9 @@ package com.rsmsa.accapp;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Matrix;
 import android.net.Uri;
@@ -35,6 +37,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -279,6 +282,8 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_drawer);
 
+
+   
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
@@ -300,16 +305,13 @@ public class MainActivity extends FragmentActivity {
             hasheader = true;
             tempFlag = true;
 
-            imgPreview = (ImageView) tempHeader.findViewById(R.id.imgPreview);
-            videoPreview = (VideoView) tempHeader.findViewById(R.id.videoPreview);
-            btnCapturePicture = (ImageButton) tempHeader.findViewById(R.id.btnCapturePicture);
-            btnRecordVideo = (ImageButton) tempHeader.findViewById(R.id.btnCaptureVideo);
-
-
 
         }
 
-
+        imgPreview = (ImageView) tempHeader.findViewById(R.id.imgPreview);
+        videoPreview = (VideoView) tempHeader.findViewById(R.id.videoPreview);
+        btnCapturePicture = (ImageButton) tempHeader.findViewById(R.id.btnCapturePicture);
+        btnRecordVideo = (ImageButton) tempHeader.findViewById(R.id.btnCaptureVideo);
         /**
          * Capture image button click event
          */
@@ -342,6 +344,7 @@ public class MainActivity extends FragmentActivity {
             // will close the app if the device does't have camera
             finish();
         }
+
 
 
 //get GPS location
@@ -465,6 +468,7 @@ public class MainActivity extends FragmentActivity {
 
             }
         });
+
 
 
 
@@ -923,7 +927,6 @@ public class MainActivity extends FragmentActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawer.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_save).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -936,10 +939,40 @@ public class MainActivity extends FragmentActivity {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
+        if (item.getItemId() == R.id.action_logout ) {
+//
+            SharedPreferences sharedpreferences = getSharedPreferences
+                    (LoginActivity.MyPREFERENCES, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.clear();
+            editor.commit();
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            this.startActivity(intent);
+            MainActivity.this.finish();
+        }
+
+
+        if (item.getItemId() == R.id.action_changePasswd ) {
+            Intent intent = new Intent(MainActivity.this, ChangePassword.class);
+            startActivity(intent);
+
+        }
 
         // Handle your other action bar items...
         return super.onOptionsItemSelected(item);
     }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            LoginActivity.justBack = true;
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -1026,6 +1059,10 @@ public class MainActivity extends FragmentActivity {
                     Log.d("headercheck", "yes there is header two " + hasheader);
                 }
 
+                Intent myIntent = new Intent(view.getContext(), MainOffence.class);
+                myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                startActivity(myIntent);
                 String text = "menu click... should be implemented";
                 //You should reset item counter
                 mDrawer.closeDrawer(mDrawerList);

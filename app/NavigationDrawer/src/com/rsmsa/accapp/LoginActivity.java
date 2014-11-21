@@ -240,6 +240,8 @@ public class LoginActivity extends Activity {
                         /**
                          * adding user information to shared preferences
                          */
+
+
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         String u = username.getText().toString();
                         String p = passwd.getText().toString();
@@ -247,8 +249,8 @@ public class LoginActivity extends Activity {
                         editor.putString(pass, p);
                         editor.commit();
 
-//                        pDialog.setMessage("Loading User Space");
-//                        pDialog.setTitle("Getting Data");
+
+
                         DatabaseHandler db = new DatabaseHandler(getApplicationContext());
                         DatabaseHandler db1 = new DatabaseHandler(getApplicationContext());
                         JSONObject json_user = json.getJSONObject("user");
@@ -286,6 +288,8 @@ public class LoginActivity extends Activity {
         }
     }
 
+
+
     @Override
     protected void onResume() {
         sharedpreferences=getSharedPreferences(MyPREFERENCES,
@@ -308,6 +312,7 @@ public class LoginActivity extends Activity {
         }
         super.onResume();
     }
+
 
     public void NetAsync(View view){
         new NetCheck().execute();

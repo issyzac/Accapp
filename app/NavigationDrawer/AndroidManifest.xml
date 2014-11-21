@@ -23,36 +23,35 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Styles" >
 
 
-        <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="adjustNothing"
-            android:label="@string/app_name"
-            android:configChanges="orientation|keyboard|keyboardHidden"
-            android:screenOrientation="portrait">
+        <activity android:name=".LoginActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Passenger"
-            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Passenger"/>
 
         <activity android:name=".AccidentTypeclassification"/>
 
         <activity android:name=".AtcSelect"
-            android:theme="@android:style/Theme.Dialog"
             />
 
-        <activity android:name=".PasswordReset"
-            android:theme="@android:style/Theme.Dialog"
-            />
-        <activity android:name=".VehicleType"
-            android:theme="@android:style/Theme.Dialog"
-            />
+        <activity android:name=".PasswordReset"/>
+
+        <activity android:name=".VehicleType"/>
+
         <receiver android:name=".NetworkListener"
             android:label="NetworkConnection">
             <intent-filter>
@@ -60,8 +59,29 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".CaptureSignature"
+
+        <activity
+            android:name=".MainOffence" >
+        </activity>
+
+        <activity android:name=".Registered"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity android:name=".ChangePassword"/>
+
+        <activity android:name=".CaptureSignature"/>
+
+        <activity android:name=".OffenseListActivity"
             android:theme="@android:style/Theme.Dialog"
+            />
+        <activity android:name=".VerifyCarActivity"
+            android:theme="@android:style/Theme.Dialog"
+            />
+
+        <activity android:name=".ReportForm"
+            android:parentActivityName=".MainOffence"
             />
 
     </application>

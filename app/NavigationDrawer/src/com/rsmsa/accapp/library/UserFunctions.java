@@ -17,25 +17,34 @@ public class UserFunctions {
     private JSONParser jsonParser;
 
     //URL of the PHP API
-    private static String loginURL = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String defectURL  = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String forpassURL = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String chgpassURL = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String driverURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String insuranceURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String damageURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String acc_descURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String categoryURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String accident_locationURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String accident_dataURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String other_damageURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String vehicleURL= "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String personURL= "http://192.168.42.250/PSMS/public/android/index.php";
 
-    private static String road_typeURL = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String junctionURL  = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String street_conditionURL = "http://192.168.42.250/PSMS/public/android/index.php";
-    private static String violationURL = "http://192.168.42.250/PSMS/public/android/index.php";
+    public static String ipAddress = "192.168.42.140";
+    //URL of the PHP API 41.86.176.252 10.0.2.2 192.168.43.162 162.243.26.128
+    private static String loginURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String registerURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String forpassURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String verificationURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String chgpassURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String HistoryURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String defectURL  = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String driverURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String insuranceURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String damageURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String acc_descURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String categoryURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String accident_locationURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String accident_dataURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String other_damageURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String vehicleURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String personURL= "http://"+ipAddress+"/PSMS/public/android/index.php";
+
+
+    private static String road_typeURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String junctionURL  = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String street_conditionURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+    private static String violationURL = "http://"+ipAddress+"/PSMS/public/android/index.php";
+
+    //tags
     private static String login_tag = "login";
     private static String accident_location_tag = "location";
     private static String accident_data_tag = "accident_data";
@@ -54,7 +63,9 @@ public class UserFunctions {
     private static String other_damage_tag = "road_type";
     private static String forget_pass_tag = "forpass";
     private static String change_pass_tag = "chgpass";
-
+    private static String history_tag = "history";
+    private static String verification_tag = "verification";
+    private static String register_tag = "register";
 
     // constructor
     public UserFunctions(){
@@ -98,16 +109,15 @@ public class UserFunctions {
     /**
      * Function to  add AccidentLocation
      **/
-    public JSONObject addAccidentLocation(String area,String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
+    public JSONObject addAccidentLocation(String area,String district, String region,String road_name, String road_no, String road_kilo_mark, String intersection_name,String intersection_no,String intersection_kilo_mark){
         // Building Parameters
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
 
         params.add(new BasicNameValuePair("tag", accident_location_tag));
         params.add(new BasicNameValuePair("accident_area", area));
-        //params.add(new BasicNameValuePair("accident_data_id", accident_data_id));
-       // params.add(new BasicNameValuePair("district_id", district_id +""));
-       // params.add(new BasicNameValuePair("region_id", region_id +""));
-        params.add(new BasicNameValuePair("road_name", road_name));
+        params.add(new BasicNameValuePair("district", district));
+        params.add(new BasicNameValuePair("region", region));
+        params.add(new BasicNameValuePair("road_name", road_name ));
         params.add(new BasicNameValuePair("road_no", road_no));
         params.add(new BasicNameValuePair("road_kilo_mark", road_kilo_mark));
         params.add(new BasicNameValuePair("intersection_name", intersection_name));
@@ -354,6 +364,50 @@ Log.d("mat",surface_type+"");
         return json;
     }
 
+
+    public JSONObject registerOffence(String license, String plateNumber, String commit, String offence,String issuer_no, String amount, double lat, double longi){
+        List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+
+        params.add(new BasicNameValuePair("tag", register_tag));
+        params.add(new BasicNameValuePair("license", license));
+        params.add(new BasicNameValuePair("plateNumber", plateNumber));
+        params.add(new BasicNameValuePair("commit", commit));
+        params.add(new BasicNameValuePair("offence", offence));
+        params.add(new BasicNameValuePair("RankNo", issuer_no));
+        params.add(new BasicNameValuePair("amount", amount));
+        params.add(new BasicNameValuePair("latitude", lat+""));
+        params.add(new BasicNameValuePair("longitude", longi+""));
+
+
+        JSONObject json = jsonParser.getJSONFromUrl(registerURL,params);
+        return json;
+    }
+
+    /**
+     * Function to  get history
+     **/
+    public JSONObject getHistory(String license){
+        List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+        params.add(new BasicNameValuePair("tag", history_tag));
+        params.add(new BasicNameValuePair("license", license));
+        JSONObject json = jsonParser.getJSONFromUrl(HistoryURL,params);
+        return json;
+    }
+
+
+    /**
+     * Function to  Register
+     **/
+    public JSONObject carAndLicenceVerification(String license, String plateNumber){
+        List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+        params.add(new BasicNameValuePair("tag", verification_tag));
+        params.add(new BasicNameValuePair("license", license));
+        params.add(new BasicNameValuePair("plateNumber", plateNumber));
+
+
+        JSONObject json = jsonParser.getJSONFromUrl(verificationURL,params);
+        return json;
+    }
     /**
      * Function to logout user
      * Resets the temporary data stored in SQLite Database

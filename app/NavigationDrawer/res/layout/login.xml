@@ -18,7 +18,7 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Traffic App"
+            android:text="Traffic Reporter"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
